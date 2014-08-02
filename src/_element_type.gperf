@@ -1,0 +1,30 @@
+struct element_entry {
+  const char *name;
+  hoedown_element_type type;
+};
+typedef struct element_entry element_entry;
+
+%%
+area, HOEDOWN_EL_VOID
+base, HOEDOWN_EL_VOID
+br, HOEDOWN_EL_VOID
+col, HOEDOWN_EL_VOID
+embed, HOEDOWN_EL_VOID
+hr, HOEDOWN_EL_VOID
+img, HOEDOWN_EL_VOID
+input, HOEDOWN_EL_VOID
+keygen, HOEDOWN_EL_VOID
+link, HOEDOWN_EL_VOID
+meta, HOEDOWN_EL_VOID
+param, HOEDOWN_EL_VOID
+source, HOEDOWN_EL_VOID
+track, HOEDOWN_EL_VOID
+wbr, HOEDOWN_EL_VOID
+#
+script, HOEDOWN_EL_RAW
+style, HOEDOWN_EL_RAW
+#
+textarea, HOEDOWN_EL_RAW_ESCAPABLE
+title, HOEDOWN_EL_RAW_ESCAPABLE
+#
+# all other elements: HOEDOWN_EL_NORMAL

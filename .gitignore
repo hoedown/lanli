@@ -1,0 +1,8 @@
+*.o
+*.obj
+*.exe
+hoedown
+hoedown.dll
+hoedown.exp
+hoedown.lib
+libhoedown.so*
