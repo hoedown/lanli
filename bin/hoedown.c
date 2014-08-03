@@ -108,7 +108,7 @@ static flag_entry flags_info[] = {
                       | HOEDOWN_FLAG_COMMENTS_SKIP )
 #define DEFAULT_LEVELS 0
 #define DEFAULT_MAX_NESTING 16
-#define DEFAULT_MAX_ATTRIBUTES 16
+#define DEFAULT_MAX_ATTRIBUTES 8
 
 
 // HELP MESSAGE
