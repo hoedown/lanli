@@ -135,11 +135,11 @@ void print_help(const char *basename) {
 
   // Usage
   printf("Usage: %s [OPTION]... [FILE]\n\n", basename);
-  
+
   // Description
   printf("Process the HTML in FILE (or standard input), and sanitize it using the Hoedown library. "
          "The result is written to standard output. Parsing and filtering can be controlled through the options below.\n\n");
-  
+
   // Main options
   printf("Main options:\n");
   print_option('l', "levels=N", "Number of additional levels. Zero disables the feature. [default: "str(DEFAULT_LEVELS)"]");
@@ -156,7 +156,7 @@ void print_help(const char *basename) {
   printf("Callback selection:\n");
   for (size_t i = 0; i < count_of(callbacks_info); i++) {
     callback_entry *entry = &callbacks_info[i];
-    
+
     hoedown_buffer_sets(desc, entry->description);
     if (entry->callback == DEFAULT_CALLBACK)
       HOEDOWN_BUFPUTSL(desc, " [default]");
@@ -169,7 +169,7 @@ void print_help(const char *basename) {
   printf("Rendering flags:\n");
   for (size_t i = 0; i < count_of(flags_info); i++) {
     flag_entry *entry = &flags_info[i];
-    
+
     hoedown_buffer_sets(desc, entry->description);
     if (DEFAULT_FLAGS & entry->flag)
       HOEDOWN_BUFPUTSL(desc, " [default]");
@@ -177,11 +177,11 @@ void print_help(const char *basename) {
     print_option( 0 , entry->option_name, hoedown_buffer_cstr(desc));
   }
   printf("\n");
-  
+
   // Ending
   printf("Flags can be negated by prepending 'no' to them, as in '--no-parse-comments' or '--no-skip-invalid'. "
          "Options are processed in order, so in case of contradictory options the last specified stands.\n\n");
-  
+
   printf("When FILE is '-', read standard input. If no FILE was given, read standard input. Use '--' to signal end of option parsing. "
          "Exit status is 0 if no errors occured, 1 with option parsing errors or 5 with I/O errors.\n\n");
 }
@@ -411,7 +411,7 @@ int main(int argc, char **argv) {
 
   hoedown_buffer *ib = hoedown_buffer_new(iunit);
   hoedown_buffer *ob = hoedown_buffer_new(ounit);
-  
+
   hoedown_document *doc = hoedown_document_new(
       callback,
       NULL,
@@ -440,7 +440,7 @@ int main(int argc, char **argv) {
     fprintf(stderr, "I/O error when reading input.\n");
     return 5;
   }
-  
+
   if (filename) fclose(file);
 
 
@@ -466,11 +466,11 @@ int main(int argc, char **argv) {
     fprintf(stderr, "Time spent on rendering: %7.2fms\n", (double)time / 1e6);
   }
 
-
   // Free everything
   hoedown_buffer_free(ib);
   hoedown_buffer_free(ob);
   hoedown_document_free(doc);
+
 
   return 0;
 }
