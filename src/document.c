@@ -11,8 +11,6 @@
 #define TOKEN_UNIT 16
 #define LEVELBUF_UNIT 16
 #define LEVELBUF_MAX_SIZE 400
-#define DEFAULT_MAX_NESTING 16
-#define DEFAULT_MAX_ATTRIBUTES 16
 
 #define TAG_NAME_UNIT TOKEN_UNIT
 #define ATTR_NAME_UNIT TOKEN_UNIT
@@ -141,9 +139,6 @@ hoedown_document *hoedown_document_new(
   size_t max_attributes
 ) {
   hoedown_document *doc = hoedown_malloc(sizeof(hoedown_document));
-
-  if (!max_nesting) max_nesting = DEFAULT_MAX_NESTING;
-  if (!max_attributes) max_attributes = DEFAULT_MAX_ATTRIBUTES;
 
   doc->callback = callback;
   doc->opaque = opaque;
