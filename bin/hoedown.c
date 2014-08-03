@@ -212,7 +212,198 @@ int main(int argc, char **argv) {
 
 
   // Option parsing
-  show_time = 1; //TODO: option parsing
+  int just_args = 0;
+  int args_parsed = 0;
+  for (int i = 1; i < argc; i++) {
+    char *arg = argv[i];
+    if (!arg[0]) continue;
+
+    if (just_args || arg[0] != '-') {
+      // regular argument
+      if (args_parsed >= 1) {
+        fprintf(stderr, "Too many arguments.\n");
+        return 1;
+      }
+      args_parsed++;
+      filename = arg;
+      continue;
+    }
+
+    if (!arg[1]) {
+      // arg is "-"
+      if (args_parsed >= 1) {
+        fprintf(stderr, "Too many arguments.\n");
+        return 1;
+      }
+      args_parsed++;
+      filename = NULL;
+      continue;
+    }
+
+    if (arg[1] != '-') {
+      // parse short options
+      char opt;
+      const char *val;
+      for (size_t j = 1; (opt = arg[j]); j++) {
+        if (opt == 'h') {
+          print_help(argv[0]);
+          return 1;
+        }
+
+        if (opt == 'v') {
+          print_version();
+          return 1;
+        }
+
+        if (opt == 'T') {
+          show_time = 1;
+          continue;
+        }
+
+        /* options requiring value */
+        if (arg[++j]) val = arg + j;
+        else if (argv[++i]) val = argv[i];
+        else {
+          fprintf(stderr, "Wrong option '-%c' found.\n", opt);
+          return 1;
+        }
+
+        long int num;
+        int isNum = parse_int(val, &num);
+
+        if (opt == 'l' && isNum) {
+          levels = num;
+          break;
+        }
+
+        if (opt == 'n' && isNum) {
+          max_nesting = num;
+          break;
+        }
+
+        if (opt == 'a' && isNum) {
+          max_attributes = num;
+          break;
+        }
+
+        if (opt == 'i' && isNum) {
+          iunit = num;
+          break;
+        }
+
+        if (opt == 'o' && isNum) {
+          ounit = num;
+          break;
+        }
+
+        fprintf(stderr, "Wrong option '-%c' found.\n", opt);
+        return 1;
+      }
+      continue;
+    }
+
+    if (!arg[2]) {
+      // arg is "--"
+      just_args = 1;
+      continue;
+    }
+
+    // parse long option
+    char opt [100];
+    strncpy(opt, arg + 2, 100);
+    opt[99] = 0;
+
+    char *val = strchr(opt, '=');
+
+    long int num = 0;
+    int isNum = 0;
+
+    if (val) {
+      *val = 0;
+      val++;
+
+      if (*val)
+        isNum = parse_int(val, &num);
+    }
+
+    int opt_parsed = 0;
+
+    if (strcmp(opt, "time") == 0) {
+      opt_parsed = 1;
+      show_time = 1;
+    }
+
+    if (strcmp(opt, "help") == 0) {
+      print_help(argv[0]);
+      return 1;
+    }
+
+    if (strcmp(opt, "version") == 0) {
+      print_version();
+      return 1;
+    }
+
+    if (strcmp(opt, "levels") == 0 && isNum) {
+      opt_parsed = 1;
+      levels = num;
+    }
+    if (strcmp(opt, "max-nesting") == 0 && isNum) {
+      opt_parsed = 1;
+      max_nesting = num;
+    }
+    if (strcmp(opt, "max-attributes") == 0 && isNum) {
+      opt_parsed = 1;
+      max_attributes = num;
+    }
+    if (strcmp(opt, "input-unit") == 0 && isNum) {
+      opt_parsed = 1;
+      iunit = num;
+    }
+    if (strcmp(opt, "output-unit") == 0 && isNum) {
+      opt_parsed = 1;
+      ounit = num;
+    }
+
+    //const char *name;
+
+    // extensions
+    for (size_t i = 0; i < count_of(callbacks_info); i++) {
+      struct callback_entry *entry = &callbacks_info[i];
+      if (strcmp(opt, entry->option_name) == 0) {
+        opt_parsed = 1;
+        callback = entry->callback;
+        break;
+      }
+    }
+
+    // flags
+    for (size_t i = 0; i < count_of(flags_info); i++) {
+      struct flag_entry *entry = &flags_info[i];
+      if (strcmp(opt, entry->option_name) == 0) {
+        opt_parsed = 1;
+        flags |= entry->flag;
+        break;
+      }
+    }
+
+    // negations
+    const char *name = strprefix(opt, "no-");
+    if (name) {
+      for (size_t i = 0; i < count_of(flags_info); i++) {
+        struct flag_entry *entry = &flags_info[i];
+        if (strcmp(name, entry->option_name) == 0) {
+          opt_parsed = 1;
+          flags &= ~(entry->flag);
+          break;
+        }
+      }
+    }
+
+    if (!opt_parsed) {
+      fprintf(stderr, "Wrong option '%s' found.\n", arg);
+      return 1;
+    }
+  }
 
 
   // Create everything
@@ -233,8 +424,14 @@ int main(int argc, char **argv) {
 
   // Read input file
   FILE *file = stdin;
-  if (filename) file = fopen(filename, "rb");
-  
+  if (filename) {
+    file = fopen(filename, "rb");
+    if (!file) {
+      fprintf(stderr, "Unable to open input file: %s\n", strerror(errno));
+      return 5;
+    }
+  }
+
   while (!feof(file) && !ferror(file)) {
     hoedown_buffer_grow(ib, ib->size + ib->unit);
     ib->size += fread(ib->data + ib->size, sizeof(uint8_t), ib->unit, file);
