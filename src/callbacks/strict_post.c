@@ -15,9 +15,9 @@
 // GENERAL UTILITIES
 
 int is_safe_link(const uint8_t *data, size_t size) {
-  static const size_t valid_uris_count = 5;
+  static const size_t valid_uris_count = 6;
   static const char *valid_uris[] = {
-    "/", "http://", "https://", "ftp://", "mailto:"
+    "#", "/", "http://", "https://", "ftp://", "mailto:"
   };
 
   for (size_t i = 0; i < valid_uris_count; ++i) {
