@@ -1,5 +1,5 @@
 /* C code produced by gperf version 3.0.3 */
-/* Command-line: gperf -S1 -m100 -l -C -7 -E -N find_tag -t src/callbacks/_strict_post_tags.gperf  */
+/* Command-line: gperf -S1 -m100 -l -C -7 -E -N find_tag -t data/strict_post_tags.gperf  */
 /* Computed positions: -k'1-2,$' */
 
 #if !((' ' == 32) && ('!' == 33) && ('"' == 34) && ('#' == 35) \
@@ -29,7 +29,7 @@
 error "gperf generated tables don't work with this execution character set. Please report a bug to <bug-gnu-gperf@gnu.org>."
 #endif
 
-#line 1 "src/callbacks/_strict_post_tags.gperf"
+#line 1 "data/strict_post_tags.gperf"
 
 typedef enum semantic_type {
   SEMANTIC_TYPE_BLOCK = (1 << 0),
@@ -50,7 +50,7 @@ struct attribute_entry {
   int needs_value;
 };
 typedef struct attribute_entry attribute_entry;
-#line 22 "src/callbacks/_strict_post_tags.gperf"
+#line 22 "data/strict_post_tags.gperf"
 struct tag_entry {
   const char *name;
   // Name to replace (NULL for original)
@@ -130,89 +130,89 @@ find_tag (str, len)
 
   static const struct tag_entry wordlist[] =
     {
-#line 83 "src/callbacks/_strict_post_tags.gperf"
+#line 83 "data/strict_post_tags.gperf"
       {"a", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {{0,"href",1}}, 1},
-#line 57 "src/callbacks/_strict_post_tags.gperf"
+#line 57 "data/strict_post_tags.gperf"
       {"dt", NULL, SEMANTIC_TYPE_DESCITEM, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 67 "src/callbacks/_strict_post_tags.gperf"
+#line 67 "data/strict_post_tags.gperf"
       {"td", NULL, SEMANTIC_TYPE_TABLECELL, SEMANTIC_TYPE_BLOCK | SEMANTIC_TYPE_INLINE, {{1,"colspan",1}, {1,"rowspan",1}}, 2},
-#line 58 "src/callbacks/_strict_post_tags.gperf"
+#line 58 "data/strict_post_tags.gperf"
       {"dd", NULL, SEMANTIC_TYPE_DESCITEM, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 66 "src/callbacks/_strict_post_tags.gperf"
+#line 66 "data/strict_post_tags.gperf"
       {"th", NULL, SEMANTIC_TYPE_TABLECELL, SEMANTIC_TYPE_BLOCK | SEMANTIC_TYPE_INLINE, {{1,"colspan",1}, {1,"rowspan",1}}, 2},
-#line 87 "src/callbacks/_strict_post_tags.gperf"
+#line 87 "data/strict_post_tags.gperf"
       {"b", "strong", SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 62 "src/callbacks/_strict_post_tags.gperf"
+#line 62 "data/strict_post_tags.gperf"
       {"thead", NULL, SEMANTIC_TYPE_TABLESECTION, SEMANTIC_TYPE_TABLEROW, {}, 0},
-#line 56 "src/callbacks/_strict_post_tags.gperf"
+#line 56 "data/strict_post_tags.gperf"
       {"dl", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_DESCITEM, {}, 0},
-#line 65 "src/callbacks/_strict_post_tags.gperf"
+#line 65 "data/strict_post_tags.gperf"
       {"tr", NULL, SEMANTIC_TYPE_TABLEROW, SEMANTIC_TYPE_TABLECELL, {}, 0},
-#line 84 "src/callbacks/_strict_post_tags.gperf"
+#line 84 "data/strict_post_tags.gperf"
       {"abbr", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {{0,"title",1}}, 1},
-#line 94 "src/callbacks/_strict_post_tags.gperf"
+#line 94 "data/strict_post_tags.gperf"
       {"hr", NULL, SEMANTIC_TYPE_BLOCK, 0, {}, 0},
-#line 93 "src/callbacks/_strict_post_tags.gperf"
+#line 93 "data/strict_post_tags.gperf"
       {"br", NULL, SEMANTIC_TYPE_INLINE, 0, {}, 0},
-#line 61 "src/callbacks/_strict_post_tags.gperf"
+#line 61 "data/strict_post_tags.gperf"
       {"table", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_TABLESECTION | SEMANTIC_TYPE_TABLEROW, {}, 0},
-#line 44 "src/callbacks/_strict_post_tags.gperf"
+#line 44 "data/strict_post_tags.gperf"
       {"p", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 75 "src/callbacks/_strict_post_tags.gperf"
+#line 75 "data/strict_post_tags.gperf"
       {"del", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 70 "src/callbacks/_strict_post_tags.gperf"
+#line 70 "data/strict_post_tags.gperf"
       {"strong", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 51 "src/callbacks/_strict_post_tags.gperf"
+#line 51 "data/strict_post_tags.gperf"
       {"ul", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_LISTITEM, {}, 0},
-#line 89 "src/callbacks/_strict_post_tags.gperf"
+#line 89 "data/strict_post_tags.gperf"
       {"strike", "del", SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 80 "src/callbacks/_strict_post_tags.gperf"
+#line 80 "data/strict_post_tags.gperf"
       {"sub", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 72 "src/callbacks/_strict_post_tags.gperf"
+#line 72 "data/strict_post_tags.gperf"
       {"u", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 78 "src/callbacks/_strict_post_tags.gperf"
+#line 78 "data/strict_post_tags.gperf"
       {"kbd", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 45 "src/callbacks/_strict_post_tags.gperf"
+#line 45 "data/strict_post_tags.gperf"
       {"pre", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 81 "src/callbacks/_strict_post_tags.gperf"
+#line 81 "data/strict_post_tags.gperf"
       {"sup", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 48 "src/callbacks/_strict_post_tags.gperf"
+#line 48 "data/strict_post_tags.gperf"
       {"blockquote", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_BLOCK | SEMANTIC_TYPE_INLINE, {}, 0},
-#line 52 "src/callbacks/_strict_post_tags.gperf"
+#line 52 "data/strict_post_tags.gperf"
       {"ol", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_LISTITEM, {}, 0},
-#line 88 "src/callbacks/_strict_post_tags.gperf"
+#line 88 "data/strict_post_tags.gperf"
       {"i", "em", SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 76 "src/callbacks/_strict_post_tags.gperf"
+#line 76 "data/strict_post_tags.gperf"
       {"mark", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 71 "src/callbacks/_strict_post_tags.gperf"
+#line 71 "data/strict_post_tags.gperf"
       {"em", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 79 "src/callbacks/_strict_post_tags.gperf"
+#line 79 "data/strict_post_tags.gperf"
       {"cite", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 53 "src/callbacks/_strict_post_tags.gperf"
+#line 53 "data/strict_post_tags.gperf"
       {"li", NULL, SEMANTIC_TYPE_LISTITEM, SEMANTIC_TYPE_BLOCK | SEMANTIC_TYPE_INLINE, {}, 0},
-#line 92 "src/callbacks/_strict_post_tags.gperf"
-      {"img", NULL, SEMANTIC_TYPE_INLINE, 0, {{0,"src",1}, {0,"alt",0}}, 2},
-#line 63 "src/callbacks/_strict_post_tags.gperf"
+#line 92 "data/strict_post_tags.gperf"
+      {"img", NULL, SEMANTIC_TYPE_INLINE, 0, {{0,"src",1}, {1,"alt",1}}, 2},
+#line 63 "data/strict_post_tags.gperf"
       {"tbody", NULL, SEMANTIC_TYPE_TABLESECTION, SEMANTIC_TYPE_TABLEROW, {}, 0},
-#line 74 "src/callbacks/_strict_post_tags.gperf"
+#line 74 "data/strict_post_tags.gperf"
       {"ins", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 77 "src/callbacks/_strict_post_tags.gperf"
+#line 77 "data/strict_post_tags.gperf"
       {"code", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 64 "src/callbacks/_strict_post_tags.gperf"
+#line 64 "data/strict_post_tags.gperf"
       {"tfoot", NULL, SEMANTIC_TYPE_TABLESECTION, SEMANTIC_TYPE_TABLEROW, {}, 0},
-#line 73 "src/callbacks/_strict_post_tags.gperf"
+#line 73 "data/strict_post_tags.gperf"
       {"q", NULL, SEMANTIC_TYPE_INLINE, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 43 "src/callbacks/_strict_post_tags.gperf"
+#line 43 "data/strict_post_tags.gperf"
       {"h6", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 42 "src/callbacks/_strict_post_tags.gperf"
+#line 42 "data/strict_post_tags.gperf"
       {"h5", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 41 "src/callbacks/_strict_post_tags.gperf"
+#line 41 "data/strict_post_tags.gperf"
       {"h4", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 40 "src/callbacks/_strict_post_tags.gperf"
+#line 40 "data/strict_post_tags.gperf"
       {"h3", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 39 "src/callbacks/_strict_post_tags.gperf"
+#line 39 "data/strict_post_tags.gperf"
       {"h2", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_INLINE, {}, 0},
-#line 38 "src/callbacks/_strict_post_tags.gperf"
+#line 38 "data/strict_post_tags.gperf"
       {"h1", NULL, SEMANTIC_TYPE_BLOCK, SEMANTIC_TYPE_INLINE, {}, 0}
     };
 

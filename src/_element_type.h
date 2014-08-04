@@ -1,5 +1,5 @@
 /* C code produced by gperf version 3.0.3 */
-/* Command-line: gperf -S1 -m100 -l -C -7 -E -N match_element_type -t src/_element_type.gperf  */
+/* Command-line: gperf -S1 -m100 -l -C -7 -E -N match_element_type -t data/element_type.gperf  */
 /* Computed positions: -k'1-2' */
 
 #if !((' ' == 32) && ('!' == 33) && ('"' == 34) && ('#' == 35) \
@@ -29,7 +29,7 @@
 error "gperf generated tables don't work with this execution character set. Please report a bug to <bug-gnu-gperf@gnu.org>."
 #endif
 
-#line 1 "src/_element_type.gperf"
+#line 1 "data/element_type.gperf"
 struct element_entry {
   const char *name;
   hoedown_element_type type;
@@ -90,43 +90,43 @@ match_element_type (str, len)
 
   static const struct element_entry wordlist[] =
     {
-#line 14 "src/_element_type.gperf"
+#line 14 "data/element_type.gperf"
       {"img", HOEDOWN_EL_VOID},
-#line 17 "src/_element_type.gperf"
+#line 17 "data/element_type.gperf"
       {"link", HOEDOWN_EL_VOID},
-#line 28 "src/_element_type.gperf"
+#line 28 "data/element_type.gperf"
       {"title", HOEDOWN_EL_RAW_ESCAPABLE},
-#line 18 "src/_element_type.gperf"
+#line 18 "data/element_type.gperf"
       {"meta", HOEDOWN_EL_VOID},
-#line 12 "src/_element_type.gperf"
+#line 12 "data/element_type.gperf"
       {"embed", HOEDOWN_EL_VOID},
-#line 25 "src/_element_type.gperf"
+#line 25 "data/element_type.gperf"
       {"style", HOEDOWN_EL_RAW},
-#line 20 "src/_element_type.gperf"
+#line 20 "data/element_type.gperf"
       {"source", HOEDOWN_EL_VOID},
-#line 27 "src/_element_type.gperf"
+#line 27 "data/element_type.gperf"
       {"textarea", HOEDOWN_EL_RAW_ESCAPABLE},
-#line 11 "src/_element_type.gperf"
+#line 11 "data/element_type.gperf"
       {"col", HOEDOWN_EL_VOID},
-#line 21 "src/_element_type.gperf"
+#line 21 "data/element_type.gperf"
       {"track", HOEDOWN_EL_VOID},
-#line 10 "src/_element_type.gperf"
+#line 10 "data/element_type.gperf"
       {"br", HOEDOWN_EL_VOID},
-#line 22 "src/_element_type.gperf"
+#line 22 "data/element_type.gperf"
       {"wbr", HOEDOWN_EL_VOID},
-#line 9 "src/_element_type.gperf"
+#line 9 "data/element_type.gperf"
       {"base", HOEDOWN_EL_VOID},
-#line 19 "src/_element_type.gperf"
+#line 19 "data/element_type.gperf"
       {"param", HOEDOWN_EL_VOID},
-#line 24 "src/_element_type.gperf"
+#line 24 "data/element_type.gperf"
       {"script", HOEDOWN_EL_RAW},
-#line 8 "src/_element_type.gperf"
+#line 8 "data/element_type.gperf"
       {"area", HOEDOWN_EL_VOID},
-#line 15 "src/_element_type.gperf"
+#line 15 "data/element_type.gperf"
       {"input", HOEDOWN_EL_VOID},
-#line 16 "src/_element_type.gperf"
+#line 16 "data/element_type.gperf"
       {"keygen", HOEDOWN_EL_VOID},
-#line 13 "src/_element_type.gperf"
+#line 13 "data/element_type.gperf"
       {"hr", HOEDOWN_EL_VOID}
     };
 

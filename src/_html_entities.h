@@ -1,5 +1,5 @@
 /* C code produced by gperf version 3.0.3 */
-/* Command-line: gperf -S1 -m100 -l -C -N find_entity -t src/_html_entities.gperf  */
+/* Command-line: gperf -S1 -m100 -l -C -N find_entity -t data/html_entities.gperf  */
 /* Computed positions: -k'1-7,10,12,$' */
 
 #if !((' ' == 32) && ('!' == 33) && ('"' == 34) && ('#' == 35) \
@@ -29,7 +29,7 @@
 error "gperf generated tables don't work with this execution character set. Please report a bug to <bug-gnu-gperf@gnu.org>."
 #endif
 
-#line 2 "src/_html_entities.gperf"
+#line 2 "data/html_entities.gperf"
 struct html_entity {
     const char *name;
     uint8_t utf8 [6];
@@ -135,4255 +135,4255 @@ find_entity (str, len)
 {
   static const struct html_entity wordlist[] =
     {
-#line 518 "src/_html_entities.gperf"
+#line 518 "data/html_entities.gperf"
       {"lat", { 0xE2, 0xAA, 0xAB }, 3},
-#line 314 "src/_html_entities.gperf"
+#line 314 "data/html_entities.gperf"
       {"npr", { 0xE2, 0x8A, 0x80 }, 3},
-#line 2061 "src/_html_entities.gperf"
+#line 2061 "data/html_entities.gperf"
       {"not", { 0xC2, 0xAC }, 2},
-#line 1174 "src/_html_entities.gperf"
+#line 1174 "data/html_entities.gperf"
       {"bot", { 0xE2, 0x8A, 0xA5 }, 3},
-#line 1073 "src/_html_entities.gperf"
+#line 1073 "data/html_entities.gperf"
       {"rarr", { 0xE2, 0x86, 0x92 }, 3},
-#line 865 "src/_html_entities.gperf"
+#line 865 "data/html_entities.gperf"
       {"larr", { 0xE2, 0x86, 0x90 }, 3},
-#line 951 "src/_html_entities.gperf"
+#line 951 "data/html_entities.gperf"
       {"nLt", { 0xE2, 0x89, 0xAA, 0xE2, 0x83, 0x92 }, 6},
-#line 957 "src/_html_entities.gperf"
+#line 957 "data/html_entities.gperf"
       {"uarr", { 0xE2, 0x86, 0x91 }, 3},
-#line 259 "src/_html_entities.gperf"
+#line 259 "data/html_entities.gperf"
       {"rpar", { 0x29 }, 1},
-#line 468 "src/_html_entities.gperf"
+#line 468 "data/html_entities.gperf"
       {"lpar", { 0x28 }, 1},
-#line 1122 "src/_html_entities.gperf"
+#line 1122 "data/html_entities.gperf"
       {"spar", { 0xE2, 0x88, 0xA5 }, 3},
-#line 1647 "src/_html_entities.gperf"
+#line 1647 "data/html_entities.gperf"
       {"epar", { 0xE2, 0x8B, 0x95 }, 3},
-#line 1532 "src/_html_entities.gperf"
+#line 1532 "data/html_entities.gperf"
       {"ll", { 0xE2, 0x89, 0xAA }, 3},
-#line 934 "src/_html_entities.gperf"
+#line 934 "data/html_entities.gperf"
       {"el", { 0xE2, 0xAA, 0x99 }, 3},
-#line 860 "src/_html_entities.gperf"
+#line 860 "data/html_entities.gperf"
       {"npar", { 0xE2, 0x88, 0xA6 }, 3},
-#line 638 "src/_html_entities.gperf"
+#line 638 "data/html_entities.gperf"
       {"roarr", { 0xE2, 0x87, 0xBE }, 3},
-#line 125 "src/_html_entities.gperf"
+#line 125 "data/html_entities.gperf"
       {"loarr", { 0xE2, 0x87, 0xBD }, 3},
-#line 2095 "src/_html_entities.gperf"
+#line 2095 "data/html_entities.gperf"
       {"par", { 0xE2, 0x88, 0xA5 }, 3},
-#line 1795 "src/_html_entities.gperf"
+#line 1795 "data/html_entities.gperf"
       {"els", { 0xE2, 0xAA, 0x95 }, 3},
-#line 153 "src/_html_entities.gperf"
+#line 153 "data/html_entities.gperf"
       {"uharr", { 0xE2, 0x86, 0xBE }, 3},
-#line 1546 "src/_html_entities.gperf"
+#line 1546 "data/html_entities.gperf"
       {"Pr", { 0xE2, 0xAA, 0xBB }, 3},
-#line 1931 "src/_html_entities.gperf"
+#line 1931 "data/html_entities.gperf"
       {"nharr", { 0xE2, 0x86, 0xAE }, 3},
-#line 647 "src/_html_entities.gperf"
+#line 647 "data/html_entities.gperf"
       {"Hat", { 0x5E }, 1},
-#line 744 "src/_html_entities.gperf"
+#line 744 "data/html_entities.gperf"
       {"tprime", { 0xE2, 0x80, 0xB4 }, 3},
-#line 1331 "src/_html_entities.gperf"
+#line 1331 "data/html_entities.gperf"
       {"rarrtl", { 0xE2, 0x86, 0xA3 }, 3},
-#line 2028 "src/_html_entities.gperf"
+#line 2028 "data/html_entities.gperf"
       {"npart", { 0xE2, 0x88, 0x82, 0xCC, 0xB8 }, 5},
-#line 45 "src/_html_entities.gperf"
+#line 45 "data/html_entities.gperf"
       {"larrtl", { 0xE2, 0x86, 0xA2 }, 3},
-#line 1088 "src/_html_entities.gperf"
+#line 1088 "data/html_entities.gperf"
       {"nlt", { 0xE2, 0x89, 0xAE }, 3},
-#line 1559 "src/_html_entities.gperf"
+#line 1559 "data/html_entities.gperf"
       {"eparsl", { 0xE2, 0xA7, 0xA3 }, 3},
-#line 63 "src/_html_entities.gperf"
+#line 63 "data/html_entities.gperf"
       {"ensp", { 0xE2, 0x80, 0x82 }, 3},
-#line 871 "src/_html_entities.gperf"
+#line 871 "data/html_entities.gperf"
       {"tau", { 0xCF, 0x84 }, 2},
-#line 2120 "src/_html_entities.gperf"
+#line 2120 "data/html_entities.gperf"
       {"bprime", { 0xE2, 0x80, 0xB5 }, 3},
-#line 319 "src/_html_entities.gperf"
+#line 319 "data/html_entities.gperf"
       {"nparsl", { 0xE2, 0xAB, 0xBD, 0xE2, 0x83, 0xA5 }, 6},
-#line 1225 "src/_html_entities.gperf"
+#line 1225 "data/html_entities.gperf"
       {"squ", { 0xE2, 0x96, 0xA1 }, 3},
-#line 1648 "src/_html_entities.gperf"
+#line 1648 "data/html_entities.gperf"
       {"lnap", { 0xE2, 0xAA, 0x89 }, 3},
-#line 1370 "src/_html_entities.gperf"
+#line 1370 "data/html_entities.gperf"
       {"nldr", { 0xE2, 0x80, 0xA5 }, 3},
-#line 628 "src/_html_entities.gperf"
+#line 628 "data/html_entities.gperf"
       {"rotimes", { 0xE2, 0xA8, 0xB5 }, 3},
-#line 1799 "src/_html_entities.gperf"
+#line 1799 "data/html_entities.gperf"
       {"lotimes", { 0xE2, 0xA8, 0xB4 }, 3},
-#line 1497 "src/_html_entities.gperf"
+#line 1497 "data/html_entities.gperf"
       {"varr", { 0xE2, 0x86, 0x95 }, 3},
-#line 1712 "src/_html_entities.gperf"
+#line 1712 "data/html_entities.gperf"
       {"blk14", { 0xE2, 0x96, 0x91 }, 3},
-#line 481 "src/_html_entities.gperf"
+#line 481 "data/html_entities.gperf"
       {"blk34", { 0xE2, 0x96, 0x93 }, 3},
-#line 1731 "src/_html_entities.gperf"
+#line 1731 "data/html_entities.gperf"
       {"Int", { 0xE2, 0x88, 0xAC }, 3},
-#line 2074 "src/_html_entities.gperf"
+#line 2074 "data/html_entities.gperf"
       {"lne", { 0xE2, 0xAA, 0x87 }, 3},
-#line 1631 "src/_html_entities.gperf"
+#line 1631 "data/html_entities.gperf"
       {"pr", { 0xE2, 0x89, 0xBA }, 3},
-#line 987 "src/_html_entities.gperf"
+#line 987 "data/html_entities.gperf"
       {"rlarr", { 0xE2, 0x87, 0x84 }, 3},
-#line 22 "src/_html_entities.gperf"
+#line 22 "data/html_entities.gperf"
       {"llarr", { 0xE2, 0x87, 0x87 }, 3},
-#line 842 "src/_html_entities.gperf"
+#line 842 "data/html_entities.gperf"
       {"slarr", { 0xE2, 0x86, 0x90 }, 3},
-#line 944 "src/_html_entities.gperf"
+#line 944 "data/html_entities.gperf"
       {"nparallel", { 0xE2, 0x88, 0xA6 }, 3},
-#line 100 "src/_html_entities.gperf"
+#line 100 "data/html_entities.gperf"
       {"nGt", { 0xE2, 0x89, 0xAB, 0xE2, 0x83, 0x92 }, 6},
-#line 948 "src/_html_entities.gperf"
+#line 948 "data/html_entities.gperf"
       {"bne", { 0x3D, 0xE2, 0x83, 0xA5 }, 4},
-#line 580 "src/_html_entities.gperf"
+#line 580 "data/html_entities.gperf"
       {"nlarr", { 0xE2, 0x86, 0x9A }, 3},
-#line 523 "src/_html_entities.gperf"
+#line 523 "data/html_entities.gperf"
       {"blk12", { 0xE2, 0x96, 0x92 }, 3},
-#line 496 "src/_html_entities.gperf"
+#line 496 "data/html_entities.gperf"
       {"rrarr", { 0xE2, 0x87, 0x89 }, 3},
-#line 915 "src/_html_entities.gperf"
+#line 915 "data/html_entities.gperf"
       {"lrarr", { 0xE2, 0x87, 0x86 }, 3},
-#line 1526 "src/_html_entities.gperf"
+#line 1526 "data/html_entities.gperf"
       {"srarr", { 0xE2, 0x86, 0x92 }, 3},
-#line 1666 "src/_html_entities.gperf"
+#line 1666 "data/html_entities.gperf"
       {"erarr", { 0xE2, 0xA5, 0xB1 }, 3},
-#line 1667 "src/_html_entities.gperf"
+#line 1667 "data/html_entities.gperf"
       {"rharu", { 0xE2, 0x87, 0x80 }, 3},
-#line 1019 "src/_html_entities.gperf"
+#line 1019 "data/html_entities.gperf"
       {"lharu", { 0xE2, 0x86, 0xBC }, 3},
-#line 2118 "src/_html_entities.gperf"
+#line 2118 "data/html_entities.gperf"
       {"nrarr", { 0xE2, 0x86, 0x9B }, 3},
-#line 256 "src/_html_entities.gperf"
+#line 256 "data/html_entities.gperf"
       {"rharul", { 0xE2, 0xA5, 0xAC }, 3},
-#line 364 "src/_html_entities.gperf"
+#line 364 "data/html_entities.gperf"
       {"lharul", { 0xE2, 0xA5, 0xAA }, 3},
-#line 885 "src/_html_entities.gperf"
+#line 885 "data/html_entities.gperf"
       {"Not", { 0xE2, 0xAB, 0xAC }, 3},
-#line 69 "src/_html_entities.gperf"
+#line 69 "data/html_entities.gperf"
       {"Larr", { 0xE2, 0x86, 0x9E }, 3},
-#line 592 "src/_html_entities.gperf"
+#line 592 "data/html_entities.gperf"
       {"Rarr", { 0xE2, 0x86, 0xA0 }, 3},
-#line 281 "src/_html_entities.gperf"
+#line 281 "data/html_entities.gperf"
       {"rbarr", { 0xE2, 0xA4, 0x8D }, 3},
-#line 1689 "src/_html_entities.gperf"
+#line 1689 "data/html_entities.gperf"
       {"rHar", { 0xE2, 0xA5, 0xA4 }, 3},
-#line 1402 "src/_html_entities.gperf"
+#line 1402 "data/html_entities.gperf"
       {"lbarr", { 0xE2, 0xA4, 0x8C }, 3},
-#line 1953 "src/_html_entities.gperf"
+#line 1953 "data/html_entities.gperf"
       {"lHar", { 0xE2, 0xA5, 0xA2 }, 3},
-#line 359 "src/_html_entities.gperf"
+#line 359 "data/html_entities.gperf"
       {"smt", { 0xE2, 0xAA, 0xAA }, 3},
-#line 763 "src/_html_entities.gperf"
+#line 763 "data/html_entities.gperf"
       {"Ll", { 0xE2, 0x8B, 0x98 }, 3},
-#line 1877 "src/_html_entities.gperf"
+#line 1877 "data/html_entities.gperf"
       {"uHar", { 0xE2, 0xA5, 0xA3 }, 3},
-#line 487 "src/_html_entities.gperf"
+#line 487 "data/html_entities.gperf"
       {"Vbar", { 0xE2, 0xAB, 0xAB }, 3},
-#line 954 "src/_html_entities.gperf"
+#line 954 "data/html_entities.gperf"
       {"nle", { 0xE2, 0x89, 0xB0 }, 3},
-#line 1043 "src/_html_entities.gperf"
+#line 1043 "data/html_entities.gperf"
       {"upuparrows", { 0xE2, 0x87, 0x88 }, 3},
-#line 208 "src/_html_entities.gperf"
+#line 208 "data/html_entities.gperf"
       {"rarrap", { 0xE2, 0xA5, 0xB5 }, 3},
-#line 173 "src/_html_entities.gperf"
+#line 173 "data/html_entities.gperf"
       {"phmmat", { 0xE2, 0x84, 0xB3 }, 3},
-#line 1348 "src/_html_entities.gperf"
+#line 1348 "data/html_entities.gperf"
       {"nbsp", { 0xC2, 0xA0 }, 2},
-#line 1337 "src/_html_entities.gperf"
+#line 1337 "data/html_entities.gperf"
       {"AMP", { 0x26 }, 1},
-#line 1513 "src/_html_entities.gperf"
+#line 1513 "data/html_entities.gperf"
       {"Rarrtl", { 0xE2, 0xA4, 0x96 }, 3},
-#line 327 "src/_html_entities.gperf"
+#line 327 "data/html_entities.gperf"
       {"rbrkslu", { 0xE2, 0xA6, 0x90 }, 3},
-#line 343 "src/_html_entities.gperf"
+#line 343 "data/html_entities.gperf"
       {"lbrkslu", { 0xE2, 0xA6, 0x8D }, 3},
-#line 1187 "src/_html_entities.gperf"
+#line 1187 "data/html_entities.gperf"
       {"napos", { 0xC5, 0x89 }, 2},
-#line 1553 "src/_html_entities.gperf"
+#line 1553 "data/html_entities.gperf"
       {"top", { 0xE2, 0x8A, 0xA4 }, 3},
-#line 2033 "src/_html_entities.gperf"
+#line 2033 "data/html_entities.gperf"
       {"lap", { 0xE2, 0xAA, 0x85 }, 3},
-#line 1780 "src/_html_entities.gperf"
+#line 1780 "data/html_entities.gperf"
       {"prap", { 0xE2, 0xAA, 0xB7 }, 3},
-#line 1897 "src/_html_entities.gperf"
+#line 1897 "data/html_entities.gperf"
       {"rarrpl", { 0xE2, 0xA5, 0x85 }, 3},
-#line 1181 "src/_html_entities.gperf"
+#line 1181 "data/html_entities.gperf"
       {"emsp14", { 0xE2, 0x80, 0x85 }, 3},
-#line 74 "src/_html_entities.gperf"
+#line 74 "data/html_entities.gperf"
       {"larrpl", { 0xE2, 0xA4, 0xB9 }, 3},
-#line 1441 "src/_html_entities.gperf"
+#line 1441 "data/html_entities.gperf"
       {"nap", { 0xE2, 0x89, 0x89 }, 3},
-#line 1478 "src/_html_entities.gperf"
+#line 1478 "data/html_entities.gperf"
       {"qprime", { 0xE2, 0x81, 0x97 }, 3},
-#line 1888 "src/_html_entities.gperf"
+#line 1888 "data/html_entities.gperf"
       {"Uarr", { 0xE2, 0x86, 0x9F }, 3},
-#line 1817 "src/_html_entities.gperf"
+#line 1817 "data/html_entities.gperf"
       {"emsp", { 0xE2, 0x80, 0x83 }, 3},
-#line 609 "src/_html_entities.gperf"
+#line 609 "data/html_entities.gperf"
       {"pre", { 0xE2, 0xAA, 0xAF }, 3},
-#line 1256 "src/_html_entities.gperf"
+#line 1256 "data/html_entities.gperf"
       {"rBarr", { 0xE2, 0xA4, 0x8F }, 3},
-#line 268 "src/_html_entities.gperf"
+#line 268 "data/html_entities.gperf"
       {"lBarr", { 0xE2, 0xA4, 0x8E }, 3},
-#line 1634 "src/_html_entities.gperf"
+#line 1634 "data/html_entities.gperf"
       {"emsp13", { 0xE2, 0x80, 0x84 }, 3},
-#line 1501 "src/_html_entities.gperf"
+#line 1501 "data/html_entities.gperf"
       {"nprcue", { 0xE2, 0x8B, 0xA0 }, 3},
-#line 919 "src/_html_entities.gperf"
+#line 919 "data/html_entities.gperf"
       {"prop", { 0xE2, 0x88, 0x9D }, 3},
-#line 1946 "src/_html_entities.gperf"
+#line 1946 "data/html_entities.gperf"
       {"le", { 0xE2, 0x89, 0xA4 }, 3},
-#line 1379 "src/_html_entities.gperf"
+#line 1379 "data/html_entities.gperf"
       {"rbrke", { 0xE2, 0xA6, 0x8C }, 3},
-#line 1720 "src/_html_entities.gperf"
+#line 1720 "data/html_entities.gperf"
       {"ee", { 0xE2, 0x85, 0x87 }, 3},
-#line 1524 "src/_html_entities.gperf"
+#line 1524 "data/html_entities.gperf"
       {"lbrke", { 0xE2, 0xA6, 0x8B }, 3},
-#line 538 "src/_html_entities.gperf"
+#line 538 "data/html_entities.gperf"
       {"nles", { 0xE2, 0xA9, 0xBD, 0xCC, 0xB8 }, 5},
-#line 1785 "src/_html_entities.gperf"
+#line 1785 "data/html_entities.gperf"
       {"in", { 0xE2, 0x88, 0x88 }, 3},
-#line 1465 "src/_html_entities.gperf"
+#line 1465 "data/html_entities.gperf"
       {"topbot", { 0xE2, 0x8C, 0xB6 }, 3},
-#line 1646 "src/_html_entities.gperf"
+#line 1646 "data/html_entities.gperf"
       {"sharp", { 0xE2, 0x99, 0xAF }, 3},
-#line 1107 "src/_html_entities.gperf"
+#line 1107 "data/html_entities.gperf"
       {"ne", { 0xE2, 0x89, 0xA0 }, 3},
-#line 1242 "src/_html_entities.gperf"
+#line 1242 "data/html_entities.gperf"
       {"there4", { 0xE2, 0x88, 0xB4 }, 3},
-#line 235 "src/_html_entities.gperf"
+#line 235 "data/html_entities.gperf"
       {"plus", { 0x2B }, 1},
-#line 1519 "src/_html_entities.gperf"
+#line 1519 "data/html_entities.gperf"
       {"les", { 0xE2, 0xA9, 0xBD }, 3},
-#line 597 "src/_html_entities.gperf"
+#line 597 "data/html_entities.gperf"
       {"lneq", { 0xE2, 0xAA, 0x87 }, 3},
-#line 1382 "src/_html_entities.gperf"
+#line 1382 "data/html_entities.gperf"
       {"int", { 0xE2, 0x88, 0xAB }, 3},
-#line 1624 "src/_html_entities.gperf"
+#line 1624 "data/html_entities.gperf"
       {"nless", { 0xE2, 0x89, 0xAE }, 3},
-#line 310 "src/_html_entities.gperf"
+#line 310 "data/html_entities.gperf"
       {"looparrowleft", { 0xE2, 0x86, 0xAB }, 3},
-#line 2040 "src/_html_entities.gperf"
+#line 2040 "data/html_entities.gperf"
       {"vBar", { 0xE2, 0xAB, 0xA8 }, 3},
-#line 657 "src/_html_entities.gperf"
+#line 657 "data/html_entities.gperf"
       {"Tau", { 0xCE, 0xA4 }, 2},
-#line 1269 "src/_html_entities.gperf"
+#line 1269 "data/html_entities.gperf"
       {"epsi", { 0xCE, 0xB5 }, 2},
-#line 1639 "src/_html_entities.gperf"
+#line 1639 "data/html_entities.gperf"
       {"lneqq", { 0xE2, 0x89, 0xA8 }, 3},
-#line 1227 "src/_html_entities.gperf"
+#line 1227 "data/html_entities.gperf"
       {"upsi", { 0xCF, 0x85 }, 2},
-#line 1385 "src/_html_entities.gperf"
+#line 1385 "data/html_entities.gperf"
       {"Proportion", { 0xE2, 0x88, 0xB7 }, 3},
-#line 1004 "src/_html_entities.gperf"
+#line 1004 "data/html_entities.gperf"
       {"blacktriangle", { 0xE2, 0x96, 0xB4 }, 3},
-#line 1110 "src/_html_entities.gperf"
+#line 1110 "data/html_entities.gperf"
       {"blacktriangleleft", { 0xE2, 0x97, 0x82 }, 3},
-#line 1329 "src/_html_entities.gperf"
+#line 1329 "data/html_entities.gperf"
       {"blacktriangleright", { 0xE2, 0x96, 0xB8 }, 3},
-#line 814 "src/_html_entities.gperf"
+#line 814 "data/html_entities.gperf"
       {"emacr", { 0xC4, 0x93 }, 2},
-#line 782 "src/_html_entities.gperf"
+#line 782 "data/html_entities.gperf"
       {"Proportional", { 0xE2, 0x88, 0x9D }, 3},
-#line 912 "src/_html_entities.gperf"
+#line 912 "data/html_entities.gperf"
       {"umacr", { 0xC5, 0xAB }, 2},
-#line 297 "src/_html_entities.gperf"
+#line 297 "data/html_entities.gperf"
       {"vprop", { 0xE2, 0x88, 0x9D }, 3},
-#line 781 "src/_html_entities.gperf"
+#line 781 "data/html_entities.gperf"
       {"blacktriangledown", { 0xE2, 0x96, 0xBE }, 3},
-#line 822 "src/_html_entities.gperf"
+#line 822 "data/html_entities.gperf"
       {"plusdu", { 0xE2, 0xA8, 0xA5 }, 3},
-#line 2069 "src/_html_entities.gperf"
+#line 2069 "data/html_entities.gperf"
       {"nedot", { 0xE2, 0x89, 0x90, 0xCC, 0xB8 }, 5},
-#line 1254 "src/_html_entities.gperf"
+#line 1254 "data/html_entities.gperf"
       {"searr", { 0xE2, 0x86, 0x98 }, 3},
-#line 606 "src/_html_entities.gperf"
+#line 606 "data/html_entities.gperf"
       {"NotSubset", { 0xE2, 0x8A, 0x82, 0xE2, 0x83, 0x92 }, 6},
-#line 1000 "src/_html_entities.gperf"
+#line 1000 "data/html_entities.gperf"
       {"dot", { 0xCB, 0x99 }, 2},
-#line 1141 "src/_html_entities.gperf"
+#line 1141 "data/html_entities.gperf"
       {"plusmn", { 0xC2, 0xB1 }, 2},
-#line 260 "src/_html_entities.gperf"
+#line 260 "data/html_entities.gperf"
       {"nearr", { 0xE2, 0x86, 0x97 }, 3},
-#line 858 "src/_html_entities.gperf"
+#line 858 "data/html_entities.gperf"
       {"nleq", { 0xE2, 0x89, 0xB0 }, 3},
-#line 1942 "src/_html_entities.gperf"
+#line 1942 "data/html_entities.gperf"
       {"frac34", { 0xC2, 0xBE }, 2},
-#line 106 "src/_html_entities.gperf"
+#line 106 "data/html_entities.gperf"
       {"LT", { 0x3C }, 1},
-#line 397 "src/_html_entities.gperf"
+#line 397 "data/html_entities.gperf"
       {"frac56", { 0xE2, 0x85, 0x9A }, 3},
-#line 266 "src/_html_entities.gperf"
+#line 266 "data/html_entities.gperf"
       {"smeparsl", { 0xE2, 0xA7, 0xA4 }, 3},
-#line 526 "src/_html_entities.gperf"
+#line 526 "data/html_entities.gperf"
       {"frac35", { 0xE2, 0x85, 0x97 }, 3},
-#line 1934 "src/_html_entities.gperf"
+#line 1934 "data/html_entities.gperf"
       {"Dot", { 0xC2, 0xA8 }, 2},
-#line 1309 "src/_html_entities.gperf"
+#line 1309 "data/html_entities.gperf"
       {"frac45", { 0xE2, 0x85, 0x98 }, 3},
-#line 2104 "src/_html_entities.gperf"
+#line 2104 "data/html_entities.gperf"
       {"darr", { 0xE2, 0x86, 0x93 }, 3},
-#line 1904 "src/_html_entities.gperf"
+#line 1904 "data/html_entities.gperf"
       {"frac14", { 0xC2, 0xBC }, 2},
-#line 79 "src/_html_entities.gperf"
+#line 79 "data/html_entities.gperf"
       {"frac16", { 0xE2, 0x85, 0x99 }, 3},
-#line 1734 "src/_html_entities.gperf"
+#line 1734 "data/html_entities.gperf"
       {"Map", { 0xE2, 0xA4, 0x85 }, 3},
-#line 649 "src/_html_entities.gperf"
+#line 649 "data/html_entities.gperf"
       {"fltns", { 0xE2, 0x96, 0xB1 }, 3},
-#line 659 "src/_html_entities.gperf"
+#line 659 "data/html_entities.gperf"
       {"nleqq", { 0xE2, 0x89, 0xA6, 0xCC, 0xB8 }, 5},
-#line 1763 "src/_html_entities.gperf"
+#line 1763 "data/html_entities.gperf"
       {"frac15", { 0xE2, 0x85, 0x95 }, 3},
-#line 1554 "src/_html_entities.gperf"
+#line 1554 "data/html_entities.gperf"
       {"frac25", { 0xE2, 0x85, 0x96 }, 3},
-#line 943 "src/_html_entities.gperf"
+#line 943 "data/html_entities.gperf"
       {"prurel", { 0xE2, 0x8A, 0xB0 }, 3},
-#line 500 "src/_html_entities.gperf"
+#line 500 "data/html_entities.gperf"
       {"RBarr", { 0xE2, 0xA4, 0x90 }, 3},
-#line 784 "src/_html_entities.gperf"
+#line 784 "data/html_entities.gperf"
       {"Verbar", { 0xE2, 0x80, 0x96 }, 3},
-#line 1315 "src/_html_entities.gperf"
+#line 1315 "data/html_entities.gperf"
       {"Darr", { 0xE2, 0x86, 0xA1 }, 3},
-#line 1787 "src/_html_entities.gperf"
+#line 1787 "data/html_entities.gperf"
       {"rnmid", { 0xE2, 0xAB, 0xAE }, 3},
-#line 789 "src/_html_entities.gperf"
+#line 789 "data/html_entities.gperf"
       {"nhArr", { 0xE2, 0x87, 0x8E }, 3},
-#line 710 "src/_html_entities.gperf"
+#line 710 "data/html_entities.gperf"
       {"frac12", { 0xC2, 0xBD }, 2},
-#line 565 "src/_html_entities.gperf"
+#line 565 "data/html_entities.gperf"
       {"frac13", { 0xE2, 0x85, 0x93 }, 3},
-#line 1903 "src/_html_entities.gperf"
+#line 1903 "data/html_entities.gperf"
       {"frac23", { 0xE2, 0x85, 0x94 }, 3},
-#line 38 "src/_html_entities.gperf"
+#line 38 "data/html_entities.gperf"
       {"dharr", { 0xE2, 0x87, 0x82 }, 3},
-#line 1535 "src/_html_entities.gperf"
+#line 1535 "data/html_entities.gperf"
       {"rhard", { 0xE2, 0x87, 0x81 }, 3},
-#line 890 "src/_html_entities.gperf"
+#line 890 "data/html_entities.gperf"
       {"lhard", { 0xE2, 0x86, 0xBD }, 3},
-#line 551 "src/_html_entities.gperf"
+#line 551 "data/html_entities.gperf"
       {"Re", { 0xE2, 0x84, 0x9C }, 3},
-#line 61 "src/_html_entities.gperf"
+#line 61 "data/html_entities.gperf"
       {"frac38", { 0xE2, 0x85, 0x9C }, 3},
-#line 401 "src/_html_entities.gperf"
+#line 401 "data/html_entities.gperf"
       {"frac58", { 0xE2, 0x85, 0x9D }, 3},
-#line 540 "src/_html_entities.gperf"
+#line 540 "data/html_entities.gperf"
       {"NotSuperset", { 0xE2, 0x8A, 0x83, 0xE2, 0x83, 0x92 }, 6},
-#line 1523 "src/_html_entities.gperf"
+#line 1523 "data/html_entities.gperf"
       {"pluse", { 0xE2, 0xA9, 0xB2 }, 3},
-#line 1600 "src/_html_entities.gperf"
+#line 1600 "data/html_entities.gperf"
       {"frac18", { 0xE2, 0x85, 0x9B }, 3},
-#line 1063 "src/_html_entities.gperf"
+#line 1063 "data/html_entities.gperf"
       {"perp", { 0xE2, 0x8A, 0xA5 }, 3},
-#line 980 "src/_html_entities.gperf"
+#line 980 "data/html_entities.gperf"
       {"Vee", { 0xE2, 0x8B, 0x81 }, 3},
-#line 1872 "src/_html_entities.gperf"
+#line 1872 "data/html_entities.gperf"
       {"Imacr", { 0xC4, 0xAA }, 2},
-#line 716 "src/_html_entities.gperf"
+#line 716 "data/html_entities.gperf"
       {"phone", { 0xE2, 0x98, 0x8E }, 3},
-#line 936 "src/_html_entities.gperf"
+#line 936 "data/html_entities.gperf"
       {"verbar", { 0x7C }, 1},
-#line 1022 "src/_html_entities.gperf"
+#line 1022 "data/html_entities.gperf"
       {"frac78", { 0xE2, 0x85, 0x9E }, 3},
-#line 1209 "src/_html_entities.gperf"
+#line 1209 "data/html_entities.gperf"
       {"leq", { 0xE2, 0x89, 0xA4 }, 3},
-#line 920 "src/_html_entities.gperf"
+#line 920 "data/html_entities.gperf"
       {"nlArr", { 0xE2, 0x87, 0x8D }, 3},
-#line 642 "src/_html_entities.gperf"
+#line 642 "data/html_entities.gperf"
       {"blacksquare", { 0xE2, 0x96, 0xAA }, 3},
-#line 530 "src/_html_entities.gperf"
+#line 530 "data/html_entities.gperf"
       {"Amacr", { 0xC4, 0x80 }, 2},
-#line 1480 "src/_html_entities.gperf"
+#line 1480 "data/html_entities.gperf"
       {"leqq", { 0xE2, 0x89, 0xA6 }, 3},
-#line 972 "src/_html_entities.gperf"
+#line 972 "data/html_entities.gperf"
       {"nrArr", { 0xE2, 0x87, 0x8F }, 3},
-#line 610 "src/_html_entities.gperf"
+#line 610 "data/html_entities.gperf"
       {"intcal", { 0xE2, 0x8A, 0xBA }, 3},
-#line 644 "src/_html_entities.gperf"
+#line 644 "data/html_entities.gperf"
       {"vee", { 0xE2, 0x88, 0xA8 }, 3},
-#line 524 "src/_html_entities.gperf"
+#line 524 "data/html_entities.gperf"
       {"nbumpe", { 0xE2, 0x89, 0x8F, 0xCC, 0xB8 }, 5},
-#line 1007 "src/_html_entities.gperf"
+#line 1007 "data/html_entities.gperf"
       {"And", { 0xE2, 0xA9, 0x93 }, 3},
-#line 1440 "src/_html_entities.gperf"
+#line 1440 "data/html_entities.gperf"
       {"ulcorn", { 0xE2, 0x8C, 0x9C }, 3},
-#line 316 "src/_html_entities.gperf"
+#line 316 "data/html_entities.gperf"
       {"square", { 0xE2, 0x96, 0xA1 }, 3},
-#line 1630 "src/_html_entities.gperf"
+#line 1630 "data/html_entities.gperf"
       {"llcorner", { 0xE2, 0x8C, 0x9E }, 3},
-#line 1332 "src/_html_entities.gperf"
+#line 1332 "data/html_entities.gperf"
       {"ulcorner", { 0xE2, 0x8C, 0x9C }, 3},
-#line 1082 "src/_html_entities.gperf"
+#line 1082 "data/html_entities.gperf"
       {"plankv", { 0xE2, 0x84, 0x8F }, 3},
-#line 1596 "src/_html_entities.gperf"
+#line 1596 "data/html_entities.gperf"
       {"squf", { 0xE2, 0x96, 0xAA }, 3},
-#line 216 "src/_html_entities.gperf"
+#line 216 "data/html_entities.gperf"
       {"urcorn", { 0xE2, 0x8C, 0x9D }, 3},
-#line 1577 "src/_html_entities.gperf"
+#line 1577 "data/html_entities.gperf"
       {"lrcorner", { 0xE2, 0x8C, 0x9F }, 3},
-#line 1885 "src/_html_entities.gperf"
+#line 1885 "data/html_entities.gperf"
       {"fpartint", { 0xE2, 0xA8, 0x8D }, 3},
-#line 1444 "src/_html_entities.gperf"
+#line 1444 "data/html_entities.gperf"
       {"urcorner", { 0xE2, 0x8C, 0x9D }, 3},
-#line 1818 "src/_html_entities.gperf"
+#line 1818 "data/html_entities.gperf"
       {"dHar", { 0xE2, 0xA5, 0xA5 }, 3},
-#line 1018 "src/_html_entities.gperf"
+#line 1018 "data/html_entities.gperf"
       {"nbump", { 0xE2, 0x89, 0x8E, 0xCC, 0xB8 }, 5},
-#line 1490 "src/_html_entities.gperf"
+#line 1490 "data/html_entities.gperf"
       {"Upsi", { 0xCF, 0x92 }, 2},
-#line 8 "src/_html_entities.gperf"
+#line 8 "data/html_entities.gperf"
       {"Square", { 0xE2, 0x96, 0xA1 }, 3},
-#line 590 "src/_html_entities.gperf"
+#line 590 "data/html_entities.gperf"
       {"Umacr", { 0xC5, 0xAA }, 2},
-#line 128 "src/_html_entities.gperf"
+#line 128 "data/html_entities.gperf"
       {"veebar", { 0xE2, 0x8A, 0xBB }, 3},
-#line 408 "src/_html_entities.gperf"
+#line 408 "data/html_entities.gperf"
       {"ropar", { 0xE2, 0xA6, 0x86 }, 3},
-#line 2057 "src/_html_entities.gperf"
+#line 2057 "data/html_entities.gperf"
       {"lopar", { 0xE2, 0xA6, 0x85 }, 3},
-#line 505 "src/_html_entities.gperf"
+#line 505 "data/html_entities.gperf"
       {"NotNestedLessLess", { 0xE2, 0xAA, 0xA1, 0xCC, 0xB8 }, 5},
-#line 1607 "src/_html_entities.gperf"
+#line 1607 "data/html_entities.gperf"
       {"QUOT", { 0x22 }, 1},
-#line 67 "src/_html_entities.gperf"
+#line 67 "data/html_entities.gperf"
       {"nhpar", { 0xE2, 0xAB, 0xB2 }, 3},
-#line 869 "src/_html_entities.gperf"
+#line 869 "data/html_entities.gperf"
       {"napid", { 0xE2, 0x89, 0x8B, 0xCC, 0xB8 }, 5},
-#line 1935 "src/_html_entities.gperf"
+#line 1935 "data/html_entities.gperf"
       {"swarr", { 0xE2, 0x86, 0x99 }, 3},
-#line 2011 "src/_html_entities.gperf"
+#line 2011 "data/html_entities.gperf"
       {"sol", { 0x2F }, 1},
-#line 718 "src/_html_entities.gperf"
+#line 718 "data/html_entities.gperf"
       {"nwarr", { 0xE2, 0x86, 0x96 }, 3},
-#line 692 "src/_html_entities.gperf"
+#line 692 "data/html_entities.gperf"
       {"nis", { 0xE2, 0x8B, 0xBC }, 3},
-#line 148 "src/_html_entities.gperf"
+#line 148 "data/html_entities.gperf"
       {"ropf", { 0xF0, 0x9D, 0x95, 0xA3 }, 4},
-#line 625 "src/_html_entities.gperf"
+#line 625 "data/html_entities.gperf"
       {"topf", { 0xF0, 0x9D, 0x95, 0xA5 }, 4},
-#line 1743 "src/_html_entities.gperf"
+#line 1743 "data/html_entities.gperf"
       {"lopf", { 0xF0, 0x9D, 0x95, 0x9D }, 4},
-#line 1234 "src/_html_entities.gperf"
+#line 1234 "data/html_entities.gperf"
       {"sopf", { 0xF0, 0x9D, 0x95, 0xA4 }, 4},
-#line 1819 "src/_html_entities.gperf"
+#line 1819 "data/html_entities.gperf"
       {"eopf", { 0xF0, 0x9D, 0x95, 0x96 }, 4},
-#line 600 "src/_html_entities.gperf"
+#line 600 "data/html_entities.gperf"
       {"fnof", { 0xC6, 0x92 }, 2},
-#line 1861 "src/_html_entities.gperf"
+#line 1861 "data/html_entities.gperf"
       {"uopf", { 0xF0, 0x9D, 0x95, 0xA6 }, 4},
-#line 1597 "src/_html_entities.gperf"
+#line 1597 "data/html_entities.gperf"
       {"nLl", { 0xE2, 0x8B, 0x98, 0xCC, 0xB8 }, 5},
-#line 1341 "src/_html_entities.gperf"
+#line 1341 "data/html_entities.gperf"
       {"nopf", { 0xF0, 0x9D, 0x95, 0x9F }, 4},
-#line 950 "src/_html_entities.gperf"
+#line 950 "data/html_entities.gperf"
       {"bernou", { 0xE2, 0x84, 0xAC }, 3},
-#line 620 "src/_html_entities.gperf"
+#line 620 "data/html_entities.gperf"
       {"Popf", { 0xE2, 0x84, 0x99 }, 3},
-#line 1750 "src/_html_entities.gperf"
+#line 1750 "data/html_entities.gperf"
       {"bopf", { 0xF0, 0x9D, 0x95, 0x93 }, 4},
-#line 108 "src/_html_entities.gperf"
+#line 108 "data/html_entities.gperf"
       {"Zopf", { 0xE2, 0x84, 0xA4 }, 3},
-#line 678 "src/_html_entities.gperf"
+#line 678 "data/html_entities.gperf"
       {"thkap", { 0xE2, 0x89, 0x88 }, 3},
-#line 726 "src/_html_entities.gperf"
+#line 726 "data/html_entities.gperf"
       {"solb", { 0xE2, 0xA7, 0x84 }, 3},
-#line 1629 "src/_html_entities.gperf"
+#line 1629 "data/html_entities.gperf"
       {"semi", { 0x3B }, 1},
-#line 896 "src/_html_entities.gperf"
+#line 896 "data/html_entities.gperf"
       {"mp", { 0xE2, 0x88, 0x93 }, 3},
-#line 1155 "src/_html_entities.gperf"
+#line 1155 "data/html_entities.gperf"
       {"Qopf", { 0xE2, 0x84, 0x9A }, 3},
-#line 1585 "src/_html_entities.gperf"
+#line 1585 "data/html_entities.gperf"
       {"Xopf", { 0xF0, 0x9D, 0x95, 0x8F }, 4},
-#line 870 "src/_html_entities.gperf"
+#line 870 "data/html_entities.gperf"
       {"Vopf", { 0xF0, 0x9D, 0x95, 0x8D }, 4},
-#line 573 "src/_html_entities.gperf"
+#line 573 "data/html_entities.gperf"
       {"imacr", { 0xC4, 0xAB }, 2},
-#line 344 "src/_html_entities.gperf"
+#line 344 "data/html_entities.gperf"
       {"Jopf", { 0xF0, 0x9D, 0x95, 0x81 }, 4},
-#line 398 "src/_html_entities.gperf"
+#line 398 "data/html_entities.gperf"
       {"lnsim", { 0xE2, 0x8B, 0xA6 }, 3},
-#line 907 "src/_html_entities.gperf"
+#line 907 "data/html_entities.gperf"
       {"rArr", { 0xE2, 0x87, 0x92 }, 3},
-#line 968 "src/_html_entities.gperf"
+#line 968 "data/html_entities.gperf"
       {"SquareSubset", { 0xE2, 0x8A, 0x8F }, 3},
-#line 535 "src/_html_entities.gperf"
+#line 535 "data/html_entities.gperf"
       {"lArr", { 0xE2, 0x87, 0x90 }, 3},
-#line 2015 "src/_html_entities.gperf"
+#line 2015 "data/html_entities.gperf"
       {"Sopf", { 0xF0, 0x9D, 0x95, 0x8A }, 4},
-#line 850 "src/_html_entities.gperf"
+#line 850 "data/html_entities.gperf"
       {"SquareSuperset", { 0xE2, 0x8A, 0x90 }, 3},
-#line 234 "src/_html_entities.gperf"
+#line 234 "data/html_entities.gperf"
       {"SquareSubsetEqual", { 0xE2, 0x8A, 0x91 }, 3},
-#line 472 "src/_html_entities.gperf"
+#line 472 "data/html_entities.gperf"
       {"uArr", { 0xE2, 0x87, 0x91 }, 3},
-#line 2067 "src/_html_entities.gperf"
+#line 2067 "data/html_entities.gperf"
       {"eqsim", { 0xE2, 0x89, 0x82 }, 3},
-#line 1662 "src/_html_entities.gperf"
+#line 1662 "data/html_entities.gperf"
       {"SquareSupersetEqual", { 0xE2, 0x8A, 0x92 }, 3},
-#line 1913 "src/_html_entities.gperf"
+#line 1913 "data/html_entities.gperf"
       {"ell", { 0xE2, 0x84, 0x93 }, 3},
-#line 1917 "src/_html_entities.gperf"
+#line 1917 "data/html_entities.gperf"
       {"uharl", { 0xE2, 0x86, 0xBF }, 3},
-#line 417 "src/_html_entities.gperf"
+#line 417 "data/html_entities.gperf"
       {"rlm", { 0xE2, 0x80, 0x8F }, 3},
-#line 1565 "src/_html_entities.gperf"
+#line 1565 "data/html_entities.gperf"
       {"solbar", { 0xE2, 0x8C, 0xBF }, 3},
-#line 1103 "src/_html_entities.gperf"
+#line 1103 "data/html_entities.gperf"
       {"popf", { 0xF0, 0x9D, 0x95, 0xA1 }, 4},
-#line 2112 "src/_html_entities.gperf"
+#line 2112 "data/html_entities.gperf"
       {"lparlt", { 0xE2, 0xA6, 0x93 }, 3},
-#line 1040 "src/_html_entities.gperf"
+#line 1040 "data/html_entities.gperf"
       {"Hopf", { 0xE2, 0x84, 0x8D }, 3},
-#line 1879 "src/_html_entities.gperf"
+#line 1879 "data/html_entities.gperf"
       {"rAarr", { 0xE2, 0x87, 0x9B }, 3},
-#line 1727 "src/_html_entities.gperf"
+#line 1727 "data/html_entities.gperf"
       {"ulcrop", { 0xE2, 0x8C, 0x8F }, 3},
-#line 1842 "src/_html_entities.gperf"
+#line 1842 "data/html_entities.gperf"
       {"lAarr", { 0xE2, 0x87, 0x9A }, 3},
-#line 1200 "src/_html_entities.gperf"
+#line 1200 "data/html_entities.gperf"
       {"mldr", { 0xE2, 0x80, 0xA6 }, 3},
-#line 695 "src/_html_entities.gperf"
+#line 695 "data/html_entities.gperf"
       {"lrm", { 0xE2, 0x80, 0x8E }, 3},
-#line 341 "src/_html_entities.gperf"
+#line 341 "data/html_entities.gperf"
       {"LessGreater", { 0xE2, 0x89, 0xB6 }, 3},
-#line 1560 "src/_html_entities.gperf"
+#line 1560 "data/html_entities.gperf"
       {"vopf", { 0xF0, 0x9D, 0x95, 0xA7 }, 4},
-#line 1868 "src/_html_entities.gperf"
+#line 1868 "data/html_entities.gperf"
       {"Wopf", { 0xF0, 0x9D, 0x95, 0x8E }, 4},
-#line 732 "src/_html_entities.gperf"
+#line 732 "data/html_entities.gperf"
       {"urcrop", { 0xE2, 0x8C, 0x8E }, 3},
-#line 1419 "src/_html_entities.gperf"
+#line 1419 "data/html_entities.gperf"
       {"simrarr", { 0xE2, 0xA5, 0xB2 }, 3},
-#line 2081 "src/_html_entities.gperf"
+#line 2081 "data/html_entities.gperf"
       {"iprod", { 0xE2, 0xA8, 0xBC }, 3},
-#line 779 "src/_html_entities.gperf"
+#line 779 "data/html_entities.gperf"
       {"profsurf", { 0xE2, 0x8C, 0x93 }, 3},
-#line 102 "src/_html_entities.gperf"
+#line 102 "data/html_entities.gperf"
       {"seArr", { 0xE2, 0x87, 0x98 }, 3},
-#line 1487 "src/_html_entities.gperf"
+#line 1487 "data/html_entities.gperf"
       {"NotReverseElement", { 0xE2, 0x88, 0x8C }, 3},
-#line 1415 "src/_html_entities.gperf"
+#line 1415 "data/html_entities.gperf"
       {"lE", { 0xE2, 0x89, 0xA6 }, 3},
-#line 507 "src/_html_entities.gperf"
+#line 507 "data/html_entities.gperf"
       {"pound", { 0xC2, 0xA3 }, 2},
-#line 1411 "src/_html_entities.gperf"
+#line 1411 "data/html_entities.gperf"
       {"neArr", { 0xE2, 0x87, 0x97 }, 3},
-#line 1153 "src/_html_entities.gperf"
+#line 1153 "data/html_entities.gperf"
       {"nlsim", { 0xE2, 0x89, 0xB4 }, 3},
-#line 71 "src/_html_entities.gperf"
+#line 71 "data/html_entities.gperf"
       {"Iopf", { 0xF0, 0x9D, 0x95, 0x80 }, 4},
-#line 1578 "src/_html_entities.gperf"
+#line 1578 "data/html_entities.gperf"
       {"Kopf", { 0xF0, 0x9D, 0x95, 0x82 }, 4},
-#line 532 "src/_html_entities.gperf"
+#line 532 "data/html_entities.gperf"
       {"vArr", { 0xE2, 0x87, 0x95 }, 3},
-#line 1286 "src/_html_entities.gperf"
+#line 1286 "data/html_entities.gperf"
       {"fopf", { 0xF0, 0x9D, 0x95, 0x97 }, 4},
-#line 230 "src/_html_entities.gperf"
+#line 230 "data/html_entities.gperf"
       {"varsubsetneq", { 0xE2, 0x8A, 0x8A, 0xEF, 0xB8, 0x80 }, 6},
-#line 889 "src/_html_entities.gperf"
+#line 889 "data/html_entities.gperf"
       {"varsubsetneqq", { 0xE2, 0xAB, 0x8B, 0xEF, 0xB8, 0x80 }, 6},
-#line 581 "src/_html_entities.gperf"
+#line 581 "data/html_entities.gperf"
       {"eDDot", { 0xE2, 0xA9, 0xB7 }, 3},
-#line 1746 "src/_html_entities.gperf"
+#line 1746 "data/html_entities.gperf"
       {"SquareIntersection", { 0xE2, 0x8A, 0x93 }, 3},
-#line 1977 "src/_html_entities.gperf"
+#line 1977 "data/html_entities.gperf"
       {"squarf", { 0xE2, 0x96, 0xAA }, 3},
-#line 591 "src/_html_entities.gperf"
+#line 591 "data/html_entities.gperf"
       {"bnequiv", { 0xE2, 0x89, 0xA1, 0xE2, 0x83, 0xA5 }, 6},
-#line 365 "src/_html_entities.gperf"
+#line 365 "data/html_entities.gperf"
       {"erDot", { 0xE2, 0x89, 0x93 }, 3},
-#line 1704 "src/_html_entities.gperf"
+#line 1704 "data/html_entities.gperf"
       {"smashp", { 0xE2, 0xA8, 0xB3 }, 3},
-#line 925 "src/_html_entities.gperf"
+#line 925 "data/html_entities.gperf"
       {"Lopf", { 0xF0, 0x9D, 0x95, 0x83 }, 4},
-#line 1214 "src/_html_entities.gperf"
+#line 1214 "data/html_entities.gperf"
       {"Ropf", { 0xE2, 0x84, 0x9D }, 3},
-#line 185 "src/_html_entities.gperf"
+#line 185 "data/html_entities.gperf"
       {"Aopf", { 0xF0, 0x9D, 0x94, 0xB8 }, 4},
-#line 1075 "src/_html_entities.gperf"
+#line 1075 "data/html_entities.gperf"
       {"rlhar", { 0xE2, 0x87, 0x8C }, 3},
-#line 831 "src/_html_entities.gperf"
+#line 831 "data/html_entities.gperf"
       {"LessLess", { 0xE2, 0xAA, 0xA1 }, 3},
-#line 1150 "src/_html_entities.gperf"
+#line 1150 "data/html_entities.gperf"
       {"Nopf", { 0xE2, 0x84, 0x95 }, 3},
-#line 2043 "src/_html_entities.gperf"
+#line 2043 "data/html_entities.gperf"
       {"Mopf", { 0xF0, 0x9D, 0x95, 0x84 }, 4},
-#line 976 "src/_html_entities.gperf"
+#line 976 "data/html_entities.gperf"
       {"uml", { 0xC2, 0xA8 }, 2},
-#line 130 "src/_html_entities.gperf"
+#line 130 "data/html_entities.gperf"
       {"varsupsetneq", { 0xE2, 0x8A, 0x8B, 0xEF, 0xB8, 0x80 }, 6},
-#line 1530 "src/_html_entities.gperf"
+#line 1530 "data/html_entities.gperf"
       {"varsupsetneqq", { 0xE2, 0xAB, 0x8C, 0xEF, 0xB8, 0x80 }, 6},
-#line 1836 "src/_html_entities.gperf"
+#line 1836 "data/html_entities.gperf"
       {"parsl", { 0xE2, 0xAB, 0xBD }, 3},
-#line 1125 "src/_html_entities.gperf"
+#line 1125 "data/html_entities.gperf"
       {"PlusMinus", { 0xC2, 0xB1 }, 2},
-#line 1026 "src/_html_entities.gperf"
+#line 1026 "data/html_entities.gperf"
       {"lrhar", { 0xE2, 0x87, 0x8B }, 3},
-#line 14 "src/_html_entities.gperf"
+#line 14 "data/html_entities.gperf"
       {"qopf", { 0xF0, 0x9D, 0x95, 0xA2 }, 4},
-#line 486 "src/_html_entities.gperf"
+#line 486 "data/html_entities.gperf"
       {"marker", { 0xE2, 0x96, 0xAE }, 3},
-#line 1575 "src/_html_entities.gperf"
+#line 1575 "data/html_entities.gperf"
       {"prsim", { 0xE2, 0x89, 0xBE }, 3},
-#line 1289 "src/_html_entities.gperf"
+#line 1289 "data/html_entities.gperf"
       {"rarrlp", { 0xE2, 0x86, 0xAC }, 3},
-#line 1981 "src/_html_entities.gperf"
+#line 1981 "data/html_entities.gperf"
       {"larrlp", { 0xE2, 0x86, 0xAB }, 3},
-#line 1675 "src/_html_entities.gperf"
+#line 1675 "data/html_entities.gperf"
       {"DD", { 0xE2, 0x85, 0x85 }, 3},
-#line 302 "src/_html_entities.gperf"
+#line 302 "data/html_entities.gperf"
       {"pm", { 0xC2, 0xB1 }, 2},
-#line 1612 "src/_html_entities.gperf"
+#line 1612 "data/html_entities.gperf"
       {"Yopf", { 0xF0, 0x9D, 0x95, 0x90 }, 4},
-#line 1725 "src/_html_entities.gperf"
+#line 1725 "data/html_entities.gperf"
       {"Fopf", { 0xF0, 0x9D, 0x94, 0xBD }, 4},
-#line 1543 "src/_html_entities.gperf"
+#line 1543 "data/html_entities.gperf"
       {"lnE", { 0xE2, 0x89, 0xA8 }, 3},
-#line 1215 "src/_html_entities.gperf"
+#line 1215 "data/html_entities.gperf"
       {"ETH", { 0xC3, 0x90 }, 2},
-#line 1384 "src/_html_entities.gperf"
+#line 1384 "data/html_entities.gperf"
       {"map", { 0xE2, 0x86, 0xA6 }, 3},
-#line 874 "src/_html_entities.gperf"
+#line 874 "data/html_entities.gperf"
       {"Uopf", { 0xF0, 0x9D, 0x95, 0x8C }, 4},
-#line 2050 "src/_html_entities.gperf"
+#line 2050 "data/html_entities.gperf"
       {"Topf", { 0xF0, 0x9D, 0x95, 0x8B }, 4},
-#line 1263 "src/_html_entities.gperf"
+#line 1263 "data/html_entities.gperf"
       {"Im", { 0xE2, 0x84, 0x91 }, 3},
-#line 2021 "src/_html_entities.gperf"
+#line 2021 "data/html_entities.gperf"
       {"dlcorn", { 0xE2, 0x8C, 0x9E }, 3},
-#line 594 "src/_html_entities.gperf"
+#line 594 "data/html_entities.gperf"
       {"drcorn", { 0xE2, 0x8C, 0x9F }, 3},
-#line 1226 "src/_html_entities.gperf"
+#line 1226 "data/html_entities.gperf"
       {"Precedes", { 0xE2, 0x89, 0xBA }, 3},
-#line 768 "src/_html_entities.gperf"
+#line 768 "data/html_entities.gperf"
       {"ni", { 0xE2, 0x88, 0x8B }, 3},
-#line 1149 "src/_html_entities.gperf"
+#line 1149 "data/html_entities.gperf"
       {"napE", { 0xE2, 0xA9, 0xB0, 0xCC, 0xB8 }, 5},
-#line 482 "src/_html_entities.gperf"
+#line 482 "data/html_entities.gperf"
       {"Pi", { 0xCE, 0xA0 }, 2},
-#line 1430 "src/_html_entities.gperf"
+#line 1430 "data/html_entities.gperf"
       {"preceq", { 0xE2, 0xAA, 0xAF }, 3},
-#line 1533 "src/_html_entities.gperf"
+#line 1533 "data/html_entities.gperf"
       {"nlE", { 0xE2, 0x89, 0xA6, 0xCC, 0xB8 }, 5},
-#line 2054 "src/_html_entities.gperf"
+#line 2054 "data/html_entities.gperf"
       {"rbrace", { 0x7D }, 1},
-#line 212 "src/_html_entities.gperf"
+#line 212 "data/html_entities.gperf"
       {"lbrace", { 0x7B }, 1},
-#line 1351 "src/_html_entities.gperf"
+#line 1351 "data/html_entities.gperf"
       {"Xi", { 0xCE, 0x9E }, 2},
-#line 733 "src/_html_entities.gperf"
+#line 733 "data/html_entities.gperf"
       {"iopf", { 0xF0, 0x9D, 0x95, 0x9A }, 4},
-#line 10 "src/_html_entities.gperf"
+#line 10 "data/html_entities.gperf"
       {"nvap", { 0xE2, 0x89, 0x8D, 0xE2, 0x83, 0x92 }, 6},
-#line 566 "src/_html_entities.gperf"
+#line 566 "data/html_entities.gperf"
       {"frasl", { 0xE2, 0x81, 0x84 }, 3},
-#line 340 "src/_html_entities.gperf"
+#line 340 "data/html_entities.gperf"
       {"rbrksld", { 0xE2, 0xA6, 0x8E }, 3},
-#line 2025 "src/_html_entities.gperf"
+#line 2025 "data/html_entities.gperf"
       {"lbrksld", { 0xE2, 0xA6, 0x8F }, 3},
-#line 1381 "src/_html_entities.gperf"
+#line 1381 "data/html_entities.gperf"
       {"lesseqqgtr", { 0xE2, 0xAA, 0x8B }, 3},
-#line 463 "src/_html_entities.gperf"
+#line 463 "data/html_entities.gperf"
       {"simne", { 0xE2, 0x89, 0x86 }, 3},
-#line 895 "src/_html_entities.gperf"
+#line 895 "data/html_entities.gperf"
       {"pi", { 0xCF, 0x80 }, 2},
-#line 1002 "src/_html_entities.gperf"
+#line 1002 "data/html_entities.gperf"
       {"swArr", { 0xE2, 0x87, 0x99 }, 3},
-#line 969 "src/_html_entities.gperf"
+#line 969 "data/html_entities.gperf"
       {"backprime", { 0xE2, 0x80, 0xB5 }, 3},
-#line 1705 "src/_html_entities.gperf"
+#line 1705 "data/html_entities.gperf"
       {"PrecedesSlantEqual", { 0xE2, 0x89, 0xBC }, 3},
-#line 1690 "src/_html_entities.gperf"
+#line 1690 "data/html_entities.gperf"
       {"nwArr", { 0xE2, 0x87, 0x96 }, 3},
-#line 1555 "src/_html_entities.gperf"
+#line 1555 "data/html_entities.gperf"
       {"rsqb", { 0x5D }, 1},
-#line 288 "src/_html_entities.gperf"
+#line 288 "data/html_entities.gperf"
       {"lsqb", { 0x5B }, 1},
-#line 956 "src/_html_entities.gperf"
+#line 956 "data/html_entities.gperf"
       {"nesim", { 0xE2, 0x89, 0x82, 0xCC, 0xB8 }, 5},
-#line 2087 "src/_html_entities.gperf"
+#line 2087 "data/html_entities.gperf"
       {"Emacr", { 0xC4, 0x92 }, 2},
-#line 1318 "src/_html_entities.gperf"
+#line 1318 "data/html_entities.gperf"
       {"wp", { 0xE2, 0x84, 0x98 }, 3},
-#line 1496 "src/_html_entities.gperf"
+#line 1496 "data/html_entities.gperf"
       {"sqcaps", { 0xE2, 0x8A, 0x93, 0xEF, 0xB8, 0x80 }, 6},
-#line 305 "src/_html_entities.gperf"
+#line 305 "data/html_entities.gperf"
       {"prE", { 0xE2, 0xAA, 0xB3 }, 3},
-#line 966 "src/_html_entities.gperf"
+#line 966 "data/html_entities.gperf"
       {"Bopf", { 0xF0, 0x9D, 0x94, 0xB9 }, 4},
-#line 665 "src/_html_entities.gperf"
+#line 665 "data/html_entities.gperf"
       {"esdot", { 0xE2, 0x89, 0x90 }, 3},
-#line 913 "src/_html_entities.gperf"
+#line 913 "data/html_entities.gperf"
       {"dopf", { 0xF0, 0x9D, 0x95, 0x95 }, 4},
-#line 1308 "src/_html_entities.gperf"
+#line 1308 "data/html_entities.gperf"
       {"imof", { 0xE2, 0x8A, 0xB7 }, 3},
-#line 1754 "src/_html_entities.gperf"
+#line 1754 "data/html_entities.gperf"
       {"lozf", { 0xE2, 0xA7, 0xAB }, 3},
-#line 1854 "src/_html_entities.gperf"
+#line 1854 "data/html_entities.gperf"
       {"wr", { 0xE2, 0x89, 0x80 }, 3},
-#line 787 "src/_html_entities.gperf"
+#line 787 "data/html_entities.gperf"
       {"macr", { 0xC2, 0xAF }, 2},
-#line 1030 "src/_html_entities.gperf"
+#line 1030 "data/html_entities.gperf"
       {"Sqrt", { 0xE2, 0x88, 0x9A }, 3},
-#line 82 "src/_html_entities.gperf"
+#line 82 "data/html_entities.gperf"
       {"Dopf", { 0xF0, 0x9D, 0x94, 0xBB }, 4},
-#line 836 "src/_html_entities.gperf"
+#line 836 "data/html_entities.gperf"
       {"Or", { 0xE2, 0xA9, 0x94 }, 3},
-#line 2076 "src/_html_entities.gperf"
+#line 2076 "data/html_entities.gperf"
       {"sqcap", { 0xE2, 0x8A, 0x93 }, 3},
-#line 1013 "src/_html_entities.gperf"
+#line 1013 "data/html_entities.gperf"
       {"Bernoullis", { 0xE2, 0x84, 0xAC }, 3},
-#line 533 "src/_html_entities.gperf"
+#line 533 "data/html_entities.gperf"
       {"part", { 0xE2, 0x88, 0x82 }, 3},
-#line 1169 "src/_html_entities.gperf"
+#line 1169 "data/html_entities.gperf"
       {"dArr", { 0xE2, 0x87, 0x93 }, 3},
-#line 1657 "src/_html_entities.gperf"
+#line 1657 "data/html_entities.gperf"
       {"bnot", { 0xE2, 0x8C, 0x90 }, 3},
-#line 311 "src/_html_entities.gperf"
+#line 311 "data/html_entities.gperf"
       {"preccurlyeq", { 0xE2, 0x89, 0xBC }, 3},
-#line 1922 "src/_html_entities.gperf"
+#line 1922 "data/html_entities.gperf"
       {"dharl", { 0xE2, 0x87, 0x83 }, 3},
-#line 1683 "src/_html_entities.gperf"
+#line 1683 "data/html_entities.gperf"
       {"pluscir", { 0xE2, 0xA8, 0xA2 }, 3},
-#line 792 "src/_html_entities.gperf"
+#line 792 "data/html_entities.gperf"
       {"eqvparsl", { 0xE2, 0xA7, 0xA5 }, 3},
-#line 1671 "src/_html_entities.gperf"
+#line 1671 "data/html_entities.gperf"
       {"dlcrop", { 0xE2, 0x8C, 0x8D }, 3},
-#line 1576 "src/_html_entities.gperf"
+#line 1576 "data/html_entities.gperf"
       {"NotSubsetEqual", { 0xE2, 0x8A, 0x88 }, 3},
-#line 448 "src/_html_entities.gperf"
+#line 448 "data/html_entities.gperf"
       {"epsiv", { 0xCF, 0xB5 }, 2},
-#line 276 "src/_html_entities.gperf"
+#line 276 "data/html_entities.gperf"
       {"nsub", { 0xE2, 0x8A, 0x84 }, 3},
-#line 563 "src/_html_entities.gperf"
+#line 563 "data/html_entities.gperf"
       {"varphi", { 0xCF, 0x95 }, 2},
-#line 1610 "src/_html_entities.gperf"
+#line 1610 "data/html_entities.gperf"
       {"drcrop", { 0xE2, 0x8C, 0x8C }, 3},
-#line 403 "src/_html_entities.gperf"
+#line 403 "data/html_entities.gperf"
       {"dotplus", { 0xE2, 0x88, 0x94 }, 3},
-#line 2012 "src/_html_entities.gperf"
+#line 2012 "data/html_entities.gperf"
       {"Element", { 0xE2, 0x88, 0x88 }, 3},
-#line 1617 "src/_html_entities.gperf"
+#line 1617 "data/html_entities.gperf"
       {"eDot", { 0xE2, 0x89, 0x91 }, 3},
-#line 682 "src/_html_entities.gperf"
+#line 682 "data/html_entities.gperf"
       {"diams", { 0xE2, 0x99, 0xA6 }, 3},
-#line 2090 "src/_html_entities.gperf"
+#line 2090 "data/html_entities.gperf"
       {"die", { 0xC2, 0xA8 }, 2},
-#line 395 "src/_html_entities.gperf"
+#line 395 "data/html_entities.gperf"
       {"NotSupersetEqual", { 0xE2, 0x8A, 0x89 }, 3},
-#line 335 "src/_html_entities.gperf"
+#line 335 "data/html_entities.gperf"
       {"brvbar", { 0xC2, 0xA6 }, 2},
-#line 880 "src/_html_entities.gperf"
+#line 880 "data/html_entities.gperf"
       {"incare", { 0xE2, 0x84, 0x85 }, 3},
-#line 2116 "src/_html_entities.gperf"
+#line 2116 "data/html_entities.gperf"
       {"nsupset", { 0xE2, 0x8A, 0x83, 0xE2, 0x83, 0x92 }, 6},
-#line 1609 "src/_html_entities.gperf"
+#line 1609 "data/html_entities.gperf"
       {"nsubset", { 0xE2, 0x8A, 0x82, 0xE2, 0x83, 0x92 }, 6},
-#line 263 "src/_html_entities.gperf"
+#line 263 "data/html_entities.gperf"
       {"nsup", { 0xE2, 0x8A, 0x85 }, 3},
-#line 1274 "src/_html_entities.gperf"
+#line 1274 "data/html_entities.gperf"
       {"easter", { 0xE2, 0xA9, 0xAE }, 3},
-#line 369 "src/_html_entities.gperf"
+#line 369 "data/html_entities.gperf"
       {"mlcp", { 0xE2, 0xAB, 0x9B }, 3},
-#line 614 "src/_html_entities.gperf"
+#line 614 "data/html_entities.gperf"
       {"parallel", { 0xE2, 0x88, 0xA5 }, 3},
-#line 1079 "src/_html_entities.gperf"
+#line 1079 "data/html_entities.gperf"
       {"equals", { 0x3D }, 1},
-#line 1761 "src/_html_entities.gperf"
+#line 1761 "data/html_entities.gperf"
       {"LessTilde", { 0xE2, 0x89, 0xB2 }, 3},
-#line 1825 "src/_html_entities.gperf"
+#line 1825 "data/html_entities.gperf"
       {"equiv", { 0xE2, 0x89, 0xA1 }, 3},
-#line 508 "src/_html_entities.gperf"
+#line 508 "data/html_entities.gperf"
       {"flat", { 0xE2, 0x99, 0xAD }, 3},
-#line 111 "src/_html_entities.gperf"
+#line 111 "data/html_entities.gperf"
       {"forall", { 0xE2, 0x88, 0x80 }, 3},
-#line 1992 "src/_html_entities.gperf"
+#line 1992 "data/html_entities.gperf"
       {"NotHumpEqual", { 0xE2, 0x89, 0x8F, 0xCC, 0xB8 }, 5},
-#line 379 "src/_html_entities.gperf"
+#line 379 "data/html_entities.gperf"
       {"rppolint", { 0xE2, 0xA8, 0x92 }, 3},
-#line 1804 "src/_html_entities.gperf"
+#line 1804 "data/html_entities.gperf"
       {"bNot", { 0xE2, 0xAB, 0xAD }, 3},
-#line 126 "src/_html_entities.gperf"
+#line 126 "data/html_entities.gperf"
       {"forkv", { 0xE2, 0xAB, 0x99 }, 3},
-#line 1281 "src/_html_entities.gperf"
+#line 1281 "data/html_entities.gperf"
       {"nsupe", { 0xE2, 0x8A, 0x89 }, 3},
-#line 1170 "src/_html_entities.gperf"
+#line 1170 "data/html_entities.gperf"
       {"nsube", { 0xE2, 0x8A, 0x88 }, 3},
-#line 1178 "src/_html_entities.gperf"
+#line 1178 "data/html_entities.gperf"
       {"becaus", { 0xE2, 0x88, 0xB5 }, 3},
-#line 228 "src/_html_entities.gperf"
+#line 228 "data/html_entities.gperf"
       {"seswar", { 0xE2, 0xA4, 0xA9 }, 3},
-#line 734 "src/_html_entities.gperf"
+#line 734 "data/html_entities.gperf"
       {"ii", { 0xE2, 0x85, 0x88 }, 3},
-#line 1426 "src/_html_entities.gperf"
+#line 1426 "data/html_entities.gperf"
       {"nsqsube", { 0xE2, 0x8B, 0xA2 }, 3},
-#line 1398 "src/_html_entities.gperf"
+#line 1398 "data/html_entities.gperf"
       {"opar", { 0xE2, 0xA6, 0xB7 }, 3},
-#line 680 "src/_html_entities.gperf"
+#line 680 "data/html_entities.gperf"
       {"because", { 0xE2, 0x88, 0xB5 }, 3},
-#line 1121 "src/_html_entities.gperf"
+#line 1121 "data/html_entities.gperf"
       {"lvertneqq", { 0xE2, 0x89, 0xA8, 0xEF, 0xB8, 0x80 }, 6},
-#line 324 "src/_html_entities.gperf"
+#line 324 "data/html_entities.gperf"
       {"sim", { 0xE2, 0x88, 0xBC }, 3},
-#line 1173 "src/_html_entities.gperf"
+#line 1173 "data/html_entities.gperf"
       {"measuredangle", { 0xE2, 0x88, 0xA1 }, 3},
-#line 380 "src/_html_entities.gperf"
+#line 380 "data/html_entities.gperf"
       {"mopf", { 0xF0, 0x9D, 0x95, 0x9E }, 4},
-#line 1923 "src/_html_entities.gperf"
+#line 1923 "data/html_entities.gperf"
       {"period", { 0x2E }, 1},
-#line 903 "src/_html_entities.gperf"
+#line 903 "data/html_entities.gperf"
       {"or", { 0xE2, 0x88, 0xA8 }, 3},
-#line 1297 "src/_html_entities.gperf"
+#line 1297 "data/html_entities.gperf"
       {"rho", { 0xCF, 0x81 }, 2},
-#line 1687 "src/_html_entities.gperf"
+#line 1687 "data/html_entities.gperf"
       {"olt", { 0xE2, 0xA7, 0x80 }, 3},
-#line 1232 "src/_html_entities.gperf"
+#line 1232 "data/html_entities.gperf"
       {"notin", { 0xE2, 0x88, 0x89 }, 3},
-#line 1350 "src/_html_entities.gperf"
+#line 1350 "data/html_entities.gperf"
       {"Eopf", { 0xF0, 0x9D, 0x94, 0xBC }, 4},
-#line 1433 "src/_html_entities.gperf"
+#line 1433 "data/html_entities.gperf"
       {"nsqsupe", { 0xE2, 0x8B, 0xA3 }, 3},
-#line 621 "src/_html_entities.gperf"
+#line 621 "data/html_entities.gperf"
       {"ForAll", { 0xE2, 0x88, 0x80 }, 3},
-#line 684 "src/_html_entities.gperf"
+#line 684 "data/html_entities.gperf"
       {"nvrArr", { 0xE2, 0xA4, 0x83 }, 3},
-#line 210 "src/_html_entities.gperf"
+#line 210 "data/html_entities.gperf"
       {"oS", { 0xE2, 0x93, 0x88 }, 3},
-#line 562 "src/_html_entities.gperf"
+#line 562 "data/html_entities.gperf"
       {"nsupseteq", { 0xE2, 0x8A, 0x89 }, 3},
-#line 634 "src/_html_entities.gperf"
+#line 634 "data/html_entities.gperf"
       {"nsubseteq", { 0xE2, 0x8A, 0x88 }, 3},
-#line 284 "src/_html_entities.gperf"
+#line 284 "data/html_entities.gperf"
       {"ratio", { 0xE2, 0x88, 0xB6 }, 3},
-#line 1285 "src/_html_entities.gperf"
+#line 1285 "data/html_entities.gperf"
       {"thetav", { 0xCF, 0x91 }, 2},
-#line 908 "src/_html_entities.gperf"
+#line 908 "data/html_entities.gperf"
       {"Vert", { 0xE2, 0x80, 0x96 }, 3},
-#line 1393 "src/_html_entities.gperf"
+#line 1393 "data/html_entities.gperf"
       {"thorn", { 0xC3, 0xBE }, 2},
-#line 717 "src/_html_entities.gperf"
+#line 717 "data/html_entities.gperf"
       {"Del", { 0xE2, 0x88, 0x87 }, 3},
-#line 572 "src/_html_entities.gperf"
+#line 572 "data/html_entities.gperf"
       {"olarr", { 0xE2, 0x86, 0xBA }, 3},
-#line 1005 "src/_html_entities.gperf"
+#line 1005 "data/html_entities.gperf"
       {"Omacr", { 0xC5, 0x8C }, 2},
-#line 821 "src/_html_entities.gperf"
+#line 821 "data/html_entities.gperf"
       {"eqslantgtr", { 0xE2, 0xAA, 0x96 }, 3},
-#line 651 "src/_html_entities.gperf"
+#line 651 "data/html_entities.gperf"
       {"Cap", { 0xE2, 0x8B, 0x92 }, 3},
-#line 1857 "src/_html_entities.gperf"
+#line 1857 "data/html_entities.gperf"
       {"simplus", { 0xE2, 0xA8, 0xA4 }, 3},
-#line 1747 "src/_html_entities.gperf"
+#line 1747 "data/html_entities.gperf"
       {"eqslantless", { 0xE2, 0xAA, 0x95 }, 3},
-#line 1333 "src/_html_entities.gperf"
+#line 1333 "data/html_entities.gperf"
       {"orarr", { 0xE2, 0x86, 0xBB }, 3},
-#line 1909 "src/_html_entities.gperf"
+#line 1909 "data/html_entities.gperf"
       {"wedbar", { 0xE2, 0xA9, 0x9F }, 3},
-#line 686 "src/_html_entities.gperf"
+#line 686 "data/html_entities.gperf"
       {"NotLess", { 0xE2, 0x89, 0xAE }, 3},
-#line 447 "src/_html_entities.gperf"
+#line 447 "data/html_entities.gperf"
       {"rscr", { 0xF0, 0x9D, 0x93, 0x87 }, 4},
-#line 677 "src/_html_entities.gperf"
+#line 677 "data/html_entities.gperf"
       {"tscr", { 0xF0, 0x9D, 0x93, 0x89 }, 4},
-#line 1098 "src/_html_entities.gperf"
+#line 1098 "data/html_entities.gperf"
       {"lscr", { 0xF0, 0x9D, 0x93, 0x81 }, 4},
-#line 899 "src/_html_entities.gperf"
+#line 899 "data/html_entities.gperf"
       {"sscr", { 0xF0, 0x9D, 0x93, 0x88 }, 4},
-#line 1603 "src/_html_entities.gperf"
+#line 1603 "data/html_entities.gperf"
       {"escr", { 0xE2, 0x84, 0xAF }, 3},
-#line 412 "src/_html_entities.gperf"
+#line 412 "data/html_entities.gperf"
       {"uscr", { 0xF0, 0x9D, 0x93, 0x8A }, 4},
-#line 1824 "src/_html_entities.gperf"
+#line 1824 "data/html_entities.gperf"
       {"Cross", { 0xE2, 0xA8, 0xAF }, 3},
-#line 708 "src/_html_entities.gperf"
+#line 708 "data/html_entities.gperf"
       {"nscr", { 0xF0, 0x9D, 0x93, 0x83 }, 4},
-#line 1323 "src/_html_entities.gperf"
+#line 1323 "data/html_entities.gperf"
       {"Pscr", { 0xF0, 0x9D, 0x92, 0xAB }, 4},
-#line 170 "src/_html_entities.gperf"
+#line 170 "data/html_entities.gperf"
       {"bscr", { 0xF0, 0x9D, 0x92, 0xB7 }, 4},
-#line 1542 "src/_html_entities.gperf"
+#line 1542 "data/html_entities.gperf"
       {"vert", { 0x7C }, 1},
-#line 1541 "src/_html_entities.gperf"
+#line 1541 "data/html_entities.gperf"
       {"oror", { 0xE2, 0xA9, 0x96 }, 3},
-#line 736 "src/_html_entities.gperf"
+#line 736 "data/html_entities.gperf"
       {"DoubleLeftTee", { 0xE2, 0xAB, 0xA4 }, 3},
-#line 1033 "src/_html_entities.gperf"
+#line 1033 "data/html_entities.gperf"
       {"mDDot", { 0xE2, 0x88, 0xBA }, 3},
-#line 636 "src/_html_entities.gperf"
+#line 636 "data/html_entities.gperf"
       {"Zscr", { 0xF0, 0x9D, 0x92, 0xB5 }, 4},
-#line 195 "src/_html_entities.gperf"
+#line 195 "data/html_entities.gperf"
       {"NotLessLess", { 0xE2, 0x89, 0xAA, 0xCC, 0xB8 }, 5},
-#line 1148 "src/_html_entities.gperf"
+#line 1148 "data/html_entities.gperf"
       {"Qscr", { 0xF0, 0x9D, 0x92, 0xAC }, 4},
-#line 1916 "src/_html_entities.gperf"
+#line 1916 "data/html_entities.gperf"
       {"Xscr", { 0xF0, 0x9D, 0x92, 0xB3 }, 4},
-#line 478 "src/_html_entities.gperf"
+#line 478 "data/html_entities.gperf"
       {"Vscr", { 0xF0, 0x9D, 0x92, 0xB1 }, 4},
-#line 986 "src/_html_entities.gperf"
+#line 986 "data/html_entities.gperf"
       {"Jscr", { 0xF0, 0x9D, 0x92, 0xA5 }, 4},
-#line 27 "src/_html_entities.gperf"
+#line 27 "data/html_entities.gperf"
       {"vBarv", { 0xE2, 0xAB, 0xA9 }, 3},
-#line 146 "src/_html_entities.gperf"
+#line 146 "data/html_entities.gperf"
       {"COPY", { 0xC2, 0xA9 }, 2},
-#line 493 "src/_html_entities.gperf"
+#line 493 "data/html_entities.gperf"
       {"loz", { 0xE2, 0x97, 0x8A }, 3},
-#line 1399 "src/_html_entities.gperf"
+#line 1399 "data/html_entities.gperf"
       {"Sscr", { 0xF0, 0x9D, 0x92, 0xAE }, 4},
-#line 1104 "src/_html_entities.gperf"
+#line 1104 "data/html_entities.gperf"
       {"nsmid", { 0xE2, 0x88, 0xA4 }, 3},
-#line 433 "src/_html_entities.gperf"
+#line 433 "data/html_entities.gperf"
       {"nvHarr", { 0xE2, 0xA4, 0x84 }, 3},
-#line 227 "src/_html_entities.gperf"
+#line 227 "data/html_entities.gperf"
       {"NotLessGreater", { 0xE2, 0x89, 0xB8 }, 3},
-#line 1852 "src/_html_entities.gperf"
+#line 1852 "data/html_entities.gperf"
       {"between", { 0xE2, 0x89, 0xAC }, 3},
-#line 162 "src/_html_entities.gperf"
+#line 162 "data/html_entities.gperf"
       {"NotLessTilde", { 0xE2, 0x89, 0xB4 }, 3},
-#line 357 "src/_html_entities.gperf"
+#line 357 "data/html_entities.gperf"
       {"NotLessEqual", { 0xE2, 0x89, 0xB0 }, 3},
-#line 1644 "src/_html_entities.gperf"
+#line 1644 "data/html_entities.gperf"
       {"Rho", { 0xCE, 0xA1 }, 2},
-#line 1127 "src/_html_entities.gperf"
+#line 1127 "data/html_entities.gperf"
       {"notinvb", { 0xE2, 0x8B, 0xB7 }, 3},
-#line 298 "src/_html_entities.gperf"
+#line 298 "data/html_entities.gperf"
       {"pscr", { 0xF0, 0x9D, 0x93, 0x85 }, 4},
-#line 1404 "src/_html_entities.gperf"
+#line 1404 "data/html_entities.gperf"
       {"Hscr", { 0xE2, 0x84, 0x8B }, 3},
-#line 1813 "src/_html_entities.gperf"
+#line 1813 "data/html_entities.gperf"
       {"vscr", { 0xF0, 0x9D, 0x93, 0x8B }, 4},
-#line 1192 "src/_html_entities.gperf"
+#line 1192 "data/html_entities.gperf"
       {"Wscr", { 0xF0, 0x9D, 0x92, 0xB2 }, 4},
-#line 184 "src/_html_entities.gperf"
+#line 184 "data/html_entities.gperf"
       {"shortmid", { 0xE2, 0x88, 0xA3 }, 3},
-#line 879 "src/_html_entities.gperf"
+#line 879 "data/html_entities.gperf"
       {"zopf", { 0xF0, 0x9D, 0x95, 0xAB }, 4},
-#line 392 "src/_html_entities.gperf"
+#line 392 "data/html_entities.gperf"
       {"Iscr", { 0xE2, 0x84, 0x90 }, 3},
-#line 1230 "src/_html_entities.gperf"
+#line 1230 "data/html_entities.gperf"
       {"Kscr", { 0xF0, 0x9D, 0x92, 0xA6 }, 4},
-#line 1368 "src/_html_entities.gperf"
+#line 1368 "data/html_entities.gperf"
       {"fscr", { 0xF0, 0x9D, 0x92, 0xBB }, 4},
-#line 918 "src/_html_entities.gperf"
+#line 918 "data/html_entities.gperf"
       {"ShortLeftArrow", { 0xE2, 0x86, 0x90 }, 3},
-#line 325 "src/_html_entities.gperf"
+#line 325 "data/html_entities.gperf"
       {"Lscr", { 0xE2, 0x84, 0x92 }, 3},
-#line 1483 "src/_html_entities.gperf"
+#line 1483 "data/html_entities.gperf"
       {"Rscr", { 0xE2, 0x84, 0x9B }, 3},
-#line 522 "src/_html_entities.gperf"
+#line 522 "data/html_entities.gperf"
       {"female", { 0xE2, 0x99, 0x80 }, 3},
-#line 338 "src/_html_entities.gperf"
+#line 338 "data/html_entities.gperf"
       {"Ascr", { 0xF0, 0x9D, 0x92, 0x9C }, 4},
-#line 407 "src/_html_entities.gperf"
+#line 407 "data/html_entities.gperf"
       {"nsupseteqq", { 0xE2, 0xAB, 0x86, 0xCC, 0xB8 }, 5},
-#line 1960 "src/_html_entities.gperf"
+#line 1960 "data/html_entities.gperf"
       {"nsubseteqq", { 0xE2, 0xAB, 0x85, 0xCC, 0xB8 }, 5},
-#line 1816 "src/_html_entities.gperf"
+#line 1816 "data/html_entities.gperf"
       {"Nscr", { 0xF0, 0x9D, 0x92, 0xA9 }, 4},
-#line 2130 "src/_html_entities.gperf"
+#line 2130 "data/html_entities.gperf"
       {"nvsim", { 0xE2, 0x88, 0xBC, 0xE2, 0x83, 0x92 }, 6},
-#line 1765 "src/_html_entities.gperf"
+#line 1765 "data/html_entities.gperf"
       {"Mscr", { 0xE2, 0x84, 0xB3 }, 3},
-#line 150 "src/_html_entities.gperf"
+#line 150 "data/html_entities.gperf"
       {"roplus", { 0xE2, 0xA8, 0xAE }, 3},
-#line 155 "src/_html_entities.gperf"
+#line 155 "data/html_entities.gperf"
       {"loplus", { 0xE2, 0xA8, 0xAD }, 3},
-#line 1930 "src/_html_entities.gperf"
+#line 1930 "data/html_entities.gperf"
       {"qscr", { 0xF0, 0x9D, 0x93, 0x86 }, 4},
-#line 646 "src/_html_entities.gperf"
+#line 646 "data/html_entities.gperf"
       {"real", { 0xE2, 0x84, 0x9C }, 3},
-#line 1199 "src/_html_entities.gperf"
+#line 1199 "data/html_entities.gperf"
       {"profline", { 0xE2, 0x8C, 0x92 }, 3},
-#line 1386 "src/_html_entities.gperf"
+#line 1386 "data/html_entities.gperf"
       {"omacr", { 0xC5, 0x8D }, 2},
-#line 413 "src/_html_entities.gperf"
+#line 413 "data/html_entities.gperf"
       {"blacklozenge", { 0xE2, 0xA7, 0xAB }, 3},
-#line 1376 "src/_html_entities.gperf"
+#line 1376 "data/html_entities.gperf"
       {"nspar", { 0xE2, 0x88, 0xA6 }, 3},
-#line 873 "src/_html_entities.gperf"
+#line 873 "data/html_entities.gperf"
       {"llhard", { 0xE2, 0xA5, 0xAB }, 3},
-#line 856 "src/_html_entities.gperf"
+#line 856 "data/html_entities.gperf"
       {"Yscr", { 0xF0, 0x9D, 0x92, 0xB4 }, 4},
-#line 561 "src/_html_entities.gperf"
+#line 561 "data/html_entities.gperf"
       {"Fscr", { 0xE2, 0x84, 0xB1 }, 3},
-#line 389 "src/_html_entities.gperf"
+#line 389 "data/html_entities.gperf"
       {"reals", { 0xE2, 0x84, 0x9D }, 3},
-#line 2046 "src/_html_entities.gperf"
+#line 2046 "data/html_entities.gperf"
       {"DoubleDot", { 0xC2, 0xA8 }, 2},
-#line 1231 "src/_html_entities.gperf"
+#line 1231 "data/html_entities.gperf"
       {"NotElement", { 0xE2, 0x88, 0x89 }, 3},
-#line 1461 "src/_html_entities.gperf"
+#line 1461 "data/html_entities.gperf"
       {"lrhard", { 0xE2, 0xA5, 0xAD }, 3},
-#line 1583 "src/_html_entities.gperf"
+#line 1583 "data/html_entities.gperf"
       {"RoundImplies", { 0xE2, 0xA5, 0xB0 }, 3},
-#line 2018 "src/_html_entities.gperf"
+#line 2018 "data/html_entities.gperf"
       {"UpEquilibrium", { 0xE2, 0xA5, 0xAE }, 3},
-#line 1380 "src/_html_entities.gperf"
+#line 1380 "data/html_entities.gperf"
       {"Uscr", { 0xF0, 0x9D, 0x92, 0xB0 }, 4},
-#line 571 "src/_html_entities.gperf"
+#line 571 "data/html_entities.gperf"
       {"wopf", { 0xF0, 0x9D, 0x95, 0xA8 }, 4},
-#line 467 "src/_html_entities.gperf"
+#line 467 "data/html_entities.gperf"
       {"backsimeq", { 0xE2, 0x8B, 0x8D }, 3},
-#line 2102 "src/_html_entities.gperf"
+#line 2102 "data/html_entities.gperf"
       {"Tscr", { 0xF0, 0x9D, 0x92, 0xAF }, 4},
-#line 560 "src/_html_entities.gperf"
+#line 560 "data/html_entities.gperf"
       {"Because", { 0xE2, 0x88, 0xB5 }, 3},
-#line 1373 "src/_html_entities.gperf"
+#line 1373 "data/html_entities.gperf"
       {"nsccue", { 0xE2, 0x8B, 0xA1 }, 3},
-#line 1449 "src/_html_entities.gperf"
+#line 1449 "data/html_entities.gperf"
       {"operp", { 0xE2, 0xA6, 0xB9 }, 3},
-#line 1803 "src/_html_entities.gperf"
+#line 1803 "data/html_entities.gperf"
       {"Oopf", { 0xF0, 0x9D, 0x95, 0x86 }, 4},
-#line 1343 "src/_html_entities.gperf"
+#line 1343 "data/html_entities.gperf"
       {"mid", { 0xE2, 0x88, 0xA3 }, 3},
-#line 1204 "src/_html_entities.gperf"
+#line 1204 "data/html_entities.gperf"
       {"setmn", { 0xE2, 0x88, 0x96 }, 3},
-#line 405 "src/_html_entities.gperf"
+#line 405 "data/html_entities.gperf"
       {"rarrsim", { 0xE2, 0xA5, 0xB4 }, 3},
-#line 292 "src/_html_entities.gperf"
+#line 292 "data/html_entities.gperf"
       {"larrsim", { 0xE2, 0xA5, 0xB3 }, 3},
-#line 320 "src/_html_entities.gperf"
+#line 320 "data/html_entities.gperf"
       {"sstarf", { 0xE2, 0x8B, 0x86 }, 3},
-#line 1322 "src/_html_entities.gperf"
+#line 1322 "data/html_entities.gperf"
       {"PrecedesTilde", { 0xE2, 0x89, 0xBE }, 3},
-#line 1775 "src/_html_entities.gperf"
+#line 1775 "data/html_entities.gperf"
       {"ssmile", { 0xE2, 0x8C, 0xA3 }, 3},
-#line 1889 "src/_html_entities.gperf"
+#line 1889 "data/html_entities.gperf"
       {"therefore", { 0xE2, 0x88, 0xB4 }, 3},
-#line 1273 "src/_html_entities.gperf"
+#line 1273 "data/html_entities.gperf"
       {"ShortRightArrow", { 0xE2, 0x86, 0x92 }, 3},
-#line 2084 "src/_html_entities.gperf"
+#line 2084 "data/html_entities.gperf"
       {"ord", { 0xE2, 0xA9, 0x9D }, 3},
-#line 1222 "src/_html_entities.gperf"
+#line 1222 "data/html_entities.gperf"
       {"rect", { 0xE2, 0x96, 0xAD }, 3},
-#line 1354 "src/_html_entities.gperf"
+#line 1354 "data/html_entities.gperf"
       {"sect", { 0xC2, 0xA7 }, 2},
-#line 252 "src/_html_entities.gperf"
+#line 252 "data/html_entities.gperf"
       {"niv", { 0xE2, 0x88, 0x8B }, 3},
-#line 1042 "src/_html_entities.gperf"
+#line 1042 "data/html_entities.gperf"
       {"iscr", { 0xF0, 0x9D, 0x92, 0xBE }, 4},
-#line 1469 "src/_html_entities.gperf"
+#line 1469 "data/html_entities.gperf"
       {"midast", { 0x2A }, 1},
-#line 1709 "src/_html_entities.gperf"
+#line 1709 "data/html_entities.gperf"
       {"lessdot", { 0xE2, 0x8B, 0x96 }, 3},
-#line 1282 "src/_html_entities.gperf"
+#line 1282 "data/html_entities.gperf"
       {"olcir", { 0xE2, 0xA6, 0xBE }, 3},
-#line 2092 "src/_html_entities.gperf"
+#line 2092 "data/html_entities.gperf"
       {"diam", { 0xE2, 0x8B, 0x84 }, 3},
-#line 1467 "src/_html_entities.gperf"
+#line 1467 "data/html_entities.gperf"
       {"mstpos", { 0xE2, 0x88, 0xBE }, 3},
-#line 1936 "src/_html_entities.gperf"
+#line 1936 "data/html_entities.gperf"
       {"piv", { 0xCF, 0x96 }, 2},
-#line 1202 "src/_html_entities.gperf"
+#line 1202 "data/html_entities.gperf"
       {"rfr", { 0xF0, 0x9D, 0x94, 0xAF }, 4},
-#line 91 "src/_html_entities.gperf"
+#line 91 "data/html_entities.gperf"
       {"tfr", { 0xF0, 0x9D, 0x94, 0xB1 }, 4},
-#line 139 "src/_html_entities.gperf"
+#line 139 "data/html_entities.gperf"
       {"lfr", { 0xF0, 0x9D, 0x94, 0xA9 }, 4},
-#line 833 "src/_html_entities.gperf"
+#line 833 "data/html_entities.gperf"
       {"sfr", { 0xF0, 0x9D, 0x94, 0xB0 }, 4},
-#line 1943 "src/_html_entities.gperf"
+#line 1943 "data/html_entities.gperf"
       {"efr", { 0xF0, 0x9D, 0x94, 0xA2 }, 4},
-#line 916 "src/_html_entities.gperf"
+#line 916 "data/html_entities.gperf"
       {"Bscr", { 0xE2, 0x84, 0xAC }, 3},
-#line 2049 "src/_html_entities.gperf"
+#line 2049 "data/html_entities.gperf"
       {"Copf", { 0xE2, 0x84, 0x82 }, 3},
-#line 462 "src/_html_entities.gperf"
+#line 462 "data/html_entities.gperf"
       {"dscr", { 0xF0, 0x9D, 0x92, 0xB9 }, 4},
-#line 1300 "src/_html_entities.gperf"
+#line 1300 "data/html_entities.gperf"
       {"ufr", { 0xF0, 0x9D, 0x94, 0xB2 }, 4},
-#line 1044 "src/_html_entities.gperf"
+#line 1044 "data/html_entities.gperf"
       {"excl", { 0x21 }, 1},
-#line 1716 "src/_html_entities.gperf"
+#line 1716 "data/html_entities.gperf"
       {"nfr", { 0xF0, 0x9D, 0x94, 0xAB }, 4},
-#line 2126 "src/_html_entities.gperf"
+#line 2126 "data/html_entities.gperf"
       {"Pfr", { 0xF0, 0x9D, 0x94, 0x93 }, 4},
-#line 1505 "src/_html_entities.gperf"
+#line 1505 "data/html_entities.gperf"
       {"bfr", { 0xF0, 0x9D, 0x94, 0x9F }, 4},
-#line 974 "src/_html_entities.gperf"
+#line 974 "data/html_entities.gperf"
       {"ordf", { 0xC2, 0xAA }, 2},
-#line 1061 "src/_html_entities.gperf"
+#line 1061 "data/html_entities.gperf"
       {"Zfr", { 0xE2, 0x84, 0xA8 }, 3},
-#line 1591 "src/_html_entities.gperf"
+#line 1591 "data/html_entities.gperf"
       {"Dscr", { 0xF0, 0x9D, 0x92, 0x9F }, 4},
-#line 1160 "src/_html_entities.gperf"
+#line 1160 "data/html_entities.gperf"
       {"Qfr", { 0xF0, 0x9D, 0x94, 0x94 }, 4},
-#line 351 "src/_html_entities.gperf"
+#line 351 "data/html_entities.gperf"
       {"Xfr", { 0xF0, 0x9D, 0x94, 0x9B }, 4},
-#line 2031 "src/_html_entities.gperf"
+#line 2031 "data/html_entities.gperf"
       {"Vfr", { 0xF0, 0x9D, 0x94, 0x99 }, 4},
-#line 451 "src/_html_entities.gperf"
+#line 451 "data/html_entities.gperf"
       {"Jfr", { 0xF0, 0x9D, 0x94, 0x8D }, 4},
-#line 1182 "src/_html_entities.gperf"
+#line 1182 "data/html_entities.gperf"
       {"percnt", { 0x25 }, 1},
-#line 2083 "src/_html_entities.gperf"
+#line 2083 "data/html_entities.gperf"
       {"Sfr", { 0xF0, 0x9D, 0x94, 0x96 }, 4},
-#line 58 "src/_html_entities.gperf"
+#line 58 "data/html_entities.gperf"
       {"Equal", { 0xE2, 0xA9, 0xB5 }, 3},
-#line 107 "src/_html_entities.gperf"
+#line 107 "data/html_entities.gperf"
       {"NotCupCap", { 0xE2, 0x89, 0xAD }, 3},
-#line 1737 "src/_html_entities.gperf"
+#line 1737 "data/html_entities.gperf"
       {"barwed", { 0xE2, 0x8C, 0x85 }, 3},
-#line 1766 "src/_html_entities.gperf"
+#line 1766 "data/html_entities.gperf"
       {"pfr", { 0xF0, 0x9D, 0x94, 0xAD }, 4},
-#line 993 "src/_html_entities.gperf"
+#line 993 "data/html_entities.gperf"
       {"Hfr", { 0xE2, 0x84, 0x8C }, 3},
-#line 1980 "src/_html_entities.gperf"
+#line 1980 "data/html_entities.gperf"
       {"olcross", { 0xE2, 0xA6, 0xBB }, 3},
-#line 1664 "src/_html_entities.gperf"
+#line 1664 "data/html_entities.gperf"
       {"vfr", { 0xF0, 0x9D, 0x94, 0xB3 }, 4},
-#line 1616 "src/_html_entities.gperf"
+#line 1616 "data/html_entities.gperf"
       {"THORN", { 0xC3, 0x9E }, 2},
-#line 470 "src/_html_entities.gperf"
+#line 470 "data/html_entities.gperf"
       {"Coproduct", { 0xE2, 0x88, 0x90 }, 3},
-#line 1694 "src/_html_entities.gperf"
+#line 1694 "data/html_entities.gperf"
       {"Wfr", { 0xF0, 0x9D, 0x94, 0x9A }, 4},
-#line 866 "src/_html_entities.gperf"
+#line 866 "data/html_entities.gperf"
       {"ohm", { 0xCE, 0xA9 }, 2},
-#line 164 "src/_html_entities.gperf"
+#line 164 "data/html_entities.gperf"
       {"oopf", { 0xF0, 0x9D, 0x95, 0xA0 }, 4},
-#line 258 "src/_html_entities.gperf"
+#line 258 "data/html_entities.gperf"
       {"Ifr", { 0xE2, 0x84, 0x91 }, 3},
-#line 1619 "src/_html_entities.gperf"
+#line 1619 "data/html_entities.gperf"
       {"Kfr", { 0xF0, 0x9D, 0x94, 0x8E }, 4},
-#line 1955 "src/_html_entities.gperf"
+#line 1955 "data/html_entities.gperf"
       {"NotLeftTriangleBar", { 0xE2, 0xA7, 0x8F, 0xCC, 0xB8 }, 5},
-#line 1521 "src/_html_entities.gperf"
+#line 1521 "data/html_entities.gperf"
       {"NotLeftTriangle", { 0xE2, 0x8B, 0xAA }, 3},
-#line 1947 "src/_html_entities.gperf"
+#line 1947 "data/html_entities.gperf"
       {"ffr", { 0xF0, 0x9D, 0x94, 0xA3 }, 4},
-#line 845 "src/_html_entities.gperf"
+#line 845 "data/html_entities.gperf"
       {"NotLeftTriangleEqual", { 0xE2, 0x8B, 0xAC }, 3},
-#line 2038 "src/_html_entities.gperf"
+#line 2038 "data/html_entities.gperf"
       {"siml", { 0xE2, 0xAA, 0x9D }, 3},
-#line 933 "src/_html_entities.gperf"
+#line 933 "data/html_entities.gperf"
       {"nLeftrightarrow", { 0xE2, 0x87, 0x8E }, 3},
-#line 26 "src/_html_entities.gperf"
+#line 26 "data/html_entities.gperf"
       {"Lfr", { 0xF0, 0x9D, 0x94, 0x8F }, 4},
-#line 1550 "src/_html_entities.gperf"
+#line 1550 "data/html_entities.gperf"
       {"Rfr", { 0xE2, 0x84, 0x9C }, 3},
-#line 312 "src/_html_entities.gperf"
+#line 312 "data/html_entities.gperf"
       {"Afr", { 0xF0, 0x9D, 0x94, 0x84 }, 4},
-#line 595 "src/_html_entities.gperf"
+#line 595 "data/html_entities.gperf"
       {"nltrie", { 0xE2, 0x8B, 0xAC }, 3},
-#line 1778 "src/_html_entities.gperf"
+#line 1778 "data/html_entities.gperf"
       {"mho", { 0xE2, 0x84, 0xA7 }, 3},
-#line 360 "src/_html_entities.gperf"
+#line 360 "data/html_entities.gperf"
       {"Nfr", { 0xF0, 0x9D, 0x94, 0x91 }, 4},
-#line 1894 "src/_html_entities.gperf"
+#line 1894 "data/html_entities.gperf"
       {"gl", { 0xE2, 0x89, 0xB7 }, 3},
-#line 169 "src/_html_entities.gperf"
+#line 169 "data/html_entities.gperf"
       {"Mfr", { 0xF0, 0x9D, 0x94, 0x90 }, 4},
-#line 123 "src/_html_entities.gperf"
+#line 123 "data/html_entities.gperf"
       {"nrtrie", { 0xE2, 0x8B, 0xAD }, 3},
-#line 30 "src/_html_entities.gperf"
+#line 30 "data/html_entities.gperf"
       {"Therefore", { 0xE2, 0x88, 0xB4 }, 3},
-#line 1352 "src/_html_entities.gperf"
+#line 1352 "data/html_entities.gperf"
       {"qfr", { 0xF0, 0x9D, 0x94, 0xAE }, 4},
-#line 1642 "src/_html_entities.gperf"
+#line 1642 "data/html_entities.gperf"
       {"backepsilon", { 0xCF, 0xB6 }, 2},
-#line 1988 "src/_html_entities.gperf"
+#line 1988 "data/html_entities.gperf"
       {"target", { 0xE2, 0x8C, 0x96 }, 3},
-#line 1229 "src/_html_entities.gperf"
+#line 1229 "data/html_entities.gperf"
       {"nleftrightarrow", { 0xE2, 0x86, 0xAE }, 3},
-#line 1489 "src/_html_entities.gperf"
+#line 1489 "data/html_entities.gperf"
       {"rarrfs", { 0xE2, 0xA4, 0x9E }, 3},
-#line 1563 "src/_html_entities.gperf"
+#line 1563 "data/html_entities.gperf"
       {"larrfs", { 0xE2, 0xA4, 0x9D }, 3},
-#line 309 "src/_html_entities.gperf"
+#line 309 "data/html_entities.gperf"
       {"nvlArr", { 0xE2, 0xA4, 0x82 }, 3},
-#line 1797 "src/_html_entities.gperf"
+#line 1797 "data/html_entities.gperf"
       {"plussim", { 0xE2, 0xA8, 0xA6 }, 3},
-#line 1522 "src/_html_entities.gperf"
+#line 1522 "data/html_entities.gperf"
       {"epsilon", { 0xCE, 0xB5 }, 2},
-#line 167 "src/_html_entities.gperf"
+#line 167 "data/html_entities.gperf"
       {"upsilon", { 0xCF, 0x85 }, 2},
-#line 2080 "src/_html_entities.gperf"
+#line 2080 "data/html_entities.gperf"
       {"Yfr", { 0xF0, 0x9D, 0x94, 0x9C }, 4},
-#line 612 "src/_html_entities.gperf"
+#line 612 "data/html_entities.gperf"
       {"Ffr", { 0xF0, 0x9D, 0x94, 0x89 }, 4},
-#line 375 "src/_html_entities.gperf"
+#line 375 "data/html_entities.gperf"
       {"diamondsuit", { 0xE2, 0x99, 0xA6 }, 3},
-#line 778 "src/_html_entities.gperf"
+#line 778 "data/html_entities.gperf"
       {"gnap", { 0xE2, 0xAA, 0x8A }, 3},
-#line 2125 "src/_html_entities.gperf"
+#line 2125 "data/html_entities.gperf"
       {"scap", { 0xE2, 0xAA, 0xB8 }, 3},
-#line 713 "src/_html_entities.gperf"
+#line 713 "data/html_entities.gperf"
       {"nsupE", { 0xE2, 0xAB, 0x86, 0xCC, 0xB8 }, 5},
-#line 1717 "src/_html_entities.gperf"
+#line 1717 "data/html_entities.gperf"
       {"nsubE", { 0xE2, 0xAB, 0x85, 0xCC, 0xB8 }, 5},
-#line 1918 "src/_html_entities.gperf"
+#line 1918 "data/html_entities.gperf"
       {"ncap", { 0xE2, 0xA9, 0x83 }, 3},
-#line 118 "src/_html_entities.gperf"
+#line 118 "data/html_entities.gperf"
       {"Ufr", { 0xF0, 0x9D, 0x94, 0x98 }, 4},
-#line 1821 "src/_html_entities.gperf"
+#line 1821 "data/html_entities.gperf"
       {"rcub", { 0x7D }, 1},
-#line 1377 "src/_html_entities.gperf"
+#line 1377 "data/html_entities.gperf"
       {"lcub", { 0x7B }, 1},
-#line 1637 "src/_html_entities.gperf"
+#line 1637 "data/html_entities.gperf"
       {"gne", { 0xE2, 0xAA, 0x88 }, 3},
-#line 2093 "src/_html_entities.gperf"
+#line 2093 "data/html_entities.gperf"
       {"sce", { 0xE2, 0xAA, 0xB0 }, 3},
-#line 442 "src/_html_entities.gperf"
+#line 442 "data/html_entities.gperf"
       {"Tfr", { 0xF0, 0x9D, 0x94, 0x97 }, 4},
-#line 119 "src/_html_entities.gperf"
+#line 119 "data/html_entities.gperf"
       {"mscr", { 0xF0, 0x9D, 0x93, 0x82 }, 4},
-#line 1344 "src/_html_entities.gperf"
+#line 1344 "data/html_entities.gperf"
       {"diamond", { 0xE2, 0x8B, 0x84 }, 3},
-#line 1091 "src/_html_entities.gperf"
+#line 1091 "data/html_entities.gperf"
       {"nsucceq", { 0xE2, 0xAA, 0xB0, 0xCC, 0xB8 }, 5},
-#line 1719 "src/_html_entities.gperf"
+#line 1719 "data/html_entities.gperf"
       {"ordm", { 0xC2, 0xBA }, 2},
-#line 1770 "src/_html_entities.gperf"
+#line 1770 "data/html_entities.gperf"
       {"exist", { 0xE2, 0x88, 0x83 }, 3},
-#line 1422 "src/_html_entities.gperf"
+#line 1422 "data/html_entities.gperf"
       {"Diamond", { 0xE2, 0x8B, 0x84 }, 3},
-#line 1112 "src/_html_entities.gperf"
+#line 1112 "data/html_entities.gperf"
       {"Escr", { 0xE2, 0x84, 0xB0 }, 3},
-#line 555 "src/_html_entities.gperf"
+#line 555 "data/html_entities.gperf"
       {"prnap", { 0xE2, 0xAA, 0xB9 }, 3},
-#line 906 "src/_html_entities.gperf"
+#line 906 "data/html_entities.gperf"
       {"rcaron", { 0xC5, 0x99 }, 2},
-#line 109 "src/_html_entities.gperf"
+#line 109 "data/html_entities.gperf"
       {"tcaron", { 0xC5, 0xA5 }, 2},
-#line 582 "src/_html_entities.gperf"
+#line 582 "data/html_entities.gperf"
       {"lcaron", { 0xC4, 0xBE }, 2},
-#line 1421 "src/_html_entities.gperf"
+#line 1421 "data/html_entities.gperf"
       {"scaron", { 0xC5, 0xA1 }, 2},
-#line 824 "src/_html_entities.gperf"
+#line 824 "data/html_entities.gperf"
       {"ecaron", { 0xC4, 0x9B }, 2},
-#line 424 "src/_html_entities.gperf"
+#line 424 "data/html_entities.gperf"
       {"divide", { 0xC3, 0xB7 }, 2},
-#line 1713 "src/_html_entities.gperf"
+#line 1713 "data/html_entities.gperf"
       {"precsim", { 0xE2, 0x89, 0xBE }, 3},
-#line 483 "src/_html_entities.gperf"
+#line 483 "data/html_entities.gperf"
       {"ncup", { 0xE2, 0xA9, 0x82 }, 3},
-#line 648 "src/_html_entities.gperf"
+#line 648 "data/html_entities.gperf"
       {"ncaron", { 0xC5, 0x88 }, 2},
-#line 1475 "src/_html_entities.gperf"
+#line 1475 "data/html_entities.gperf"
       {"lesssim", { 0xE2, 0x89, 0xB2 }, 3},
-#line 2078 "src/_html_entities.gperf"
+#line 2078 "data/html_entities.gperf"
       {"precneqq", { 0xE2, 0xAA, 0xB5 }, 3},
-#line 700 "src/_html_entities.gperf"
+#line 700 "data/html_entities.gperf"
       {"div", { 0xC3, 0xB7 }, 2},
-#line 2056 "src/_html_entities.gperf"
+#line 2056 "data/html_entities.gperf"
       {"elsdot", { 0xE2, 0xAA, 0x97 }, 3},
-#line 1807 "src/_html_entities.gperf"
+#line 1807 "data/html_entities.gperf"
       {"Zcaron", { 0xC5, 0xBD }, 2},
-#line 1873 "src/_html_entities.gperf"
+#line 1873 "data/html_entities.gperf"
       {"backsim", { 0xE2, 0x88, 0xBD }, 3},
-#line 2032 "src/_html_entities.gperf"
+#line 2032 "data/html_entities.gperf"
       {"ifr", { 0xF0, 0x9D, 0x94, 0xA6 }, 4},
-#line 498 "src/_html_entities.gperf"
+#line 498 "data/html_entities.gperf"
       {"spades", { 0xE2, 0x99, 0xA0 }, 3},
-#line 1661 "src/_html_entities.gperf"
+#line 1661 "data/html_entities.gperf"
       {"looparrowright", { 0xE2, 0x86, 0xAC }, 3},
-#line 1117 "src/_html_entities.gperf"
+#line 1117 "data/html_entities.gperf"
       {"Prime", { 0xE2, 0x80, 0xB3 }, 3},
-#line 735 "src/_html_entities.gperf"
+#line 735 "data/html_entities.gperf"
       {"Scaron", { 0xC5, 0xA0 }, 2},
-#line 1349 "src/_html_entities.gperf"
+#line 1349 "data/html_entities.gperf"
       {"Phi", { 0xCE, 0xA6 }, 2},
-#line 725 "src/_html_entities.gperf"
+#line 725 "data/html_entities.gperf"
       {"SquareUnion", { 0xE2, 0x8A, 0x94 }, 3},
-#line 721 "src/_html_entities.gperf"
+#line 721 "data/html_entities.gperf"
       {"elinters", { 0xE2, 0x8F, 0xA7 }, 3},
-#line 1074 "src/_html_entities.gperf"
+#line 1074 "data/html_entities.gperf"
       {"spadesuit", { 0xE2, 0x99, 0xA0 }, 3},
-#line 455 "src/_html_entities.gperf"
+#line 455 "data/html_entities.gperf"
       {"prnE", { 0xE2, 0xAA, 0xB5 }, 3},
-#line 1588 "src/_html_entities.gperf"
+#line 1588 "data/html_entities.gperf"
       {"topcir", { 0xE2, 0xAB, 0xB1 }, 3},
-#line 1978 "src/_html_entities.gperf"
+#line 1978 "data/html_entities.gperf"
       {"gap", { 0xE2, 0xAA, 0x86 }, 3},
-#line 2008 "src/_html_entities.gperf"
+#line 2008 "data/html_entities.gperf"
       {"nrarrw", { 0xE2, 0x86, 0x9D, 0xCC, 0xB8 }, 5},
-#line 1097 "src/_html_entities.gperf"
+#line 1097 "data/html_entities.gperf"
       {"thinsp", { 0xE2, 0x80, 0x89 }, 3},
-#line 113 "src/_html_entities.gperf"
+#line 113 "data/html_entities.gperf"
       {"Bfr", { 0xF0, 0x9D, 0x94, 0x85 }, 4},
-#line 1064 "src/_html_entities.gperf"
+#line 1064 "data/html_entities.gperf"
       {"prime", { 0xE2, 0x80, 0xB2 }, 3},
-#line 135 "src/_html_entities.gperf"
+#line 135 "data/html_entities.gperf"
       {"dfr", { 0xF0, 0x9D, 0x94, 0xA1 }, 4},
-#line 715 "src/_html_entities.gperf"
+#line 715 "data/html_entities.gperf"
       {"trade", { 0xE2, 0x84, 0xA2 }, 3},
-#line 88 "src/_html_entities.gperf"
+#line 88 "data/html_entities.gperf"
       {"phi", { 0xCF, 0x86 }, 2},
-#line 681 "src/_html_entities.gperf"
+#line 681 "data/html_entities.gperf"
       {"notnivb", { 0xE2, 0x8B, 0xBE }, 3},
-#line 1076 "src/_html_entities.gperf"
+#line 1076 "data/html_entities.gperf"
       {"Dfr", { 0xF0, 0x9D, 0x94, 0x87 }, 4},
-#line 491 "src/_html_entities.gperf"
+#line 491 "data/html_entities.gperf"
       {"primes", { 0xE2, 0x84, 0x99 }, 3},
-#line 639 "src/_html_entities.gperf"
+#line 639 "data/html_entities.gperf"
       {"ssetmn", { 0xE2, 0x88, 0x96 }, 3},
-#line 837 "src/_html_entities.gperf"
+#line 837 "data/html_entities.gperf"
       {"ge", { 0xE2, 0x89, 0xA5 }, 3},
-#line 1847 "src/_html_entities.gperf"
+#line 1847 "data/html_entities.gperf"
       {"mnplus", { 0xE2, 0x88, 0x93 }, 3},
-#line 277 "src/_html_entities.gperf"
+#line 277 "data/html_entities.gperf"
       {"GT", { 0x3E }, 1},
-#line 1406 "src/_html_entities.gperf"
+#line 1406 "data/html_entities.gperf"
       {"Barwed", { 0xE2, 0x8C, 0x86 }, 3},
-#line 529 "src/_html_entities.gperf"
+#line 529 "data/html_entities.gperf"
       {"Upsilon", { 0xCE, 0xA5 }, 2},
-#line 220 "src/_html_entities.gperf"
+#line 220 "data/html_entities.gperf"
       {"Lcaron", { 0xC4, 0xBD }, 2},
-#line 935 "src/_html_entities.gperf"
+#line 935 "data/html_entities.gperf"
       {"ges", { 0xE2, 0xA9, 0xBE }, 3},
-#line 1372 "src/_html_entities.gperf"
+#line 1372 "data/html_entities.gperf"
       {"Rcaron", { 0xC5, 0x98 }, 2},
-#line 98 "src/_html_entities.gperf"
+#line 98 "data/html_entities.gperf"
       {"lltri", { 0xE2, 0x97, 0xBA }, 3},
-#line 1834 "src/_html_entities.gperf"
+#line 1834 "data/html_entities.gperf"
       {"gneq", { 0xE2, 0xAA, 0x88 }, 3},
-#line 1580 "src/_html_entities.gperf"
+#line 1580 "data/html_entities.gperf"
       {"ultri", { 0xE2, 0x97, 0xB8 }, 3},
-#line 643 "src/_html_entities.gperf"
+#line 643 "data/html_entities.gperf"
       {"varpi", { 0xCF, 0x96 }, 2},
-#line 1168 "src/_html_entities.gperf"
+#line 1168 "data/html_entities.gperf"
       {"nltri", { 0xE2, 0x8B, 0xAA }, 3},
-#line 1700 "src/_html_entities.gperf"
+#line 1700 "data/html_entities.gperf"
       {"ratail", { 0xE2, 0xA4, 0x9A }, 3},
-#line 1566 "src/_html_entities.gperf"
+#line 1566 "data/html_entities.gperf"
       {"Ncaron", { 0xC5, 0x87 }, 2},
-#line 1006 "src/_html_entities.gperf"
+#line 1006 "data/html_entities.gperf"
       {"latail", { 0xE2, 0xA4, 0x99 }, 3},
-#line 2115 "src/_html_entities.gperf"
+#line 2115 "data/html_entities.gperf"
       {"lrtri", { 0xE2, 0x8A, 0xBF }, 3},
-#line 766 "src/_html_entities.gperf"
+#line 766 "data/html_entities.gperf"
       {"gneqq", { 0xE2, 0x89, 0xA9 }, 3},
-#line 1165 "src/_html_entities.gperf"
+#line 1165 "data/html_entities.gperf"
       {"oast", { 0xE2, 0x8A, 0x9B }, 3},
-#line 441 "src/_html_entities.gperf"
+#line 441 "data/html_entities.gperf"
       {"urtri", { 0xE2, 0x97, 0xB9 }, 3},
-#line 1527 "src/_html_entities.gperf"
+#line 1527 "data/html_entities.gperf"
       {"nrtri", { 0xE2, 0x8B, 0xAB }, 3},
-#line 1540 "src/_html_entities.gperf"
+#line 1540 "data/html_entities.gperf"
       {"mapstoleft", { 0xE2, 0x86, 0xA4 }, 3},
-#line 587 "src/_html_entities.gperf"
+#line 587 "data/html_entities.gperf"
       {"zscr", { 0xF0, 0x9D, 0x93, 0x8F }, 4},
-#line 1726 "src/_html_entities.gperf"
+#line 1726 "data/html_entities.gperf"
       {"NestedLessLess", { 0xE2, 0x89, 0xAA }, 3},
-#line 1206 "src/_html_entities.gperf"
+#line 1206 "data/html_entities.gperf"
       {"nvrtrie", { 0xE2, 0x8A, 0xB5, 0xE2, 0x83, 0x92 }, 6},
-#line 1159 "src/_html_entities.gperf"
+#line 1159 "data/html_entities.gperf"
       {"upharpoonleft", { 0xE2, 0x86, 0xBF }, 3},
-#line 1065 "src/_html_entities.gperf"
+#line 1065 "data/html_entities.gperf"
       {"OpenCurlyDoubleQuote", { 0xE2, 0x80, 0x9C }, 3},
-#line 204 "src/_html_entities.gperf"
+#line 204 "data/html_entities.gperf"
       {"setminus", { 0xE2, 0x88, 0x96 }, 3},
-#line 811 "src/_html_entities.gperf"
+#line 811 "data/html_entities.gperf"
       {"malt", { 0xE2, 0x9C, 0xA0 }, 3},
-#line 1814 "src/_html_entities.gperf"
+#line 1814 "data/html_entities.gperf"
       {"REG", { 0xC2, 0xAE }, 2},
-#line 1366 "src/_html_entities.gperf"
+#line 1366 "data/html_entities.gperf"
       {"lesges", { 0xE2, 0xAA, 0x93 }, 3},
-#line 742 "src/_html_entities.gperf"
+#line 742 "data/html_entities.gperf"
       {"permil", { 0xE2, 0x80, 0xB0 }, 3},
-#line 1310 "src/_html_entities.gperf"
+#line 1310 "data/html_entities.gperf"
       {"emptyset", { 0xE2, 0x88, 0x85 }, 3},
-#line 2085 "src/_html_entities.gperf"
+#line 2085 "data/html_entities.gperf"
       {"vltri", { 0xE2, 0x8A, 0xB2 }, 3},
-#line 42 "src/_html_entities.gperf"
+#line 42 "data/html_entities.gperf"
       {"mapstoup", { 0xE2, 0x86, 0xA5 }, 3},
-#line 1041 "src/_html_entities.gperf"
+#line 1041 "data/html_entities.gperf"
       {"disin", { 0xE2, 0x8B, 0xB2 }, 3},
-#line 1312 "src/_html_entities.gperf"
+#line 1312 "data/html_entities.gperf"
       {"Tcaron", { 0xC5, 0xA4 }, 2},
-#line 1086 "src/_html_entities.gperf"
+#line 1086 "data/html_entities.gperf"
       {"bsol", { 0x5C }, 1},
-#line 1823 "src/_html_entities.gperf"
+#line 1823 "data/html_entities.gperf"
       {"vrtri", { 0xE2, 0x8A, 0xB3 }, 3},
-#line 1374 "src/_html_entities.gperf"
+#line 1374 "data/html_entities.gperf"
       {"NotHumpDownHump", { 0xE2, 0x89, 0x8E, 0xCC, 0xB8 }, 5},
-#line 1314 "src/_html_entities.gperf"
+#line 1314 "data/html_entities.gperf"
       {"dollar", { 0x24 }, 1},
-#line 1653 "src/_html_entities.gperf"
+#line 1653 "data/html_entities.gperf"
       {"dotminus", { 0xE2, 0x88, 0xB8 }, 3},
-#line 1702 "src/_html_entities.gperf"
+#line 1702 "data/html_entities.gperf"
       {"notni", { 0xE2, 0x88, 0x8C }, 3},
-#line 517 "src/_html_entities.gperf"
+#line 517 "data/html_entities.gperf"
       {"lesdot", { 0xE2, 0xA9, 0xBF }, 3},
-#line 930 "src/_html_entities.gperf"
+#line 930 "data/html_entities.gperf"
       {"HorizontalLine", { 0xE2, 0x94, 0x80 }, 3},
-#line 603 "src/_html_entities.gperf"
+#line 603 "data/html_entities.gperf"
       {"Wedge", { 0xE2, 0x8B, 0x80 }, 3},
-#line 1859 "src/_html_entities.gperf"
+#line 1859 "data/html_entities.gperf"
       {"ThickSpace", { 0xE2, 0x81, 0x9F, 0xE2, 0x80, 0x8A }, 6},
-#line 1762 "src/_html_entities.gperf"
+#line 1762 "data/html_entities.gperf"
       {"NotDoubleVerticalBar", { 0xE2, 0x88, 0xA6 }, 3},
-#line 1396 "src/_html_entities.gperf"
+#line 1396 "data/html_entities.gperf"
       {"eqcolon", { 0xE2, 0x89, 0x95 }, 3},
-#line 1183 "src/_html_entities.gperf"
+#line 1183 "data/html_entities.gperf"
       {"equivDD", { 0xE2, 0xA9, 0xB8 }, 3},
-#line 1829 "src/_html_entities.gperf"
+#line 1829 "data/html_entities.gperf"
       {"wscr", { 0xF0, 0x9D, 0x93, 0x8C }, 4},
-#line 569 "src/_html_entities.gperf"
+#line 569 "data/html_entities.gperf"
       {"orv", { 0xE2, 0xA9, 0x9B }, 3},
-#line 999 "src/_html_entities.gperf"
+#line 999 "data/html_entities.gperf"
       {"DoubleLeftArrow", { 0xE2, 0x87, 0x90 }, 3},
-#line 1220 "src/_html_entities.gperf"
+#line 1220 "data/html_entities.gperf"
       {"geq", { 0xE2, 0x89, 0xA5 }, 3},
-#line 1699 "src/_html_entities.gperf"
+#line 1699 "data/html_entities.gperf"
       {"Oscr", { 0xF0, 0x9D, 0x92, 0xAA }, 4},
-#line 129 "src/_html_entities.gperf"
+#line 129 "data/html_entities.gperf"
       {"DoubleContourIntegral", { 0xE2, 0x88, 0xAF }, 3},
-#line 2096 "src/_html_entities.gperf"
+#line 2096 "data/html_entities.gperf"
       {"bottom", { 0xE2, 0x8A, 0xA5 }, 3},
-#line 1831 "src/_html_entities.gperf"
+#line 1831 "data/html_entities.gperf"
       {"inodot", { 0xC4, 0xB1 }, 2},
-#line 1945 "src/_html_entities.gperf"
+#line 1945 "data/html_entities.gperf"
       {"mfr", { 0xF0, 0x9D, 0x94, 0xAA }, 4},
-#line 1456 "src/_html_entities.gperf"
+#line 1456 "data/html_entities.gperf"
       {"NotNestedGreaterGreater", { 0xE2, 0xAA, 0xA2, 0xCC, 0xB8 }, 5},
-#line 1146 "src/_html_entities.gperf"
+#line 1146 "data/html_entities.gperf"
       {"geqq", { 0xE2, 0x89, 0xA7 }, 3},
-#line 1311 "src/_html_entities.gperf"
+#line 1311 "data/html_entities.gperf"
       {"intprod", { 0xE2, 0xA8, 0xBC }, 3},
-#line 1858 "src/_html_entities.gperf"
+#line 1858 "data/html_entities.gperf"
       {"nshortmid", { 0xE2, 0x88, 0xA4 }, 3},
-#line 247 "src/_html_entities.gperf"
+#line 247 "data/html_entities.gperf"
       {"frown", { 0xE2, 0x8C, 0xA2 }, 3},
-#line 1321 "src/_html_entities.gperf"
+#line 1321 "data/html_entities.gperf"
       {"jopf", { 0xF0, 0x9D, 0x95, 0x9B }, 4},
-#line 168 "src/_html_entities.gperf"
+#line 168 "data/html_entities.gperf"
       {"Efr", { 0xF0, 0x9D, 0x94, 0x88 }, 4},
-#line 229 "src/_html_entities.gperf"
+#line 229 "data/html_entities.gperf"
       {"Fouriertrf", { 0xE2, 0x84, 0xB1 }, 3},
-#line 1551 "src/_html_entities.gperf"
+#line 1551 "data/html_entities.gperf"
       {"emptyv", { 0xE2, 0x88, 0x85 }, 3},
-#line 183 "src/_html_entities.gperf"
+#line 183 "data/html_entities.gperf"
       {"pointint", { 0xE2, 0xA8, 0x95 }, 3},
-#line 888 "src/_html_entities.gperf"
+#line 888 "data/html_entities.gperf"
       {"dcaron", { 0xC4, 0x8F }, 2},
-#line 1781 "src/_html_entities.gperf"
+#line 1781 "data/html_entities.gperf"
       {"InvisibleTimes", { 0xE2, 0x81, 0xA2 }, 3},
-#line 222 "src/_html_entities.gperf"
+#line 222 "data/html_entities.gperf"
       {"vsupne", { 0xE2, 0x8A, 0x8B, 0xEF, 0xB8, 0x80 }, 6},
-#line 688 "src/_html_entities.gperf"
+#line 688 "data/html_entities.gperf"
       {"vsubne", { 0xE2, 0x8A, 0x8A, 0xEF, 0xB8, 0x80 }, 6},
-#line 1605 "src/_html_entities.gperf"
+#line 1605 "data/html_entities.gperf"
       {"EqualTilde", { 0xE2, 0x89, 0x82 }, 3},
-#line 1962 "src/_html_entities.gperf"
+#line 1962 "data/html_entities.gperf"
       {"image", { 0xE2, 0x84, 0x91 }, 3},
-#line 1120 "src/_html_entities.gperf"
+#line 1120 "data/html_entities.gperf"
       {"maltese", { 0xE2, 0x9C, 0xA0 }, 3},
-#line 1558 "src/_html_entities.gperf"
+#line 1558 "data/html_entities.gperf"
       {"Dcaron", { 0xC4, 0x8E }, 2},
-#line 799 "src/_html_entities.gperf"
+#line 799 "data/html_entities.gperf"
       {"Equilibrium", { 0xE2, 0x87, 0x8C }, 3},
-#line 729 "src/_html_entities.gperf"
+#line 729 "data/html_entities.gperf"
       {"DotDot", { 0xE2, 0x83, 0x9C }, 3},
-#line 1792 "src/_html_entities.gperf"
+#line 1792 "data/html_entities.gperf"
       {"efDot", { 0xE2, 0x89, 0x92 }, 3},
-#line 1733 "src/_html_entities.gperf"
+#line 1733 "data/html_entities.gperf"
       {"harr", { 0xE2, 0x86, 0x94 }, 3},
-#line 722 "src/_html_entities.gperf"
+#line 722 "data/html_entities.gperf"
       {"NotCongruent", { 0xE2, 0x89, 0xA2 }, 3},
-#line 1319 "src/_html_entities.gperf"
+#line 1319 "data/html_entities.gperf"
       {"late", { 0xE2, 0xAA, 0xAD }, 3},
-#line 2086 "src/_html_entities.gperf"
+#line 2086 "data/html_entities.gperf"
       {"npre", { 0xE2, 0xAA, 0xAF, 0xCC, 0xB8 }, 5},
-#line 900 "src/_html_entities.gperf"
+#line 900 "data/html_entities.gperf"
       {"NotTilde", { 0xE2, 0x89, 0x81 }, 3},
-#line 1140 "src/_html_entities.gperf"
+#line 1140 "data/html_entities.gperf"
       {"nvlt", { 0x3C, 0xE2, 0x83, 0x92 }, 4},
-#line 1598 "src/_html_entities.gperf"
+#line 1598 "data/html_entities.gperf"
       {"lates", { 0xE2, 0xAA, 0xAD, 0xEF, 0xB8, 0x80 }, 6},
-#line 59 "src/_html_entities.gperf"
+#line 59 "data/html_entities.gperf"
       {"prod", { 0xE2, 0x88, 0x8F }, 3},
-#line 1010 "src/_html_entities.gperf"
+#line 1010 "data/html_entities.gperf"
       {"ShortUpArrow", { 0xE2, 0x86, 0x91 }, 3},
-#line 1129 "src/_html_entities.gperf"
+#line 1129 "data/html_entities.gperf"
       {"Cscr", { 0xF0, 0x9D, 0x92, 0x9E }, 4},
-#line 945 "src/_html_entities.gperf"
+#line 945 "data/html_entities.gperf"
       {"hoarr", { 0xE2, 0x87, 0xBF }, 3},
-#line 1884 "src/_html_entities.gperf"
+#line 1884 "data/html_entities.gperf"
       {"udarr", { 0xE2, 0x87, 0x85 }, 3},
-#line 1929 "src/_html_entities.gperf"
+#line 1929 "data/html_entities.gperf"
       {"rfloor", { 0xE2, 0x8C, 0x8B }, 3},
-#line 2071 "src/_html_entities.gperf"
+#line 2071 "data/html_entities.gperf"
       {"lfloor", { 0xE2, 0x8C, 0x8A }, 3},
-#line 1072 "src/_html_entities.gperf"
+#line 1072 "data/html_entities.gperf"
       {"smallsetminus", { 0xE2, 0x88, 0x96 }, 3},
-#line 1534 "src/_html_entities.gperf"
+#line 1534 "data/html_entities.gperf"
       {"horbar", { 0xE2, 0x80, 0x95 }, 3},
-#line 719 "src/_html_entities.gperf"
+#line 719 "data/html_entities.gperf"
       {"rpargt", { 0xE2, 0xA6, 0x94 }, 3},
-#line 605 "src/_html_entities.gperf"
+#line 605 "data/html_entities.gperf"
       {"gopf", { 0xF0, 0x9D, 0x95, 0x98 }, 4},
-#line 2048 "src/_html_entities.gperf"
+#line 2048 "data/html_entities.gperf"
       {"NotTildeFullEqual", { 0xE2, 0x89, 0x87 }, 3},
-#line 1481 "src/_html_entities.gperf"
+#line 1481 "data/html_entities.gperf"
       {"lagran", { 0xE2, 0x84, 0x92 }, 3},
-#line 1299 "src/_html_entities.gperf"
+#line 1299 "data/html_entities.gperf"
       {"gnsim", { 0xE2, 0x8B, 0xA7 }, 3},
-#line 1106 "src/_html_entities.gperf"
+#line 1106 "data/html_entities.gperf"
       {"scsim", { 0xE2, 0x89, 0xBF }, 3},
-#line 1049 "src/_html_entities.gperf"
+#line 1049 "data/html_entities.gperf"
       {"triplus", { 0xE2, 0xA8, 0xB9 }, 3},
-#line 1925 "src/_html_entities.gperf"
+#line 1925 "data/html_entities.gperf"
       {"Gopf", { 0xF0, 0x9D, 0x94, 0xBE }, 4},
-#line 387 "src/_html_entities.gperf"
+#line 387 "data/html_entities.gperf"
       {"zeetrf", { 0xE2, 0x84, 0xA8 }, 3},
-#line 1162 "src/_html_entities.gperf"
+#line 1162 "data/html_entities.gperf"
       {"equest", { 0xE2, 0x89, 0x9F }, 3},
-#line 87 "src/_html_entities.gperf"
+#line 87 "data/html_entities.gperf"
       {"hbar", { 0xE2, 0x84, 0x8F }, 3},
-#line 226 "src/_html_entities.gperf"
+#line 226 "data/html_entities.gperf"
       {"doublebarwedge", { 0xE2, 0x8C, 0x86 }, 3},
-#line 1131 "src/_html_entities.gperf"
+#line 1131 "data/html_entities.gperf"
       {"oscr", { 0xE2, 0x84, 0xB4 }, 3},
-#line 1552 "src/_html_entities.gperf"
+#line 1552 "data/html_entities.gperf"
       {"zfr", { 0xF0, 0x9D, 0x94, 0xB7 }, 4},
-#line 1217 "src/_html_entities.gperf"
+#line 1217 "data/html_entities.gperf"
       {"Epsilon", { 0xCE, 0x95 }, 2},
-#line 1890 "src/_html_entities.gperf"
+#line 1890 "data/html_entities.gperf"
       {"notinE", { 0xE2, 0x8B, 0xB9, 0xCC, 0xB8 }, 5},
-#line 1268 "src/_html_entities.gperf"
+#line 1268 "data/html_entities.gperf"
       {"gEl", { 0xE2, 0xAA, 0x8C }, 3},
-#line 674 "src/_html_entities.gperf"
+#line 674 "data/html_entities.gperf"
       {"CirclePlus", { 0xE2, 0x8A, 0x95 }, 3},
-#line 1375 "src/_html_entities.gperf"
+#line 1375 "data/html_entities.gperf"
       {"gE", { 0xE2, 0x89, 0xA7 }, 3},
-#line 438 "src/_html_entities.gperf"
+#line 438 "data/html_entities.gperf"
       {"GreaterLess", { 0xE2, 0x89, 0xB7 }, 3},
-#line 1674 "src/_html_entities.gperf"
+#line 1674 "data/html_entities.gperf"
       {"DoubleDownArrow", { 0xE2, 0x87, 0x93 }, 3},
-#line 346 "src/_html_entities.gperf"
+#line 346 "data/html_entities.gperf"
       {"mapstodown", { 0xE2, 0x86, 0xA7 }, 3},
-#line 973 "src/_html_entities.gperf"
+#line 973 "data/html_entities.gperf"
       {"simdot", { 0xE2, 0xA9, 0xAA }, 3},
-#line 859 "src/_html_entities.gperf"
+#line 859 "data/html_entities.gperf"
       {"smte", { 0xE2, 0xAA, 0xAC }, 3},
-#line 758 "src/_html_entities.gperf"
+#line 758 "data/html_entities.gperf"
       {"GreaterGreater", { 0xE2, 0xAA, 0xA2 }, 3},
-#line 1447 "src/_html_entities.gperf"
+#line 1447 "data/html_entities.gperf"
       {"precnsim", { 0xE2, 0x8B, 0xA8 }, 3},
-#line 1253 "src/_html_entities.gperf"
+#line 1253 "data/html_entities.gperf"
       {"GreaterTilde", { 0xE2, 0x89, 0xB3 }, 3},
-#line 1158 "src/_html_entities.gperf"
+#line 1158 "data/html_entities.gperf"
       {"GreaterEqual", { 0xE2, 0x89, 0xA5 }, 3},
-#line 953 "src/_html_entities.gperf"
+#line 953 "data/html_entities.gperf"
       {"GreaterEqualLess", { 0xE2, 0x8B, 0x9B }, 3},
-#line 92 "src/_html_entities.gperf"
+#line 92 "data/html_entities.gperf"
       {"dsol", { 0xE2, 0xA7, 0xB6 }, 3},
-#line 1172 "src/_html_entities.gperf"
+#line 1172 "data/html_entities.gperf"
       {"lesseqgtr", { 0xE2, 0x8B, 0x9A }, 3},
-#line 2064 "src/_html_entities.gperf"
+#line 2064 "data/html_entities.gperf"
       {"smtes", { 0xE2, 0xAA, 0xAC, 0xEF, 0xB8, 0x80 }, 6},
-#line 1244 "src/_html_entities.gperf"
+#line 1244 "data/html_entities.gperf"
       {"rceil", { 0xE2, 0x8C, 0x89 }, 3},
-#line 607 "src/_html_entities.gperf"
+#line 607 "data/html_entities.gperf"
       {"lceil", { 0xE2, 0x8C, 0x88 }, 3},
-#line 1436 "src/_html_entities.gperf"
+#line 1436 "data/html_entities.gperf"
       {"varpropto", { 0xE2, 0x88, 0x9D }, 3},
-#line 1682 "src/_html_entities.gperf"
+#line 1682 "data/html_entities.gperf"
       {"rarrb", { 0xE2, 0x87, 0xA5 }, 3},
-#line 1094 "src/_html_entities.gperf"
+#line 1094 "data/html_entities.gperf"
       {"larrb", { 0xE2, 0x87, 0xA4 }, 3},
-#line 1789 "src/_html_entities.gperf"
+#line 1789 "data/html_entities.gperf"
       {"DoubleLeftRightArrow", { 0xE2, 0x87, 0x94 }, 3},
-#line 2063 "src/_html_entities.gperf"
+#line 2063 "data/html_entities.gperf"
       {"bsolhsub", { 0xE2, 0x9F, 0x88 }, 3},
-#line 997 "src/_html_entities.gperf"
+#line 997 "data/html_entities.gperf"
       {"Ecaron", { 0xC4, 0x9A }, 2},
-#line 1711 "src/_html_entities.gperf"
+#line 1711 "data/html_entities.gperf"
       {"Exists", { 0xE2, 0x88, 0x83 }, 3},
-#line 390 "src/_html_entities.gperf"
+#line 390 "data/html_entities.gperf"
       {"bepsi", { 0xCF, 0xB6 }, 2},
-#line 1853 "src/_html_entities.gperf"
+#line 1853 "data/html_entities.gperf"
       {"swnwar", { 0xE2, 0xA4, 0xAA }, 3},
-#line 18 "src/_html_entities.gperf"
+#line 18 "data/html_entities.gperf"
       {"comp", { 0xE2, 0x88, 0x81 }, 3},
-#line 755 "src/_html_entities.gperf"
+#line 755 "data/html_entities.gperf"
       {"wfr", { 0xF0, 0x9D, 0x94, 0xB4 }, 4},
-#line 450 "src/_html_entities.gperf"
+#line 450 "data/html_entities.gperf"
       {"propto", { 0xE2, 0x88, 0x9D }, 3},
-#line 46 "src/_html_entities.gperf"
+#line 46 "data/html_entities.gperf"
       {"gnE", { 0xE2, 0x89, 0xA9 }, 3},
-#line 332 "src/_html_entities.gperf"
+#line 332 "data/html_entities.gperf"
       {"orslope", { 0xE2, 0xA9, 0x97 }, 3},
-#line 747 "src/_html_entities.gperf"
+#line 747 "data/html_entities.gperf"
       {"scE", { 0xE2, 0xAA, 0xB4 }, 3},
-#line 1574 "src/_html_entities.gperf"
+#line 1574 "data/html_entities.gperf"
       {"Ofr", { 0xF0, 0x9D, 0x94, 0x92 }, 4},
-#line 1952 "src/_html_entities.gperf"
+#line 1952 "data/html_entities.gperf"
       {"crarr", { 0xE2, 0x86, 0xB5 }, 3},
-#line 761 "src/_html_entities.gperf"
+#line 761 "data/html_entities.gperf"
       {"commat", { 0x40 }, 1},
-#line 645 "src/_html_entities.gperf"
+#line 645 "data/html_entities.gperf"
       {"simlE", { 0xE2, 0xAA, 0x9F }, 3},
-#line 720 "src/_html_entities.gperf"
+#line 720 "data/html_entities.gperf"
       {"CircleMinus", { 0xE2, 0x8A, 0x96 }, 3},
-#line 854 "src/_html_entities.gperf"
+#line 854 "data/html_entities.gperf"
       {"gammad", { 0xCF, 0x9D }, 2},
-#line 1757 "src/_html_entities.gperf"
+#line 1757 "data/html_entities.gperf"
       {"ENG", { 0xC5, 0x8A }, 2},
-#line 406 "src/_html_entities.gperf"
+#line 406 "data/html_entities.gperf"
       {"upsih", { 0xCF, 0x92 }, 2},
-#line 1998 "src/_html_entities.gperf"
+#line 1998 "data/html_entities.gperf"
       {"plusdo", { 0xE2, 0x88, 0x94 }, 3},
-#line 1844 "src/_html_entities.gperf"
+#line 1844 "data/html_entities.gperf"
       {"glE", { 0xE2, 0xAA, 0x92 }, 3},
-#line 635 "src/_html_entities.gperf"
+#line 635 "data/html_entities.gperf"
       {"clubs", { 0xE2, 0x99, 0xA3 }, 3},
-#line 746 "src/_html_entities.gperf"
+#line 746 "data/html_entities.gperf"
       {"lvnE", { 0xE2, 0x89, 0xA8, 0xEF, 0xB8, 0x80 }, 6},
-#line 1132 "src/_html_entities.gperf"
+#line 1132 "data/html_entities.gperf"
       {"gel", { 0xE2, 0x8B, 0x9B }, 3},
-#line 1228 "src/_html_entities.gperf"
+#line 1228 "data/html_entities.gperf"
       {"nesear", { 0xE2, 0xA4, 0xA8 }, 3},
-#line 2122 "src/_html_entities.gperf"
+#line 2122 "data/html_entities.gperf"
       {"race", { 0xE2, 0x88, 0xBD, 0xCC, 0xB1 }, 5},
-#line 1052 "src/_html_entities.gperf"
+#line 1052 "data/html_entities.gperf"
       {"rarrbfs", { 0xE2, 0xA4, 0xA0 }, 3},
-#line 1025 "src/_html_entities.gperf"
+#line 1025 "data/html_entities.gperf"
       {"Gammad", { 0xCF, 0x9C }, 2},
-#line 1811 "src/_html_entities.gperf"
+#line 1811 "data/html_entities.gperf"
       {"larrbfs", { 0xE2, 0xA4, 0x9F }, 3},
-#line 843 "src/_html_entities.gperf"
+#line 843 "data/html_entities.gperf"
       {"tint", { 0xE2, 0x88, 0xAD }, 3},
-#line 32 "src/_html_entities.gperf"
+#line 32 "data/html_entities.gperf"
       {"hearts", { 0xE2, 0x99, 0xA5 }, 3},
-#line 501 "src/_html_entities.gperf"
+#line 501 "data/html_entities.gperf"
       {"CircleTimes", { 0xE2, 0x8A, 0x97 }, 3},
-#line 435 "src/_html_entities.gperf"
+#line 435 "data/html_entities.gperf"
       {"rAtail", { 0xE2, 0xA4, 0x9C }, 3},
-#line 2027 "src/_html_entities.gperf"
+#line 2027 "data/html_entities.gperf"
       {"lAtail", { 0xE2, 0xA4, 0x9B }, 3},
-#line 1839 "src/_html_entities.gperf"
+#line 1839 "data/html_entities.gperf"
       {"cap", { 0xE2, 0x88, 0xA9 }, 3},
-#line 1902 "src/_html_entities.gperf"
+#line 1902 "data/html_entities.gperf"
       {"Cfr", { 0xE2, 0x84, 0xAD }, 3},
-#line 963 "src/_html_entities.gperf"
+#line 963 "data/html_entities.gperf"
       {"nvltrie", { 0xE2, 0x8A, 0xB4, 0xE2, 0x83, 0x92 }, 6},
-#line 958 "src/_html_entities.gperf"
+#line 958 "data/html_entities.gperf"
       {"heartsuit", { 0xE2, 0x99, 0xA5 }, 3},
-#line 1764 "src/_html_entities.gperf"
+#line 1764 "data/html_entities.gperf"
       {"ddarr", { 0xE2, 0x87, 0x8A }, 3},
-#line 795 "src/_html_entities.gperf"
+#line 795 "data/html_entities.gperf"
       {"Tab", { 0x09 }, 1},
-#line 1635 "src/_html_entities.gperf"
+#line 1635 "data/html_entities.gperf"
       {"cross", { 0xE2, 0x9C, 0x97 }, 3},
-#line 62 "src/_html_entities.gperf"
+#line 62 "data/html_entities.gperf"
       {"zcaron", { 0xC5, 0xBE }, 2},
-#line 762 "src/_html_entities.gperf"
+#line 762 "data/html_entities.gperf"
       {"iquest", { 0xC2, 0xBF }, 2},
-#line 1849 "src/_html_entities.gperf"
+#line 1849 "data/html_entities.gperf"
       {"caps", { 0xE2, 0x88, 0xA9, 0xEF, 0xB8, 0x80 }, 6},
-#line 286 "src/_html_entities.gperf"
+#line 286 "data/html_entities.gperf"
       {"thicksim", { 0xE2, 0x88, 0xBC }, 3},
-#line 1395 "src/_html_entities.gperf"
+#line 1395 "data/html_entities.gperf"
       {"lessgtr", { 0xE2, 0x89, 0xB6 }, 3},
-#line 619 "src/_html_entities.gperf"
+#line 619 "data/html_entities.gperf"
       {"nisd", { 0xE2, 0x8B, 0xBA }, 3},
-#line 145 "src/_html_entities.gperf"
+#line 145 "data/html_entities.gperf"
       {"UpArrowBar", { 0xE2, 0xA4, 0x92 }, 3},
-#line 753 "src/_html_entities.gperf"
+#line 753 "data/html_entities.gperf"
       {"varrho", { 0xCF, 0xB1 }, 2},
-#line 1649 "src/_html_entities.gperf"
+#line 1649 "data/html_entities.gperf"
       {"notindot", { 0xE2, 0x8B, 0xB5, 0xCC, 0xB8 }, 5},
-#line 578 "src/_html_entities.gperf"
+#line 578 "data/html_entities.gperf"
       {"iiint", { 0xE2, 0x88, 0xAD }, 3},
-#line 1774 "src/_html_entities.gperf"
+#line 1774 "data/html_entities.gperf"
       {"twixt", { 0xE2, 0x89, 0xAC }, 3},
-#line 2072 "src/_html_entities.gperf"
+#line 2072 "data/html_entities.gperf"
       {"Vdashl", { 0xE2, 0xAB, 0xA6 }, 3},
-#line 875 "src/_html_entities.gperf"
+#line 875 "data/html_entities.gperf"
       {"NotPrecedes", { 0xE2, 0x8A, 0x80 }, 3},
-#line 1401 "src/_html_entities.gperf"
+#line 1401 "data/html_entities.gperf"
       {"lsime", { 0xE2, 0xAA, 0x8D }, 3},
-#line 368 "src/_html_entities.gperf"
+#line 368 "data/html_entities.gperf"
       {"nsime", { 0xE2, 0x89, 0x84 }, 3},
-#line 285 "src/_html_entities.gperf"
+#line 285 "data/html_entities.gperf"
       {"plusb", { 0xE2, 0x8A, 0x9E }, 3},
-#line 1636 "src/_html_entities.gperf"
+#line 1636 "data/html_entities.gperf"
       {"bsime", { 0xE2, 0x8B, 0x8D }, 3},
-#line 1360 "src/_html_entities.gperf"
+#line 1360 "data/html_entities.gperf"
       {"micro", { 0xC2, 0xB5 }, 2},
-#line 1177 "src/_html_entities.gperf"
+#line 1177 "data/html_entities.gperf"
       {"ofr", { 0xF0, 0x9D, 0x94, 0xAC }, 4},
-#line 291 "src/_html_entities.gperf"
+#line 291 "data/html_entities.gperf"
       {"CircleDot", { 0xE2, 0x8A, 0x99 }, 3},
-#line 165 "src/_html_entities.gperf"
+#line 165 "data/html_entities.gperf"
       {"VDash", { 0xE2, 0x8A, 0xAB }, 3},
-#line 1016 "src/_html_entities.gperf"
+#line 1016 "data/html_entities.gperf"
       {"ShortDownArrow", { 0xE2, 0x86, 0x93 }, 3},
-#line 1284 "src/_html_entities.gperf"
+#line 1284 "data/html_entities.gperf"
       {"copysr", { 0xE2, 0x84, 0x97 }, 3},
-#line 1684 "src/_html_entities.gperf"
+#line 1684 "data/html_entities.gperf"
       {"LessEqualGreater", { 0xE2, 0x8B, 0x9A }, 3},
-#line 248 "src/_html_entities.gperf"
+#line 248 "data/html_entities.gperf"
       {"NotPrecedesSlantEqual", { 0xE2, 0x8B, 0xA0 }, 3},
-#line 1089 "src/_html_entities.gperf"
+#line 1089 "data/html_entities.gperf"
       {"Colon", { 0xE2, 0x88, 0xB7 }, 3},
-#line 1021 "src/_html_entities.gperf"
+#line 1021 "data/html_entities.gperf"
       {"qint", { 0xE2, 0xA8, 0x8C }, 3},
-#line 1123 "src/_html_entities.gperf"
+#line 1123 "data/html_entities.gperf"
       {"hercon", { 0xE2, 0x8A, 0xB9 }, 3},
-#line 1302 "src/_html_entities.gperf"
+#line 1302 "data/html_entities.gperf"
       {"Intersection", { 0xE2, 0x8B, 0x82 }, 3},
-#line 1506 "src/_html_entities.gperf"
+#line 1506 "data/html_entities.gperf"
       {"Colone", { 0xE2, 0xA9, 0xB4 }, 3},
-#line 790 "src/_html_entities.gperf"
+#line 790 "data/html_entities.gperf"
       {"prec", { 0xE2, 0x89, 0xBA }, 3},
-#line 342 "src/_html_entities.gperf"
+#line 342 "data/html_entities.gperf"
       {"vDash", { 0xE2, 0x8A, 0xA8 }, 3},
-#line 1417 "src/_html_entities.gperf"
+#line 1417 "data/html_entities.gperf"
       {"doteq", { 0xE2, 0x89, 0x90 }, 3},
-#line 1707 "src/_html_entities.gperf"
+#line 1707 "data/html_entities.gperf"
       {"radic", { 0xE2, 0x88, 0x9A }, 3},
-#line 1538 "src/_html_entities.gperf"
+#line 1538 "data/html_entities.gperf"
       {"rarrc", { 0xE2, 0xA4, 0xB3 }, 3},
-#line 1928 "src/_html_entities.gperf"
+#line 1928 "data/html_entities.gperf"
       {"Psi", { 0xCE, 0xA8 }, 2},
-#line 1145 "src/_html_entities.gperf"
+#line 1145 "data/html_entities.gperf"
       {"UpTee", { 0xE2, 0x8A, 0xA5 }, 3},
-#line 1869 "src/_html_entities.gperf"
+#line 1869 "data/html_entities.gperf"
       {"hopf", { 0xF0, 0x9D, 0x95, 0x99 }, 4},
-#line 770 "src/_html_entities.gperf"
+#line 770 "data/html_entities.gperf"
       {"OpenCurlyQuote", { 0xE2, 0x80, 0x98 }, 3},
-#line 1081 "src/_html_entities.gperf"
+#line 1081 "data/html_entities.gperf"
       {"scpolint", { 0xE2, 0xA8, 0x93 }, 3},
-#line 1068 "src/_html_entities.gperf"
+#line 1068 "data/html_entities.gperf"
       {"sime", { 0xE2, 0x89, 0x83 }, 3},
-#line 1773 "src/_html_entities.gperf"
+#line 1773 "data/html_entities.gperf"
       {"psi", { 0xCF, 0x88 }, 2},
-#line 1645 "src/_html_entities.gperf"
+#line 1645 "data/html_entities.gperf"
       {"times", { 0xC3, 0x97 }, 2},
-#line 991 "src/_html_entities.gperf"
+#line 991 "data/html_entities.gperf"
       {"hArr", { 0xE2, 0x87, 0x94 }, 3},
-#line 1632 "src/_html_entities.gperf"
+#line 1632 "data/html_entities.gperf"
       {"ap", { 0xE2, 0x89, 0x88 }, 3},
-#line 1751 "src/_html_entities.gperf"
+#line 1751 "data/html_entities.gperf"
       {"vangrt", { 0xE2, 0xA6, 0x9C }, 3},
-#line 1409 "src/_html_entities.gperf"
+#line 1409 "data/html_entities.gperf"
       {"capcap", { 0xE2, 0xA9, 0x8B }, 3},
-#line 1808 "src/_html_entities.gperf"
+#line 1808 "data/html_entities.gperf"
       {"jscr", { 0xF0, 0x9D, 0x92, 0xBF }, 4},
-#line 304 "src/_html_entities.gperf"
+#line 304 "data/html_entities.gperf"
       {"hamilt", { 0xE2, 0x84, 0x8B }, 3},
-#line 1979 "src/_html_entities.gperf"
+#line 1979 "data/html_entities.gperf"
       {"gvertneqq", { 0xE2, 0x89, 0xA9, 0xEF, 0xB8, 0x80 }, 6},
-#line 1863 "src/_html_entities.gperf"
+#line 1863 "data/html_entities.gperf"
       {"range", { 0xE2, 0xA6, 0xA5 }, 3},
-#line 141 "src/_html_entities.gperf"
+#line 141 "data/html_entities.gperf"
       {"npolint", { 0xE2, 0xA8, 0x94 }, 3},
-#line 444 "src/_html_entities.gperf"
+#line 444 "data/html_entities.gperf"
       {"varepsilon", { 0xCF, 0xB5 }, 2},
-#line 679 "src/_html_entities.gperf"
+#line 679 "data/html_entities.gperf"
       {"UnderBrace", { 0xE2, 0x8F, 0x9F }, 3},
-#line 955 "src/_html_entities.gperf"
+#line 955 "data/html_entities.gperf"
       {"thksim", { 0xE2, 0x88, 0xBC }, 3},
-#line 177 "src/_html_entities.gperf"
+#line 177 "data/html_entities.gperf"
       {"Ccaron", { 0xC4, 0x8C }, 2},
-#line 1730 "src/_html_entities.gperf"
+#line 1730 "data/html_entities.gperf"
       {"timesb", { 0xE2, 0x8A, 0xA0 }, 3},
-#line 995 "src/_html_entities.gperf"
+#line 995 "data/html_entities.gperf"
       {"dd", { 0xE2, 0x85, 0x86 }, 3},
-#line 1485 "src/_html_entities.gperf"
+#line 1485 "data/html_entities.gperf"
       {"veeeq", { 0xE2, 0x89, 0x9A }, 3},
-#line 315 "src/_html_entities.gperf"
+#line 315 "data/html_entities.gperf"
       {"clubsuit", { 0xE2, 0x99, 0xA3 }, 3},
-#line 675 "src/_html_entities.gperf"
+#line 675 "data/html_entities.gperf"
       {"udhar", { 0xE2, 0xA5, 0xAE }, 3},
-#line 60 "src/_html_entities.gperf"
+#line 60 "data/html_entities.gperf"
       {"Chi", { 0xCE, 0xA7 }, 2},
-#line 1595 "src/_html_entities.gperf"
+#line 1595 "data/html_entities.gperf"
       {"midcir", { 0xE2, 0xAB, 0xB0 }, 3},
-#line 55 "src/_html_entities.gperf"
+#line 55 "data/html_entities.gperf"
       {"capcup", { 0xE2, 0xA9, 0x87 }, 3},
-#line 1668 "src/_html_entities.gperf"
+#line 1668 "data/html_entities.gperf"
       {"TripleDot", { 0xE2, 0x83, 0x9B }, 3},
-#line 1339 "src/_html_entities.gperf"
+#line 1339 "data/html_entities.gperf"
       {"ape", { 0xE2, 0x89, 0x8A }, 3},
-#line 329 "src/_html_entities.gperf"
+#line 329 "data/html_entities.gperf"
       {"wedge", { 0xE2, 0x88, 0xA7 }, 3},
-#line 585 "src/_html_entities.gperf"
+#line 585 "data/html_entities.gperf"
       {"harrcir", { 0xE2, 0xA5, 0x88 }, 3},
-#line 1462 "src/_html_entities.gperf"
+#line 1462 "data/html_entities.gperf"
       {"parsim", { 0xE2, 0xAB, 0xB3 }, 3},
-#line 1957 "src/_html_entities.gperf"
+#line 1957 "data/html_entities.gperf"
       {"NotTildeTilde", { 0xE2, 0x89, 0x89 }, 3},
-#line 1788 "src/_html_entities.gperf"
+#line 1788 "data/html_entities.gperf"
       {"cir", { 0xE2, 0x97, 0x8B }, 3},
-#line 1313 "src/_html_entities.gperf"
+#line 1313 "data/html_entities.gperf"
       {"apos", { 0x27 }, 1},
-#line 1305 "src/_html_entities.gperf"
+#line 1305 "data/html_entities.gperf"
       {"rationals", { 0xE2, 0x84, 0x9A }, 3},
-#line 1800 "src/_html_entities.gperf"
+#line 1800 "data/html_entities.gperf"
       {"gscr", { 0xE2, 0x84, 0x8A }, 3},
-#line 1092 "src/_html_entities.gperf"
+#line 1092 "data/html_entities.gperf"
       {"isin", { 0xE2, 0x88, 0x88 }, 3},
-#line 1895 "src/_html_entities.gperf"
+#line 1895 "data/html_entities.gperf"
       {"middot", { 0xC2, 0xB7 }, 2},
-#line 557 "src/_html_entities.gperf"
+#line 557 "data/html_entities.gperf"
       {"Union", { 0xE2, 0x8B, 0x83 }, 3},
-#line 754 "src/_html_entities.gperf"
+#line 754 "data/html_entities.gperf"
       {"copf", { 0xF0, 0x9D, 0x95, 0x94 }, 4},
-#line 272 "src/_html_entities.gperf"
+#line 272 "data/html_entities.gperf"
       {"isins", { 0xE2, 0x8B, 0xB4 }, 3},
-#line 654 "src/_html_entities.gperf"
+#line 654 "data/html_entities.gperf"
       {"npreceq", { 0xE2, 0xAA, 0xAF, 0xCC, 0xB8 }, 5},
-#line 550 "src/_html_entities.gperf"
+#line 550 "data/html_entities.gperf"
       {"uparrow", { 0xE2, 0x86, 0x91 }, 3},
-#line 653 "src/_html_entities.gperf"
+#line 653 "data/html_entities.gperf"
       {"uwangle", { 0xE2, 0xA6, 0xA7 }, 3},
-#line 1801 "src/_html_entities.gperf"
+#line 1801 "data/html_entities.gperf"
       {"bsemi", { 0xE2, 0x81, 0x8F }, 3},
-#line 149 "src/_html_entities.gperf"
+#line 149 "data/html_entities.gperf"
       {"simeq", { 0xE2, 0x89, 0x83 }, 3},
-#line 1301 "src/_html_entities.gperf"
+#line 1301 "data/html_entities.gperf"
       {"tilde", { 0xCB, 0x9C }, 2},
-#line 807 "src/_html_entities.gperf"
+#line 807 "data/html_entities.gperf"
       {"Gscr", { 0xF0, 0x9D, 0x92, 0xA2 }, 4},
-#line 39 "src/_html_entities.gperf"
+#line 39 "data/html_entities.gperf"
       {"GreaterFullEqual", { 0xE2, 0x89, 0xA7 }, 3},
-#line 862 "src/_html_entities.gperf"
+#line 862 "data/html_entities.gperf"
       {"simgE", { 0xE2, 0xAA, 0xA0 }, 3},
-#line 1458 "src/_html_entities.gperf"
+#line 1458 "data/html_entities.gperf"
       {"UnionPlus", { 0xE2, 0x8A, 0x8E }, 3},
-#line 691 "src/_html_entities.gperf"
+#line 691 "data/html_entities.gperf"
       {"ecolon", { 0xE2, 0x89, 0x95 }, 3},
-#line 445 "src/_html_entities.gperf"
+#line 445 "data/html_entities.gperf"
       {"imagline", { 0xE2, 0x84, 0x90 }, 3},
-#line 994 "src/_html_entities.gperf"
+#line 994 "data/html_entities.gperf"
       {"smile", { 0xE2, 0x8C, 0xA3 }, 3},
-#line 1901 "src/_html_entities.gperf"
+#line 1901 "data/html_entities.gperf"
       {"bkarow", { 0xE2, 0xA4, 0x8D }, 3},
-#line 84 "src/_html_entities.gperf"
+#line 84 "data/html_entities.gperf"
       {"plusacir", { 0xE2, 0xA8, 0xA3 }, 3},
-#line 1135 "src/_html_entities.gperf"
+#line 1135 "data/html_entities.gperf"
       {"Uarrocir", { 0xE2, 0xA5, 0x89 }, 3},
-#line 810 "src/_html_entities.gperf"
+#line 810 "data/html_entities.gperf"
       {"barwedge", { 0xE2, 0x8C, 0x85 }, 3},
-#line 1367 "src/_html_entities.gperf"
+#line 1367 "data/html_entities.gperf"
       {"bigoplus", { 0xE2, 0xA8, 0x81 }, 3},
-#line 1568 "src/_html_entities.gperf"
+#line 1568 "data/html_entities.gperf"
       {"nsimeq", { 0xE2, 0x89, 0x84 }, 3},
-#line 2045 "src/_html_entities.gperf"
+#line 2045 "data/html_entities.gperf"
       {"shortparallel", { 0xE2, 0x88, 0xA5 }, 3},
-#line 2099 "src/_html_entities.gperf"
+#line 2099 "data/html_entities.gperf"
       {"nleqslant", { 0xE2, 0xA9, 0xBD, 0xCC, 0xB8 }, 5},
-#line 1387 "src/_html_entities.gperf"
+#line 1387 "data/html_entities.gperf"
       {"sigmav", { 0xCF, 0x82 }, 2},
-#line 1557 "src/_html_entities.gperf"
+#line 1557 "data/html_entities.gperf"
       {"lt", { 0x3C }, 1},
-#line 1748 "src/_html_entities.gperf"
+#line 1748 "data/html_entities.gperf"
       {"oline", { 0xE2, 0x80, 0xBE }, 3},
-#line 564 "src/_html_entities.gperf"
+#line 564 "data/html_entities.gperf"
       {"NotGreater", { 0xE2, 0x89, 0xAF }, 3},
-#line 336 "src/_html_entities.gperf"
+#line 336 "data/html_entities.gperf"
       {"ofcir", { 0xE2, 0xA6, 0xBF }, 3},
-#line 1714 "src/_html_entities.gperf"
+#line 1714 "data/html_entities.gperf"
       {"rangd", { 0xE2, 0xA6, 0x92 }, 3},
-#line 221 "src/_html_entities.gperf"
+#line 221 "data/html_entities.gperf"
       {"langd", { 0xE2, 0xA6, 0x91 }, 3},
-#line 1031 "src/_html_entities.gperf"
+#line 1031 "data/html_entities.gperf"
       {"bigcap", { 0xE2, 0x8B, 0x82 }, 3},
-#line 1359 "src/_html_entities.gperf"
+#line 1359 "data/html_entities.gperf"
       {"varkappa", { 0xCF, 0xB0 }, 2},
-#line 101 "src/_html_entities.gperf"
+#line 101 "data/html_entities.gperf"
       {"realine", { 0xE2, 0x84, 0x9B }, 3},
-#line 1473 "src/_html_entities.gperf"
+#line 1473 "data/html_entities.gperf"
       {"mapsto", { 0xE2, 0x86, 0xA6 }, 3},
-#line 819 "src/_html_entities.gperf"
+#line 819 "data/html_entities.gperf"
       {"NotEqual", { 0xE2, 0x89, 0xA0 }, 3},
-#line 723 "src/_html_entities.gperf"
+#line 723 "data/html_entities.gperf"
       {"FilledSmallSquare", { 0xE2, 0x97, 0xBC }, 3},
-#line 1706 "src/_html_entities.gperf"
+#line 1706 "data/html_entities.gperf"
       {"NotGreaterGreater", { 0xE2, 0x89, 0xAB, 0xCC, 0xB8 }, 5},
-#line 2111 "src/_html_entities.gperf"
+#line 2111 "data/html_entities.gperf"
       {"NotGreaterLess", { 0xE2, 0x89, 0xB9 }, 3},
-#line 771 "src/_html_entities.gperf"
+#line 771 "data/html_entities.gperf"
       {"NotGreaterSlantEqual", { 0xE2, 0xA9, 0xBE, 0xCC, 0xB8 }, 5},
-#line 1975 "src/_html_entities.gperf"
+#line 1975 "data/html_entities.gperf"
       {"NotGreaterFullEqual", { 0xE2, 0x89, 0xA7, 0xCC, 0xB8 }, 5},
-#line 394 "src/_html_entities.gperf"
+#line 394 "data/html_entities.gperf"
       {"gesl", { 0xE2, 0x8B, 0x9B, 0xEF, 0xB8, 0x80 }, 6},
-#line 1703 "src/_html_entities.gperf"
+#line 1703 "data/html_entities.gperf"
       {"Kappa", { 0xCE, 0x9A }, 2},
-#line 473 "src/_html_entities.gperf"
+#line 473 "data/html_entities.gperf"
       {"amacr", { 0xC4, 0x81 }, 2},
-#line 1056 "src/_html_entities.gperf"
+#line 1056 "data/html_entities.gperf"
       {"lsim", { 0xE2, 0x89, 0xB2 }, 3},
-#line 531 "src/_html_entities.gperf"
+#line 531 "data/html_entities.gperf"
       {"esim", { 0xE2, 0x89, 0x82 }, 3},
-#line 1221 "src/_html_entities.gperf"
+#line 1221 "data/html_entities.gperf"
       {"star", { 0xE2, 0x98, 0x86 }, 3},
-#line 1233 "src/_html_entities.gperf"
+#line 1233 "data/html_entities.gperf"
       {"sigmaf", { 0xCF, 0x82 }, 2},
-#line 714 "src/_html_entities.gperf"
+#line 714 "data/html_entities.gperf"
       {"nsim", { 0xE2, 0x89, 0x81 }, 3},
-#line 72 "src/_html_entities.gperf"
+#line 72 "data/html_entities.gperf"
       {"isinsv", { 0xE2, 0x8B, 0xB3 }, 3},
-#line 85 "src/_html_entities.gperf"
+#line 85 "data/html_entities.gperf"
       {"bsim", { 0xE2, 0x88, 0xBD }, 3},
-#line 785 "src/_html_entities.gperf"
+#line 785 "data/html_entities.gperf"
       {"ltdot", { 0xE2, 0x8B, 0x96 }, 3},
-#line 1288 "src/_html_entities.gperf"
+#line 1288 "data/html_entities.gperf"
       {"xodot", { 0xE2, 0xA8, 0x80 }, 3},
-#line 1347 "src/_html_entities.gperf"
+#line 1347 "data/html_entities.gperf"
       {"and", { 0xE2, 0x88, 0xA7 }, 3},
-#line 1507 "src/_html_entities.gperf"
+#line 1507 "data/html_entities.gperf"
       {"utdot", { 0xE2, 0x8B, 0xB0 }, 3},
-#line 2060 "src/_html_entities.gperf"
+#line 2060 "data/html_entities.gperf"
       {"infin", { 0xE2, 0x88, 0x9E }, 3},
-#line 378 "src/_html_entities.gperf"
+#line 378 "data/html_entities.gperf"
       {"natur", { 0xE2, 0x99, 0xAE }, 3},
-#line 283 "src/_html_entities.gperf"
+#line 283 "data/html_entities.gperf"
       {"xharr", { 0xE2, 0x9F, 0xB7 }, 3},
-#line 178 "src/_html_entities.gperf"
+#line 178 "data/html_entities.gperf"
       {"NotSquareSubset", { 0xE2, 0x8A, 0x8F, 0xCC, 0xB8 }, 5},
-#line 1739 "src/_html_entities.gperf"
+#line 1739 "data/html_entities.gperf"
       {"bigcup", { 0xE2, 0x8B, 0x83 }, 3},
-#line 1157 "src/_html_entities.gperf"
+#line 1157 "data/html_entities.gperf"
       {"NotSquareSubsetEqual", { 0xE2, 0x8B, 0xA2 }, 3},
-#line 1476 "src/_html_entities.gperf"
+#line 1476 "data/html_entities.gperf"
       {"tosa", { 0xE2, 0xA4, 0xA9 }, 3},
-#line 608 "src/_html_entities.gperf"
+#line 608 "data/html_entities.gperf"
       {"lescc", { 0xE2, 0xAA, 0xA8 }, 3},
-#line 511 "src/_html_entities.gperf"
+#line 511 "data/html_entities.gperf"
       {"lowbar", { 0x5F }, 1},
-#line 952 "src/_html_entities.gperf"
+#line 952 "data/html_entities.gperf"
       {"ominus", { 0xE2, 0x8A, 0x96 }, 3},
-#line 243 "src/_html_entities.gperf"
+#line 243 "data/html_entities.gperf"
       {"Star", { 0xE2, 0x8B, 0x86 }, 3},
-#line 1424 "src/_html_entities.gperf"
+#line 1424 "data/html_entities.gperf"
       {"tdot", { 0xE2, 0x83, 0x9B }, 3},
-#line 262 "src/_html_entities.gperf"
+#line 262 "data/html_entities.gperf"
       {"TRADE", { 0xE2, 0x84, 0xA2 }, 3},
-#line 867 "src/_html_entities.gperf"
+#line 867 "data/html_entities.gperf"
       {"sdot", { 0xE2, 0x8B, 0x85 }, 3},
-#line 1949 "src/_html_entities.gperf"
+#line 1949 "data/html_entities.gperf"
       {"edot", { 0xC4, 0x97 }, 2},
-#line 1940 "src/_html_entities.gperf"
+#line 1940 "data/html_entities.gperf"
       {"xotime", { 0xE2, 0xA8, 0x82 }, 3},
-#line 938 "src/_html_entities.gperf"
+#line 938 "data/html_entities.gperf"
       {"osol", { 0xE2, 0x8A, 0x98 }, 3},
-#line 2055 "src/_html_entities.gperf"
+#line 2055 "data/html_entities.gperf"
       {"amp", { 0x26 }, 1},
-#line 1011 "src/_html_entities.gperf"
+#line 1011 "data/html_entities.gperf"
       {"Uparrow", { 0xE2, 0x87, 0x91 }, 3},
-#line 1802 "src/_html_entities.gperf"
+#line 1802 "data/html_entities.gperf"
       {"jfr", { 0xF0, 0x9D, 0x94, 0xA7 }, 4},
-#line 1604 "src/_html_entities.gperf"
+#line 1604 "data/html_entities.gperf"
       {"Zdot", { 0xC5, 0xBB }, 2},
-#line 730 "src/_html_entities.gperf"
+#line 730 "data/html_entities.gperf"
       {"ltrPar", { 0xE2, 0xA6, 0x96 }, 3},
-#line 1326 "src/_html_entities.gperf"
+#line 1326 "data/html_entities.gperf"
       {"rx", { 0xE2, 0x84, 0x9E }, 3},
-#line 1365 "src/_html_entities.gperf"
+#line 1365 "data/html_entities.gperf"
       {"NotSquareSuperset", { 0xE2, 0x8A, 0x90, 0xCC, 0xB8 }, 5},
-#line 664 "src/_html_entities.gperf"
+#line 664 "data/html_entities.gperf"
       {"half", { 0xC2, 0xBD }, 2},
-#line 1001 "src/_html_entities.gperf"
+#line 1001 "data/html_entities.gperf"
       {"NotSquareSupersetEqual", { 0xE2, 0x8B, 0xA3 }, 3},
-#line 1407 "src/_html_entities.gperf"
+#line 1407 "data/html_entities.gperf"
       {"Lt", { 0xE2, 0x89, 0xAA }, 3},
-#line 115 "src/_html_entities.gperf"
+#line 115 "data/html_entities.gperf"
       {"xlarr", { 0xE2, 0x9F, 0xB5 }, 3},
-#line 849 "src/_html_entities.gperf"
+#line 849 "data/html_entities.gperf"
       {"imped", { 0xC6, 0xB5 }, 2},
-#line 841 "src/_html_entities.gperf"
+#line 841 "data/html_entities.gperf"
       {"Implies", { 0xE2, 0x87, 0x92 }, 3},
-#line 499 "src/_html_entities.gperf"
+#line 499 "data/html_entities.gperf"
       {"Tilde", { 0xE2, 0x88, 0xBC }, 3},
-#line 1245 "src/_html_entities.gperf"
+#line 1245 "data/html_entities.gperf"
       {"para", { 0xC2, 0xB6 }, 2},
-#line 886 "src/_html_entities.gperf"
+#line 886 "data/html_entities.gperf"
       {"xrarr", { 0xE2, 0x9F, 0xB6 }, 3},
-#line 439 "src/_html_entities.gperf"
+#line 439 "data/html_entities.gperf"
       {"lesdotor", { 0xE2, 0xAA, 0x83 }, 3},
-#line 631 "src/_html_entities.gperf"
+#line 631 "data/html_entities.gperf"
       {"LeftUpVector", { 0xE2, 0x86, 0xBF }, 3},
-#line 2131 "src/_html_entities.gperf"
+#line 2131 "data/html_entities.gperf"
       {"LeftUpVectorBar", { 0xE2, 0xA5, 0x98 }, 3},
-#line 476 "src/_html_entities.gperf"
+#line 476 "data/html_entities.gperf"
       {"rsaquo", { 0xE2, 0x80, 0xBA }, 3},
-#line 1939 "src/_html_entities.gperf"
+#line 1939 "data/html_entities.gperf"
       {"rtrie", { 0xE2, 0x8A, 0xB5 }, 3},
-#line 1932 "src/_html_entities.gperf"
+#line 1932 "data/html_entities.gperf"
       {"lsaquo", { 0xE2, 0x80, 0xB9 }, 3},
-#line 1060 "src/_html_entities.gperf"
+#line 1060 "data/html_entities.gperf"
       {"ltrie", { 0xE2, 0x8A, 0xB4 }, 3},
-#line 1265 "src/_html_entities.gperf"
+#line 1265 "data/html_entities.gperf"
       {"searrow", { 0xE2, 0x86, 0x98 }, 3},
-#line 2014 "src/_html_entities.gperf"
+#line 2014 "data/html_entities.gperf"
       {"wedgeq", { 0xE2, 0x89, 0x99 }, 3},
-#line 693 "src/_html_entities.gperf"
+#line 693 "data/html_entities.gperf"
       {"NotGreaterEqual", { 0xE2, 0x89, 0xB1 }, 3},
-#line 946 "src/_html_entities.gperf"
+#line 946 "data/html_entities.gperf"
       {"gesles", { 0xE2, 0xAA, 0x94 }, 3},
-#line 289 "src/_html_entities.gperf"
+#line 289 "data/html_entities.gperf"
       {"nearrow", { 0xE2, 0x86, 0x97 }, 3},
-#line 2105 "src/_html_entities.gperf"
+#line 2105 "data/html_entities.gperf"
       {"ubreve", { 0xC5, 0xAD }, 2},
-#line 197 "src/_html_entities.gperf"
+#line 197 "data/html_entities.gperf"
       {"toea", { 0xE2, 0xA4, 0xA8 }, 3},
-#line 1898 "src/_html_entities.gperf"
+#line 1898 "data/html_entities.gperf"
       {"Idot", { 0xC4, 0xB0 }, 2},
-#line 1692 "src/_html_entities.gperf"
+#line 1692 "data/html_entities.gperf"
       {"Iota", { 0xCE, 0x99 }, 2},
-#line 745 "src/_html_entities.gperf"
+#line 745 "data/html_entities.gperf"
       {"cedil", { 0xC2, 0xB8 }, 2},
-#line 941 "src/_html_entities.gperf"
+#line 941 "data/html_entities.gperf"
       {"Conint", { 0xE2, 0x88, 0xAF }, 3},
-#line 929 "src/_html_entities.gperf"
+#line 929 "data/html_entities.gperf"
       {"leftarrowtail", { 0xE2, 0x86, 0xA2 }, 3},
-#line 1083 "src/_html_entities.gperf"
+#line 1083 "data/html_entities.gperf"
       {"NotPrecedesEqual", { 0xE2, 0xAA, 0xAF, 0xCC, 0xB8 }, 5},
-#line 1047 "src/_html_entities.gperf"
+#line 1047 "data/html_entities.gperf"
       {"gfr", { 0xF0, 0x9D, 0x94, 0xA4 }, 4},
-#line 1342 "src/_html_entities.gperf"
+#line 1342 "data/html_entities.gperf"
       {"SmallCircle", { 0xE2, 0x88, 0x98 }, 3},
-#line 1838 "src/_html_entities.gperf"
+#line 1838 "data/html_entities.gperf"
       {"strns", { 0xC2, 0xAF }, 2},
-#line 202 "src/_html_entities.gperf"
+#line 202 "data/html_entities.gperf"
       {"LeftTee", { 0xE2, 0x8A, 0xA3 }, 3},
-#line 1987 "src/_html_entities.gperf"
+#line 1987 "data/html_entities.gperf"
       {"sdote", { 0xE2, 0xA9, 0xA6 }, 3},
-#line 140 "src/_html_entities.gperf"
+#line 140 "data/html_entities.gperf"
       {"Assign", { 0xE2, 0x89, 0x94 }, 3},
-#line 1464 "src/_html_entities.gperf"
+#line 1464 "data/html_entities.gperf"
       {"dotsquare", { 0xE2, 0x8A, 0xA1 }, 3},
-#line 931 "src/_html_entities.gperf"
+#line 931 "data/html_entities.gperf"
       {"DotEqual", { 0xE2, 0x89, 0x90 }, 3},
-#line 520 "src/_html_entities.gperf"
+#line 520 "data/html_entities.gperf"
       {"ecir", { 0xE2, 0x89, 0x96 }, 3},
-#line 356 "src/_html_entities.gperf"
+#line 356 "data/html_entities.gperf"
       {"divideontimes", { 0xE2, 0x8B, 0x87 }, 3},
-#line 2117 "src/_html_entities.gperf"
+#line 2117 "data/html_entities.gperf"
       {"dwangle", { 0xE2, 0xA6, 0xA6 }, 3},
-#line 615 "src/_html_entities.gperf"
+#line 615 "data/html_entities.gperf"
       {"sqsupe", { 0xE2, 0x8A, 0x92 }, 3},
-#line 884 "src/_html_entities.gperf"
+#line 884 "data/html_entities.gperf"
       {"rangle", { 0xE2, 0x9F, 0xA9 }, 3},
-#line 232 "src/_html_entities.gperf"
+#line 232 "data/html_entities.gperf"
       {"DoubleUpArrow", { 0xE2, 0x87, 0x91 }, 3},
-#line 1260 "src/_html_entities.gperf"
+#line 1260 "data/html_entities.gperf"
       {"langle", { 0xE2, 0x9F, 0xA8 }, 3},
-#line 1608 "src/_html_entities.gperf"
+#line 1608 "data/html_entities.gperf"
       {"Gfr", { 0xF0, 0x9D, 0x94, 0x8A }, 4},
-#line 294 "src/_html_entities.gperf"
+#line 294 "data/html_entities.gperf"
       {"sqsupset", { 0xE2, 0x8A, 0x90 }, 3},
-#line 1035 "src/_html_entities.gperf"
+#line 1035 "data/html_entities.gperf"
       {"xmap", { 0xE2, 0x9F, 0xBC }, 3},
-#line 443 "src/_html_entities.gperf"
+#line 443 "data/html_entities.gperf"
       {"DoubleUpDownArrow", { 0xE2, 0x87, 0x95 }, 3},
-#line 1515 "src/_html_entities.gperf"
+#line 1515 "data/html_entities.gperf"
       {"coprod", { 0xE2, 0x88, 0x90 }, 3},
-#line 418 "src/_html_entities.gperf"
+#line 418 "data/html_entities.gperf"
       {"sqsup", { 0xE2, 0x8A, 0x90 }, 3},
-#line 2121 "src/_html_entities.gperf"
+#line 2121 "data/html_entities.gperf"
       {"it", { 0xE2, 0x81, 0xA2 }, 3},
-#line 199 "src/_html_entities.gperf"
+#line 199 "data/html_entities.gperf"
       {"profalar", { 0xE2, 0x8C, 0xAE }, 3},
-#line 1656 "src/_html_entities.gperf"
+#line 1656 "data/html_entities.gperf"
       {"eogon", { 0xC4, 0x99 }, 2},
-#line 1910 "src/_html_entities.gperf"
+#line 1910 "data/html_entities.gperf"
       {"rmoust", { 0xE2, 0x8E, 0xB1 }, 3},
-#line 2037 "src/_html_entities.gperf"
+#line 2037 "data/html_entities.gperf"
       {"csub", { 0xE2, 0xAB, 0x8F }, 3},
-#line 939 "src/_html_entities.gperf"
+#line 939 "data/html_entities.gperf"
       {"lmoust", { 0xE2, 0x8E, 0xB0 }, 3},
-#line 160 "src/_html_entities.gperf"
+#line 160 "data/html_entities.gperf"
       {"uogon", { 0xC5, 0xB3 }, 2},
-#line 712 "src/_html_entities.gperf"
+#line 712 "data/html_entities.gperf"
       {"male", { 0xE2, 0x99, 0x82 }, 3},
-#line 1685 "src/_html_entities.gperf"
+#line 1685 "data/html_entities.gperf"
       {"rsh", { 0xE2, 0x86, 0xB1 }, 3},
-#line 2004 "src/_html_entities.gperf"
+#line 2004 "data/html_entities.gperf"
       {"lsh", { 0xE2, 0x86, 0xB0 }, 3},
-#line 1195 "src/_html_entities.gperf"
+#line 1195 "data/html_entities.gperf"
       {"aopf", { 0xF0, 0x9D, 0x95, 0x92 }, 4},
-#line 1996 "src/_html_entities.gperf"
+#line 1996 "data/html_entities.gperf"
       {"vsupnE", { 0xE2, 0xAB, 0x8C, 0xEF, 0xB8, 0x80 }, 6},
-#line 143 "src/_html_entities.gperf"
+#line 143 "data/html_entities.gperf"
       {"vsubnE", { 0xE2, 0xAB, 0x8B, 0xEF, 0xB8, 0x80 }, 6},
-#line 1292 "src/_html_entities.gperf"
+#line 1292 "data/html_entities.gperf"
       {"NotGreaterTilde", { 0xE2, 0x89, 0xB5 }, 3},
-#line 1502 "src/_html_entities.gperf"
+#line 1502 "data/html_entities.gperf"
       {"rtri", { 0xE2, 0x96, 0xB9 }, 3},
-#line 2034 "src/_html_entities.gperf"
+#line 2034 "data/html_entities.gperf"
       {"ltri", { 0xE2, 0x97, 0x83 }, 3},
-#line 1166 "src/_html_entities.gperf"
+#line 1166 "data/html_entities.gperf"
       {"Abreve", { 0xC4, 0x82 }, 2},
-#line 1759 "src/_html_entities.gperf"
+#line 1759 "data/html_entities.gperf"
       {"utri", { 0xE2, 0x96, 0xB5 }, 3},
-#line 1983 "src/_html_entities.gperf"
+#line 1983 "data/html_entities.gperf"
       {"models", { 0xE2, 0x8A, 0xA7 }, 3},
-#line 1186 "src/_html_entities.gperf"
+#line 1186 "data/html_entities.gperf"
       {"triminus", { 0xE2, 0xA8, 0xBA }, 3},
-#line 2082 "src/_html_entities.gperf"
+#line 2082 "data/html_entities.gperf"
       {"csup", { 0xE2, 0xAB, 0x90 }, 3},
-#line 186 "src/_html_entities.gperf"
+#line 186 "data/html_entities.gperf"
       {"scnap", { 0xE2, 0xAA, 0xBA }, 3},
-#line 820 "src/_html_entities.gperf"
+#line 820 "data/html_entities.gperf"
       {"vnsup", { 0xE2, 0x8A, 0x83, 0xE2, 0x83, 0x92 }, 6},
-#line 1290 "src/_html_entities.gperf"
+#line 1290 "data/html_entities.gperf"
       {"order", { 0xE2, 0x84, 0xB4 }, 3},
-#line 461 "src/_html_entities.gperf"
+#line 461 "data/html_entities.gperf"
       {"homtht", { 0xE2, 0x88, 0xBB }, 3},
-#line 1095 "src/_html_entities.gperf"
+#line 1095 "data/html_entities.gperf"
       {"plustwo", { 0xE2, 0xA8, 0xA7 }, 3},
-#line 13 "src/_html_entities.gperf"
+#line 13 "data/html_entities.gperf"
       {"iota", { 0xCE, 0xB9 }, 2},
-#line 65 "src/_html_entities.gperf"
+#line 65 "data/html_entities.gperf"
       {"hscr", { 0xF0, 0x9D, 0x92, 0xBD }, 4},
-#line 459 "src/_html_entities.gperf"
+#line 459 "data/html_entities.gperf"
       {"infintie", { 0xE2, 0xA7, 0x9D }, 3},
-#line 1463 "src/_html_entities.gperf"
+#line 1463 "data/html_entities.gperf"
       {"nsce", { 0xE2, 0xAA, 0xB0, 0xCC, 0xB8 }, 5},
-#line 144 "src/_html_entities.gperf"
+#line 144 "data/html_entities.gperf"
       {"beta", { 0xCE, 0xB2 }, 2},
-#line 1477 "src/_html_entities.gperf"
+#line 1477 "data/html_entities.gperf"
       {"EmptySmallSquare", { 0xE2, 0x97, 0xBB }, 3},
-#line 1769 "src/_html_entities.gperf"
+#line 1769 "data/html_entities.gperf"
       {"Iogon", { 0xC4, 0xAE }, 2},
-#line 328 "src/_html_entities.gperf"
+#line 328 "data/html_entities.gperf"
       {"Zeta", { 0xCE, 0x96 }, 2},
-#line 1438 "src/_html_entities.gperf"
+#line 1438 "data/html_entities.gperf"
       {"ltcir", { 0xE2, 0xA9, 0xB9 }, 3},
-#line 317 "src/_html_entities.gperf"
+#line 317 "data/html_entities.gperf"
       {"Ubreve", { 0xC5, 0xAC }, 2},
-#line 1208 "src/_html_entities.gperf"
+#line 1208 "data/html_entities.gperf"
       {"xhArr", { 0xE2, 0x9F, 0xBA }, 3},
-#line 1316 "src/_html_entities.gperf"
+#line 1316 "data/html_entities.gperf"
       {"tridot", { 0xE2, 0x97, 0xAC }, 3},
-#line 1235 "src/_html_entities.gperf"
+#line 1235 "data/html_entities.gperf"
       {"dtdot", { 0xE2, 0x8B, 0xB1 }, 3},
-#line 1676 "src/_html_entities.gperf"
+#line 1676 "data/html_entities.gperf"
       {"swarrow", { 0xE2, 0x86, 0x99 }, 3},
-#line 20 "src/_html_entities.gperf"
+#line 20 "data/html_entities.gperf"
       {"scnE", { 0xE2, 0xAA, 0xB6 }, 3},
-#line 556 "src/_html_entities.gperf"
+#line 556 "data/html_entities.gperf"
       {"csupe", { 0xE2, 0xAB, 0x92 }, 3},
-#line 1392 "src/_html_entities.gperf"
+#line 1392 "data/html_entities.gperf"
       {"csube", { 0xE2, 0xAB, 0x91 }, 3},
-#line 1974 "src/_html_entities.gperf"
+#line 1974 "data/html_entities.gperf"
       {"nwarrow", { 0xE2, 0x86, 0x96 }, 3},
-#line 1434 "src/_html_entities.gperf"
+#line 1434 "data/html_entities.gperf"
       {"lowast", { 0xE2, 0x88, 0x97 }, 3},
-#line 1193 "src/_html_entities.gperf"
+#line 1193 "data/html_entities.gperf"
       {"Aogon", { 0xC4, 0x84 }, 2},
-#line 1882 "src/_html_entities.gperf"
+#line 1882 "data/html_entities.gperf"
       {"racute", { 0xC5, 0x95 }, 2},
-#line 1460 "src/_html_entities.gperf"
+#line 1460 "data/html_entities.gperf"
       {"lacute", { 0xC4, 0xBA }, 2},
-#line 2110 "src/_html_entities.gperf"
+#line 2110 "data/html_entities.gperf"
       {"sacute", { 0xC5, 0x9B }, 2},
-#line 765 "src/_html_entities.gperf"
+#line 765 "data/html_entities.gperf"
       {"eacute", { 0xC3, 0xA9 }, 2},
-#line 851 "src/_html_entities.gperf"
+#line 851 "data/html_entities.gperf"
       {"Lsh", { 0xE2, 0x86, 0xB0 }, 3},
-#line 942 "src/_html_entities.gperf"
+#line 942 "data/html_entities.gperf"
       {"UpArrow", { 0xE2, 0x86, 0x91 }, 3},
-#line 1830 "src/_html_entities.gperf"
+#line 1830 "data/html_entities.gperf"
       {"Rsh", { 0xE2, 0x86, 0xB1 }, 3},
-#line 1191 "src/_html_entities.gperf"
+#line 1191 "data/html_entities.gperf"
       {"uacute", { 0xC3, 0xBA }, 2},
-#line 1508 "src/_html_entities.gperf"
+#line 1508 "data/html_entities.gperf"
       {"nacute", { 0xC5, 0x84 }, 2},
-#line 1871 "src/_html_entities.gperf"
+#line 1871 "data/html_entities.gperf"
       {"Zacute", { 0xC5, 0xB9 }, 2},
-#line 1405 "src/_html_entities.gperf"
+#line 1405 "data/html_entities.gperf"
       {"timesd", { 0xE2, 0xA8, 0xB0 }, 3},
-#line 1615 "src/_html_entities.gperf"
+#line 1615 "data/html_entities.gperf"
       {"caron", { 0xCB, 0x87 }, 2},
-#line 36 "src/_html_entities.gperf"
+#line 36 "data/html_entities.gperf"
       {"xlArr", { 0xE2, 0x9F, 0xB8 }, 3},
-#line 485 "src/_html_entities.gperf"
+#line 485 "data/html_entities.gperf"
       {"DoubleVerticalBar", { 0xE2, 0x88, 0xA5 }, 3},
-#line 1223 "src/_html_entities.gperf"
+#line 1223 "data/html_entities.gperf"
       {"Sacute", { 0xC5, 0x9A }, 2},
-#line 2062 "src/_html_entities.gperf"
+#line 2062 "data/html_entities.gperf"
       {"xrArr", { 0xE2, 0x9F, 0xB9 }, 3},
-#line 1218 "src/_html_entities.gperf"
+#line 1218 "data/html_entities.gperf"
       {"circeq", { 0xE2, 0x89, 0x97 }, 3},
-#line 798 "src/_html_entities.gperf"
+#line 798 "data/html_entities.gperf"
       {"rthree", { 0xE2, 0x8B, 0x8C }, 3},
-#line 1036 "src/_html_entities.gperf"
+#line 1036 "data/html_entities.gperf"
       {"lthree", { 0xE2, 0x8B, 0x8B }, 3},
-#line 1665 "src/_html_entities.gperf"
+#line 1665 "data/html_entities.gperf"
       {"ClockwiseContourIntegral", { 0xE2, 0x88, 0xB2 }, 3},
-#line 515 "src/_html_entities.gperf"
+#line 515 "data/html_entities.gperf"
       {"lmidot", { 0xC5, 0x80 }, 2},
-#line 1058 "src/_html_entities.gperf"
+#line 1058 "data/html_entities.gperf"
       {"Uogon", { 0xC5, 0xB2 }, 2},
-#line 1579 "src/_html_entities.gperf"
+#line 1579 "data/html_entities.gperf"
       {"nvle", { 0xE2, 0x89, 0xA4, 0xE2, 0x83, 0x92 }, 6},
-#line 806 "src/_html_entities.gperf"
+#line 806 "data/html_entities.gperf"
       {"apE", { 0xE2, 0xA9, 0xB0 }, 3},
-#line 1652 "src/_html_entities.gperf"
+#line 1652 "data/html_entities.gperf"
       {"LeftUpDownVector", { 0xE2, 0xA5, 0x91 }, 3},
-#line 1179 "src/_html_entities.gperf"
+#line 1179 "data/html_entities.gperf"
       {"lesg", { 0xE2, 0x8B, 0x9A, 0xEF, 0xB8, 0x80 }, 6},
-#line 756 "src/_html_entities.gperf"
+#line 756 "data/html_entities.gperf"
       {"rfisht", { 0xE2, 0xA5, 0xBD }, 3},
-#line 1828 "src/_html_entities.gperf"
+#line 1828 "data/html_entities.gperf"
       {"MediumSpace", { 0xE2, 0x81, 0x9F }, 3},
-#line 546 "src/_html_entities.gperf"
+#line 546 "data/html_entities.gperf"
       {"lfisht", { 0xE2, 0xA5, 0xBC }, 3},
-#line 1427 "src/_html_entities.gperf"
+#line 1427 "data/html_entities.gperf"
       {"ufisht", { 0xE2, 0xA5, 0xBE }, 3},
-#line 396 "src/_html_entities.gperf"
+#line 396 "data/html_entities.gperf"
       {"backcong", { 0xE2, 0x89, 0x8C }, 3},
-#line 1696 "src/_html_entities.gperf"
+#line 1696 "data/html_entities.gperf"
       {"Iacute", { 0xC3, 0x8D }, 2},
-#line 1024 "src/_html_entities.gperf"
+#line 1024 "data/html_entities.gperf"
       {"nsc", { 0xE2, 0x8A, 0x81 }, 3},
-#line 75 "src/_html_entities.gperf"
+#line 75 "data/html_entities.gperf"
       {"iiiint", { 0xE2, 0xA8, 0x8C }, 3},
-#line 516 "src/_html_entities.gperf"
+#line 516 "data/html_entities.gperf"
       {"ApplyFunction", { 0xE2, 0x81, 0xA1 }, 3},
-#line 1020 "src/_html_entities.gperf"
+#line 1020 "data/html_entities.gperf"
       {"cirE", { 0xE2, 0xA7, 0x83 }, 3},
-#line 1130 "src/_html_entities.gperf"
+#line 1130 "data/html_entities.gperf"
       {"upharpoonright", { 0xE2, 0x86, 0xBE }, 3},
-#line 421 "src/_html_entities.gperf"
+#line 421 "data/html_entities.gperf"
       {"complement", { 0xE2, 0x88, 0x81 }, 3},
-#line 430 "src/_html_entities.gperf"
+#line 430 "data/html_entities.gperf"
       {"cscr", { 0xF0, 0x9D, 0x92, 0xB8 }, 4},
-#line 1450 "src/_html_entities.gperf"
+#line 1450 "data/html_entities.gperf"
       {"ReverseElement", { 0xE2, 0x88, 0x8B }, 3},
-#line 207 "src/_html_entities.gperf"
+#line 207 "data/html_entities.gperf"
       {"Lacute", { 0xC4, 0xB9 }, 2},
-#line 818 "src/_html_entities.gperf"
+#line 818 "data/html_entities.gperf"
       {"zigrarr", { 0xE2, 0x87, 0x9D }, 3},
-#line 1618 "src/_html_entities.gperf"
+#line 1618 "data/html_entities.gperf"
       {"Racute", { 0xC5, 0x94 }, 2},
-#line 1512 "src/_html_entities.gperf"
+#line 1512 "data/html_entities.gperf"
       {"Aacute", { 0xC3, 0x81 }, 2},
-#line 1090 "src/_html_entities.gperf"
+#line 1090 "data/html_entities.gperf"
       {"iogon", { 0xC4, 0xAF }, 2},
-#line 219 "src/_html_entities.gperf"
+#line 219 "data/html_entities.gperf"
       {"Nacute", { 0xC5, 0x83 }, 2},
-#line 1028 "src/_html_entities.gperf"
+#line 1028 "data/html_entities.gperf"
       {"sqcups", { 0xE2, 0x8A, 0x94, 0xEF, 0xB8, 0x80 }, 6},
-#line 1250 "src/_html_entities.gperf"
+#line 1250 "data/html_entities.gperf"
       {"xopf", { 0xF0, 0x9D, 0x95, 0xA9 }, 4},
-#line 2068 "src/_html_entities.gperf"
+#line 2068 "data/html_entities.gperf"
       {"ast", { 0x2A }, 1},
-#line 1745 "src/_html_entities.gperf"
+#line 1745 "data/html_entities.gperf"
       {"egs", { 0xE2, 0xAA, 0x96 }, 3},
-#line 1835 "src/_html_entities.gperf"
+#line 1835 "data/html_entities.gperf"
       {"oint", { 0xE2, 0x88, 0xAE }, 3},
-#line 402 "src/_html_entities.gperf"
+#line 402 "data/html_entities.gperf"
       {"sqsupseteq", { 0xE2, 0x8A, 0x92 }, 3},
-#line 1154 "src/_html_entities.gperf"
+#line 1154 "data/html_entities.gperf"
       {"iff", { 0xE2, 0x87, 0x94 }, 3},
-#line 250 "src/_html_entities.gperf"
+#line 250 "data/html_entities.gperf"
       {"ngt", { 0xE2, 0x89, 0xAF }, 3},
-#line 1283 "src/_html_entities.gperf"
+#line 1283 "data/html_entities.gperf"
       {"DoubleRightTee", { 0xE2, 0x8A, 0xA8 }, 3},
-#line 1971 "src/_html_entities.gperf"
+#line 1971 "data/html_entities.gperf"
       {"Yacute", { 0xC3, 0x9D }, 2},
-#line 1032 "src/_html_entities.gperf"
+#line 1032 "data/html_entities.gperf"
       {"eplus", { 0xE2, 0xA9, 0xB1 }, 3},
-#line 1961 "src/_html_entities.gperf"
+#line 1961 "data/html_entities.gperf"
       {"Lmidot", { 0xC4, 0xBF }, 2},
-#line 743 "src/_html_entities.gperf"
+#line 743 "data/html_entities.gperf"
       {"sqcup", { 0xE2, 0x8A, 0x94 }, 3},
-#line 961 "src/_html_entities.gperf"
+#line 961 "data/html_entities.gperf"
       {"uplus", { 0xE2, 0x8A, 0x8E }, 3},
-#line 147 "src/_html_entities.gperf"
+#line 147 "data/html_entities.gperf"
       {"NotVerticalBar", { 0xE2, 0x88, 0xA4 }, 3},
-#line 57 "src/_html_entities.gperf"
+#line 57 "data/html_entities.gperf"
       {"Esim", { 0xE2, 0xA9, 0xB3 }, 3},
-#line 1334 "src/_html_entities.gperf"
+#line 1334 "data/html_entities.gperf"
       {"Uacute", { 0xC3, 0x9A }, 2},
-#line 1514 "src/_html_entities.gperf"
+#line 1514 "data/html_entities.gperf"
       {"prcue", { 0xE2, 0x89, 0xBC }, 3},
-#line 66 "src/_html_entities.gperf"
+#line 66 "data/html_entities.gperf"
       {"ngtr", { 0xE2, 0x89, 0xAF }, 3},
-#line 200 "src/_html_entities.gperf"
+#line 200 "data/html_entities.gperf"
       {"cirscir", { 0xE2, 0xA7, 0x82 }, 3},
-#line 536 "src/_html_entities.gperf"
+#line 536 "data/html_entities.gperf"
       {"bigotimes", { 0xE2, 0xA8, 0x82 }, 3},
-#line 93 "src/_html_entities.gperf"
+#line 93 "data/html_entities.gperf"
       {"dtri", { 0xE2, 0x96, 0xBF }, 3},
-#line 136 "src/_html_entities.gperf"
+#line 136 "data/html_entities.gperf"
       {"dbkarow", { 0xE2, 0xA4, 0x8F }, 3},
-#line 1556 "src/_html_entities.gperf"
+#line 1556 "data/html_entities.gperf"
       {"isinE", { 0xE2, 0x8B, 0xB9 }, 3},
-#line 1504 "src/_html_entities.gperf"
+#line 1504 "data/html_entities.gperf"
       {"Edot", { 0xC4, 0x96 }, 2},
-#line 1681 "src/_html_entities.gperf"
+#line 1681 "data/html_entities.gperf"
       {"NotEqualTilde", { 0xE2, 0x89, 0x82, 0xCC, 0xB8 }, 5},
-#line 1003 "src/_html_entities.gperf"
+#line 1003 "data/html_entities.gperf"
       {"NegativeMediumSpace", { 0xE2, 0x80, 0x8B }, 3},
-#line 373 "src/_html_entities.gperf"
+#line 373 "data/html_entities.gperf"
       {"TildeTilde", { 0xE2, 0x89, 0x88 }, 3},
-#line 1070 "src/_html_entities.gperf"
+#line 1070 "data/html_entities.gperf"
       {"iacute", { 0xC3, 0xAD }, 2},
-#line 1448 "src/_html_entities.gperf"
+#line 1448 "data/html_entities.gperf"
       {"Beta", { 0xCE, 0x92 }, 2},
-#line 48 "src/_html_entities.gperf"
+#line 48 "data/html_entities.gperf"
       {"hfr", { 0xF0, 0x9D, 0x94, 0xA5 }, 4},
-#line 1457 "src/_html_entities.gperf"
+#line 1457 "data/html_entities.gperf"
       {"LeftArrowBar", { 0xE2, 0x87, 0xA4 }, 3},
-#line 1614 "src/_html_entities.gperf"
+#line 1614 "data/html_entities.gperf"
       {"Congruent", { 0xE2, 0x89, 0xA1 }, 3},
-#line 1715 "src/_html_entities.gperf"
+#line 1715 "data/html_entities.gperf"
       {"gesdot", { 0xE2, 0xAA, 0x80 }, 3},
-#line 239 "src/_html_entities.gperf"
+#line 239 "data/html_entities.gperf"
       {"DifferentialD", { 0xE2, 0x85, 0x86 }, 3},
-#line 349 "src/_html_entities.gperf"
+#line 349 "data/html_entities.gperf"
       {"nge", { 0xE2, 0x89, 0xB1 }, 3},
-#line 1956 "src/_html_entities.gperf"
+#line 1956 "data/html_entities.gperf"
       {"vellip", { 0xE2, 0x8B, 0xAE }, 3},
-#line 1355 "src/_html_entities.gperf"
+#line 1355 "data/html_entities.gperf"
       {"leqslant", { 0xE2, 0xA9, 0xBD }, 3},
-#line 171 "src/_html_entities.gperf"
+#line 171 "data/html_entities.gperf"
       {"smid", { 0xE2, 0x88, 0xA3 }, 3},
-#line 1921 "src/_html_entities.gperf"
+#line 1921 "data/html_entities.gperf"
       {"tbrk", { 0xE2, 0x8E, 0xB4 }, 3},
-#line 205 "src/_html_entities.gperf"
+#line 205 "data/html_entities.gperf"
       {"fork", { 0xE2, 0x8B, 0x94 }, 3},
-#line 1941 "src/_html_entities.gperf"
+#line 1941 "data/html_entities.gperf"
       {"nmid", { 0xE2, 0x88, 0xA4 }, 3},
-#line 1695 "src/_html_entities.gperf"
+#line 1695 "data/html_entities.gperf"
       {"bbrk", { 0xE2, 0x8E, 0xB5 }, 3},
-#line 1805 "src/_html_entities.gperf"
+#line 1805 "data/html_entities.gperf"
       {"theta", { 0xCE, 0xB8 }, 2},
-#line 1623 "src/_html_entities.gperf"
+#line 1623 "data/html_entities.gperf"
       {"nsucc", { 0xE2, 0x8A, 0x81 }, 3},
-#line 2108 "src/_html_entities.gperf"
+#line 2108 "data/html_entities.gperf"
       {"leftarrow", { 0xE2, 0x86, 0x90 }, 3},
-#line 1340 "src/_html_entities.gperf"
+#line 1340 "data/html_entities.gperf"
       {"CenterDot", { 0xC2, 0xB7 }, 2},
-#line 191 "src/_html_entities.gperf"
+#line 191 "data/html_entities.gperf"
       {"PrecedesEqual", { 0xE2, 0xAA, 0xAF }, 3},
-#line 813 "src/_html_entities.gperf"
+#line 813 "data/html_entities.gperf"
       {"nu", { 0xCE, 0xBD }, 2},
-#line 1180 "src/_html_entities.gperf"
+#line 1180 "data/html_entities.gperf"
       {"DoubleLongLeftArrow", { 0xE2, 0x9F, 0xB8 }, 3},
-#line 1271 "src/_html_entities.gperf"
+#line 1271 "data/html_entities.gperf"
       {"DoubleLongLeftRightArrow", { 0xE2, 0x9F, 0xBA }, 3},
-#line 1134 "src/_html_entities.gperf"
+#line 1134 "data/html_entities.gperf"
       {"UpperLeftArrow", { 0xE2, 0x86, 0x96 }, 3},
-#line 1571 "src/_html_entities.gperf"
+#line 1571 "data/html_entities.gperf"
       {"ohbar", { 0xE2, 0xA6, 0xB5 }, 3},
-#line 1294 "src/_html_entities.gperf"
+#line 1294 "data/html_entities.gperf"
       {"imath", { 0xC4, 0xB1 }, 2},
-#line 29 "src/_html_entities.gperf"
+#line 29 "data/html_entities.gperf"
       {"nvgt", { 0x3E, 0xE2, 0x83, 0x92 }, 4},
-#line 1364 "src/_html_entities.gperf"
+#line 1364 "data/html_entities.gperf"
       {"simg", { 0xE2, 0xAA, 0x9E }, 3},
-#line 127 "src/_html_entities.gperf"
+#line 127 "data/html_entities.gperf"
       {"trie", { 0xE2, 0x89, 0x9C }, 3},
-#line 927 "src/_html_entities.gperf"
+#line 927 "data/html_entities.gperf"
       {"ddotseq", { 0xE2, 0xA9, 0xB7 }, 3},
-#line 1054 "src/_html_entities.gperf"
+#line 1054 "data/html_entities.gperf"
       {"nges", { 0xE2, 0xA9, 0xBE, 0xCC, 0xB8 }, 5},
-#line 152 "src/_html_entities.gperf"
+#line 152 "data/html_entities.gperf"
       {"trpezium", { 0xE2, 0x8F, 0xA2 }, 3},
-#line 81 "src/_html_entities.gperf"
+#line 81 "data/html_entities.gperf"
       {"nwnear", { 0xE2, 0xA4, 0xA7 }, 3},
-#line 2006 "src/_html_entities.gperf"
+#line 2006 "data/html_entities.gperf"
       {"eng", { 0xC5, 0x8B }, 2},
-#line 990 "src/_html_entities.gperf"
+#line 990 "data/html_entities.gperf"
       {"Mellintrf", { 0xE2, 0x84, 0xB3 }, 3},
-#line 666 "src/_html_entities.gperf"
+#line 666 "data/html_entities.gperf"
       {"bbrktbrk", { 0xE2, 0x8E, 0xB6 }, 3},
-#line 707 "src/_html_entities.gperf"
+#line 707 "data/html_entities.gperf"
       {"DownTee", { 0xE2, 0x8A, 0xA4 }, 3},
-#line 883 "src/_html_entities.gperf"
+#line 883 "data/html_entities.gperf"
       {"uuarr", { 0xE2, 0x87, 0x88 }, 3},
-#line 1161 "src/_html_entities.gperf"
+#line 1161 "data/html_entities.gperf"
       {"ZeroWidthSpace", { 0xE2, 0x80, 0x8B }, 3},
-#line 1008 "src/_html_entities.gperf"
+#line 1008 "data/html_entities.gperf"
       {"isinv", { 0xE2, 0x88, 0x88 }, 3},
-#line 702 "src/_html_entities.gperf"
+#line 702 "data/html_entities.gperf"
       {"iinfin", { 0xE2, 0xA7, 0x9C }, 3},
-#line 1414 "src/_html_entities.gperf"
+#line 1414 "data/html_entities.gperf"
       {"xi", { 0xCE, 0xBE }, 2},
-#line 446 "src/_html_entities.gperf"
+#line 446 "data/html_entities.gperf"
       {"boxUr", { 0xE2, 0x95, 0x99 }, 3},
-#line 132 "src/_html_entities.gperf"
+#line 132 "data/html_entities.gperf"
       {"zdot", { 0xC5, 0xBC }, 2},
-#line 2103 "src/_html_entities.gperf"
+#line 2103 "data/html_entities.gperf"
       {"dfisht", { 0xE2, 0xA5, 0xBF }, 3},
-#line 797 "src/_html_entities.gperf"
+#line 797 "data/html_entities.gperf"
       {"bump", { 0xE2, 0x89, 0x8E }, 3},
-#line 805 "src/_html_entities.gperf"
+#line 805 "data/html_entities.gperf"
       {"Eogon", { 0xC4, 0x98 }, 2},
-#line 17 "src/_html_entities.gperf"
+#line 17 "data/html_entities.gperf"
       {"block", { 0xE2, 0x96, 0x88 }, 3},
-#line 940 "src/_html_entities.gperf"
+#line 940 "data/html_entities.gperf"
       {"cfr", { 0xF0, 0x9D, 0x94, 0xA0 }, 4},
-#line 544 "src/_html_entities.gperf"
+#line 544 "data/html_entities.gperf"
       {"blank", { 0xE2, 0x90, 0xA3 }, 3},
-#line 475 "src/_html_entities.gperf"
+#line 475 "data/html_entities.gperf"
       {"Leftarrow", { 0xE2, 0x87, 0x90 }, 3},
-#line 33 "src/_html_entities.gperf"
+#line 33 "data/html_entities.gperf"
       {"bigodot", { 0xE2, 0xA8, 0x80 }, 3},
-#line 1059 "src/_html_entities.gperf"
+#line 1059 "data/html_entities.gperf"
       {"Omicron", { 0xCE, 0x9F }, 2},
-#line 2098 "src/_html_entities.gperf"
+#line 2098 "data/html_entities.gperf"
       {"nLtv", { 0xE2, 0x89, 0xAA, 0xCC, 0xB8 }, 5},
-#line 528 "src/_html_entities.gperf"
+#line 528 "data/html_entities.gperf"
       {"hairsp", { 0xE2, 0x80, 0x8A }, 3},
-#line 759 "src/_html_entities.gperf"
+#line 759 "data/html_entities.gperf"
       {"ngeq", { 0xE2, 0x89, 0xB1 }, 3},
-#line 965 "src/_html_entities.gperf"
+#line 965 "data/html_entities.gperf"
       {"Nu", { 0xCE, 0x9D }, 2},
-#line 50 "src/_html_entities.gperf"
+#line 50 "data/html_entities.gperf"
       {"Mu", { 0xCE, 0x9C }, 2},
-#line 1246 "src/_html_entities.gperf"
+#line 1246 "data/html_entities.gperf"
       {"ngeqq", { 0xE2, 0x89, 0xA7, 0xCC, 0xB8 }, 5},
-#line 910 "src/_html_entities.gperf"
+#line 910 "data/html_entities.gperf"
       {"DownLeftVector", { 0xE2, 0x86, 0xBD }, 3},
-#line 832 "src/_html_entities.gperf"
+#line 832 "data/html_entities.gperf"
       {"rhov", { 0xCF, 0xB1 }, 2},
-#line 1389 "src/_html_entities.gperf"
+#line 1389 "data/html_entities.gperf"
       {"UpperRightArrow", { 0xE2, 0x86, 0x97 }, 3},
-#line 1528 "src/_html_entities.gperf"
+#line 1528 "data/html_entities.gperf"
       {"DownLeftVectorBar", { 0xE2, 0xA5, 0x96 }, 3},
-#line 1257 "src/_html_entities.gperf"
+#line 1257 "data/html_entities.gperf"
       {"lEg", { 0xE2, 0xAA, 0x8B }, 3},
-#line 295 "src/_html_entities.gperf"
+#line 295 "data/html_entities.gperf"
       {"rarrw", { 0xE2, 0x86, 0x9D }, 3},
-#line 548 "src/_html_entities.gperf"
+#line 548 "data/html_entities.gperf"
       {"nGg", { 0xE2, 0x8B, 0x99, 0xCC, 0xB8 }, 5},
-#line 542 "src/_html_entities.gperf"
+#line 542 "data/html_entities.gperf"
       {"rtriltri", { 0xE2, 0xA7, 0x8E }, 3},
-#line 769 "src/_html_entities.gperf"
+#line 769 "data/html_entities.gperf"
       {"bumpe", { 0xE2, 0x89, 0x8F }, 3},
-#line 251 "src/_html_entities.gperf"
+#line 251 "data/html_entities.gperf"
       {"TildeEqual", { 0xE2, 0x89, 0x83 }, 3},
-#line 1345 "src/_html_entities.gperf"
+#line 1345 "data/html_entities.gperf"
       {"sup1", { 0xC2, 0xB9 }, 2},
-#line 1247 "src/_html_entities.gperf"
+#line 1247 "data/html_entities.gperf"
       {"DownLeftTeeVector", { 0xE2, 0xA5, 0x9E }, 3},
-#line 28 "src/_html_entities.gperf"
+#line 28 "data/html_entities.gperf"
       {"barvee", { 0xE2, 0x8A, 0xBD }, 3},
-#line 1758 "src/_html_entities.gperf"
+#line 1758 "data/html_entities.gperf"
       {"ascr", { 0xF0, 0x9D, 0x92, 0xB6 }, 4},
-#line 1057 "src/_html_entities.gperf"
+#line 1057 "data/html_entities.gperf"
       {"sup3", { 0xC2, 0xB3 }, 2},
-#line 911 "src/_html_entities.gperf"
+#line 911 "data/html_entities.gperf"
       {"sup2", { 0xC2, 0xB2 }, 2},
-#line 166 "src/_html_entities.gperf"
+#line 166 "data/html_entities.gperf"
       {"boxH", { 0xE2, 0x95, 0x90 }, 3},
-#line 1262 "src/_html_entities.gperf"
+#line 1262 "data/html_entities.gperf"
       {"sc", { 0xE2, 0x89, 0xBB }, 3},
-#line 301 "src/_html_entities.gperf"
+#line 301 "data/html_entities.gperf"
       {"ltlarr", { 0xE2, 0xA5, 0xB6 }, 3},
-#line 949 "src/_html_entities.gperf"
+#line 949 "data/html_entities.gperf"
       {"Theta", { 0xCE, 0x98 }, 2},
-#line 1561 "src/_html_entities.gperf"
+#line 1561 "data/html_entities.gperf"
       {"kappav", { 0xCF, 0xB0 }, 2},
-#line 640 "src/_html_entities.gperf"
+#line 640 "data/html_entities.gperf"
       {"nGtv", { 0xE2, 0x89, 0xAB, 0xCC, 0xB8 }, 5},
-#line 1498 "src/_html_entities.gperf"
+#line 1498 "data/html_entities.gperf"
       {"circledast", { 0xE2, 0x8A, 0x9B }, 3},
-#line 474 "src/_html_entities.gperf"
+#line 474 "data/html_entities.gperf"
       {"sup", { 0xE2, 0x8A, 0x83 }, 3},
-#line 1984 "src/_html_entities.gperf"
+#line 1984 "data/html_entities.gperf"
       {"rsquor", { 0xE2, 0x80, 0x99 }, 3},
-#line 1133 "src/_html_entities.gperf"
+#line 1133 "data/html_entities.gperf"
       {"lsquor", { 0xE2, 0x80, 0x9A }, 3},
-#line 970 "src/_html_entities.gperf"
+#line 970 "data/html_entities.gperf"
       {"NotLessSlantEqual", { 0xE2, 0xA9, 0xBD, 0xCC, 0xB8 }, 5},
-#line 983 "src/_html_entities.gperf"
+#line 983 "data/html_entities.gperf"
       {"doteqdot", { 0xE2, 0x89, 0x91 }, 3},
-#line 9 "src/_html_entities.gperf"
+#line 9 "data/html_entities.gperf"
       {"circledS", { 0xE2, 0x93, 0x88 }, 3},
-#line 1999 "src/_html_entities.gperf"
+#line 1999 "data/html_entities.gperf"
       {"Sc", { 0xE2, 0xAA, 0xBC }, 3},
-#line 436 "src/_html_entities.gperf"
+#line 436 "data/html_entities.gperf"
       {"boxHu", { 0xE2, 0x95, 0xA7 }, 3},
-#line 190 "src/_html_entities.gperf"
+#line 190 "data/html_entities.gperf"
       {"TildeFullEqual", { 0xE2, 0x89, 0x85 }, 3},
-#line 711 "src/_html_entities.gperf"
+#line 711 "data/html_entities.gperf"
       {"boxVr", { 0xE2, 0x95, 0x9F }, 3},
-#line 370 "src/_html_entities.gperf"
+#line 370 "data/html_entities.gperf"
       {"Eacute", { 0xC3, 0x89 }, 2},
-#line 984 "src/_html_entities.gperf"
+#line 984 "data/html_entities.gperf"
       {"colon", { 0x3A }, 1},
-#line 1777 "src/_html_entities.gperf"
+#line 1777 "data/html_entities.gperf"
       {"boxUR", { 0xE2, 0x95, 0x9A }, 3},
-#line 985 "src/_html_entities.gperf"
+#line 985 "data/html_entities.gperf"
       {"prnsim", { 0xE2, 0x8B, 0xA8 }, 3},
-#line 749 "src/_html_entities.gperf"
+#line 749 "data/html_entities.gperf"
       {"boxV", { 0xE2, 0x95, 0x91 }, 3},
-#line 513 "src/_html_entities.gperf"
+#line 513 "data/html_entities.gperf"
       {"isindot", { 0xE2, 0x8B, 0xB5 }, 3},
-#line 34 "src/_html_entities.gperf"
+#line 34 "data/html_entities.gperf"
       {"Sup", { 0xE2, 0x8B, 0x91 }, 3},
-#line 641 "src/_html_entities.gperf"
+#line 641 "data/html_entities.gperf"
       {"colone", { 0xE2, 0x89, 0x94 }, 3},
-#line 1306 "src/_html_entities.gperf"
+#line 1306 "data/html_entities.gperf"
       {"Laplacetrf", { 0xE2, 0x84, 0x92 }, 3},
-#line 1798 "src/_html_entities.gperf"
+#line 1798 "data/html_entities.gperf"
       {"roang", { 0xE2, 0x9F, 0xAD }, 3},
-#line 1023 "src/_html_entities.gperf"
+#line 1023 "data/html_entities.gperf"
       {"vartheta", { 0xCF, 0x91 }, 2},
-#line 492 "src/_html_entities.gperf"
+#line 492 "data/html_entities.gperf"
       {"loang", { 0xE2, 0x9F, 0xAC }, 3},
-#line 1394 "src/_html_entities.gperf"
+#line 1394 "data/html_entities.gperf"
       {"ccaps", { 0xE2, 0xA9, 0x8D }, 3},
-#line 1510 "src/_html_entities.gperf"
+#line 1510 "data/html_entities.gperf"
       {"dblac", { 0xCB, 0x9D }, 2},
-#line 1815 "src/_html_entities.gperf"
+#line 1815 "data/html_entities.gperf"
       {"DoubleLongRightArrow", { 0xE2, 0x9F, 0xB9 }, 3},
-#line 1625 "src/_html_entities.gperf"
+#line 1625 "data/html_entities.gperf"
       {"nshortparallel", { 0xE2, 0x88, 0xA6 }, 3},
-#line 752 "src/_html_entities.gperf"
+#line 752 "data/html_entities.gperf"
       {"vartriangleright", { 0xE2, 0x8A, 0xB3 }, 3},
-#line 1045 "src/_html_entities.gperf"
+#line 1045 "data/html_entities.gperf"
       {"vartriangleleft", { 0xE2, 0x8A, 0xB2 }, 3},
-#line 1113 "src/_html_entities.gperf"
+#line 1113 "data/html_entities.gperf"
       {"compfn", { 0xE2, 0x88, 0x98 }, 3},
-#line 172 "src/_html_entities.gperf"
+#line 172 "data/html_entities.gperf"
       {"risingdotseq", { 0xE2, 0x89, 0x93 }, 3},
-#line 1855 "src/_html_entities.gperf"
+#line 1855 "data/html_entities.gperf"
       {"trisb", { 0xE2, 0xA7, 0x8D }, 3},
-#line 2070 "src/_html_entities.gperf"
+#line 2070 "data/html_entities.gperf"
       {"Cdot", { 0xC4, 0x8A }, 2},
-#line 122 "src/_html_entities.gperf"
+#line 122 "data/html_entities.gperf"
       {"omicron", { 0xCE, 0xBF }, 2},
-#line 1982 "src/_html_entities.gperf"
+#line 1982 "data/html_entities.gperf"
       {"circledR", { 0xC2, 0xAE }, 2},
-#line 1397 "src/_html_entities.gperf"
+#line 1397 "data/html_entities.gperf"
       {"ccups", { 0xE2, 0xA9, 0x8C }, 3},
-#line 791 "src/_html_entities.gperf"
+#line 791 "data/html_entities.gperf"
       {"reg", { 0xC2, 0xAE }, 2},
-#line 1196 "src/_html_entities.gperf"
+#line 1196 "data/html_entities.gperf"
       {"leg", { 0xE2, 0x8B, 0x9A }, 3},
-#line 1968 "src/_html_entities.gperf"
+#line 1968 "data/html_entities.gperf"
       {"breve", { 0xCB, 0x98 }, 2},
-#line 937 "src/_html_entities.gperf"
+#line 937 "data/html_entities.gperf"
       {"nexist", { 0xE2, 0x88, 0x84 }, 3},
-#line 1304 "src/_html_entities.gperf"
+#line 1304 "data/html_entities.gperf"
       {"numsp", { 0xE2, 0x80, 0x87 }, 3},
-#line 1537 "src/_html_entities.gperf"
+#line 1537 "data/html_entities.gperf"
       {"ReverseEquilibrium", { 0xE2, 0x87, 0x8B }, 3},
-#line 1327 "src/_html_entities.gperf"
+#line 1327 "data/html_entities.gperf"
       {"boxUL", { 0xE2, 0x95, 0x9D }, 3},
-#line 981 "src/_html_entities.gperf"
+#line 981 "data/html_entities.gperf"
       {"zeta", { 0xCE, 0xB6 }, 2},
-#line 1531 "src/_html_entities.gperf"
+#line 1531 "data/html_entities.gperf"
       {"supmult", { 0xE2, 0xAB, 0x82 }, 3},
-#line 1841 "src/_html_entities.gperf"
+#line 1841 "data/html_entities.gperf"
       {"HilbertSpace", { 0xE2, 0x84, 0x8B }, 3},
-#line 257 "src/_html_entities.gperf"
+#line 257 "data/html_entities.gperf"
       {"nexists", { 0xE2, 0x88, 0x84 }, 3},
-#line 1425 "src/_html_entities.gperf"
+#line 1425 "data/html_entities.gperf"
       {"ccaron", { 0xC4, 0x8D }, 2},
-#line 2013 "src/_html_entities.gperf"
+#line 2013 "data/html_entities.gperf"
       {"LessSlantEqual", { 0xE2, 0xA9, 0xBD }, 3},
-#line 593 "src/_html_entities.gperf"
+#line 593 "data/html_entities.gperf"
       {"quest", { 0x3F }, 1},
-#line 514 "src/_html_entities.gperf"
+#line 514 "data/html_entities.gperf"
       {"supsub", { 0xE2, 0xAB, 0x94 }, 3},
-#line 971 "src/_html_entities.gperf"
+#line 971 "data/html_entities.gperf"
       {"boxHU", { 0xE2, 0x95, 0xA9 }, 3},
-#line 1266 "src/_html_entities.gperf"
+#line 1266 "data/html_entities.gperf"
       {"gvnE", { 0xE2, 0x89, 0xA9, 0xEF, 0xB8, 0x80 }, 6},
-#line 1051 "src/_html_entities.gperf"
+#line 1051 "data/html_entities.gperf"
       {"duarr", { 0xE2, 0x87, 0xB5 }, 3},
-#line 673 "src/_html_entities.gperf"
+#line 673 "data/html_entities.gperf"
       {"chi", { 0xCF, 0x87 }, 2},
-#line 1878 "src/_html_entities.gperf"
+#line 1878 "data/html_entities.gperf"
       {"supset", { 0xE2, 0x8A, 0x83 }, 3},
-#line 138 "src/_html_entities.gperf"
+#line 138 "data/html_entities.gperf"
       {"kopf", { 0xF0, 0x9D, 0x95, 0x9C }, 4},
-#line 64 "src/_html_entities.gperf"
+#line 64 "data/html_entities.gperf"
       {"boxVH", { 0xE2, 0x95, 0xAC }, 3},
-#line 1243 "src/_html_entities.gperf"
+#line 1243 "data/html_entities.gperf"
       {"boxVR", { 0xE2, 0x95, 0xA0 }, 3},
-#line 454 "src/_html_entities.gperf"
+#line 454 "data/html_entities.gperf"
       {"odot", { 0xE2, 0x8A, 0x99 }, 3},
-#line 626 "src/_html_entities.gperf"
+#line 626 "data/html_entities.gperf"
       {"zacute", { 0xC5, 0xBA }, 2},
-#line 1459 "src/_html_entities.gperf"
+#line 1459 "data/html_entities.gperf"
       {"Barv", { 0xE2, 0xAB, 0xA7 }, 3},
-#line 812 "src/_html_entities.gperf"
+#line 812 "data/html_entities.gperf"
       {"raquo", { 0xC2, 0xBB }, 2},
-#line 1768 "src/_html_entities.gperf"
+#line 1768 "data/html_entities.gperf"
       {"Supset", { 0xE2, 0x8B, 0x91 }, 3},
-#line 1264 "src/_html_entities.gperf"
+#line 1264 "data/html_entities.gperf"
       {"laquo", { 0xC2, 0xAB }, 2},
-#line 194 "src/_html_entities.gperf"
+#line 194 "data/html_entities.gperf"
       {"LeftArrow", { 0xE2, 0x86, 0x90 }, 3},
-#line 214 "src/_html_entities.gperf"
+#line 214 "data/html_entities.gperf"
       {"ngsim", { 0xE2, 0x89, 0xB5 }, 3},
-#line 1137 "src/_html_entities.gperf"
+#line 1137 "data/html_entities.gperf"
       {"dagger", { 0xE2, 0x80, 0xA0 }, 3},
-#line 1907 "src/_html_entities.gperf"
+#line 1907 "data/html_entities.gperf"
       {"exponentiale", { 0xE2, 0x85, 0x87 }, 3},
-#line 255 "src/_html_entities.gperf"
+#line 255 "data/html_entities.gperf"
       {"Dagger", { 0xE2, 0x80, 0xA1 }, 3},
-#line 1827 "src/_html_entities.gperf"
+#line 1827 "data/html_entities.gperf"
       {"xsqcup", { 0xE2, 0xA8, 0x86 }, 3},
-#line 180 "src/_html_entities.gperf"
+#line 180 "data/html_entities.gperf"
       {"supne", { 0xE2, 0x8A, 0x8B }, 3},
-#line 318 "src/_html_entities.gperf"
+#line 318 "data/html_entities.gperf"
       {"lesdoto", { 0xE2, 0xAA, 0x81 }, 3},
-#line 35 "src/_html_entities.gperf"
+#line 35 "data/html_entities.gperf"
       {"raemptyv", { 0xE2, 0xA6, 0xB3 }, 3},
-#line 704 "src/_html_entities.gperf"
+#line 704 "data/html_entities.gperf"
       {"laemptyv", { 0xE2, 0xA6, 0xB4 }, 3},
-#line 893 "src/_html_entities.gperf"
+#line 893 "data/html_entities.gperf"
       {"xscr", { 0xF0, 0x9D, 0x93, 0x8D }, 4},
-#line 1087 "src/_html_entities.gperf"
+#line 1087 "data/html_entities.gperf"
       {"supsup", { 0xE2, 0xAB, 0x96 }, 3},
-#line 1280 "src/_html_entities.gperf"
+#line 1280 "data/html_entities.gperf"
       {"shcy", { 0xD1, 0x88 }, 2},
-#line 1959 "src/_html_entities.gperf"
+#line 1959 "data/html_entities.gperf"
       {"ic", { 0xE2, 0x81, 0xA3 }, 3},
-#line 1908 "src/_html_entities.gperf"
+#line 1908 "data/html_entities.gperf"
       {"ljcy", { 0xD1, 0x99 }, 2},
-#line 588 "src/_html_entities.gperf"
+#line 588 "data/html_entities.gperf"
       {"capdot", { 0xE2, 0xA9, 0x80 }, 3},
-#line 830 "src/_html_entities.gperf"
+#line 830 "data/html_entities.gperf"
       {"boxHd", { 0xE2, 0x95, 0xA4 }, 3},
-#line 393 "src/_html_entities.gperf"
+#line 393 "data/html_entities.gperf"
       {"njcy", { 0xD1, 0x9A }, 2},
-#line 1442 "src/_html_entities.gperf"
+#line 1442 "data/html_entities.gperf"
       {"HumpEqual", { 0xE2, 0x89, 0x8F }, 3},
-#line 362 "src/_html_entities.gperf"
+#line 362 "data/html_entities.gperf"
       {"Product", { 0xE2, 0x88, 0x8F }, 3},
-#line 694 "src/_html_entities.gperf"
+#line 694 "data/html_entities.gperf"
       {"bumpeq", { 0xE2, 0x89, 0x8F }, 3},
-#line 672 "src/_html_entities.gperf"
+#line 672 "data/html_entities.gperf"
       {"gsime", { 0xE2, 0xAA, 0x8E }, 3},
-#line 1688 "src/_html_entities.gperf"
+#line 1688 "data/html_entities.gperf"
       {"afr", { 0xF0, 0x9D, 0x94, 0x9E }, 4},
-#line 670 "src/_html_entities.gperf"
+#line 670 "data/html_entities.gperf"
       {"boxVL", { 0xE2, 0x95, 0xA3 }, 3},
-#line 1810 "src/_html_entities.gperf"
+#line 1810 "data/html_entities.gperf"
       {"bemptyv", { 0xE2, 0xA6, 0xB0 }, 3},
-#line 1509 "src/_html_entities.gperf"
+#line 1509 "data/html_entities.gperf"
       {"DiacriticalAcute", { 0xC2, 0xB4 }, 2},
-#line 97 "src/_html_entities.gperf"
+#line 97 "data/html_entities.gperf"
       {"sbquo", { 0xE2, 0x80, 0x9A }, 3},
-#line 1870 "src/_html_entities.gperf"
+#line 1870 "data/html_entities.gperf"
       {"Oacute", { 0xC3, 0x93 }, 2},
-#line 110 "src/_html_entities.gperf"
+#line 110 "data/html_entities.gperf"
       {"mu", { 0xCE, 0xBC }, 2},
-#line 1638 "src/_html_entities.gperf"
+#line 1638 "data/html_entities.gperf"
       {"DownArrowBar", { 0xE2, 0xA4, 0x93 }, 3},
-#line 1252 "src/_html_entities.gperf"
+#line 1252 "data/html_entities.gperf"
       {"rang", { 0xE2, 0x9F, 0xA9 }, 3},
-#line 1735 "src/_html_entities.gperf"
+#line 1735 "data/html_entities.gperf"
       {"lang", { 0xE2, 0x9F, 0xA8 }, 3},
-#line 1400 "src/_html_entities.gperf"
+#line 1400 "data/html_entities.gperf"
       {"ocir", { 0xE2, 0x8A, 0x9A }, 3},
-#line 156 "src/_html_entities.gperf"
+#line 156 "data/html_entities.gperf"
       {"nang", { 0xE2, 0x88, 0xA0, 0xE2, 0x83, 0x92 }, 6},
-#line 11 "src/_html_entities.gperf"
+#line 11 "data/html_entities.gperf"
       {"sum", { 0xE2, 0x88, 0x91 }, 3},
-#line 689 "src/_html_entities.gperf"
+#line 689 "data/html_entities.gperf"
       {"yopf", { 0xF0, 0x9D, 0x95, 0xAA }, 4},
-#line 86 "src/_html_entities.gperf"
+#line 86 "data/html_entities.gperf"
       {"NotExists", { 0xE2, 0x88, 0x84 }, 3},
-#line 1152 "src/_html_entities.gperf"
+#line 1152 "data/html_entities.gperf"
       {"realpart", { 0xE2, 0x84, 0x9C }, 3},
-#line 1356 "src/_html_entities.gperf"
+#line 1356 "data/html_entities.gperf"
       {"num", { 0x23 }, 1},
-#line 1840 "src/_html_entities.gperf"
+#line 1840 "data/html_entities.gperf"
       {"supseteq", { 0xE2, 0x8A, 0x87 }, 3},
-#line 2124 "src/_html_entities.gperf"
+#line 2124 "data/html_entities.gperf"
       {"supseteqq", { 0xE2, 0xAB, 0x86 }, 3},
-#line 741 "src/_html_entities.gperf"
+#line 741 "data/html_entities.gperf"
       {"lnapprox", { 0xE2, 0xAA, 0x89 }, 3},
-#line 898 "src/_html_entities.gperf"
+#line 898 "data/html_entities.gperf"
       {"supsetneq", { 0xE2, 0x8A, 0x8B }, 3},
-#line 1627 "src/_html_entities.gperf"
+#line 1627 "data/html_entities.gperf"
       {"coloneq", { 0xE2, 0x89, 0x94 }, 3},
-#line 992 "src/_html_entities.gperf"
+#line 992 "data/html_entities.gperf"
       {"Sum", { 0xE2, 0x88, 0x91 }, 3},
-#line 1796 "src/_html_entities.gperf"
+#line 1796 "data/html_entities.gperf"
       {"lgE", { 0xE2, 0xAA, 0x91 }, 3},
-#line 690 "src/_html_entities.gperf"
+#line 690 "data/html_entities.gperf"
       {"af", { 0xE2, 0x81, 0xA1 }, 3},
-#line 1924 "src/_html_entities.gperf"
+#line 1924 "data/html_entities.gperf"
       {"ngE", { 0xE2, 0x89, 0xA7, 0xCC, 0xB8 }, 5},
-#line 96 "src/_html_entities.gperf"
+#line 96 "data/html_entities.gperf"
       {"IOcy", { 0xD0, 0x81 }, 2},
-#line 274 "src/_html_entities.gperf"
+#line 274 "data/html_entities.gperf"
       {"DiacriticalTilde", { 0xCB, 0x9C }, 2},
-#line 2091 "src/_html_entities.gperf"
+#line 2091 "data/html_entities.gperf"
       {"bsolb", { 0xE2, 0xA7, 0x85 }, 3},
-#line 1880 "src/_html_entities.gperf"
+#line 1880 "data/html_entities.gperf"
       {"ZHcy", { 0xD0, 0x96 }, 2},
-#line 897 "src/_html_entities.gperf"
+#line 897 "data/html_entities.gperf"
       {"DoubleRightArrow", { 0xE2, 0x87, 0x92 }, 3},
-#line 1102 "src/_html_entities.gperf"
+#line 1102 "data/html_entities.gperf"
       {"xoplus", { 0xE2, 0xA8, 0x81 }, 3},
-#line 796 "src/_html_entities.gperf"
+#line 796 "data/html_entities.gperf"
       {"boxUl", { 0xE2, 0x95, 0x9C }, 3},
-#line 1429 "src/_html_entities.gperf"
+#line 1429 "data/html_entities.gperf"
       {"SHcy", { 0xD0, 0xA8 }, 2},
-#line 456 "src/_html_entities.gperf"
+#line 456 "data/html_entities.gperf"
       {"szlig", { 0xC3, 0x9F }, 2},
-#line 1891 "src/_html_entities.gperf"
+#line 1891 "data/html_entities.gperf"
       {"Cacute", { 0xC4, 0x86 }, 2},
-#line 1439 "src/_html_entities.gperf"
+#line 1439 "data/html_entities.gperf"
       {"boxplus", { 0xE2, 0x8A, 0x9E }, 3},
-#line 163 "src/_html_entities.gperf"
+#line 163 "data/html_entities.gperf"
       {"Breve", { 0xCB, 0x98 }, 2},
-#line 828 "src/_html_entities.gperf"
+#line 828 "data/html_entities.gperf"
       {"deg", { 0xC2, 0xB0 }, 2},
-#line 739 "src/_html_entities.gperf"
+#line 739 "data/html_entities.gperf"
       {"Lang", { 0xE2, 0x9F, 0xAA }, 3},
-#line 2023 "src/_html_entities.gperf"
+#line 2023 "data/html_entities.gperf"
       {"Rang", { 0xE2, 0x9F, 0xAB }, 3},
-#line 552 "src/_html_entities.gperf"
+#line 552 "data/html_entities.gperf"
       {"IEcy", { 0xD0, 0x95 }, 2},
-#line 917 "src/_html_entities.gperf"
+#line 917 "data/html_entities.gperf"
       {"apacir", { 0xE2, 0xA9, 0xAF }, 3},
-#line 2051 "src/_html_entities.gperf"
+#line 2051 "data/html_entities.gperf"
       {"gla", { 0xE2, 0xAA, 0xA5 }, 3},
-#line 868 "src/_html_entities.gperf"
+#line 868 "data/html_entities.gperf"
       {"downarrow", { 0xE2, 0x86, 0x93 }, 3},
-#line 484 "src/_html_entities.gperf"
+#line 484 "data/html_entities.gperf"
       {"zwnj", { 0xE2, 0x80, 0x8C }, 3},
-#line 1678 "src/_html_entities.gperf"
+#line 1678 "data/html_entities.gperf"
       {"UpArrowDownArrow", { 0xE2, 0x87, 0x85 }, 3},
-#line 1491 "src/_html_entities.gperf"
+#line 1491 "data/html_entities.gperf"
       {"CapitalDifferentialD", { 0xE2, 0x85, 0x85 }, 3},
-#line 685 "src/_html_entities.gperf"
+#line 685 "data/html_entities.gperf"
       {"KHcy", { 0xD0, 0xA5 }, 2},
-#line 2053 "src/_html_entities.gperf"
+#line 2053 "data/html_entities.gperf"
       {"Downarrow", { 0xE2, 0x87, 0x93 }, 3},
-#line 477 "src/_html_entities.gperf"
+#line 477 "data/html_entities.gperf"
       {"KJcy", { 0xD0, 0x8C }, 2},
-#line 964 "src/_html_entities.gperf"
+#line 964 "data/html_entities.gperf"
       {"Cconint", { 0xE2, 0x88, 0xB0 }, 3},
-#line 1860 "src/_html_entities.gperf"
+#line 1860 "data/html_entities.gperf"
       {"oacute", { 0xC3, 0xB3 }, 2},
-#line 1791 "src/_html_entities.gperf"
+#line 1791 "data/html_entities.gperf"
       {"gamma", { 0xCE, 0xB3 }, 2},
-#line 857 "src/_html_entities.gperf"
+#line 857 "data/html_entities.gperf"
       {"questeq", { 0xE2, 0x89, 0x9F }, 3},
-#line 1650 "src/_html_entities.gperf"
+#line 1650 "data/html_entities.gperf"
       {"DiacriticalDot", { 0xCB, 0x99 }, 2},
-#line 334 "src/_html_entities.gperf"
+#line 334 "data/html_entities.gperf"
       {"nvinfin", { 0xE2, 0xA7, 0x9E }, 3},
-#line 1261 "src/_html_entities.gperf"
+#line 1261 "data/html_entities.gperf"
       {"LJcy", { 0xD0, 0x89 }, 2},
-#line 83 "src/_html_entities.gperf"
+#line 83 "data/html_entities.gperf"
       {"shy", { 0xC2, 0xAD }, 2},
-#line 1241 "src/_html_entities.gperf"
+#line 1241 "data/html_entities.gperf"
       {"caret", { 0xE2, 0x81, 0x81 }, 3},
-#line 1259 "src/_html_entities.gperf"
+#line 1259 "data/html_entities.gperf"
       {"odsold", { 0xE2, 0xA6, 0xBC }, 3},
-#line 1906 "src/_html_entities.gperf"
+#line 1906 "data/html_entities.gperf"
       {"DiacriticalDoubleAcute", { 0xCB, 0x9D }, 2},
-#line 246 "src/_html_entities.gperf"
+#line 246 "data/html_entities.gperf"
       {"iocy", { 0xD1, 0x91 }, 2},
-#line 1325 "src/_html_entities.gperf"
+#line 1325 "data/html_entities.gperf"
       {"fjlig", { 0x66, 0x6A }, 2},
-#line 2059 "src/_html_entities.gperf"
+#line 2059 "data/html_entities.gperf"
       {"NJcy", { 0xD0, 0x8A }, 2},
-#line 1933 "src/_html_entities.gperf"
+#line 1933 "data/html_entities.gperf"
       {"supsetneqq", { 0xE2, 0xAB, 0x8C }, 3},
-#line 213 "src/_html_entities.gperf"
+#line 213 "data/html_entities.gperf"
       {"ovbar", { 0xE2, 0x8C, 0xBD }, 3},
-#line 1875 "src/_html_entities.gperf"
+#line 1875 "data/html_entities.gperf"
       {"iiota", { 0xE2, 0x84, 0xA9 }, 3},
-#line 1985 "src/_html_entities.gperf"
+#line 1985 "data/html_entities.gperf"
       {"TScy", { 0xD0, 0xA6 }, 2},
-#line 94 "src/_html_entities.gperf"
+#line 94 "data/html_entities.gperf"
       {"conint", { 0xE2, 0x88, 0xAE }, 3},
-#line 1887 "src/_html_entities.gperf"
+#line 1887 "data/html_entities.gperf"
       {"Gamma", { 0xCE, 0x93 }, 2},
-#line 121 "src/_html_entities.gperf"
+#line 121 "data/html_entities.gperf"
       {"boxVl", { 0xE2, 0x95, 0xA2 }, 3},
-#line 1071 "src/_html_entities.gperf"
+#line 1071 "data/html_entities.gperf"
       {"cent", { 0xC2, 0xA2 }, 2},
-#line 280 "src/_html_entities.gperf"
+#line 280 "data/html_entities.gperf"
       {"supplus", { 0xE2, 0xAB, 0x80 }, 3},
-#line 2129 "src/_html_entities.gperf"
+#line 2129 "data/html_entities.gperf"
       {"xfr", { 0xF0, 0x9D, 0x94, 0xB5 }, 4},
-#line 901 "src/_html_entities.gperf"
+#line 901 "data/html_entities.gperf"
       {"fllig", { 0xEF, 0xAC, 0x82 }, 3},
-#line 1237 "src/_html_entities.gperf"
+#line 1237 "data/html_entities.gperf"
       {"andslope", { 0xE2, 0xA9, 0x98 }, 3},
-#line 764 "src/_html_entities.gperf"
+#line 764 "data/html_entities.gperf"
       {"dzcy", { 0xD1, 0x9F }, 2},
-#line 1663 "src/_html_entities.gperf"
+#line 1663 "data/html_entities.gperf"
       {"cwint", { 0xE2, 0x88, 0xB1 }, 3},
-#line 2029 "src/_html_entities.gperf"
+#line 2029 "data/html_entities.gperf"
       {"YIcy", { 0xD0, 0x87 }, 2},
-#line 480 "src/_html_entities.gperf"
+#line 480 "data/html_entities.gperf"
       {"supE", { 0xE2, 0xAB, 0x86 }, 3},
-#line 882 "src/_html_entities.gperf"
+#line 882 "data/html_entities.gperf"
       {"djcy", { 0xD1, 0x92 }, 2},
-#line 404 "src/_html_entities.gperf"
+#line 404 "data/html_entities.gperf"
       {"Bumpeq", { 0xE2, 0x89, 0x8E }, 3},
-#line 223 "src/_html_entities.gperf"
+#line 223 "data/html_entities.gperf"
       {"bumpE", { 0xE2, 0xAA, 0xAE }, 3},
-#line 705 "src/_html_entities.gperf"
+#line 705 "data/html_entities.gperf"
       {"origof", { 0xE2, 0x8A, 0xB6 }, 3},
-#line 1128 "src/_html_entities.gperf"
+#line 1128 "data/html_entities.gperf"
       {"DZcy", { 0xD0, 0x8F }, 2},
-#line 731 "src/_html_entities.gperf"
+#line 731 "data/html_entities.gperf"
       {"DownBreve", { 0xCC, 0x91 }, 2},
-#line 1295 "src/_html_entities.gperf"
+#line 1295 "data/html_entities.gperf"
       {"cwconint", { 0xE2, 0x88, 0xB2 }, 3},
-#line 457 "src/_html_entities.gperf"
+#line 457 "data/html_entities.gperf"
       {"cirfnint", { 0xE2, 0xA8, 0x90 }, 3},
-#line 1067 "src/_html_entities.gperf"
+#line 1067 "data/html_entities.gperf"
       {"YUcy", { 0xD0, 0xAE }, 2},
-#line 371 "src/_html_entities.gperf"
+#line 371 "data/html_entities.gperf"
       {"demptyv", { 0xE2, 0xA6, 0xB1 }, 3},
-#line 823 "src/_html_entities.gperf"
+#line 823 "data/html_entities.gperf"
       {"OverParenthesis", { 0xE2, 0x8F, 0x9C }, 3},
-#line 1851 "src/_html_entities.gperf"
+#line 1851 "data/html_entities.gperf"
       {"UpTeeArrow", { 0xE2, 0x86, 0xA5 }, 3},
-#line 1779 "src/_html_entities.gperf"
+#line 1779 "data/html_entities.gperf"
       {"capand", { 0xE2, 0xA9, 0x84 }, 3},
-#line 909 "src/_html_entities.gperf"
+#line 909 "data/html_entities.gperf"
       {"sfrown", { 0xE2, 0x8C, 0xA2 }, 3},
-#line 1012 "src/_html_entities.gperf"
+#line 1012 "data/html_entities.gperf"
       {"AElig", { 0xC3, 0x86 }, 2},
-#line 1641 "src/_html_entities.gperf"
+#line 1641 "data/html_entities.gperf"
       {"asymp", { 0xE2, 0x89, 0x88 }, 3},
-#line 1756 "src/_html_entities.gperf"
+#line 1756 "data/html_entities.gperf"
       {"IJlig", { 0xC4, 0xB2 }, 2},
-#line 701 "src/_html_entities.gperf"
+#line 701 "data/html_entities.gperf"
       {"gt", { 0x3E }, 1},
-#line 347 "src/_html_entities.gperf"
+#line 347 "data/html_entities.gperf"
       {"xnis", { 0xE2, 0x8B, 0xBB }, 3},
-#line 543 "src/_html_entities.gperf"
+#line 543 "data/html_entities.gperf"
       {"leftleftarrows", { 0xE2, 0x87, 0x87 }, 3},
-#line 627 "src/_html_entities.gperf"
+#line 627 "data/html_entities.gperf"
       {"integers", { 0xE2, 0x84, 0xA4 }, 3},
-#line 1446 "src/_html_entities.gperf"
+#line 1446 "data/html_entities.gperf"
       {"DScy", { 0xD0, 0x85 }, 2},
-#line 617 "src/_html_entities.gperf"
+#line 617 "data/html_entities.gperf"
       {"tritime", { 0xE2, 0xA8, 0xBB }, 3},
-#line 238 "src/_html_entities.gperf"
+#line 238 "data/html_entities.gperf"
       {"ogt", { 0xE2, 0xA7, 0x81 }, 3},
-#line 313 "src/_html_entities.gperf"
+#line 313 "data/html_entities.gperf"
       {"orderof", { 0xE2, 0x84, 0xB4 }, 3},
-#line 2058 "src/_html_entities.gperf"
+#line 2058 "data/html_entities.gperf"
       {"oplus", { 0xE2, 0x8A, 0x95 }, 3},
-#line 2088 "src/_html_entities.gperf"
+#line 2088 "data/html_entities.gperf"
       {"succeq", { 0xE2, 0xAA, 0xB0 }, 3},
-#line 1686 "src/_html_entities.gperf"
+#line 1686 "data/html_entities.gperf"
       {"ReverseUpEquilibrium", { 0xE2, 0xA5, 0xAF }, 3},
-#line 1136 "src/_html_entities.gperf"
+#line 1136 "data/html_entities.gperf"
       {"ijlig", { 0xC4, 0xB3 }, 2},
-#line 840 "src/_html_entities.gperf"
+#line 840 "data/html_entities.gperf"
       {"Gt", { 0xE2, 0x89, 0xAB }, 3},
-#line 1782 "src/_html_entities.gperf"
+#line 1782 "data/html_entities.gperf"
       {"NonBreakingSpace", { 0xC2, 0xA0 }, 2},
-#line 134 "src/_html_entities.gperf"
+#line 134 "data/html_entities.gperf"
       {"gsim", { 0xE2, 0x89, 0xB3 }, 3},
-#line 519 "src/_html_entities.gperf"
+#line 519 "data/html_entities.gperf"
       {"LeftDoubleBracket", { 0xE2, 0x9F, 0xA6 }, 3},
-#line 1479 "src/_html_entities.gperf"
+#line 1479 "data/html_entities.gperf"
       {"gtdot", { 0xE2, 0x8B, 0x97 }, 3},
-#line 241 "src/_html_entities.gperf"
+#line 241 "data/html_entities.gperf"
       {"ndash", { 0xE2, 0x80, 0x93 }, 3},
-#line 1453 "src/_html_entities.gperf"
+#line 1453 "data/html_entities.gperf"
       {"gsiml", { 0xE2, 0xAA, 0x90 }, 3},
-#line 1964 "src/_html_entities.gperf"
+#line 1964 "data/html_entities.gperf"
       {"acd", { 0xE2, 0x88, 0xBF }, 3},
-#line 437 "src/_html_entities.gperf"
+#line 437 "data/html_entities.gperf"
       {"nVdash", { 0xE2, 0x8A, 0xAE }, 3},
-#line 825 "src/_html_entities.gperf"
+#line 825 "data/html_entities.gperf"
       {"DJcy", { 0xD0, 0x82 }, 2},
-#line 853 "src/_html_entities.gperf"
+#line 853 "data/html_entities.gperf"
       {"Vdash", { 0xE2, 0x8A, 0xA9 }, 3},
-#line 1669 "src/_html_entities.gperf"
+#line 1669 "data/html_entities.gperf"
       {"andd", { 0xE2, 0xA9, 0x9C }, 3},
-#line 1567 "src/_html_entities.gperf"
+#line 1567 "data/html_entities.gperf"
       {"gescc", { 0xE2, 0xAA, 0xA9 }, 3},
-#line 1582 "src/_html_entities.gperf"
+#line 1582 "data/html_entities.gperf"
       {"gdot", { 0xC4, 0xA1 }, 2},
-#line 1970 "src/_html_entities.gperf"
+#line 1970 "data/html_entities.gperf"
       {"duhar", { 0xE2, 0xA5, 0xAF }, 3},
-#line 2128 "src/_html_entities.gperf"
+#line 2128 "data/html_entities.gperf"
       {"xcap", { 0xE2, 0x8B, 0x82 }, 3},
-#line 224 "src/_html_entities.gperf"
+#line 224 "data/html_entities.gperf"
       {"Succeeds", { 0xE2, 0x89, 0xBB }, 3},
-#line 1760 "src/_html_entities.gperf"
+#line 1760 "data/html_entities.gperf"
       {"ContourIntegral", { 0xE2, 0x88, 0xAE }, 3},
-#line 1969 "src/_html_entities.gperf"
+#line 1969 "data/html_entities.gperf"
       {"drbkarow", { 0xE2, 0xA4, 0x90 }, 3},
-#line 425 "src/_html_entities.gperf"
+#line 425 "data/html_entities.gperf"
       {"ubrcy", { 0xD1, 0x9E }, 2},
-#line 1037 "src/_html_entities.gperf"
+#line 1037 "data/html_entities.gperf"
       {"triangle", { 0xE2, 0x96, 0xB5 }, 3},
-#line 1672 "src/_html_entities.gperf"
+#line 1672 "data/html_entities.gperf"
       {"vdash", { 0xE2, 0x8A, 0xA2 }, 3},
-#line 196 "src/_html_entities.gperf"
+#line 196 "data/html_entities.gperf"
       {"Gdot", { 0xC4, 0xA0 }, 2},
-#line 112 "src/_html_entities.gperf"
+#line 112 "data/html_entities.gperf"
       {"rtimes", { 0xE2, 0x8B, 0x8A }, 3},
-#line 261 "src/_html_entities.gperf"
+#line 261 "data/html_entities.gperf"
       {"ltimes", { 0xE2, 0x8B, 0x89 }, 3},
-#line 1708 "src/_html_entities.gperf"
+#line 1708 "data/html_entities.gperf"
       {"nrarrc", { 0xE2, 0xA4, 0xB3, 0xCC, 0xB8 }, 5},
-#line 1062 "src/_html_entities.gperf"
+#line 1062 "data/html_entities.gperf"
       {"DownArrow", { 0xE2, 0x86, 0x93 }, 3},
-#line 53 "src/_html_entities.gperf"
+#line 53 "data/html_entities.gperf"
       {"iecy", { 0xD0, 0xB5 }, 2},
-#line 793 "src/_html_entities.gperf"
+#line 793 "data/html_entities.gperf"
       {"succcurlyeq", { 0xE2, 0x89, 0xBD }, 3},
-#line 1994 "src/_html_entities.gperf"
+#line 1994 "data/html_entities.gperf"
       {"omid", { 0xE2, 0xA6, 0xB6 }, 3},
-#line 1677 "src/_html_entities.gperf"
+#line 1677 "data/html_entities.gperf"
       {"gesdotol", { 0xE2, 0xAA, 0x84 }, 3},
-#line 374 "src/_html_entities.gperf"
+#line 374 "data/html_entities.gperf"
       {"delta", { 0xCE, 0xB4 }, 2},
-#line 1693 "src/_html_entities.gperf"
+#line 1693 "data/html_entities.gperf"
       {"kscr", { 0xF0, 0x9D, 0x93, 0x80 }, 4},
-#line 1586 "src/_html_entities.gperf"
+#line 1586 "data/html_entities.gperf"
       {"triangleleft", { 0xE2, 0x97, 0x83 }, 3},
-#line 308 "src/_html_entities.gperf"
+#line 308 "data/html_entities.gperf"
       {"SucceedsSlantEqual", { 0xE2, 0x89, 0xBD }, 3},
-#line 271 "src/_html_entities.gperf"
+#line 271 "data/html_entities.gperf"
       {"rtrif", { 0xE2, 0x96, 0xB8 }, 3},
-#line 923 "src/_html_entities.gperf"
+#line 923 "data/html_entities.gperf"
       {"ltrif", { 0xE2, 0x97, 0x82 }, 3},
-#line 1050 "src/_html_entities.gperf"
+#line 1050 "data/html_entities.gperf"
       {"xcup", { 0xE2, 0x8B, 0x83 }, 3},
-#line 1673 "src/_html_entities.gperf"
+#line 1673 "data/html_entities.gperf"
       {"utrif", { 0xE2, 0x96, 0xB4 }, 3},
-#line 650 "src/_html_entities.gperf"
+#line 650 "data/html_entities.gperf"
       {"Delta", { 0xCE, 0x94 }, 2},
-#line 1435 "src/_html_entities.gperf"
+#line 1435 "data/html_entities.gperf"
       {"starf", { 0xE2, 0x98, 0x85 }, 3},
-#line 872 "src/_html_entities.gperf"
+#line 872 "data/html_entities.gperf"
       {"gbreve", { 0xC4, 0x9F }, 2},
-#line 1403 "src/_html_entities.gperf"
+#line 1403 "data/html_entities.gperf"
       {"boxHD", { 0xE2, 0x95, 0xA6 }, 3},
-#line 464 "src/_html_entities.gperf"
+#line 464 "data/html_entities.gperf"
       {"egrave", { 0xC3, 0xA8 }, 2},
-#line 1581 "src/_html_entities.gperf"
+#line 1581 "data/html_entities.gperf"
       {"quot", { 0x22 }, 1},
-#line 68 "src/_html_entities.gperf"
+#line 68 "data/html_entities.gperf"
       {"nprec", { 0xE2, 0x8A, 0x80 }, 3},
-#line 2109 "src/_html_entities.gperf"
+#line 2109 "data/html_entities.gperf"
       {"ugrave", { 0xC3, 0xB9 }, 2},
-#line 242 "src/_html_entities.gperf"
+#line 242 "data/html_entities.gperf"
       {"euro", { 0xE2, 0x82, 0xAC }, 3},
-#line 1391 "src/_html_entities.gperf"
+#line 1391 "data/html_entities.gperf"
       {"ring", { 0xCB, 0x9A }, 2},
-#line 225 "src/_html_entities.gperf"
+#line 225 "data/html_entities.gperf"
       {"euml", { 0xC3, 0xAB }, 2},
-#line 724 "src/_html_entities.gperf"
+#line 724 "data/html_entities.gperf"
       {"andand", { 0xE2, 0xA9, 0x95 }, 3},
-#line 203 "src/_html_entities.gperf"
+#line 203 "data/html_entities.gperf"
       {"uuml", { 0xC3, 0xBC }, 2},
-#line 586 "src/_html_entities.gperf"
+#line 586 "data/html_entities.gperf"
       {"Gbreve", { 0xC4, 0x9E }, 2},
-#line 1736 "src/_html_entities.gperf"
+#line 1736 "data/html_entities.gperf"
       {"supnE", { 0xE2, 0xAB, 0x8C }, 3},
-#line 209 "src/_html_entities.gperf"
+#line 209 "data/html_entities.gperf"
       {"MinusPlus", { 0xE2, 0x88, 0x93 }, 3},
-#line 878 "src/_html_entities.gperf"
+#line 878 "data/html_entities.gperf"
       {"dashv", { 0xE2, 0x8A, 0xA3 }, 3},
-#line 772 "src/_html_entities.gperf"
+#line 772 "data/html_entities.gperf"
       {"Poincareplane", { 0xE2, 0x84, 0x8C }, 3},
-#line 1445 "src/_html_entities.gperf"
+#line 1445 "data/html_entities.gperf"
       {"mumap", { 0xE2, 0x8A, 0xB8 }, 3},
-#line 559 "src/_html_entities.gperf"
+#line 559 "data/html_entities.gperf"
       {"Dashv", { 0xE2, 0xAB, 0xA4 }, 3},
-#line 728 "src/_html_entities.gperf"
+#line 728 "data/html_entities.gperf"
       {"ogon", { 0xCB, 0x9B }, 2},
-#line 1272 "src/_html_entities.gperf"
+#line 1272 "data/html_entities.gperf"
       {"sext", { 0xE2, 0x9C, 0xB6 }, 3},
-#line 1883 "src/_html_entities.gperf"
+#line 1883 "data/html_entities.gperf"
       {"angrt", { 0xE2, 0x88, 0x9F }, 3},
-#line 1164 "src/_html_entities.gperf"
+#line 1164 "data/html_entities.gperf"
       {"ntriangleleft", { 0xE2, 0x8B, 0xAA }, 3},
-#line 1219 "src/_html_entities.gperf"
+#line 1219 "data/html_entities.gperf"
       {"triangleq", { 0xE2, 0x89, 0x9C }, 3},
-#line 835 "src/_html_entities.gperf"
+#line 835 "data/html_entities.gperf"
       {"capbrcup", { 0xE2, 0xA9, 0x89 }, 3},
-#line 1320 "src/_html_entities.gperf"
+#line 1320 "data/html_entities.gperf"
       {"hookleftarrow", { 0xE2, 0x86, 0xA9 }, 3},
-#line 629 "src/_html_entities.gperf"
+#line 629 "data/html_entities.gperf"
       {"asympeq", { 0xE2, 0x89, 0x8D }, 3},
-#line 333 "src/_html_entities.gperf"
+#line 333 "data/html_entities.gperf"
       {"Igrave", { 0xC3, 0x8C }, 2},
-#line 431 "src/_html_entities.gperf"
+#line 431 "data/html_entities.gperf"
       {"angzarr", { 0xE2, 0x8D, 0xBC }, 3},
-#line 827 "src/_html_entities.gperf"
+#line 827 "data/html_entities.gperf"
       {"nLeftarrow", { 0xE2, 0x87, 0x8D }, 3},
-#line 1420 "src/_html_entities.gperf"
+#line 1420 "data/html_entities.gperf"
       {"Cup", { 0xE2, 0x8B, 0x93 }, 3},
-#line 547 "src/_html_entities.gperf"
+#line 547 "data/html_entities.gperf"
       {"imagpart", { 0xE2, 0x84, 0x91 }, 3},
-#line 415 "src/_html_entities.gperf"
+#line 415 "data/html_entities.gperf"
       {"gimel", { 0xE2, 0x84, 0xB7 }, 3},
-#line 1291 "src/_html_entities.gperf"
+#line 1291 "data/html_entities.gperf"
       {"Iuml", { 0xC3, 0x8F }, 2},
-#line 1503 "src/_html_entities.gperf"
+#line 1503 "data/html_entities.gperf"
       {"LeftTeeArrow", { 0xE2, 0x86, 0xA4 }, 3},
-#line 124 "src/_html_entities.gperf"
+#line 124 "data/html_entities.gperf"
       {"Ubrcy", { 0xD0, 0x8E }, 2},
-#line 1084 "src/_html_entities.gperf"
+#line 1084 "data/html_entities.gperf"
       {"trianglelefteq", { 0xE2, 0x8A, 0xB4 }, 3},
-#line 1643 "src/_html_entities.gperf"
+#line 1643 "data/html_entities.gperf"
       {"yscr", { 0xF0, 0x9D, 0x93, 0x8E }, 4},
-#line 947 "src/_html_entities.gperf"
+#line 947 "data/html_entities.gperf"
       {"awint", { 0xE2, 0xA8, 0x91 }, 3},
-#line 1066 "src/_html_entities.gperf"
+#line 1066 "data/html_entities.gperf"
       {"Agrave", { 0xC3, 0x80 }, 2},
-#line 187 "src/_html_entities.gperf"
+#line 187 "data/html_entities.gperf"
       {"zhcy", { 0xD0, 0xB6 }, 2},
-#line 1820 "src/_html_entities.gperf"
+#line 1820 "data/html_entities.gperf"
       {"angst", { 0xC3, 0x85 }, 2},
-#line 1371 "src/_html_entities.gperf"
+#line 1371 "data/html_entities.gperf"
       {"nleftarrow", { 0xE2, 0x86, 0x9A }, 3},
-#line 420 "src/_html_entities.gperf"
+#line 420 "data/html_entities.gperf"
       {"YAcy", { 0xD0, 0xAF }, 2},
-#line 300 "src/_html_entities.gperf"
+#line 300 "data/html_entities.gperf"
       {"Auml", { 0xC3, 0x84 }, 2},
-#line 2075 "src/_html_entities.gperf"
+#line 2075 "data/html_entities.gperf"
       {"awconint", { 0xE2, 0x88, 0xB3 }, 3},
-#line 2010 "src/_html_entities.gperf"
+#line 2010 "data/html_entities.gperf"
       {"ThinSpace", { 0xE2, 0x80, 0x89 }, 3},
-#line 1190 "src/_html_entities.gperf"
+#line 1190 "data/html_entities.gperf"
       {"quaternions", { 0xE2, 0x84, 0x8D }, 3},
-#line 1721 "src/_html_entities.gperf"
+#line 1721 "data/html_entities.gperf"
       {"weierp", { 0xE2, 0x84, 0x98 }, 3},
-#line 583 "src/_html_entities.gperf"
+#line 583 "data/html_entities.gperf"
       {"iexcl", { 0xC2, 0xA1 }, 2},
-#line 808 "src/_html_entities.gperf"
+#line 808 "data/html_entities.gperf"
       {"rcedil", { 0xC5, 0x97 }, 2},
-#line 1989 "src/_html_entities.gperf"
+#line 1989 "data/html_entities.gperf"
       {"tcedil", { 0xC5, 0xA3 }, 2},
-#line 1147 "src/_html_entities.gperf"
+#line 1147 "data/html_entities.gperf"
       {"lcedil", { 0xC4, 0xBC }, 2},
-#line 527 "src/_html_entities.gperf"
+#line 527 "data/html_entities.gperf"
       {"scedil", { 0xC5, 0x9F }, 2},
-#line 137 "src/_html_entities.gperf"
+#line 137 "data/html_entities.gperf"
       {"eqcirc", { 0xE2, 0x89, 0x96 }, 3},
-#line 1833 "src/_html_entities.gperf"
+#line 1833 "data/html_entities.gperf"
       {"ncedil", { 0xC5, 0x86 }, 2},
-#line 489 "src/_html_entities.gperf"
+#line 489 "data/html_entities.gperf"
       {"gtcir", { 0xE2, 0xA9, 0xBA }, 3},
-#line 1432 "src/_html_entities.gperf"
+#line 1432 "data/html_entities.gperf"
       {"rsquo", { 0xE2, 0x80, 0x99 }, 3},
-#line 458 "src/_html_entities.gperf"
+#line 458 "data/html_entities.gperf"
       {"cire", { 0xE2, 0x89, 0x97 }, 3},
-#line 56 "src/_html_entities.gperf"
+#line 56 "data/html_entities.gperf"
       {"lsquo", { 0xE2, 0x80, 0x98 }, 3},
-#line 662 "src/_html_entities.gperf"
+#line 662 "data/html_entities.gperf"
       {"jmath", { 0xC8, 0xB7 }, 2},
-#line 1740 "src/_html_entities.gperf"
+#line 1740 "data/html_entities.gperf"
       {"Ugrave", { 0xC3, 0x99 }, 2},
-#line 623 "src/_html_entities.gperf"
+#line 623 "data/html_entities.gperf"
       {"Yuml", { 0xC5, 0xB8 }, 2},
-#line 1328 "src/_html_entities.gperf"
+#line 1328 "data/html_entities.gperf"
       {"TSHcy", { 0xD0, 0x8B }, 2},
-#line 703 "src/_html_entities.gperf"
+#line 703 "data/html_entities.gperf"
       {"nequiv", { 0xE2, 0x89, 0xA2 }, 3},
-#line 1156 "src/_html_entities.gperf"
+#line 1156 "data/html_entities.gperf"
       {"centerdot", { 0xC2, 0xB7 }, 2},
-#line 2119 "src/_html_entities.gperf"
+#line 2119 "data/html_entities.gperf"
       {"angrtvb", { 0xE2, 0x8A, 0xBE }, 3},
-#line 330 "src/_html_entities.gperf"
+#line 330 "data/html_entities.gperf"
       {"gtrarr", { 0xE2, 0xA5, 0xB8 }, 3},
-#line 1973 "src/_html_entities.gperf"
+#line 1973 "data/html_entities.gperf"
       {"Scedil", { 0xC5, 0x9E }, 2},
-#line 2113 "src/_html_entities.gperf"
+#line 2113 "data/html_entities.gperf"
       {"filig", { 0xEF, 0xAC, 0x81 }, 3},
-#line 348 "src/_html_entities.gperf"
+#line 348 "data/html_entities.gperf"
       {"GreaterSlantEqual", { 0xE2, 0xA9, 0xBE }, 3},
-#line 1545 "src/_html_entities.gperf"
+#line 1545 "data/html_entities.gperf"
       {"Uuml", { 0xC3, 0x9C }, 2},
-#line 361 "src/_html_entities.gperf"
+#line 361 "data/html_entities.gperf"
       {"gacute", { 0xC7, 0xB5 }, 2},
-#line 1100 "src/_html_entities.gperf"
+#line 1100 "data/html_entities.gperf"
       {"LongLeftArrow", { 0xE2, 0x9F, 0xB5 }, 3},
-#line 959 "src/_html_entities.gperf"
+#line 959 "data/html_entities.gperf"
       {"suplarr", { 0xE2, 0xA5, 0xBB }, 3},
-#line 1732 "src/_html_entities.gperf"
+#line 1732 "data/html_entities.gperf"
       {"nvge", { 0xE2, 0x89, 0xA5, 0xE2, 0x83, 0x92 }, 6},
-#line 80 "src/_html_entities.gperf"
+#line 80 "data/html_entities.gperf"
       {"ntrianglelefteq", { 0xE2, 0x8B, 0xAC }, 3},
-#line 1718 "src/_html_entities.gperf"
+#line 1718 "data/html_entities.gperf"
       {"tscy", { 0xD1, 0x86 }, 2},
-#line 1099 "src/_html_entities.gperf"
+#line 1099 "data/html_entities.gperf"
       {"NotTildeEqual", { 0xE2, 0x89, 0x84 }, 3},
-#line 95 "src/_html_entities.gperf"
+#line 95 "data/html_entities.gperf"
       {"Lleftarrow", { 0xE2, 0x87, 0x9A }, 3},
-#line 326 "src/_html_entities.gperf"
+#line 326 "data/html_entities.gperf"
       {"igrave", { 0xC3, 0xAC }, 2},
-#line 1046 "src/_html_entities.gperf"
+#line 1046 "data/html_entities.gperf"
       {"yen", { 0xC2, 0xA5 }, 2},
-#line 1601 "src/_html_entities.gperf"
+#line 1601 "data/html_entities.gperf"
       {"Kcedil", { 0xC4, 0xB6 }, 2},
-#line 1486 "src/_html_entities.gperf"
+#line 1486 "data/html_entities.gperf"
       {"kfr", { 0xF0, 0x9D, 0x94, 0xA8 }, 4},
-#line 1212 "src/_html_entities.gperf"
+#line 1212 "data/html_entities.gperf"
       {"iuml", { 0xC3, 0xAF }, 2},
-#line 1361 "src/_html_entities.gperf"
+#line 1361 "data/html_entities.gperf"
       {"acE", { 0xE2, 0x88, 0xBE, 0xCC, 0xB3 }, 5},
-#line 1728 "src/_html_entities.gperf"
+#line 1728 "data/html_entities.gperf"
       {"dtrif", { 0xE2, 0x96, 0xBE }, 3},
-#line 1845 "src/_html_entities.gperf"
+#line 1845 "data/html_entities.gperf"
       {"sccue", { 0xE2, 0x89, 0xBD }, 3},
-#line 1451 "src/_html_entities.gperf"
+#line 1451 "data/html_entities.gperf"
       {"comma", { 0x2C }, 1},
-#line 504 "src/_html_entities.gperf"
+#line 504 "data/html_entities.gperf"
       {"Lcedil", { 0xC4, 0xBB }, 2},
-#line 988 "src/_html_entities.gperf"
+#line 988 "data/html_entities.gperf"
       {"Rcedil", { 0xC5, 0x96 }, 2},
-#line 2005 "src/_html_entities.gperf"
+#line 2005 "data/html_entities.gperf"
       {"puncsp", { 0xE2, 0x80, 0x88 }, 3},
-#line 1296 "src/_html_entities.gperf"
+#line 1296 "data/html_entities.gperf"
       {"Ncedil", { 0xC5, 0x85 }, 2},
-#line 488 "src/_html_entities.gperf"
+#line 488 "data/html_entities.gperf"
       {"DownArrowUpArrow", { 0xE2, 0x87, 0xB5 }, 3},
-#line 611 "src/_html_entities.gperf"
+#line 611 "data/html_entities.gperf"
       {"LessFullEqual", { 0xE2, 0x89, 0xA6 }, 3},
-#line 1267 "src/_html_entities.gperf"
+#line 1267 "data/html_entities.gperf"
       {"LeftTriangleBar", { 0xE2, 0xA7, 0x8F }, 3},
-#line 293 "src/_html_entities.gperf"
+#line 293 "data/html_entities.gperf"
       {"LeftTriangle", { 0xE2, 0x8A, 0xB2 }, 3},
-#line 337 "src/_html_entities.gperf"
+#line 337 "data/html_entities.gperf"
       {"LeftTriangleEqual", { 0xE2, 0x8A, 0xB4 }, 3},
-#line 469 "src/_html_entities.gperf"
+#line 469 "data/html_entities.gperf"
       {"cirmid", { 0xE2, 0xAB, 0xAF }, 3},
-#line 1660 "src/_html_entities.gperf"
+#line 1660 "data/html_entities.gperf"
       {"lg", { 0xE2, 0x89, 0xB6 }, 3},
-#line 1378 "src/_html_entities.gperf"
+#line 1378 "data/html_entities.gperf"
       {"eg", { 0xE2, 0xAA, 0x9A }, 3},
-#line 584 "src/_html_entities.gperf"
+#line 584 "data/html_entities.gperf"
       {"ccupssm", { 0xE2, 0xA9, 0x90 }, 3},
-#line 253 "src/_html_entities.gperf"
+#line 253 "data/html_entities.gperf"
       {"fallingdotseq", { 0xE2, 0x89, 0x92 }, 3},
-#line 1335 "src/_html_entities.gperf"
+#line 1335 "data/html_entities.gperf"
       {"minus", { 0xE2, 0x88, 0x92 }, 3},
-#line 244 "src/_html_entities.gperf"
+#line 244 "data/html_entities.gperf"
       {"bigsqcup", { 0xE2, 0xA8, 0x86 }, 3},
-#line 54 "src/_html_entities.gperf"
+#line 54 "data/html_entities.gperf"
       {"Tcedil", { 0xC5, 0xA2 }, 2},
-#line 1197 "src/_html_entities.gperf"
+#line 1197 "data/html_entities.gperf"
       {"mdash", { 0xE2, 0x80, 0x94 }, 3},
-#line 1966 "src/_html_entities.gperf"
+#line 1966 "data/html_entities.gperf"
       {"rdquor", { 0xE2, 0x80, 0x9D }, 3},
-#line 905 "src/_html_entities.gperf"
+#line 905 "data/html_entities.gperf"
       {"ldquor", { 0xE2, 0x80, 0x9E }, 3},
-#line 2106 "src/_html_entities.gperf"
+#line 2106 "data/html_entities.gperf"
       {"CupCap", { 0xE2, 0x89, 0x8D }, 3},
-#line 2017 "src/_html_entities.gperf"
+#line 2017 "data/html_entities.gperf"
       {"minusb", { 0xE2, 0x8A, 0x9F }, 3},
-#line 1211 "src/_html_entities.gperf"
+#line 1211 "data/html_entities.gperf"
       {"nVDash", { 0xE2, 0x8A, 0xAF }, 3},
-#line 1111 "src/_html_entities.gperf"
+#line 1111 "data/html_entities.gperf"
       {"yfr", { 0xF0, 0x9D, 0x94, 0xB6 }, 4},
-#line 1369 "src/_html_entities.gperf"
+#line 1369 "data/html_entities.gperf"
       {"circ", { 0xCB, 0x86 }, 2},
-#line 233 "src/_html_entities.gperf"
+#line 233 "data/html_entities.gperf"
       {"NotSucceeds", { 0xE2, 0x8A, 0x81 }, 3},
-#line 863 "src/_html_entities.gperf"
+#line 863 "data/html_entities.gperf"
       {"gtlPar", { 0xE2, 0xA6, 0x95 }, 3},
-#line 1096 "src/_html_entities.gperf"
+#line 1096 "data/html_entities.gperf"
       {"LeftCeiling", { 0xE2, 0x8C, 0x88 }, 3},
-#line 282 "src/_html_entities.gperf"
+#line 282 "data/html_entities.gperf"
       {"CHcy", { 0xD0, 0xA7 }, 2},
-#line 632 "src/_html_entities.gperf"
+#line 632 "data/html_entities.gperf"
       {"longleftarrow", { 0xE2, 0x9F, 0xB5 }, 3},
-#line 804 "src/_html_entities.gperf"
+#line 804 "data/html_entities.gperf"
       {"egsdot", { 0xE2, 0xAA, 0x98 }, 3},
-#line 864 "src/_html_entities.gperf"
+#line 864 "data/html_entities.gperf"
       {"aleph", { 0xE2, 0x84, 0xB5 }, 3},
-#line 40 "src/_html_entities.gperf"
+#line 40 "data/html_entities.gperf"
       {"thetasym", { 0xCF, 0x91 }, 2},
-#line 809 "src/_html_entities.gperf"
+#line 809 "data/html_entities.gperf"
       {"ctdot", { 0xE2, 0x8B, 0xAF }, 3},
-#line 1915 "src/_html_entities.gperf"
+#line 1915 "data/html_entities.gperf"
       {"geqslant", { 0xE2, 0xA9, 0xBE }, 3},
-#line 887 "src/_html_entities.gperf"
+#line 887 "data/html_entities.gperf"
       {"NotSucceedsSlantEqual", { 0xE2, 0x8B, 0xA1 }, 3},
-#line 1990 "src/_html_entities.gperf"
+#line 1990 "data/html_entities.gperf"
       {"angrtvbd", { 0xE2, 0xA6, 0x9D }, 3},
-#line 1416 "src/_html_entities.gperf"
+#line 1416 "data/html_entities.gperf"
       {"OElig", { 0xC5, 0x92 }, 2},
-#line 1976 "src/_html_entities.gperf"
+#line 1976 "data/html_entities.gperf"
       {"sqsub", { 0xE2, 0x8A, 0x8F }, 3},
-#line 1324 "src/_html_entities.gperf"
+#line 1324 "data/html_entities.gperf"
       {"sqsube", { 0xE2, 0x8A, 0x91 }, 3},
-#line 1362 "src/_html_entities.gperf"
+#line 1362 "data/html_entities.gperf"
       {"cdot", { 0xC4, 0x8B }, 2},
-#line 1651 "src/_html_entities.gperf"
+#line 1651 "data/html_entities.gperf"
       {"sqsubset", { 0xE2, 0x8A, 0x8F }, 3},
-#line 534 "src/_html_entities.gperf"
+#line 534 "data/html_entities.gperf"
       {"LeftVector", { 0xE2, 0x86, 0xBC }, 3},
-#line 31 "src/_html_entities.gperf"
+#line 31 "data/html_entities.gperf"
       {"SucceedsTilde", { 0xE2, 0x89, 0xBF }, 3},
-#line 1809 "src/_html_entities.gperf"
+#line 1809 "data/html_entities.gperf"
       {"EmptyVerySmallSquare", { 0xE2, 0x96, 0xAB }, 3},
-#line 760 "src/_html_entities.gperf"
+#line 760 "data/html_entities.gperf"
       {"bull", { 0xE2, 0x80, 0xA2 }, 3},
-#line 24 "src/_html_entities.gperf"
+#line 24 "data/html_entities.gperf"
       {"Egrave", { 0xC3, 0x88 }, 2},
-#line 1499 "src/_html_entities.gperf"
+#line 1499 "data/html_entities.gperf"
       {"dscy", { 0xD1, 0x95 }, 2},
-#line 44 "src/_html_entities.gperf"
+#line 44 "data/html_entities.gperf"
       {"sdotb", { 0xE2, 0x8A, 0xA1 }, 3},
-#line 1862 "src/_html_entities.gperf"
+#line 1862 "data/html_entities.gperf"
       {"Euml", { 0xC3, 0x8B }, 2},
-#line 1484 "src/_html_entities.gperf"
+#line 1484 "data/html_entities.gperf"
       {"eth", { 0xC3, 0xB0 }, 2},
-#line 783 "src/_html_entities.gperf"
+#line 783 "data/html_entities.gperf"
       {"vnsub", { 0xE2, 0x8A, 0x82, 0xE2, 0x83, 0x92 }, 6},
-#line 174 "src/_html_entities.gperf"
+#line 174 "data/html_entities.gperf"
       {"phiv", { 0xCF, 0x95 }, 2},
-#line 1101 "src/_html_entities.gperf"
+#line 1101 "data/html_entities.gperf"
       {"nvdash", { 0xE2, 0x8A, 0xAC }, 3},
-#line 306 "src/_html_entities.gperf"
+#line 306 "data/html_entities.gperf"
       {"acute", { 0xC2, 0xB4 }, 2},
-#line 323 "src/_html_entities.gperf"
+#line 323 "data/html_entities.gperf"
       {"boxdr", { 0xE2, 0x94, 0x8C }, 3},
-#line 1899 "src/_html_entities.gperf"
+#line 1899 "data/html_entities.gperf"
       {"lozenge", { 0xE2, 0x97, 0x8A }, 3},
-#line 307 "src/_html_entities.gperf"
+#line 307 "data/html_entities.gperf"
       {"boxminus", { 0xE2, 0x8A, 0x9F }, 3},
-#line 47 "src/_html_entities.gperf"
+#line 47 "data/html_entities.gperf"
       {"Omega", { 0xCE, 0xA9 }, 2},
-#line 1468 "src/_html_entities.gperf"
+#line 1468 "data/html_entities.gperf"
       {"Vvdash", { 0xE2, 0x8A, 0xAA }, 3},
-#line 1358 "src/_html_entities.gperf"
+#line 1358 "data/html_entities.gperf"
       {"Longleftarrow", { 0xE2, 0x9F, 0xB8 }, 3},
-#line 926 "src/_html_entities.gperf"
+#line 926 "data/html_entities.gperf"
       {"UnderBar", { 0x5F }, 1},
-#line 1138 "src/_html_entities.gperf"
+#line 1138 "data/html_entities.gperf"
       {"bowtie", { 0xE2, 0x8B, 0x88 }, 3},
-#line 466 "src/_html_entities.gperf"
+#line 466 "data/html_entities.gperf"
       {"boxDr", { 0xE2, 0x95, 0x93 }, 3},
-#line 1105 "src/_html_entities.gperf"
+#line 1105 "data/html_entities.gperf"
       {"lambda", { 0xCE, 0xBB }, 2},
-#line 1822 "src/_html_entities.gperf"
+#line 1822 "data/html_entities.gperf"
       {"timesbar", { 0xE2, 0xA8, 0xB1 }, 3},
-#line 1599 "src/_html_entities.gperf"
+#line 1599 "data/html_entities.gperf"
       {"ncongdot", { 0xE2, 0xA9, 0xAD, 0xCC, 0xB8 }, 5},
-#line 613 "src/_html_entities.gperf"
+#line 613 "data/html_entities.gperf"
       {"OverBar", { 0xE2, 0x80, 0xBE }, 3},
-#line 1896 "src/_html_entities.gperf"
+#line 1896 "data/html_entities.gperf"
       {"scnsim", { 0xE2, 0x8B, 0xA9 }, 3},
-#line 265 "src/_html_entities.gperf"
+#line 265 "data/html_entities.gperf"
       {"OverBrace", { 0xE2, 0x8F, 0x9E }, 3},
-#line 2035 "src/_html_entities.gperf"
+#line 2035 "data/html_entities.gperf"
       {"sigma", { 0xCF, 0x83 }, 2},
-#line 2047 "src/_html_entities.gperf"
+#line 2047 "data/html_entities.gperf"
       {"OverBracket", { 0xE2, 0x8E, 0xB4 }, 3},
-#line 1670 "src/_html_entities.gperf"
+#line 1670 "data/html_entities.gperf"
       {"NegativeThinSpace", { 0xE2, 0x80, 0x8B }, 3},
-#line 471 "src/_html_entities.gperf"
+#line 471 "data/html_entities.gperf"
       {"NotSucceedsTilde", { 0xE2, 0x89, 0xBF, 0xCC, 0xB8 }, 5},
-#line 372 "src/_html_entities.gperf"
+#line 372 "data/html_entities.gperf"
       {"LeftDownVector", { 0xE2, 0x87, 0x83 }, 3},
-#line 21 "src/_html_entities.gperf"
+#line 21 "data/html_entities.gperf"
       {"VeryThinSpace", { 0xE2, 0x80, 0x8A }, 3},
-#line 78 "src/_html_entities.gperf"
+#line 78 "data/html_entities.gperf"
       {"LeftDownVectorBar", { 0xE2, 0xA5, 0x99 }, 3},
-#line 1986 "src/_html_entities.gperf"
+#line 1986 "data/html_entities.gperf"
       {"rdca", { 0xE2, 0xA4, 0xB7 }, 3},
-#line 861 "src/_html_entities.gperf"
+#line 861 "data/html_entities.gperf"
       {"ldca", { 0xE2, 0xA4, 0xB6 }, 3},
-#line 1886 "src/_html_entities.gperf"
+#line 1886 "data/html_entities.gperf"
       {"bullet", { 0xE2, 0x80, 0xA2 }, 3},
-#line 1611 "src/_html_entities.gperf"
+#line 1611 "data/html_entities.gperf"
       {"DownTeeArrow", { 0xE2, 0x86, 0xA7 }, 3},
-#line 1753 "src/_html_entities.gperf"
+#line 1753 "data/html_entities.gperf"
       {"Sigma", { 0xCE, 0xA3 }, 2},
-#line 1418 "src/_html_entities.gperf"
+#line 1418 "data/html_entities.gperf"
       {"PartialD", { 0xE2, 0x88, 0x82 }, 3},
-#line 622 "src/_html_entities.gperf"
+#line 622 "data/html_entities.gperf"
       {"LeftDownTeeVector", { 0xE2, 0xA5, 0xA1 }, 3},
-#line 914 "src/_html_entities.gperf"
+#line 914 "data/html_entities.gperf"
       {"bigstar", { 0xE2, 0x98, 0x85 }, 3},
-#line 767 "src/_html_entities.gperf"
+#line 767 "data/html_entities.gperf"
       {"leftthreetimes", { 0xE2, 0x8B, 0x8B }, 3},
-#line 273 "src/_html_entities.gperf"
+#line 273 "data/html_entities.gperf"
       {"minusdu", { 0xE2, 0xA8, 0xAA }, 3},
-#line 892 "src/_html_entities.gperf"
+#line 892 "data/html_entities.gperf"
       {"boxdR", { 0xE2, 0x95, 0x92 }, 3},
-#line 786 "src/_html_entities.gperf"
+#line 786 "data/html_entities.gperf"
       {"Backslash", { 0xE2, 0x88, 0x96 }, 3},
-#line 549 "src/_html_entities.gperf"
+#line 549 "data/html_entities.gperf"
       {"uring", { 0xC5, 0xAF }, 2},
-#line 176 "src/_html_entities.gperf"
+#line 176 "data/html_entities.gperf"
       {"InvisibleComma", { 0xE2, 0x81, 0xA3 }, 3},
-#line 99 "src/_html_entities.gperf"
+#line 99 "data/html_entities.gperf"
       {"telrec", { 0xE2, 0x8C, 0x95 }, 3},
-#line 816 "src/_html_entities.gperf"
+#line 816 "data/html_entities.gperf"
       {"grave", { 0x60 }, 1},
-#line 175 "src/_html_entities.gperf"
+#line 175 "data/html_entities.gperf"
       {"Lambda", { 0xCE, 0x9B }, 2},
-#line 1466 "src/_html_entities.gperf"
+#line 1466 "data/html_entities.gperf"
       {"bigwedge", { 0xE2, 0x8B, 0x80 }, 3},
-#line 1965 "src/_html_entities.gperf"
+#line 1965 "data/html_entities.gperf"
       {"angmsd", { 0xE2, 0x88, 0xA1 }, 3},
-#line 1248 "src/_html_entities.gperf"
+#line 1248 "data/html_entities.gperf"
       {"Otimes", { 0xE2, 0xA8, 0xB7 }, 3},
-#line 159 "src/_html_entities.gperf"
+#line 159 "data/html_entities.gperf"
       {"succsim", { 0xE2, 0x89, 0xBF }, 3},
-#line 2002 "src/_html_entities.gperf"
+#line 2002 "data/html_entities.gperf"
       {"boxDR", { 0xE2, 0x95, 0x94 }, 3},
-#line 2123 "src/_html_entities.gperf"
+#line 2123 "data/html_entities.gperf"
       {"omega", { 0xCF, 0x89 }, 2},
-#line 384 "src/_html_entities.gperf"
+#line 384 "data/html_entities.gperf"
       {"supdsub", { 0xE2, 0xAB, 0x98 }, 3},
-#line 1116 "src/_html_entities.gperf"
+#line 1116 "data/html_entities.gperf"
       {"succneqq", { 0xE2, 0xAA, 0xB6 }, 3},
-#line 367 "src/_html_entities.gperf"
+#line 367 "data/html_entities.gperf"
       {"supdot", { 0xE2, 0xAA, 0xBE }, 3},
-#line 41 "src/_html_entities.gperf"
+#line 41 "data/html_entities.gperf"
       {"LeftUpTeeVector", { 0xE2, 0xA5, 0xA0 }, 3},
-#line 245 "src/_html_entities.gperf"
+#line 245 "data/html_entities.gperf"
       {"utilde", { 0xC5, 0xA9 }, 2},
-#line 1423 "src/_html_entities.gperf"
+#line 1423 "data/html_entities.gperf"
       {"ntilde", { 0xC3, 0xB1 }, 2},
-#line 1236 "src/_html_entities.gperf"
+#line 1236 "data/html_entities.gperf"
       {"leftrightsquigarrow", { 0xE2, 0x86, 0xAD }, 3},
-#line 2065 "src/_html_entities.gperf"
+#line 2065 "data/html_entities.gperf"
       {"Ograve", { 0xC3, 0x92 }, 2},
-#line 1205 "src/_html_entities.gperf"
+#line 1205 "data/html_entities.gperf"
       {"empty", { 0xE2, 0x88, 0x85 }, 3},
-#line 1772 "src/_html_entities.gperf"
+#line 1772 "data/html_entities.gperf"
       {"ncong", { 0xE2, 0x89, 0x87 }, 3},
-#line 383 "src/_html_entities.gperf"
+#line 383 "data/html_entities.gperf"
       {"bcong", { 0xE2, 0x89, 0x8C }, 3},
-#line 465 "src/_html_entities.gperf"
+#line 465 "data/html_entities.gperf"
       {"cacute", { 0xC4, 0x87 }, 2},
-#line 1239 "src/_html_entities.gperf"
+#line 1239 "data/html_entities.gperf"
       {"wreath", { 0xE2, 0x89, 0x80 }, 3},
-#line 2114 "src/_html_entities.gperf"
+#line 2114 "data/html_entities.gperf"
       {"boxdL", { 0xE2, 0x95, 0x95 }, 3},
-#line 2019 "src/_html_entities.gperf"
+#line 2019 "data/html_entities.gperf"
       {"Ouml", { 0xC3, 0x96 }, 2},
-#line 780 "src/_html_entities.gperf"
+#line 780 "data/html_entities.gperf"
       {"eta", { 0xCE, 0xB7 }, 2},
-#line 1912 "src/_html_entities.gperf"
+#line 1912 "data/html_entities.gperf"
       {"sqsubseteq", { 0xE2, 0x8A, 0x91 }, 3},
-#line 1741 "src/_html_entities.gperf"
+#line 1741 "data/html_entities.gperf"
       {"oelig", { 0xC5, 0x93 }, 2},
-#line 652 "src/_html_entities.gperf"
+#line 652 "data/html_entities.gperf"
       {"Aring", { 0xC3, 0x85 }, 2},
-#line 1029 "src/_html_entities.gperf"
+#line 1029 "data/html_entities.gperf"
       {"LeftFloor", { 0xE2, 0x8C, 0x8A }, 3},
-#line 1115 "src/_html_entities.gperf"
+#line 1115 "data/html_entities.gperf"
       {"boxDL", { 0xE2, 0x95, 0x97 }, 3},
-#line 989 "src/_html_entities.gperf"
+#line 989 "data/html_entities.gperf"
       {"odash", { 0xE2, 0x8A, 0x9D }, 3},
-#line 193 "src/_html_entities.gperf"
+#line 193 "data/html_entities.gperf"
       {"hellip", { 0xE2, 0x80, 0xA6 }, 3},
-#line 839 "src/_html_entities.gperf"
+#line 839 "data/html_entities.gperf"
       {"ltcc", { 0xE2, 0xAA, 0xA6 }, 3},
-#line 77 "src/_html_entities.gperf"
+#line 77 "data/html_entities.gperf"
       {"tshcy", { 0xD1, 0x9B }, 2},
-#line 376 "src/_html_entities.gperf"
+#line 376 "data/html_entities.gperf"
       {"Itilde", { 0xC4, 0xA8 }, 2},
-#line 1474 "src/_html_entities.gperf"
+#line 1474 "data/html_entities.gperf"
       {"natural", { 0xE2, 0x99, 0xAE }, 3},
-#line 1492 "src/_html_entities.gperf"
+#line 1492 "data/html_entities.gperf"
       {"naturals", { 0xE2, 0x84, 0x95 }, 3},
-#line 215 "src/_html_entities.gperf"
+#line 215 "data/html_entities.gperf"
       {"Uring", { 0xC5, 0xAE }, 2},
-#line 1482 "src/_html_entities.gperf"
+#line 1482 "data/html_entities.gperf"
       {"DownRightTeeVector", { 0xE2, 0xA5, 0x9F }, 3},
-#line 192 "src/_html_entities.gperf"
+#line 192 "data/html_entities.gperf"
       {"Atilde", { 0xC3, 0x83 }, 2},
-#line 89 "src/_html_entities.gperf"
+#line 89 "data/html_entities.gperf"
       {"LongRightArrow", { 0xE2, 0x9F, 0xB6 }, 3},
-#line 774 "src/_html_entities.gperf"
+#line 774 "data/html_entities.gperf"
       {"Ntilde", { 0xC3, 0x91 }, 2},
-#line 660 "src/_html_entities.gperf"
+#line 660 "data/html_entities.gperf"
       {"varnothing", { 0xE2, 0x88, 0x85 }, 3},
-#line 750 "src/_html_entities.gperf"
+#line 750 "data/html_entities.gperf"
       {"DiacriticalGrave", { 0x60 }, 1},
-#line 1275 "src/_html_entities.gperf"
+#line 1275 "data/html_entities.gperf"
       {"pitchfork", { 0xE2, 0x8B, 0x94 }, 3},
-#line 1303 "src/_html_entities.gperf"
+#line 1303 "data/html_entities.gperf"
       {"otimes", { 0xE2, 0x8A, 0x97 }, 3},
-#line 1270 "src/_html_entities.gperf"
+#line 1270 "data/html_entities.gperf"
       {"notinvc", { 0xE2, 0x8B, 0xB6 }, 3},
-#line 1790 "src/_html_entities.gperf"
+#line 1790 "data/html_entities.gperf"
       {"gesdoto", { 0xE2, 0xAA, 0x82 }, 3},
-#line 521 "src/_html_entities.gperf"
+#line 521 "data/html_entities.gperf"
       {"gjcy", { 0xD1, 0x93 }, 2},
-#line 829 "src/_html_entities.gperf"
+#line 829 "data/html_entities.gperf"
       {"abreve", { 0xC4, 0x83 }, 2},
-#line 299 "src/_html_entities.gperf"
+#line 299 "data/html_entities.gperf"
       {"scirc", { 0xC5, 0x9D }, 2},
-#line 737 "src/_html_entities.gperf"
+#line 737 "data/html_entities.gperf"
       {"ecirc", { 0xC3, 0xAA }, 2},
-#line 1249 "src/_html_entities.gperf"
+#line 1249 "data/html_entities.gperf"
       {"ucirc", { 0xC3, 0xBB }, 2},
-#line 1255 "src/_html_entities.gperf"
+#line 1255 "data/html_entities.gperf"
       {"triangledown", { 0xE2, 0x96, 0xBF }, 3},
-#line 1078 "src/_html_entities.gperf"
+#line 1078 "data/html_entities.gperf"
       {"Utilde", { 0xC5, 0xA8 }, 2},
-#line 19 "src/_html_entities.gperf"
+#line 19 "data/html_entities.gperf"
       {"NotSucceedsEqual", { 0xE2, 0xAA, 0xB0, 0xCC, 0xB8 }, 5},
-#line 1865 "src/_html_entities.gperf"
+#line 1865 "data/html_entities.gperf"
       {"ograve", { 0xC3, 0xB2 }, 2},
-#line 1697 "src/_html_entities.gperf"
+#line 1697 "data/html_entities.gperf"
       {"minusd", { 0xE2, 0x88, 0xB8 }, 3},
-#line 1346 "src/_html_entities.gperf"
+#line 1346 "data/html_entities.gperf"
       {"Jcirc", { 0xC4, 0xB4 }, 2},
-#line 1729 "src/_html_entities.gperf"
+#line 1729 "data/html_entities.gperf"
       {"gtrless", { 0xE2, 0x89, 0xB7 }, 3},
-#line 574 "src/_html_entities.gperf"
+#line 574 "data/html_entities.gperf"
       {"Scirc", { 0xC5, 0x9C }, 2},
-#line 354 "src/_html_entities.gperf"
+#line 354 "data/html_entities.gperf"
       {"ouml", { 0xC3, 0xB6 }, 2},
-#line 2007 "src/_html_entities.gperf"
+#line 2007 "data/html_entities.gperf"
       {"ExponentialE", { 0xE2, 0x85, 0x87 }, 3},
-#line 2097 "src/_html_entities.gperf"
+#line 2097 "data/html_entities.gperf"
       {"robrk", { 0xE2, 0x9F, 0xA7 }, 3},
-#line 1562 "src/_html_entities.gperf"
+#line 1562 "data/html_entities.gperf"
       {"lobrk", { 0xE2, 0x9F, 0xA6 }, 3},
-#line 322 "src/_html_entities.gperf"
+#line 322 "data/html_entities.gperf"
       {"NewLine", { 0x0A }, 1},
-#line 1744 "src/_html_entities.gperf"
+#line 1744 "data/html_entities.gperf"
       {"Hcirc", { 0xC4, 0xA4 }, 2},
-#line 1633 "src/_html_entities.gperf"
+#line 1633 "data/html_entities.gperf"
       {"biguplus", { 0xE2, 0xA8, 0x84 }, 3},
-#line 894 "src/_html_entities.gperf"
+#line 894 "data/html_entities.gperf"
       {"complexes", { 0xE2, 0x84, 0x82 }, 3},
-#line 928 "src/_html_entities.gperf"
+#line 928 "data/html_entities.gperf"
       {"UpDownArrow", { 0xE2, 0x86, 0x95 }, 3},
-#line 788 "src/_html_entities.gperf"
+#line 788 "data/html_entities.gperf"
       {"Wcirc", { 0xC5, 0xB4 }, 2},
-#line 1950 "src/_html_entities.gperf"
+#line 1950 "data/html_entities.gperf"
       {"itilde", { 0xC4, 0xA9 }, 2},
-#line 502 "src/_html_entities.gperf"
+#line 502 "data/html_entities.gperf"
       {"gnapprox", { 0xE2, 0xAA, 0x8A }, 3},
-#line 932 "src/_html_entities.gperf"
+#line 932 "data/html_entities.gperf"
       {"aogon", { 0xC4, 0x85 }, 2},
-#line 1893 "src/_html_entities.gperf"
+#line 1893 "data/html_entities.gperf"
       {"Icirc", { 0xC3, 0x8E }, 2},
-#line 1298 "src/_html_entities.gperf"
+#line 1298 "data/html_entities.gperf"
       {"hkswarow", { 0xE2, 0xA4, 0xA6 }, 3},
-#line 1472 "src/_html_entities.gperf"
+#line 1472 "data/html_entities.gperf"
       {"LeftRightArrow", { 0xE2, 0x86, 0x94 }, 3},
-#line 727 "src/_html_entities.gperf"
+#line 727 "data/html_entities.gperf"
       {"Ccedil", { 0xC3, 0x87 }, 2},
-#line 1549 "src/_html_entities.gperf"
+#line 1549 "data/html_entities.gperf"
       {"boxdl", { 0xE2, 0x94, 0x90 }, 3},
-#line 12 "src/_html_entities.gperf"
+#line 12 "data/html_entities.gperf"
       {"LeftArrowRightArrow", { 0xE2, 0x87, 0x86 }, 3},
-#line 1317 "src/_html_entities.gperf"
+#line 1317 "data/html_entities.gperf"
       {"CounterClockwiseContourIntegral", { 0xE2, 0x88, 0xB3 }, 3},
-#line 453 "src/_html_entities.gperf"
+#line 453 "data/html_entities.gperf"
       {"nvDash", { 0xE2, 0x8A, 0xAD }, 3},
-#line 1139 "src/_html_entities.gperf"
+#line 1139 "data/html_entities.gperf"
       {"Acirc", { 0xC3, 0x82 }, 2},
-#line 1213 "src/_html_entities.gperf"
+#line 1213 "data/html_entities.gperf"
       {"xvee", { 0xE2, 0x8B, 0x81 }, 3},
-#line 120 "src/_html_entities.gperf"
+#line 120 "data/html_entities.gperf"
       {"rmoustache", { 0xE2, 0x8E, 0xB1 }, 3},
-#line 826 "src/_html_entities.gperf"
+#line 826 "data/html_entities.gperf"
       {"lmoustache", { 0xE2, 0x8E, 0xB0 }, 3},
-#line 1516 "src/_html_entities.gperf"
+#line 1516 "data/html_entities.gperf"
       {"rbbrk", { 0xE2, 0x9D, 0xB3 }, 3},
-#line 1151 "src/_html_entities.gperf"
+#line 1151 "data/html_entities.gperf"
       {"lbbrk", { 0xE2, 0x9D, 0xB2 }, 3},
-#line 1488 "src/_html_entities.gperf"
+#line 1488 "data/html_entities.gperf"
       {"beth", { 0xE2, 0x84, 0xB6 }, 3},
-#line 1431 "src/_html_entities.gperf"
+#line 1431 "data/html_entities.gperf"
       {"fflig", { 0xEF, 0xAC, 0x80 }, 3},
-#line 1691 "src/_html_entities.gperf"
+#line 1691 "data/html_entities.gperf"
       {"boxDl", { 0xE2, 0x95, 0x96 }, 3},
-#line 852 "src/_html_entities.gperf"
+#line 852 "data/html_entities.gperf"
       {"harrw", { 0xE2, 0x86, 0xAD }, 3},
-#line 881 "src/_html_entities.gperf"
+#line 881 "data/html_entities.gperf"
       {"GJcy", { 0xD0, 0x83 }, 2},
-#line 1357 "src/_html_entities.gperf"
+#line 1357 "data/html_entities.gperf"
       {"hyphen", { 0xE2, 0x80, 0x90 }, 3},
-#line 1658 "src/_html_entities.gperf"
+#line 1658 "data/html_entities.gperf"
       {"sub", { 0xE2, 0x8A, 0x82 }, 3},
-#line 2022 "src/_html_entities.gperf"
+#line 2022 "data/html_entities.gperf"
       {"supe", { 0xE2, 0x8A, 0x87 }, 3},
-#line 1621 "src/_html_entities.gperf"
+#line 1621 "data/html_entities.gperf"
       {"Ycirc", { 0xC5, 0xB6 }, 2},
-#line 1142 "src/_html_entities.gperf"
+#line 1142 "data/html_entities.gperf"
       {"dash", { 0xE2, 0x80, 0x90 }, 3},
-#line 800 "src/_html_entities.gperf"
+#line 800 "data/html_entities.gperf"
       {"angle", { 0xE2, 0x88, 0xA0 }, 3},
-#line 630 "src/_html_entities.gperf"
+#line 630 "data/html_entities.gperf"
       {"congdot", { 0xE2, 0xA9, 0xAD }, 3},
-#line 1536 "src/_html_entities.gperf"
+#line 1536 "data/html_entities.gperf"
       {"Ucirc", { 0xC3, 0x9B }, 2},
-#line 848 "src/_html_entities.gperf"
+#line 848 "data/html_entities.gperf"
       {"Sub", { 0xE2, 0x8B, 0x90 }, 3},
-#line 1109 "src/_html_entities.gperf"
+#line 1109 "data/html_entities.gperf"
       {"circleddash", { 0xE2, 0x8A, 0x9D }, 3},
-#line 676 "src/_html_entities.gperf"
+#line 676 "data/html_entities.gperf"
       {"aacute", { 0xC3, 0xA1 }, 2},
-#line 2026 "src/_html_entities.gperf"
+#line 2026 "data/html_entities.gperf"
       {"CloseCurlyQuote", { 0xE2, 0x80, 0x99 }, 3},
-#line 37 "src/_html_entities.gperf"
+#line 37 "data/html_entities.gperf"
       {"check", { 0xE2, 0x9C, 0x93 }, 3},
-#line 545 "src/_html_entities.gperf"
+#line 545 "data/html_entities.gperf"
       {"subrarr", { 0xE2, 0xA5, 0xB9 }, 3},
-#line 1080 "src/_html_entities.gperf"
+#line 1080 "data/html_entities.gperf"
       {"rcy", { 0xD1, 0x80 }, 2},
-#line 1408 "src/_html_entities.gperf"
+#line 1408 "data/html_entities.gperf"
       {"tcy", { 0xD1, 0x82 }, 2},
-#line 1547 "src/_html_entities.gperf"
+#line 1547 "data/html_entities.gperf"
       {"lcy", { 0xD0, 0xBB }, 2},
-#line 1093 "src/_html_entities.gperf"
+#line 1093 "data/html_entities.gperf"
       {"scy", { 0xD1, 0x81 }, 2},
-#line 2042 "src/_html_entities.gperf"
+#line 2042 "data/html_entities.gperf"
       {"ecy", { 0xD1, 0x8D }, 2},
-#line 960 "src/_html_entities.gperf"
+#line 960 "data/html_entities.gperf"
       {"ucy", { 0xD1, 0x83 }, 2},
-#line 1602 "src/_html_entities.gperf"
+#line 1602 "data/html_entities.gperf"
       {"ncy", { 0xD0, 0xBD }, 2},
-#line 161 "src/_html_entities.gperf"
+#line 161 "data/html_entities.gperf"
       {"Hacek", { 0xCB, 0x87 }, 2},
-#line 1680 "src/_html_entities.gperf"
+#line 1680 "data/html_entities.gperf"
       {"Pcy", { 0xD0, 0x9F }, 2},
-#line 1997 "src/_html_entities.gperf"
+#line 1997 "data/html_entities.gperf"
       {"bcy", { 0xD0, 0xB1 }, 2},
-#line 599 "src/_html_entities.gperf"
+#line 599 "data/html_entities.gperf"
       {"Superset", { 0xE2, 0x8A, 0x83 }, 3},
-#line 877 "src/_html_entities.gperf"
+#line 877 "data/html_entities.gperf"
       {"nabla", { 0xE2, 0x88, 0x87 }, 3},
-#line 1710 "src/_html_entities.gperf"
+#line 1710 "data/html_entities.gperf"
       {"Zcy", { 0xD0, 0x97 }, 2},
-#line 1144 "src/_html_entities.gperf"
+#line 1144 "data/html_entities.gperf"
       {"icirc", { 0xC3, 0xAE }, 2},
-#line 1606 "src/_html_entities.gperf"
+#line 1606 "data/html_entities.gperf"
       {"Vcy", { 0xD0, 0x92 }, 2},
-#line 479 "src/_html_entities.gperf"
+#line 479 "data/html_entities.gperf"
       {"approxeq", { 0xE2, 0x89, 0x8A }, 3},
-#line 264 "src/_html_entities.gperf"
+#line 264 "data/html_entities.gperf"
       {"Jcy", { 0xD0, 0x99 }, 2},
-#line 1143 "src/_html_entities.gperf"
+#line 1143 "data/html_entities.gperf"
       {"succnsim", { 0xE2, 0x8B, 0xA9 }, 3},
-#line 2024 "src/_html_entities.gperf"
+#line 2024 "data/html_entities.gperf"
       {"Scy", { 0xD0, 0xA1 }, 2},
-#line 503 "src/_html_entities.gperf"
+#line 503 "data/html_entities.gperf"
       {"ltquest", { 0xE2, 0xA9, 0xBB }, 3},
-#line 1014 "src/_html_entities.gperf"
+#line 1014 "data/html_entities.gperf"
       {"cuepr", { 0xE2, 0x8B, 0x9E }, 3},
-#line 1338 "src/_html_entities.gperf"
+#line 1338 "data/html_entities.gperf"
       {"pcy", { 0xD0, 0xBF }, 2},
-#line 182 "src/_html_entities.gperf"
+#line 182 "data/html_entities.gperf"
       {"dzigrarr", { 0xE2, 0x9F, 0xBF }, 3},
-#line 236 "src/_html_entities.gperf"
+#line 236 "data/html_entities.gperf"
       {"vcy", { 0xD0, 0xB2 }, 2},
-#line 1856 "src/_html_entities.gperf"
+#line 1856 "data/html_entities.gperf"
       {"curren", { 0xC2, 0xA4 }, 2},
-#line 1189 "src/_html_entities.gperf"
+#line 1189 "data/html_entities.gperf"
       {"cupor", { 0xE2, 0xA9, 0x85 }, 3},
-#line 460 "src/_html_entities.gperf"
+#line 460 "data/html_entities.gperf"
       {"Icy", { 0xD0, 0x98 }, 2},
-#line 240 "src/_html_entities.gperf"
+#line 240 "data/html_entities.gperf"
       {"Kcy", { 0xD0, 0x9A }, 2},
-#line 339 "src/_html_entities.gperf"
+#line 339 "data/html_entities.gperf"
       {"ntgl", { 0xE2, 0x89, 0xB9 }, 3},
-#line 1659 "src/_html_entities.gperf"
+#line 1659 "data/html_entities.gperf"
       {"NestedGreaterGreater", { 0xE2, 0x89, 0xAB }, 3},
-#line 1564 "src/_html_entities.gperf"
+#line 1564 "data/html_entities.gperf"
       {"fcy", { 0xD1, 0x84 }, 2},
-#line 1963 "src/_html_entities.gperf"
+#line 1963 "data/html_entities.gperf"
       {"ddagger", { 0xE2, 0x80, 0xA1 }, 3},
-#line 73 "src/_html_entities.gperf"
+#line 73 "data/html_entities.gperf"
       {"submult", { 0xE2, 0xAB, 0x81 }, 3},
-#line 876 "src/_html_entities.gperf"
+#line 876 "data/html_entities.gperf"
       {"apid", { 0xE2, 0x89, 0x8B }, 3},
-#line 618 "src/_html_entities.gperf"
+#line 618 "data/html_entities.gperf"
       {"circledcirc", { 0xE2, 0x8A, 0x9A }, 3},
-#line 656 "src/_html_entities.gperf"
+#line 656 "data/html_entities.gperf"
       {"cup", { 0xE2, 0x88, 0xAA }, 3},
-#line 391 "src/_html_entities.gperf"
+#line 391 "data/html_entities.gperf"
       {"Lcy", { 0xD0, 0x9B }, 2},
-#line 1454 "src/_html_entities.gperf"
+#line 1454 "data/html_entities.gperf"
       {"Rcy", { 0xD0, 0xA0 }, 2},
-#line 416 "src/_html_entities.gperf"
+#line 416 "data/html_entities.gperf"
       {"subsub", { 0xE2, 0xAB, 0x95 }, 3},
-#line 452 "src/_html_entities.gperf"
+#line 452 "data/html_entities.gperf"
       {"Acy", { 0xD0, 0x90 }, 2},
-#line 419 "src/_html_entities.gperf"
+#line 419 "data/html_entities.gperf"
       {"Ncy", { 0xD0, 0x9D }, 2},
-#line 1900 "src/_html_entities.gperf"
+#line 1900 "data/html_entities.gperf"
       {"subset", { 0xE2, 0x8A, 0x82 }, 3},
-#line 1701 "src/_html_entities.gperf"
+#line 1701 "data/html_entities.gperf"
       {"lsimg", { 0xE2, 0xAA, 0x8F }, 3},
-#line 353 "src/_html_entities.gperf"
+#line 353 "data/html_entities.gperf"
       {"Mcy", { 0xD0, 0x9C }, 2},
-#line 1905 "src/_html_entities.gperf"
+#line 1905 "data/html_entities.gperf"
       {"cups", { 0xE2, 0x88, 0xAA, 0xEF, 0xB8, 0x80 }, 6},
-#line 287 "src/_html_entities.gperf"
+#line 287 "data/html_entities.gperf"
       {"Eta", { 0xCE, 0x97 }, 2},
-#line 776 "src/_html_entities.gperf"
+#line 776 "data/html_entities.gperf"
       {"rdquo", { 0xE2, 0x80, 0x9D }, 3},
-#line 1188 "src/_html_entities.gperf"
+#line 1188 "data/html_entities.gperf"
       {"ldquo", { 0xE2, 0x80, 0x9C }, 3},
-#line 1881 "src/_html_entities.gperf"
+#line 1881 "data/html_entities.gperf"
       {"DownLeftRightVector", { 0xE2, 0xA5, 0x90 }, 3},
-#line 1207 "src/_html_entities.gperf"
+#line 1207 "data/html_entities.gperf"
       {"Subset", { 0xE2, 0x8B, 0x90 }, 3},
-#line 142 "src/_html_entities.gperf"
+#line 142 "data/html_entities.gperf"
       {"bdquo", { 0xE2, 0x80, 0x9E }, 3},
-#line 157 "src/_html_entities.gperf"
+#line 157 "data/html_entities.gperf"
       {"Ycy", { 0xD0, 0xAB }, 2},
-#line 411 "src/_html_entities.gperf"
+#line 411 "data/html_entities.gperf"
       {"Fcy", { 0xD0, 0xA4 }, 2},
-#line 217 "src/_html_entities.gperf"
+#line 217 "data/html_entities.gperf"
       {"Ucy", { 0xD0, 0xA3 }, 2},
-#line 267 "src/_html_entities.gperf"
+#line 267 "data/html_entities.gperf"
       {"copy", { 0xC2, 0xA9 }, 2},
-#line 90 "src/_html_entities.gperf"
+#line 90 "data/html_entities.gperf"
       {"subne", { 0xE2, 0x8A, 0x8A }, 3},
-#line 1584 "src/_html_entities.gperf"
+#line 1584 "data/html_entities.gperf"
       {"Tcy", { 0xD0, 0xA2 }, 2},
-#line 410 "src/_html_entities.gperf"
+#line 410 "data/html_entities.gperf"
       {"subsup", { 0xE2, 0xAB, 0x93 }, 3},
-#line 637 "src/_html_entities.gperf"
+#line 637 "data/html_entities.gperf"
       {"zwj", { 0xE2, 0x80, 0x8D }, 3},
-#line 1184 "src/_html_entities.gperf"
+#line 1184 "data/html_entities.gperf"
       {"UnderBracket", { 0xE2, 0x8E, 0xB5 }, 3},
-#line 1698 "src/_html_entities.gperf"
+#line 1698 "data/html_entities.gperf"
       {"ImaginaryI", { 0xE2, 0x85, 0x88 }, 3},
-#line 962 "src/_html_entities.gperf"
+#line 962 "data/html_entities.gperf"
       {"quatint", { 0xE2, 0xA8, 0x96 }, 3},
-#line 1654 "src/_html_entities.gperf"
+#line 1654 "data/html_entities.gperf"
       {"boxVh", { 0xE2, 0x95, 0xAB }, 3},
-#line 1991 "src/_html_entities.gperf"
+#line 1991 "data/html_entities.gperf"
       {"LongLeftRightArrow", { 0xE2, 0x9F, 0xB7 }, 3},
-#line 2094 "src/_html_entities.gperf"
+#line 2094 "data/html_entities.gperf"
       {"gtrdot", { 0xE2, 0x8B, 0x97 }, 3},
-#line 105 "src/_html_entities.gperf"
+#line 105 "data/html_entities.gperf"
       {"icy", { 0xD0, 0xB8 }, 2},
-#line 801 "src/_html_entities.gperf"
+#line 801 "data/html_entities.gperf"
       {"curarr", { 0xE2, 0x86, 0xB7 }, 3},
-#line 751 "src/_html_entities.gperf"
+#line 751 "data/html_entities.gperf"
       {"ntriangleright", { 0xE2, 0x8B, 0xAB }, 3},
-#line 1518 "src/_html_entities.gperf"
+#line 1518 "data/html_entities.gperf"
       {"cudarrr", { 0xE2, 0xA4, 0xB5 }, 3},
-#line 2001 "src/_html_entities.gperf"
+#line 2001 "data/html_entities.gperf"
       {"Ecirc", { 0xC3, 0x8A }, 2},
-#line 154 "src/_html_entities.gperf"
+#line 154 "data/html_entities.gperf"
       {"cudarrl", { 0xE2, 0xA4, 0xB8 }, 3},
-#line 757 "src/_html_entities.gperf"
+#line 757 "data/html_entities.gperf"
       {"subseteq", { 0xE2, 0x8A, 0x86 }, 3},
-#line 409 "src/_html_entities.gperf"
+#line 409 "data/html_entities.gperf"
       {"subseteqq", { 0xE2, 0xAB, 0x85 }, 3},
-#line 1251 "src/_html_entities.gperf"
+#line 1251 "data/html_entities.gperf"
       {"Bcy", { 0xD0, 0x91 }, 2},
-#line 363 "src/_html_entities.gperf"
+#line 363 "data/html_entities.gperf"
       {"subsetneq", { 0xE2, 0x8A, 0x8A }, 3},
-#line 1494 "src/_html_entities.gperf"
+#line 1494 "data/html_entities.gperf"
       {"dcy", { 0xD0, 0xB4 }, 2},
-#line 352 "src/_html_entities.gperf"
+#line 352 "data/html_entities.gperf"
       {"ngeqslant", { 0xE2, 0xA9, 0xBE, 0xCC, 0xB8 }, 5},
-#line 815 "src/_html_entities.gperf"
+#line 815 "data/html_entities.gperf"
       {"notnivc", { 0xE2, 0x8B, 0xBD }, 3},
-#line 1738 "src/_html_entities.gperf"
+#line 1738 "data/html_entities.gperf"
       {"Dcy", { 0xD0, 0x94 }, 2},
-#line 624 "src/_html_entities.gperf"
+#line 624 "data/html_entities.gperf"
       {"cupcap", { 0xE2, 0xA9, 0x86 }, 3},
-#line 449 "src/_html_entities.gperf"
+#line 449 "data/html_entities.gperf"
       {"kappa", { 0xCE, 0xBA }, 2},
-#line 385 "src/_html_entities.gperf"
+#line 385 "data/html_entities.gperf"
       {"ang", { 0xE2, 0x88, 0xA0 }, 3},
-#line 1240 "src/_html_entities.gperf"
+#line 1240 "data/html_entities.gperf"
       {"LowerLeftArrow", { 0xE2, 0x86, 0x99 }, 3},
-#line 1794 "src/_html_entities.gperf"
+#line 1794 "data/html_entities.gperf"
       {"succ", { 0xE2, 0x89, 0xBB }, 3},
-#line 2030 "src/_html_entities.gperf"
+#line 2030 "data/html_entities.gperf"
       {"chcy", { 0xD1, 0x87 }, 2},
-#line 1620 "src/_html_entities.gperf"
+#line 1620 "data/html_entities.gperf"
       {"andv", { 0xE2, 0xA9, 0x9A }, 3},
-#line 399 "src/_html_entities.gperf"
+#line 399 "data/html_entities.gperf"
       {"HumpDownHump", { 0xE2, 0x89, 0x8E }, 3},
-#line 1806 "src/_html_entities.gperf"
+#line 1806 "data/html_entities.gperf"
       {"cupcup", { 0xE2, 0xA9, 0x8A }, 3},
-#line 1048 "src/_html_entities.gperf"
+#line 1048 "data/html_entities.gperf"
       {"Otilde", { 0xC3, 0x95 }, 2},
-#line 616 "src/_html_entities.gperf"
+#line 616 "data/html_entities.gperf"
       {"cemptyv", { 0xE2, 0xA6, 0xB2 }, 3},
-#line 1108 "src/_html_entities.gperf"
+#line 1108 "data/html_entities.gperf"
       {"precapprox", { 0xE2, 0xAA, 0xB7 }, 3},
-#line 1500 "src/_html_entities.gperf"
+#line 1500 "data/html_entities.gperf"
       {"lessapprox", { 0xE2, 0xAA, 0x85 }, 3},
-#line 748 "src/_html_entities.gperf"
+#line 748 "data/html_entities.gperf"
       {"DDotrahd", { 0xE2, 0xA4, 0x91 }, 3},
-#line 1053 "src/_html_entities.gperf"
+#line 1053 "data/html_entities.gperf"
       {"cong", { 0xE2, 0x89, 0x85 }, 3},
-#line 434 "src/_html_entities.gperf"
+#line 434 "data/html_entities.gperf"
       {"ntrianglerighteq", { 0xE2, 0x8B, 0xAD }, 3},
-#line 982 "src/_html_entities.gperf"
+#line 982 "data/html_entities.gperf"
       {"bigvee", { 0xE2, 0x8B, 0x81 }, 3},
-#line 967 "src/_html_entities.gperf"
+#line 967 "data/html_entities.gperf"
       {"downdownarrows", { 0xE2, 0x87, 0x8A }, 3},
-#line 1038 "src/_html_entities.gperf"
+#line 1038 "data/html_entities.gperf"
       {"LeftTeeVector", { 0xE2, 0xA5, 0x9A }, 3},
-#line 1723 "src/_html_entities.gperf"
+#line 1723 "data/html_entities.gperf"
       {"ac", { 0xE2, 0x88, 0xBE }, 3},
-#line 1783 "src/_html_entities.gperf"
+#line 1783 "data/html_entities.gperf"
       {"subsetneqq", { 0xE2, 0xAB, 0x8B }, 3},
-#line 1039 "src/_html_entities.gperf"
+#line 1039 "data/html_entities.gperf"
       {"expectation", { 0xE2, 0x84, 0xB0 }, 3},
-#line 834 "src/_html_entities.gperf"
+#line 834 "data/html_entities.gperf"
       {"LowerRightArrow", { 0xE2, 0x86, 0x98 }, 3},
-#line 1569 "src/_html_entities.gperf"
+#line 1569 "data/html_entities.gperf"
       {"notinva", { 0xE2, 0x88, 0x89 }, 3},
-#line 510 "src/_html_entities.gperf"
+#line 510 "data/html_entities.gperf"
       {"rightrightarrows", { 0xE2, 0x87, 0x89 }, 3},
-#line 494 "src/_html_entities.gperf"
+#line 494 "data/html_entities.gperf"
       {"RightAngleBracket", { 0xE2, 0x9F, 0xA9 }, 3},
-#line 1548 "src/_html_entities.gperf"
+#line 1548 "data/html_entities.gperf"
       {"supsim", { 0xE2, 0xAB, 0x88 }, 3},
-#line 2073 "src/_html_entities.gperf"
+#line 2073 "data/html_entities.gperf"
       {"longleftrightarrow", { 0xE2, 0x9F, 0xB7 }, 3},
-#line 803 "src/_html_entities.gperf"
+#line 803 "data/html_entities.gperf"
       {"varsigma", { 0xCF, 0x82 }, 2},
-#line 1919 "src/_html_entities.gperf"
+#line 1919 "data/html_entities.gperf"
       {"subplus", { 0xE2, 0xAA, 0xBF }, 3},
-#line 440 "src/_html_entities.gperf"
+#line 440 "data/html_entities.gperf"
       {"RightFloor", { 0xE2, 0x8C, 0x8B }, 3},
-#line 1864 "src/_html_entities.gperf"
+#line 1864 "data/html_entities.gperf"
       {"Alpha", { 0xCE, 0x91 }, 2},
-#line 2132 "src/_html_entities.gperf"
+#line 2132 "data/html_entities.gperf"
       {"mcy", { 0xD0, 0xBC }, 2},
-#line 382 "src/_html_entities.gperf"
+#line 382 "data/html_entities.gperf"
       {"Gcedil", { 0xC4, 0xA2 }, 2},
-#line 355 "src/_html_entities.gperf"
+#line 355 "data/html_entities.gperf"
       {"RightTee", { 0xE2, 0x8A, 0xA2 }, 3},
-#line 377 "src/_html_entities.gperf"
+#line 377 "data/html_entities.gperf"
       {"subE", { 0xE2, 0xAB, 0x85 }, 3},
-#line 303 "src/_html_entities.gperf"
+#line 303 "data/html_entities.gperf"
       {"Ecy", { 0xD0, 0xAD }, 2},
-#line 579 "src/_html_entities.gperf"
+#line 579 "data/html_entities.gperf"
       {"Cayleys", { 0xE2, 0x84, 0xAD }, 3},
-#line 661 "src/_html_entities.gperf"
+#line 661 "data/html_entities.gperf"
       {"bigtriangleup", { 0xE2, 0x96, 0xB3 }, 3},
-#line 1027 "src/_html_entities.gperf"
+#line 1027 "data/html_entities.gperf"
       {"wcirc", { 0xC5, 0xB5 }, 2},
-#line 1573 "src/_html_entities.gperf"
+#line 1573 "data/html_entities.gperf"
       {"RightTeeVector", { 0xE2, 0xA5, 0x9B }, 3},
-#line 1622 "src/_html_entities.gperf"
+#line 1622 "data/html_entities.gperf"
       {"RightTriangleBar", { 0xE2, 0xA7, 0x90 }, 3},
-#line 1539 "src/_html_entities.gperf"
+#line 1539 "data/html_entities.gperf"
       {"RightTriangle", { 0xE2, 0x8A, 0xB3 }, 3},
-#line 1967 "src/_html_entities.gperf"
+#line 1967 "data/html_entities.gperf"
       {"RightTriangleEqual", { 0xE2, 0x8A, 0xB5 }, 3},
-#line 1995 "src/_html_entities.gperf"
+#line 1995 "data/html_entities.gperf"
       {"Ocirc", { 0xC3, 0x94 }, 2},
-#line 554 "src/_html_entities.gperf"
+#line 554 "data/html_entities.gperf"
       {"otilde", { 0xC3, 0xB5 }, 2},
-#line 2016 "src/_html_entities.gperf"
+#line 2016 "data/html_entities.gperf"
       {"ntlg", { 0xE2, 0x89, 0xB8 }, 3},
-#line 495 "src/_html_entities.gperf"
+#line 495 "data/html_entities.gperf"
       {"boxtimes", { 0xE2, 0x8A, 0xA0 }, 3},
-#line 658 "src/_html_entities.gperf"
+#line 658 "data/html_entities.gperf"
       {"RightUpTeeVector", { 0xE2, 0xA5, 0x9C }, 3},
-#line 509 "src/_html_entities.gperf"
+#line 509 "data/html_entities.gperf"
       {"boxur", { 0xE2, 0x94, 0x94 }, 3},
-#line 1944 "src/_html_entities.gperf"
+#line 1944 "data/html_entities.gperf"
       {"Longleftrightarrow", { 0xE2, 0x9F, 0xBA }, 3},
-#line 2052 "src/_html_entities.gperf"
+#line 2052 "data/html_entities.gperf"
       {"glj", { 0xE2, 0xAA, 0xA4 }, 3},
-#line 553 "src/_html_entities.gperf"
+#line 553 "data/html_entities.gperf"
       {"gg", { 0xE2, 0x89, 0xAB }, 3},
-#line 1495 "src/_html_entities.gperf"
+#line 1495 "data/html_entities.gperf"
       {"ldrdhar", { 0xE2, 0xA5, 0xA7 }, 3},
-#line 1353 "src/_html_entities.gperf"
+#line 1353 "data/html_entities.gperf"
       {"Ccirc", { 0xC4, 0x88 }, 2},
-#line 104 "src/_html_entities.gperf"
+#line 104 "data/html_entities.gperf"
       {"gtreqless", { 0xE2, 0x8B, 0x9B }, 3},
-#line 1363 "src/_html_entities.gperf"
+#line 1363 "data/html_entities.gperf"
       {"zcy", { 0xD0, 0xB7 }, 2},
-#line 655 "src/_html_entities.gperf"
+#line 655 "data/html_entities.gperf"
       {"Gg", { 0xE2, 0x8B, 0x99 }, 3},
-#line 699 "src/_html_entities.gperf"
+#line 699 "data/html_entities.gperf"
       {"ocirc", { 0xC3, 0xB4 }, 2},
-#line 2079 "src/_html_entities.gperf"
+#line 2079 "data/html_entities.gperf"
       {"boxuR", { 0xE2, 0x95, 0x98 }, 3},
-#line 924 "src/_html_entities.gperf"
+#line 924 "data/html_entities.gperf"
       {"Oslash", { 0xC3, 0x98 }, 2},
-#line 1114 "src/_html_entities.gperf"
+#line 1114 "data/html_entities.gperf"
       {"leftrightharpoons", { 0xE2, 0x87, 0x8B }, 3},
-#line 427 "src/_html_entities.gperf"
+#line 427 "data/html_entities.gperf"
       {"cularr", { 0xE2, 0x86, 0xB6 }, 3},
-#line 1176 "src/_html_entities.gperf"
+#line 1176 "data/html_entities.gperf"
       {"lhblk", { 0xE2, 0x96, 0x84 }, 3},
-#line 1124 "src/_html_entities.gperf"
+#line 1124 "data/html_entities.gperf"
       {"uhblk", { 0xE2, 0x96, 0x80 }, 3},
-#line 1640 "src/_html_entities.gperf"
+#line 1640 "data/html_entities.gperf"
       {"subnE", { 0xE2, 0xAB, 0x8B }, 3},
-#line 567 "src/_html_entities.gperf"
+#line 567 "data/html_entities.gperf"
       {"ange", { 0xE2, 0xA6, 0xA4 }, 3},
-#line 432 "src/_html_entities.gperf"
+#line 432 "data/html_entities.gperf"
       {"Ocy", { 0xD0, 0x9E }, 2},
-#line 1993 "src/_html_entities.gperf"
+#line 1993 "data/html_entities.gperf"
       {"xdtri", { 0xE2, 0x96, 0xBD }, 3},
-#line 1786 "src/_html_entities.gperf"
+#line 1786 "data/html_entities.gperf"
       {"bigtriangledown", { 0xE2, 0x96, 0xBD }, 3},
-#line 51 "src/_html_entities.gperf"
+#line 51 "data/html_entities.gperf"
       {"leftharpoonup", { 0xE2, 0x86, 0xBC }, 3},
-#line 1126 "src/_html_entities.gperf"
+#line 1126 "data/html_entities.gperf"
       {"gtreqqless", { 0xE2, 0xAA, 0x8C }, 3},
-#line 321 "src/_html_entities.gperf"
+#line 321 "data/html_entities.gperf"
       {"boxuL", { 0xE2, 0x95, 0x9B }, 3},
-#line 904 "src/_html_entities.gperf"
+#line 904 "data/html_entities.gperf"
       {"cularrp", { 0xE2, 0xA4, 0xBD }, 3},
-#line 206 "src/_html_entities.gperf"
+#line 206 "data/html_entities.gperf"
       {"NegativeVeryThinSpace", { 0xE2, 0x80, 0x8B }, 3},
-#line 1812 "src/_html_entities.gperf"
+#line 1812 "data/html_entities.gperf"
       {"yacute", { 0xC3, 0xBD }, 2},
-#line 740 "src/_html_entities.gperf"
+#line 740 "data/html_entities.gperf"
       {"oslash", { 0xC3, 0xB8 }, 2},
-#line 1850 "src/_html_entities.gperf"
+#line 1850 "data/html_entities.gperf"
       {"intlarhk", { 0xE2, 0xA8, 0x97 }, 3},
-#line 1203 "src/_html_entities.gperf"
+#line 1203 "data/html_entities.gperf"
       {"Integral", { 0xE2, 0x88, 0xAB }, 3},
-#line 279 "src/_html_entities.gperf"
+#line 279 "data/html_entities.gperf"
       {"supedot", { 0xE2, 0xAB, 0x84 }, 3},
-#line 1655 "src/_html_entities.gperf"
+#line 1655 "data/html_entities.gperf"
       {"CloseCurlyDoubleQuote", { 0xE2, 0x80, 0x9D }, 3},
-#line 117 "src/_html_entities.gperf"
+#line 117 "data/html_entities.gperf"
       {"triangleright", { 0xE2, 0x96, 0xB9 }, 3},
-#line 43 "src/_html_entities.gperf"
+#line 43 "data/html_entities.gperf"
       {"ocy", { 0xD0, 0xBE }, 2},
-#line 133 "src/_html_entities.gperf"
+#line 133 "data/html_entities.gperf"
       {"FilledVerySmallSquare", { 0xE2, 0x96, 0xAA }, 3},
-#line 537 "src/_html_entities.gperf"
+#line 537 "data/html_entities.gperf"
       {"notniva", { 0xE2, 0x88, 0x8C }, 3},
-#line 2009 "src/_html_entities.gperf"
+#line 2009 "data/html_entities.gperf"
       {"leftharpoondown", { 0xE2, 0x86, 0xBD }, 3},
-#line 1171 "src/_html_entities.gperf"
+#line 1171 "data/html_entities.gperf"
       {"ccedil", { 0xC3, 0xA7 }, 2},
-#line 506 "src/_html_entities.gperf"
+#line 506 "data/html_entities.gperf"
       {"Cedilla", { 0xC2, 0xB8 }, 2},
-#line 1544 "src/_html_entities.gperf"
+#line 1544 "data/html_entities.gperf"
       {"napprox", { 0xE2, 0x89, 0x89 }, 3},
-#line 1034 "src/_html_entities.gperf"
+#line 1034 "data/html_entities.gperf"
       {"LeftRightVector", { 0xE2, 0xA5, 0x8E }, 3},
-#line 1920 "src/_html_entities.gperf"
+#line 1920 "data/html_entities.gperf"
       {"UnderParenthesis", { 0xE2, 0x8F, 0x9D }, 3},
-#line 846 "src/_html_entities.gperf"
+#line 846 "data/html_entities.gperf"
       {"boxul", { 0xE2, 0x94, 0x98 }, 3},
-#line 2039 "src/_html_entities.gperf"
+#line 2039 "data/html_entities.gperf"
       {"aelig", { 0xC3, 0xA6 }, 2},
-#line 1926 "src/_html_entities.gperf"
+#line 1926 "data/html_entities.gperf"
       {"trianglerighteq", { 0xE2, 0x8A, 0xB5 }, 3},
-#line 290 "src/_html_entities.gperf"
+#line 290 "data/html_entities.gperf"
       {"hksearow", { 0xE2, 0xA4, 0xA5 }, 3},
-#line 1517 "src/_html_entities.gperf"
+#line 1517 "data/html_entities.gperf"
       {"daleth", { 0xE2, 0x84, 0xB8 }, 3},
-#line 817 "src/_html_entities.gperf"
+#line 817 "data/html_entities.gperf"
       {"rdldhar", { 0xE2, 0xA5, 0xA9 }, 3},
-#line 802 "src/_html_entities.gperf"
+#line 802 "data/html_entities.gperf"
       {"gtcc", { 0xE2, 0xAA, 0xA7 }, 3},
-#line 1238 "src/_html_entities.gperf"
+#line 1238 "data/html_entities.gperf"
       {"jcirc", { 0xC4, 0xB5 }, 2},
-#line 1055 "src/_html_entities.gperf"
+#line 1055 "data/html_entities.gperf"
       {"circlearrowright", { 0xE2, 0x86, 0xBB }, 3},
-#line 1626 "src/_html_entities.gperf"
+#line 1626 "data/html_entities.gperf"
       {"circlearrowleft", { 0xE2, 0x86, 0xBA }, 3},
-#line 1742 "src/_html_entities.gperf"
+#line 1742 "data/html_entities.gperf"
       {"gtrsim", { 0xE2, 0x89, 0xB3 }, 3},
-#line 497 "src/_html_entities.gperf"
+#line 497 "data/html_entities.gperf"
       {"boxhu", { 0xE2, 0x94, 0xB4 }, 3},
-#line 1525 "src/_html_entities.gperf"
+#line 1525 "data/html_entities.gperf"
       {"xwedge", { 0xE2, 0x8B, 0x80 }, 3},
-#line 902 "src/_html_entities.gperf"
+#line 902 "data/html_entities.gperf"
       {"rarrhk", { 0xE2, 0x86, 0xAA }, 3},
-#line 1278 "src/_html_entities.gperf"
+#line 1278 "data/html_entities.gperf"
       {"larrhk", { 0xE2, 0x86, 0xA9 }, 3},
-#line 1163 "src/_html_entities.gperf"
+#line 1163 "data/html_entities.gperf"
       {"intercal", { 0xE2, 0x8A, 0xBA }, 3},
-#line 1590 "src/_html_entities.gperf"
+#line 1590 "data/html_entities.gperf"
       {"gcirc", { 0xC4, 0x9D }, 2},
-#line 576 "src/_html_entities.gperf"
+#line 576 "data/html_entities.gperf"
       {"boxvr", { 0xE2, 0x94, 0x9C }, 3},
-#line 198 "src/_html_entities.gperf"
+#line 198 "data/html_entities.gperf"
       {"agrave", { 0xC3, 0xA0 }, 2},
-#line 249 "src/_html_entities.gperf"
+#line 249 "data/html_entities.gperf"
       {"leftrightarrows", { 0xE2, 0x87, 0x86 }, 3},
-#line 1279 "src/_html_entities.gperf"
+#line 1279 "data/html_entities.gperf"
       {"auml", { 0xC3, 0xA4 }, 2},
-#line 151 "src/_html_entities.gperf"
+#line 151 "data/html_entities.gperf"
       {"curarrm", { 0xE2, 0xA4, 0xBC }, 3},
-#line 1866 "src/_html_entities.gperf"
+#line 1866 "data/html_entities.gperf"
       {"Gcirc", { 0xC4, 0x9C }, 2},
-#line 2077 "src/_html_entities.gperf"
+#line 2077 "data/html_entities.gperf"
       {"RuleDelayed", { 0xE2, 0xA7, 0xB4 }, 3},
-#line 2000 "src/_html_entities.gperf"
+#line 2000 "data/html_entities.gperf"
       {"suphsub", { 0xE2, 0xAB, 0x97 }, 3},
-#line 211 "src/_html_entities.gperf"
+#line 211 "data/html_entities.gperf"
       {"boxv", { 0xE2, 0x94, 0x82 }, 3},
-#line 2066 "src/_html_entities.gperf"
+#line 2066 "data/html_entities.gperf"
       {"boxhU", { 0xE2, 0x95, 0xA8 }, 3},
-#line 1724 "src/_html_entities.gperf"
+#line 1724 "data/html_entities.gperf"
       {"RightVector", { 0xE2, 0x87, 0x80 }, 3},
-#line 1119 "src/_html_entities.gperf"
+#line 1119 "data/html_entities.gperf"
       {"longmapsto", { 0xE2, 0x9F, 0xBC }, 3},
-#line 414 "src/_html_entities.gperf"
+#line 414 "data/html_entities.gperf"
       {"SucceedsEqual", { 0xE2, 0xAA, 0xB0 }, 3},
-#line 366 "src/_html_entities.gperf"
+#line 366 "data/html_entities.gperf"
       {"RightUpDownVector", { 0xE2, 0xA5, 0x8F }, 3},
-#line 1452 "src/_html_entities.gperf"
+#line 1452 "data/html_entities.gperf"
       {"downharpoonright", { 0xE2, 0x87, 0x82 }, 3},
-#line 1587 "src/_html_entities.gperf"
+#line 1587 "data/html_entities.gperf"
       {"downharpoonleft", { 0xE2, 0x87, 0x83 }, 3},
-#line 1413 "src/_html_entities.gperf"
+#line 1413 "data/html_entities.gperf"
       {"jcy", { 0xD0, 0xB9 }, 2},
-#line 978 "src/_html_entities.gperf"
+#line 978 "data/html_entities.gperf"
       {"boxvH", { 0xE2, 0x95, 0xAA }, 3},
-#line 23 "src/_html_entities.gperf"
+#line 23 "data/html_entities.gperf"
       {"boxvR", { 0xE2, 0x95, 0x9E }, 3},
-#line 1210 "src/_html_entities.gperf"
+#line 1210 "data/html_entities.gperf"
       {"boxhd", { 0xE2, 0x94, 0xAC }, 3},
-#line 775 "src/_html_entities.gperf"
+#line 775 "data/html_entities.gperf"
       {"topfork", { 0xE2, 0xAB, 0x9A }, 3},
-#line 2003 "src/_html_entities.gperf"
+#line 2003 "data/html_entities.gperf"
       {"updownarrow", { 0xE2, 0x86, 0x95 }, 3},
-#line 49 "src/_html_entities.gperf"
+#line 49 "data/html_entities.gperf"
       {"searhk", { 0xE2, 0xA4, 0xA5 }, 3},
-#line 1336 "src/_html_entities.gperf"
+#line 1336 "data/html_entities.gperf"
       {"amalg", { 0xE2, 0xA8, 0xBF }, 3},
-#line 1572 "src/_html_entities.gperf"
+#line 1572 "data/html_entities.gperf"
       {"gcy", { 0xD0, 0xB3 }, 2},
-#line 400 "src/_html_entities.gperf"
+#line 400 "data/html_entities.gperf"
       {"khcy", { 0xD1, 0x85 }, 2},
-#line 1175 "src/_html_entities.gperf"
+#line 1175 "data/html_entities.gperf"
       {"nearhk", { 0xE2, 0xA4, 0xA4 }, 3},
-#line 189 "src/_html_entities.gperf"
+#line 189 "data/html_entities.gperf"
       {"kjcy", { 0xD1, 0x9C }, 2},
-#line 1722 "src/_html_entities.gperf"
+#line 1722 "data/html_entities.gperf"
       {"mcomma", { 0xE2, 0xA8, 0xA9 }, 3},
-#line 25 "src/_html_entities.gperf"
+#line 25 "data/html_entities.gperf"
       {"subdot", { 0xE2, 0xAA, 0xBD }, 3},
-#line 1570 "src/_html_entities.gperf"
+#line 1570 "data/html_entities.gperf"
       {"boxvL", { 0xE2, 0x95, 0xA1 }, 3},
-#line 1077 "src/_html_entities.gperf"
+#line 1077 "data/html_entities.gperf"
       {"hookrightarrow", { 0xE2, 0x86, 0xAA }, 3},
-#line 633 "src/_html_entities.gperf"
+#line 633 "data/html_entities.gperf"
       {"planck", { 0xE2, 0x84, 0x8F }, 3},
-#line 2107 "src/_html_entities.gperf"
+#line 2107 "data/html_entities.gperf"
       {"NegativeThickSpace", { 0xE2, 0x80, 0x8B }, 3},
-#line 490 "src/_html_entities.gperf"
+#line 490 "data/html_entities.gperf"
       {"gtquest", { 0xE2, 0xA9, 0xBC }, 3},
-#line 386 "src/_html_entities.gperf"
+#line 386 "data/html_entities.gperf"
       {"Gcy", { 0xD0, 0x93 }, 2},
-#line 1470 "src/_html_entities.gperf"
+#line 1470 "data/html_entities.gperf"
       {"rdsh", { 0xE2, 0x86, 0xB3 }, 3},
-#line 428 "src/_html_entities.gperf"
+#line 428 "data/html_entities.gperf"
       {"ldsh", { 0xE2, 0x86, 0xB2 }, 3},
-#line 604 "src/_html_entities.gperf"
+#line 604 "data/html_entities.gperf"
       {"DownRightVector", { 0xE2, 0x87, 0x81 }, 3},
-#line 1837 "src/_html_entities.gperf"
+#line 1837 "data/html_entities.gperf"
       {"DownRightVectorBar", { 0xE2, 0xA5, 0x97 }, 3},
-#line 1118 "src/_html_entities.gperf"
+#line 1118 "data/html_entities.gperf"
       {"Updownarrow", { 0xE2, 0x87, 0x95 }, 3},
-#line 15 "src/_html_entities.gperf"
+#line 15 "data/html_entities.gperf"
       {"RightVectorBar", { 0xE2, 0xA5, 0x93 }, 3},
-#line 237 "src/_html_entities.gperf"
+#line 237 "data/html_entities.gperf"
       {"yacy", { 0xD1, 0x8F }, 2},
-#line 388 "src/_html_entities.gperf"
+#line 388 "data/html_entities.gperf"
       {"cupdot", { 0xE2, 0x8A, 0x8D }, 3},
-#line 1771 "src/_html_entities.gperf"
+#line 1771 "data/html_entities.gperf"
       {"rbrack", { 0x5D }, 1},
-#line 218 "src/_html_entities.gperf"
+#line 218 "data/html_entities.gperf"
       {"lbrack", { 0x5B }, 1},
-#line 345 "src/_html_entities.gperf"
+#line 345 "data/html_entities.gperf"
       {"swarhk", { 0xE2, 0xA4, 0xA6 }, 3},
-#line 2100 "src/_html_entities.gperf"
+#line 2100 "data/html_entities.gperf"
       {"nwarhk", { 0xE2, 0xA4, 0xA3 }, 3},
-#line 1493 "src/_html_entities.gperf"
+#line 1493 "data/html_entities.gperf"
       {"hcirc", { 0xC4, 0xA5 }, 2},
-#line 1307 "src/_html_entities.gperf"
+#line 1307 "data/html_entities.gperf"
       {"curlyvee", { 0xE2, 0x8B, 0x8E }, 3},
-#line 1198 "src/_html_entities.gperf"
+#line 1198 "data/html_entities.gperf"
       {"sung", { 0xE2, 0x99, 0xAA }, 3},
-#line 2089 "src/_html_entities.gperf"
+#line 2089 "data/html_entities.gperf"
       {"angmsdae", { 0xE2, 0xA6, 0xAC }, 3},
-#line 1749 "src/_html_entities.gperf"
+#line 1749 "data/html_entities.gperf"
       {"angmsdab", { 0xE2, 0xA6, 0xA9 }, 3},
-#line 975 "src/_html_entities.gperf"
+#line 975 "data/html_entities.gperf"
       {"hybull", { 0xE2, 0x81, 0x83 }, 3},
-#line 1428 "src/_html_entities.gperf"
+#line 1428 "data/html_entities.gperf"
       {"LeftAngleBracket", { 0xE2, 0x9F, 0xA8 }, 3},
-#line 1848 "src/_html_entities.gperf"
+#line 1848 "data/html_entities.gperf"
       {"alefsym", { 0xE2, 0x84, 0xB5 }, 3},
-#line 2101 "src/_html_entities.gperf"
+#line 2101 "data/html_entities.gperf"
       {"boxvl", { 0xE2, 0x94, 0xA4 }, 3},
-#line 838 "src/_html_entities.gperf"
+#line 838 "data/html_entities.gperf"
       {"xuplus", { 0xE2, 0xA8, 0x84 }, 3},
-#line 1958 "src/_html_entities.gperf"
+#line 1958 "data/html_entities.gperf"
       {"numero", { 0xE2, 0x84, 0x96 }, 3},
-#line 1914 "src/_html_entities.gperf"
+#line 1914 "data/html_entities.gperf"
       {"LeftVectorBar", { 0xE2, 0xA5, 0x92 }, 3},
-#line 777 "src/_html_entities.gperf"
+#line 777 "data/html_entities.gperf"
       {"VerticalLine", { 0x7C }, 1},
-#line 254 "src/_html_entities.gperf"
+#line 254 "data/html_entities.gperf"
       {"tstrok", { 0xC5, 0xA7 }, 2},
-#line 1009 "src/_html_entities.gperf"
+#line 1009 "data/html_entities.gperf"
       {"lstrok", { 0xC5, 0x82 }, 2},
-#line 422 "src/_html_entities.gperf"
+#line 422 "data/html_entities.gperf"
       {"angmsdaf", { 0xE2, 0xA6, 0xAD }, 3},
-#line 188 "src/_html_entities.gperf"
+#line 188 "data/html_entities.gperf"
       {"nRightarrow", { 0xE2, 0x87, 0x8F }, 3},
-#line 1826 "src/_html_entities.gperf"
+#line 1826 "data/html_entities.gperf"
       {"RightDownTeeVector", { 0xE2, 0xA5, 0x9D }, 3},
-#line 231 "src/_html_entities.gperf"
+#line 231 "data/html_entities.gperf"
       {"ffllig", { 0xEF, 0xAC, 0x84 }, 3},
-#line 1085 "src/_html_entities.gperf"
+#line 1085 "data/html_entities.gperf"
       {"ccirc", { 0xC4, 0x89 }, 2},
-#line 76 "src/_html_entities.gperf"
+#line 76 "data/html_entities.gperf"
       {"Hstrok", { 0xC4, 0xA6 }, 2},
-#line 1455 "src/_html_entities.gperf"
+#line 1455 "data/html_entities.gperf"
       {"nrightarrow", { 0xE2, 0x86, 0x9B }, 3},
-#line 922 "src/_html_entities.gperf"
+#line 922 "data/html_entities.gperf"
       {"sube", { 0xE2, 0x8A, 0x86 }, 3},
-#line 663 "src/_html_entities.gperf"
+#line 663 "data/html_entities.gperf"
       {"hslash", { 0xE2, 0x84, 0x8F }, 3},
-#line 1846 "src/_html_entities.gperf"
+#line 1846 "data/html_entities.gperf"
       {"longrightarrow", { 0xE2, 0x9F, 0xB6 }, 3},
-#line 158 "src/_html_entities.gperf"
+#line 158 "data/html_entities.gperf"
       {"Lstrok", { 0xC5, 0x81 }, 2},
-#line 1390 "src/_html_entities.gperf"
+#line 1390 "data/html_entities.gperf"
       {"gtrapprox", { 0xE2, 0xAA, 0x86 }, 3},
-#line 381 "src/_html_entities.gperf"
+#line 381 "data/html_entities.gperf"
       {"RightDoubleBracket", { 0xE2, 0x9F, 0xA7 }, 3},
-#line 350 "src/_html_entities.gperf"
+#line 350 "data/html_entities.gperf"
       {"boxhD", { 0xE2, 0x95, 0xA5 }, 3},
-#line 2127 "src/_html_entities.gperf"
+#line 2127 "data/html_entities.gperf"
       {"Rrightarrow", { 0xE2, 0x87, 0x9B }, 3},
-#line 977 "src/_html_entities.gperf"
+#line 977 "data/html_entities.gperf"
       {"aring", { 0xC3, 0xA5 }, 2},
-#line 921 "src/_html_entities.gperf"
+#line 921 "data/html_entities.gperf"
       {"Tstrok", { 0xC5, 0xA6 }, 2},
-#line 794 "src/_html_entities.gperf"
+#line 794 "data/html_entities.gperf"
       {"RightArrow", { 0xE2, 0x86, 0x92 }, 3},
-#line 1843 "src/_html_entities.gperf"
+#line 1843 "data/html_entities.gperf"
       {"precnapprox", { 0xE2, 0xAA, 0xB9 }, 3},
-#line 1911 "src/_html_entities.gperf"
+#line 1911 "data/html_entities.gperf"
       {"Longrightarrow", { 0xE2, 0x9F, 0xB9 }, 3},
-#line 114 "src/_html_entities.gperf"
+#line 114 "data/html_entities.gperf"
       {"angmsdad", { 0xE2, 0xA6, 0xAB }, 3},
-#line 1948 "src/_html_entities.gperf"
+#line 1948 "data/html_entities.gperf"
       {"RightArrowLeftArrow", { 0xE2, 0x87, 0x84 }, 3},
-#line 16 "src/_html_entities.gperf"
+#line 16 "data/html_entities.gperf"
       {"atilde", { 0xC3, 0xA3 }, 2},
-#line 696 "src/_html_entities.gperf"
+#line 696 "data/html_entities.gperf"
       {"leftrightarrow", { 0xE2, 0x86, 0x94 }, 3},
-#line 2036 "src/_html_entities.gperf"
+#line 2036 "data/html_entities.gperf"
       {"Jukcy", { 0xD0, 0x84 }, 2},
-#line 1194 "src/_html_entities.gperf"
+#line 1194 "data/html_entities.gperf"
       {"VerticalTilde", { 0xE2, 0x89, 0x80 }, 3},
-#line 1201 "src/_html_entities.gperf"
+#line 1201 "data/html_entities.gperf"
       {"dstrok", { 0xC4, 0x91 }, 2},
-#line 541 "src/_html_entities.gperf"
+#line 541 "data/html_entities.gperf"
       {"Iukcy", { 0xD0, 0x86 }, 2},
-#line 2041 "src/_html_entities.gperf"
+#line 2041 "data/html_entities.gperf"
       {"Dstrok", { 0xC4, 0x90 }, 2},
-#line 1412 "src/_html_entities.gperf"
+#line 1412 "data/html_entities.gperf"
       {"SHCHcy", { 0xD0, 0xA9 }, 2},
-#line 1954 "src/_html_entities.gperf"
+#line 1954 "data/html_entities.gperf"
       {"yicy", { 0xD1, 0x97 }, 2},
-#line 568 "src/_html_entities.gperf"
+#line 568 "data/html_entities.gperf"
       {"NotRightTriangleBar", { 0xE2, 0xA7, 0x90, 0xCC, 0xB8 }, 5},
-#line 598 "src/_html_entities.gperf"
+#line 598 "data/html_entities.gperf"
       {"NotRightTriangle", { 0xE2, 0x8B, 0xAB }, 3},
-#line 1876 "src/_html_entities.gperf"
+#line 1876 "data/html_entities.gperf"
       {"NotRightTriangleEqual", { 0xE2, 0x8B, 0xAD }, 3},
-#line 429 "src/_html_entities.gperf"
+#line 429 "data/html_entities.gperf"
       {"Leftrightarrow", { 0xE2, 0x87, 0x94 }, 3},
-#line 1892 "src/_html_entities.gperf"
+#line 1892 "data/html_entities.gperf"
       {"pertenk", { 0xE2, 0x80, 0xB1 }, 3},
-#line 269 "src/_html_entities.gperf"
+#line 269 "data/html_entities.gperf"
       {"rightleftharpoons", { 0xE2, 0x87, 0x8C }, 3},
-#line 1529 "src/_html_entities.gperf"
+#line 1529 "data/html_entities.gperf"
       {"planckh", { 0xE2, 0x84, 0x8E }, 3},
-#line 1767 "src/_html_entities.gperf"
+#line 1767 "data/html_entities.gperf"
       {"otimesas", { 0xE2, 0xA8, 0xB6 }, 3},
-#line 1594 "src/_html_entities.gperf"
+#line 1594 "data/html_entities.gperf"
       {"kcedil", { 0xC4, 0xB7 }, 2},
-#line 998 "src/_html_entities.gperf"
+#line 998 "data/html_entities.gperf"
       {"yuml", { 0xC3, 0xBF }, 2},
-#line 1867 "src/_html_entities.gperf"
+#line 1867 "data/html_entities.gperf"
       {"acirc", { 0xC3, 0xA2 }, 2},
-#line 1784 "src/_html_entities.gperf"
+#line 1784 "data/html_entities.gperf"
       {"thickapprox", { 0xE2, 0x89, 0x88 }, 3},
-#line 131 "src/_html_entities.gperf"
+#line 131 "data/html_entities.gperf"
       {"odiv", { 0xE2, 0xA8, 0xB8 }, 3},
-#line 668 "src/_html_entities.gperf"
+#line 668 "data/html_entities.gperf"
       {"xutri", { 0xE2, 0x96, 0xB3 }, 3},
-#line 683 "src/_html_entities.gperf"
+#line 683 "data/html_entities.gperf"
       {"suphsol", { 0xE2, 0x9F, 0x89 }, 3},
-#line 1972 "src/_html_entities.gperf"
+#line 1972 "data/html_entities.gperf"
       {"iukcy", { 0xD1, 0x96 }, 2},
-#line 709 "src/_html_entities.gperf"
+#line 709 "data/html_entities.gperf"
       {"RightTeeArrow", { 0xE2, 0x86, 0xA6 }, 3},
-#line 1167 "src/_html_entities.gperf"
+#line 1167 "data/html_entities.gperf"
       {"rightthreetimes", { 0xE2, 0x8B, 0x8C }, 3},
-#line 1410 "src/_html_entities.gperf"
+#line 1410 "data/html_entities.gperf"
       {"subsim", { 0xE2, 0xAB, 0x87 }, 3},
-#line 2044 "src/_html_entities.gperf"
+#line 2044 "data/html_entities.gperf"
       {"curlywedge", { 0xE2, 0x8B, 0x8F }, 3},
-#line 1017 "src/_html_entities.gperf"
+#line 1017 "data/html_entities.gperf"
       {"acy", { 0xD0, 0xB0 }, 2},
-#line 601 "src/_html_entities.gperf"
+#line 601 "data/html_entities.gperf"
       {"Jsercy", { 0xD0, 0x88 }, 2},
-#line 671 "src/_html_entities.gperf"
+#line 671 "data/html_entities.gperf"
       {"divonx", { 0xE2, 0x8B, 0x87 }, 3},
-#line 738 "src/_html_entities.gperf"
+#line 738 "data/html_entities.gperf"
       {"xcirc", { 0xE2, 0x97, 0xAF }, 3},
-#line 278 "src/_html_entities.gperf"
+#line 278 "data/html_entities.gperf"
       {"cuesc", { 0xE2, 0x8B, 0x9F }, 3},
-#line 1592 "src/_html_entities.gperf"
+#line 1592 "data/html_entities.gperf"
       {"approx", { 0xE2, 0x89, 0x88 }, 3},
-#line 70 "src/_html_entities.gperf"
+#line 70 "data/html_entities.gperf"
       {"ggg", { 0xE2, 0x8B, 0x99 }, 3},
-#line 1287 "src/_html_entities.gperf"
+#line 1287 "data/html_entities.gperf"
       {"bigcirc", { 0xE2, 0x97, 0xAF }, 3},
-#line 1015 "src/_html_entities.gperf"
+#line 1015 "data/html_entities.gperf"
       {"rightsquigarrow", { 0xE2, 0x86, 0x9D }, 3},
-#line 706 "src/_html_entities.gperf"
+#line 706 "data/html_entities.gperf"
       {"SupersetEqual", { 0xE2, 0x8A, 0x87 }, 3},
-#line 667 "src/_html_entities.gperf"
+#line 667 "data/html_entities.gperf"
       {"rightleftarrows", { 0xE2, 0x87, 0x84 }, 3},
-#line 358 "src/_html_entities.gperf"
+#line 358 "data/html_entities.gperf"
       {"straightepsilon", { 0xCF, 0xB5 }, 2},
-#line 1383 "src/_html_entities.gperf"
+#line 1383 "data/html_entities.gperf"
       {"ffilig", { 0xEF, 0xAC, 0x83 }, 3},
-#line 669 "src/_html_entities.gperf"
+#line 669 "data/html_entities.gperf"
       {"cuvee", { 0xE2, 0x8B, 0x8E }, 3},
-#line 1589 "src/_html_entities.gperf"
+#line 1589 "data/html_entities.gperf"
       {"alpha", { 0xCE, 0xB1 }, 2},
-#line 1471 "src/_html_entities.gperf"
+#line 1471 "data/html_entities.gperf"
       {"subedot", { 0xE2, 0xAB, 0x83 }, 3},
-#line 570 "src/_html_entities.gperf"
+#line 570 "data/html_entities.gperf"
       {"angsph", { 0xE2, 0x88, 0xA2 }, 3},
-#line 697 "src/_html_entities.gperf"
+#line 697 "data/html_entities.gperf"
       {"digamma", { 0xCF, 0x9D }, 2},
-#line 103 "src/_html_entities.gperf"
+#line 103 "data/html_entities.gperf"
       {"checkmark", { 0xE2, 0x9C, 0x93 }, 3},
-#line 525 "src/_html_entities.gperf"
+#line 525 "data/html_entities.gperf"
       {"kgreen", { 0xC4, 0xB8 }, 2},
-#line 1755 "src/_html_entities.gperf"
+#line 1755 "data/html_entities.gperf"
       {"boxh", { 0xE2, 0x94, 0x80 }, 3},
-#line 1613 "src/_html_entities.gperf"
+#line 1613 "data/html_entities.gperf"
       {"ycirc", { 0xC5, 0xB7 }, 2},
-#line 558 "src/_html_entities.gperf"
+#line 558 "data/html_entities.gperf"
       {"SubsetEqual", { 0xE2, 0x8A, 0x86 }, 3},
-#line 275 "src/_html_entities.gperf"
+#line 275 "data/html_entities.gperf"
       {"angmsdag", { 0xE2, 0xA6, 0xAE }, 3},
-#line 891 "src/_html_entities.gperf"
+#line 891 "data/html_entities.gperf"
       {"SOFTcy", { 0xD0, 0xAC }, 2},
-#line 2020 "src/_html_entities.gperf"
+#line 2020 "data/html_entities.gperf"
       {"kcy", { 0xD0, 0xBA }, 2},
-#line 855 "src/_html_entities.gperf"
+#line 855 "data/html_entities.gperf"
       {"vzigzag", { 0xE2, 0xA6, 0x9A }, 3},
-#line 687 "src/_html_entities.gperf"
+#line 687 "data/html_entities.gperf"
       {"luruhar", { 0xE2, 0xA5, 0xA6 }, 3},
-#line 1293 "src/_html_entities.gperf"
+#line 1293 "data/html_entities.gperf"
       {"boxbox", { 0xE2, 0xA7, 0x89 }, 3},
-#line 1511 "src/_html_entities.gperf"
+#line 1511 "data/html_entities.gperf"
       {"ycy", { 0xD1, 0x8B }, 2},
-#line 589 "src/_html_entities.gperf"
+#line 589 "data/html_entities.gperf"
       {"twoheadrightarrow", { 0xE2, 0x86, 0xA0 }, 3},
-#line 1776 "src/_html_entities.gperf"
+#line 1776 "data/html_entities.gperf"
       {"jukcy", { 0xD1, 0x94 }, 2},
-#line 1520 "src/_html_entities.gperf"
+#line 1520 "data/html_entities.gperf"
       {"boxvh", { 0xE2, 0x94, 0xBC }, 3},
-#line 181 "src/_html_entities.gperf"
+#line 181 "data/html_entities.gperf"
       {"ldrushar", { 0xE2, 0xA5, 0x8B }, 3},
-#line 1388 "src/_html_entities.gperf"
+#line 1388 "data/html_entities.gperf"
       {"RightUpVector", { 0xE2, 0x86, 0xBE }, 3},
-#line 1752 "src/_html_entities.gperf"
+#line 1752 "data/html_entities.gperf"
       {"RightUpVectorBar", { 0xE2, 0xA5, 0x94 }, 3},
-#line 1927 "src/_html_entities.gperf"
+#line 1927 "data/html_entities.gperf"
       {"angmsdah", { 0xE2, 0xA6, 0xAF }, 3},
-#line 1628 "src/_html_entities.gperf"
+#line 1628 "data/html_entities.gperf"
       {"udblac", { 0xC5, 0xB1 }, 2},
-#line 1277 "src/_html_entities.gperf"
+#line 1277 "data/html_entities.gperf"
       {"RightArrowBar", { 0xE2, 0x87, 0xA5 }, 3},
-#line 52 "src/_html_entities.gperf"
+#line 52 "data/html_entities.gperf"
       {"HARDcy", { 0xD0, 0xAA }, 2},
-#line 773 "src/_html_entities.gperf"
+#line 773 "data/html_entities.gperf"
       {"hstrok", { 0xC4, 0xA7 }, 2},
-#line 1258 "src/_html_entities.gperf"
+#line 1258 "data/html_entities.gperf"
       {"RightDownVector", { 0xE2, 0x87, 0x82 }, 3},
-#line 1069 "src/_html_entities.gperf"
+#line 1069 "data/html_entities.gperf"
       {"RightDownVectorBar", { 0xE2, 0xA5, 0x95 }, 3},
-#line 539 "src/_html_entities.gperf"
+#line 539 "data/html_entities.gperf"
       {"lurdshar", { 0xE2, 0xA5, 0x8A }, 3},
-#line 844 "src/_html_entities.gperf"
+#line 844 "data/html_entities.gperf"
       {"angmsdac", { 0xE2, 0xA6, 0xAA }, 3},
-#line 296 "src/_html_entities.gperf"
+#line 296 "data/html_entities.gperf"
       {"ruluhar", { 0xE2, 0xA5, 0xA8 }, 3},
-#line 426 "src/_html_entities.gperf"
+#line 426 "data/html_entities.gperf"
       {"softcy", { 0xD1, 0x8C }, 2},
-#line 1832 "src/_html_entities.gperf"
+#line 1832 "data/html_entities.gperf"
       {"jsercy", { 0xD1, 0x98 }, 2},
-#line 1679 "src/_html_entities.gperf"
+#line 1679 "data/html_entities.gperf"
       {"succapprox", { 0xE2, 0xAA, 0xB8 }, 3},
-#line 979 "src/_html_entities.gperf"
+#line 979 "data/html_entities.gperf"
       {"Udblac", { 0xC5, 0xB0 }, 2},
-#line 698 "src/_html_entities.gperf"
+#line 698 "data/html_entities.gperf"
       {"curlyeqprec", { 0xE2, 0x8B, 0x9E }, 3},
-#line 1793 "src/_html_entities.gperf"
+#line 1793 "data/html_entities.gperf"
       {"cylcty", { 0xE2, 0x8C, 0xAD }, 3},
-#line 331 "src/_html_entities.gperf"
+#line 331 "data/html_entities.gperf"
       {"VerticalBar", { 0xE2, 0x88, 0xA3 }, 3},
-#line 1330 "src/_html_entities.gperf"
+#line 1330 "data/html_entities.gperf"
       {"VerticalSeparator", { 0xE2, 0x9D, 0x98 }, 3},
-#line 1951 "src/_html_entities.gperf"
+#line 1951 "data/html_entities.gperf"
       {"multimap", { 0xE2, 0x8A, 0xB8 }, 3},
-#line 577 "src/_html_entities.gperf"
+#line 577 "data/html_entities.gperf"
       {"angmsdaa", { 0xE2, 0xA6, 0xA8 }, 3},
-#line 1437 "src/_html_entities.gperf"
+#line 1437 "data/html_entities.gperf"
       {"rightarrow", { 0xE2, 0x86, 0x92 }, 3},
-#line 1276 "src/_html_entities.gperf"
+#line 1276 "data/html_entities.gperf"
       {"Rightarrow", { 0xE2, 0x87, 0x92 }, 3},
-#line 575 "src/_html_entities.gperf"
+#line 575 "data/html_entities.gperf"
       {"twoheadleftarrow", { 0xE2, 0x86, 0x9E }, 3},
-#line 270 "src/_html_entities.gperf"
+#line 270 "data/html_entities.gperf"
       {"Odblac", { 0xC5, 0x90 }, 2},
-#line 1185 "src/_html_entities.gperf"
+#line 1185 "data/html_entities.gperf"
       {"RightCeiling", { 0xE2, 0x8C, 0x89 }, 3},
-#line 179 "src/_html_entities.gperf"
+#line 179 "data/html_entities.gperf"
       {"NoBreak", { 0xE2, 0x81, 0xA0 }, 3},
-#line 602 "src/_html_entities.gperf"
+#line 602 "data/html_entities.gperf"
       {"straightphi", { 0xCF, 0x95 }, 2},
-#line 1216 "src/_html_entities.gperf"
+#line 1216 "data/html_entities.gperf"
       {"odblac", { 0xC5, 0x91 }, 2},
-#line 423 "src/_html_entities.gperf"
+#line 423 "data/html_entities.gperf"
       {"cupbrcap", { 0xE2, 0xA9, 0x88 }, 3},
-#line 512 "src/_html_entities.gperf"
+#line 512 "data/html_entities.gperf"
       {"cuwed", { 0xE2, 0x8B, 0x8F }, 3},
-#line 596 "src/_html_entities.gperf"
+#line 596 "data/html_entities.gperf"
       {"hardcy", { 0xD1, 0x8A }, 2},
-#line 1593 "src/_html_entities.gperf"
+#line 1593 "data/html_entities.gperf"
       {"yucy", { 0xD1, 0x8E }, 2},
-#line 1937 "src/_html_entities.gperf"
+#line 1937 "data/html_entities.gperf"
       {"shchcy", { 0xD1, 0x89 }, 2},
-#line 996 "src/_html_entities.gperf"
+#line 996 "data/html_entities.gperf"
       {"succnapprox", { 0xE2, 0xAA, 0xBA }, 3},
-#line 1874 "src/_html_entities.gperf"
+#line 1874 "data/html_entities.gperf"
       {"rightharpoondown", { 0xE2, 0x87, 0x81 }, 3},
-#line 201 "src/_html_entities.gperf"
+#line 201 "data/html_entities.gperf"
       {"rightharpoonup", { 0xE2, 0x87, 0x80 }, 3},
-#line 847 "src/_html_entities.gperf"
+#line 847 "data/html_entities.gperf"
       {"rightarrowtail", { 0xE2, 0x86, 0xA3 }, 3},
-#line 1224 "src/_html_entities.gperf"
+#line 1224 "data/html_entities.gperf"
       {"curlyeqsucc", { 0xE2, 0x8B, 0x9F }, 3},
-#line 1938 "src/_html_entities.gperf"
+#line 1938 "data/html_entities.gperf"
       {"SuchThat", { 0xE2, 0x88, 0x8B }, 3},
-#line 116 "src/_html_entities.gperf"
+#line 116 "data/html_entities.gperf"
       {"curvearrowleft", { 0xE2, 0x86, 0xB6 }, 3},
-#line 1443 "src/_html_entities.gperf"
+#line 1443 "data/html_entities.gperf"
       {"curvearrowright", { 0xE2, 0x86, 0xB7 }, 3}
     };
 
