@@ -34,16 +34,16 @@ hoedown: bin/hoedown.o $(HOEDOWN_SRC)
 
 # Perfect hashing
 
-src/_html_entities.gperf: entities.json
+data/html_entities.gperf: data/entities.json
 	python tools/generate_entity_lookup.py < $^ > $@
 
-src/_html_entities.h: src/_html_entities.gperf
+src/_html_entities.h: data/html_entities.gperf
 	gperf -S1 -m100 -l -C -N find_entity -t $^ > $@
 
-src/_element_type.h: src/_element_type.gperf
+src/_element_type.h: data/element_type.gperf
 	gperf -S1 -m100 -l -C -7 -E -N match_element_type -t $^ > $@
 
-src/callbacks/_strict_post_tags.h: src/callbacks/_strict_post_tags.gperf
+src/callbacks/_strict_post_tags.h: data/strict_post_tags.gperf
 	gperf -S1 -m100 -l -C -7 -E -N find_tag -t $^ > $@
 
 # Testing
