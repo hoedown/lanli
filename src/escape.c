@@ -186,7 +186,7 @@ void hoedown_escape_html(hoedown_buffer *ob, const uint8_t *data, size_t size, i
       break;
 
     /* The forward slash is only escaped in secure mode */
-    if (data[i] == '/' && !secure) {
+    if (!secure && data[i] == '/') {
       hoedown_buffer_putc(ob, '/');
     } else {
       hoedown_buffer_puts(ob, HTML_ESCAPES[esc]);

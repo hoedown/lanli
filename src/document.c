@@ -232,7 +232,7 @@ static inline int is_attr_name_char(uint8_t ch) {
 // unquoted attribute values, according to the HTML5 spec.
 static inline int is_attr_sensitive(uint8_t ch) {
   return ch == '<' || ch == '>' || ch == '='
-      || ch == '\''|| ch == '"' || ch == '`';
+      || ch == '"' || ch == '`' || ch == '\'';
 }
 
 // Parse an attribute value if there's one, according to the HTML5 spec.
