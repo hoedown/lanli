@@ -98,11 +98,25 @@ void hoedown_buffer_sets(hoedown_buffer *buf, const char *str) {
   hoedown_buffer_set(buf, (const uint8_t *)str, strlen(str));
 }
 
+int hoedown_buffer_eq(const hoedown_buffer *buf, const uint8_t *data, size_t size) {
+  if (buf->size != size) return 0;
+
+  for (size_t i = 0; i < size; i++) {
+    if (buf->data[i] != data[i])
+      return 0;
+  }
+
+  return 1;
+}
+
+int hoedown_buffer_eqs(const hoedown_buffer *buf, const char *str) {
+  return hoedown_buffer_eq(buf, (const uint8_t *)str, strlen(str));
+}
+
 int hoedown_buffer_prefix(const hoedown_buffer *buf, const char *prefix) {
-  size_t i;
   assert(buf && buf->unit);
 
-  for (i = 0; i < buf->size; ++i) {
+  for (size_t i = 0; i < buf->size; ++i) {
     if (prefix[i] == 0)
       return 0;
 

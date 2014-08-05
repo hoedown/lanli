@@ -103,6 +103,12 @@ void hoedown_buffer_set(hoedown_buffer *buf, const uint8_t *data, size_t size);
 /* hoedown_buffer_puts: replace the buffer's contents with a NUL-terminated string */
 void hoedown_buffer_sets(hoedown_buffer *buf, const char *str);
 
+/* hoedown_buffer_eq: compare a buffer's data with other data for equality */
+int hoedown_buffer_eq(const hoedown_buffer *buf, const uint8_t *data, size_t size);
+
+/* hoedown_buffer_eq: compare a buffer's data with NUL-terminated string for equality */
+int hoedown_buffer_eqs(const hoedown_buffer *buf, const char *str);
+
 /* hoedown_buffer_prefix: compare the beginning of a buffer with a string */
 int hoedown_buffer_prefix(const hoedown_buffer *buf, const char *prefix);
 
@@ -126,6 +132,10 @@ void hoedown_buffer_free(hoedown_buffer *buf);
 /* HOEDOWN_BUFSETSL: optimized hoedown_buffer_sets of a string literal */
 #define HOEDOWN_BUFSETSL(output, literal) \
   hoedown_buffer_set(output, (const uint8_t *)literal, sizeof(literal) - 1)
+
+/* HOEDOWN_BUFEQSL: optimized hoedown_buffer_eqs of a string literal */
+#define HOEDOWN_BUFEQSL(output, literal) \
+  hoedown_buffer_eq(output, (const uint8_t *)literal, sizeof(literal) - 1)
 
 
 #ifdef __cplusplus
