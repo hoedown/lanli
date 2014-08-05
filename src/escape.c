@@ -67,12 +67,10 @@ void hoedown_escape_html(hoedown_buffer *ob, const uint8_t *data, size_t size, i
       return;
     }
 
-    if (i > mark)
+    if (likely(i > mark))
       hoedown_buffer_put(ob, data + mark, i - mark);
 
-    /* escaping */
-    if (i >= size)
-      break;
+    if (i >= size) break;
 
     /* The forward slash is only escaped in secure mode */
     if (!secure && data[i] == '/') {
@@ -169,17 +167,20 @@ static size_t unescape_entity(hoedown_buffer *ob, const uint8_t *data, size_t si
 void hoedown_unescape_html(hoedown_buffer *ob, const uint8_t *data, size_t size) {
   size_t i = 0, mark;
 
-  while (i < size) {
+  while (1) {
     mark = i;
-    while (i < size && data[i] != '&')
-      i++;
+    while (i < size && data[i] != '&') i++;
+
+    /* Optimization for cases where there's nothing to escape */
+    if (mark == 0 && i >= size) {
+      hoedown_buffer_put(ob, data, size);
+      return;
+    }
 
     if (likely(i > mark))
       hoedown_buffer_put(ob, data + mark, i - mark);
 
-    /* escaping */
-    if (i >= size)
-      break;
+    if (i >= size) break;
 
     i++;
     i += unescape_entity(ob, data + i, size - i);
