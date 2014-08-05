@@ -20,9 +20,6 @@ void hoedown_escape_html(hoedown_buffer *ob, const uint8_t *data, size_t size, i
 /* hoedown_unescape_html: unescape HTML */
 void hoedown_unescape_html(hoedown_buffer *ob, const uint8_t *data, size_t size);
 
-/* hoedown_escape_href: escape (part of) a URL */
-void hoedown_escape_href(hoedown_buffer *ob, const uint8_t *data, size_t size);
-
 
 #ifdef __cplusplus
 }
