@@ -416,13 +416,11 @@ int validate_start_tag(hoedown_tag *tag) {
   for (size_t a = 0; a < tag->attributes_count; a++) {
     hoedown_buffer *attrname = tag->attributes[a].name;
     to_lower_ascii(attrname->data, attrname->size);
-    const char *attrname_n = hoedown_buffer_cstr(attrname);
 
     // Make sure there's no duplicate with previous names
     for (size_t b = 0; b < a; b++) {
-      // safe, since we've already called cstr on this buffer
-      const char *attrname_s = (char *)tag->attributes[b].name->data;
-      if (strcmp(attrname_n, attrname_s) == 0) return 0;
+      if (hoedown_buffer_eq(tag->attributes[b].name, attrname->data, attrname->size))
+        return 0;
     }
   }
 
@@ -492,8 +490,8 @@ size_t search_and_close_raw(
   size_t i = 0, mark;
 
   // Find the end
-  const char *name = hoedown_buffer_cstr(tag->name);
-  hoedown_tag *otag = doc->stack->tags[doc->stack->size];
+  hoedown_buffer *name = tag->name;
+  hoedown_tag *otag = &doc->stack->tags[doc->stack->size];
   while (1) {
     while (i < size && data[i] != '<') i++;
     mark = i;
@@ -501,8 +499,7 @@ size_t search_and_close_raw(
 
     i += parse_end_tag(otag, data + i, size - i);
     if (i > mark) {
-      const char *oname = hoedown_buffer_cstr(otag->name);
-      if (strcmp(name, oname) == 0) break;
+      if (hoedown_buffer_eq(otag->name, name->data, name->size)) break;
     } else i++;
   }
 
@@ -524,13 +521,16 @@ size_t search_and_close_raw(
 }
 
 static inline size_t match_closing(hoedown_tag_stack *stack, const hoedown_tag *tag, size_t level) {
-  to_lower_ascii(tag->name->data, tag->name->size);
-  const char *name = hoedown_buffer_cstr(tag->name);
-  for (size_t n = stack->size; n; n--) {
-    hoedown_tag *otag = stack->orig[n-1];
-    if (otag->level < level) break;
-    const char *oname = hoedown_buffer_cstr(otag->name);
-    if (strcmp(name, oname) == 0) return stack->size - (n-1);
+  // Lowercase name of end tag
+  hoedown_buffer *name = tag->name;
+  to_lower_ascii(name->data, name->size);
+
+  // Iterate over stack tags
+  hoedown_tag *orig = stack->orig + stack->size;
+  for (size_t i = 0; i < stack->size; i++) {
+    --orig;
+    if (orig->level < level) break;
+    if (hoedown_buffer_eq(orig->name, name->data, name->size)) return i+1;
   }
   return 0;
 }

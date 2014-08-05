@@ -38,17 +38,17 @@ int is_safe_link(const uint8_t *data, size_t size) {
 
 hoedown_tag_attribute *find_attribute(const hoedown_tag *tag, const attribute_entry *attr) {
   for (size_t a = 0; a < tag->attributes_count; a++) {
-    const char *name = hoedown_buffer_cstr(tag->attributes[a].name);
-    if (strcmp(name, attr->name)==0) return tag->attributes + a;
+    if (hoedown_buffer_eqs(tag->attributes[a].name, attr->name))
+      return &tag->attributes[a];
   }
   return NULL;
 }
 
 int validate_attribute(hoedown_tag *tag, hoedown_tag_attribute *attr) {
-  const char *name = hoedown_buffer_cstr(attr->name);
+  const hoedown_buffer *name = attr->name;
 
   // Attribute is a URL, validate it
-  if (strcmp(name, "src")==0 || strcmp(name, "href")==0) {
+  if (HOEDOWN_BUFEQSL(name, "href") || HOEDOWN_BUFEQSL(name, "src")) {
     if (!is_safe_link(attr->value->data, attr->value->size)) return 0;
   }
 
