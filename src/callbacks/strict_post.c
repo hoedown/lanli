@@ -70,7 +70,7 @@ hoedown_action hoedown_callback_strict_post(
   // This tag must be of type accepted by the parent
   semantic_type accepted_types;
   if (stack->size) {
-    const hoedown_tag *parent_tag = stack->tags[stack->size-1];
+    const hoedown_tag *parent_tag = &stack->tags[stack->size-1];
     const tag_entry *parent = (const tag_entry *) parent_tag->opaque;
     accepted_types = parent->accepted_types;
   } else {
@@ -81,7 +81,7 @@ hoedown_action hoedown_callback_strict_post(
   // Validate attributes
   size_t present_attributes = 0;
   for (size_t a = 0; a < current->attributes_count; a++) {
-    const attribute_entry *attr = current->attributes + a;
+    const attribute_entry *attr = &current->attributes[a];
     // Try to find the attribute in the tag
     hoedown_tag_attribute *orig_attr = find_attribute(tag, attr);
     if (!orig_attr) {

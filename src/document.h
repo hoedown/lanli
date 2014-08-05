@@ -67,8 +67,8 @@ struct hoedown_tag {
 typedef struct hoedown_tag hoedown_tag;
 
 struct hoedown_tag_stack {
-  hoedown_tag **tags;
-  hoedown_tag **orig;
+  hoedown_tag *tags;
+  hoedown_tag *orig;
   size_t size;
   size_t asize;
   size_t max_attributes;

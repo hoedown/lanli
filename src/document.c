@@ -20,10 +20,7 @@
 // TAG
 // Methods to create and destroy tag objects
 
-hoedown_tag *new_tag(size_t max_attributes) __attribute__ ((malloc));
-hoedown_tag *new_tag(size_t max_attributes) {
-  hoedown_tag *tag = hoedown_malloc(sizeof(hoedown_tag));
-
+void init_tag(hoedown_tag *tag, size_t max_attributes) {
   tag->attributes = hoedown_calloc(max_attributes, sizeof(hoedown_tag_attribute));
   for (size_t a = 0; a < max_attributes; a++) {
     tag->attributes[a].name = hoedown_buffer_new(ATTR_NAME_UNIT);
@@ -31,18 +28,15 @@ hoedown_tag *new_tag(size_t max_attributes) {
   }
 
   tag->name = hoedown_buffer_new(TAG_NAME_UNIT);
-
-  return tag;
 }
 
-void free_tag(hoedown_tag *tag, size_t max_attributes) {
+void uninit_tag(hoedown_tag *tag, size_t max_attributes) {
   hoedown_buffer_free(tag->name);
   for (size_t a = 0; a < max_attributes; a++) {
     hoedown_buffer_free(tag->attributes[a].name);
     hoedown_buffer_free(tag->attributes[a].value);
   }
   free(tag->attributes);
-  free(tag);
 }
 
 void reset_tag(hoedown_tag *tag, size_t max_attributes) {
@@ -81,12 +75,12 @@ hoedown_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) {
   stack->max_attributes = max_attributes;
   stack->asize = max_nesting;
 
-  stack->tags = hoedown_calloc(max_nesting, sizeof(hoedown_tag *));
-  stack->orig = hoedown_calloc(max_nesting, sizeof(hoedown_tag *));
+  stack->tags = hoedown_calloc(max_nesting, sizeof(hoedown_tag));
+  stack->orig = hoedown_calloc(max_nesting, sizeof(hoedown_tag));
 
   for (size_t i = 0; i < max_nesting; i++) {
-    stack->tags[i] = new_tag(max_attributes);
-    stack->orig[i] = new_tag(max_attributes);
+    init_tag(&stack->tags[i], max_attributes);
+    init_tag(&stack->orig[i], max_attributes);
   }
 
   return stack;
@@ -94,8 +88,8 @@ hoedown_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) {
 
 void free_tag_stack(hoedown_tag_stack *stack) {
   for (size_t i = 0; i < stack->asize; i++) {
-    free_tag(stack->tags[i], stack->max_attributes);
-    free_tag(stack->orig[i], stack->max_attributes);
+    uninit_tag(&stack->tags[i], stack->max_attributes);
+    uninit_tag(&stack->orig[i], stack->max_attributes);
   }
 
   free(stack->tags);
@@ -106,8 +100,8 @@ void free_tag_stack(hoedown_tag_stack *stack) {
 
 void reset_tag_stack(hoedown_tag_stack *stack) {
   for (size_t i = 0; i < stack->asize; i++) {
-    reset_tag(stack->tags[i], stack->max_attributes);
-    reset_tag(stack->orig[i], stack->max_attributes);
+    reset_tag(&stack->tags[i], stack->max_attributes);
+    reset_tag(&stack->orig[i], stack->max_attributes);
   }
 }
 
@@ -478,7 +472,7 @@ void output_start_tag(hoedown_document *doc, hoedown_buffer *levelbuf, const hoe
 
 static inline void close_tag(hoedown_document *doc) {
   hoedown_tag_stack *stack = doc->stack;
-  hoedown_tag *tag = stack->tags[--stack->size];
+  hoedown_tag *tag = &stack->tags[--stack->size];
 
   HOEDOWN_BUFPUTSL(doc->ob, "</");
   hoedown_buffer_put(doc->ob, tag->name->data, tag->name->size);
@@ -564,7 +558,7 @@ void process(hoedown_document *doc, const uint8_t *data, size_t size, size_t lev
 
     if (i >= size) break;
     mark = i;
-    hoedown_tag *tag = stack->tags[stack->size];
+    hoedown_tag *tag = &stack->tags[stack->size];
 
     // Try to parse start tag
     if (stack->size+1 < stack->asize) {
@@ -577,7 +571,7 @@ void process(hoedown_document *doc, const uint8_t *data, size_t size, size_t lev
           continue;
         }
         // Make a copy and call callback
-        copy_tag(stack->orig[stack->size], tag);
+        copy_tag(&stack->orig[stack->size], tag);
         hoedown_action action = doc->callback(tag, stack, doc->opaque);
         // Take pertinent actions
         switch (action) {
@@ -635,7 +629,7 @@ void process(hoedown_document *doc, const uint8_t *data, size_t size, size_t lev
 
   // If strict levels are enabled, close open tags before exit
   if (doc->flags & HOEDOWN_FLAG_LEVELS_STRICT) {
-    while (stack->size && stack->tags[stack->size-1]->level >= level)
+    while (stack->size && stack->tags[stack->size-1].level >= level)
       close_tag(doc);
   }
 }
