@@ -57,20 +57,18 @@ static const char *HTML_ESCAPES[] = {
 void hoedown_escape_html(hoedown_buffer *ob, const uint8_t *data, size_t size, int secure) {
   size_t i = 0, mark;
 
-  size_t esc = 0;
   while (1) {
     mark = i;
-    while (i < size && (esc = HTML_ESCAPE_TABLE[data[i]]) == 0)
-      i++;
+    while (i < size && HTML_ESCAPE_TABLE[data[i]] == 0) i++;
 
-    if (i > mark) {
-      if (mark == 0 && i >= size) {
-        hoedown_buffer_put(ob, data, size);
-        return;
-      }
-
-      hoedown_buffer_put(ob, data + mark, i - mark);
+    /* Optimization for cases where there's nothing to escape */
+    if (mark == 0 && i >= size) {
+      hoedown_buffer_put(ob, data, size);
+      return;
     }
+
+    if (i > mark)
+      hoedown_buffer_put(ob, data + mark, i - mark);
 
     /* escaping */
     if (i >= size)
@@ -80,7 +78,7 @@ void hoedown_escape_html(hoedown_buffer *ob, const uint8_t *data, size_t size, i
     if (!secure && data[i] == '/') {
       hoedown_buffer_putc(ob, '/');
     } else {
-      hoedown_buffer_puts(ob, HTML_ESCAPES[esc]);
+      hoedown_buffer_puts(ob, HTML_ESCAPES[HTML_ESCAPE_TABLE[data[i]]]);
     }
 
     i++;
