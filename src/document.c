@@ -16,6 +16,11 @@
 #define ATTR_NAME_UNIT TOKEN_UNIT
 #define ATTR_VALUE_UNIT TOKEN_UNIT
 
+#define RESTRICT_VALUE(VAR, NAME) \
+  ((int)VAR < HOEDOWN_##NAME##__MIN ? HOEDOWN_##NAME##__MIN : \
+  ((int)VAR > HOEDOWN_##NAME##__MAX ? HOEDOWN_##NAME##__MAX : \
+VAR))
+
 
 // TAG
 // Methods to create and destroy tag objects
@@ -137,7 +142,7 @@ hoedown_document *hoedown_document_new(
   doc->callback = callback;
   doc->opaque = opaque;
   doc->flags = flags;
-  doc->levels = levels;
+  doc->levels = RESTRICT_VALUE(levels, LEVELS);
 
   doc->escape_secure = flags & HOEDOWN_FLAG_ESCAPE_SECURE;
 
@@ -146,6 +151,8 @@ hoedown_document *hoedown_document_new(
   for (size_t i = 0; i < length; i++)
     doc->levelbuf[i] = hoedown_buffer_new(LEVELBUF_UNIT);
 
+  max_nesting = RESTRICT_VALUE(max_nesting, MAX_NESTING);
+  max_attributes = RESTRICT_VALUE(max_attributes, MAX_ATTRIBUTES);
   doc->stack = new_tag_stack(max_nesting, max_attributes);
 
   return doc;

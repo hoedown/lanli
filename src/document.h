@@ -107,6 +107,14 @@ void hoedown_document_render(
 void hoedown_document_free(hoedown_document *doc);
 
 
+#define HOEDOWN_MAX_NESTING__MAX 64
+#define HOEDOWN_MAX_NESTING__MIN  1
+#define HOEDOWN_MAX_ATTRIBUTES__MAX 64
+#define HOEDOWN_MAX_ATTRIBUTES__MIN 0
+#define HOEDOWN_LEVELS__MAX 10
+#define HOEDOWN_LEVELS__MIN 0
+
+
 #ifdef __cplusplus
 }
 #endif
