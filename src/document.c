@@ -536,8 +536,8 @@ static inline size_t match_closing(hoedown_tag_stack *stack, const hoedown_tag *
   hoedown_tag *orig = stack->orig + stack->size;
   for (size_t i = 0; i < stack->size; i++) {
     --orig;
-    if (orig->level < level) break;
-    if (hoedown_buffer_eq(orig->name, name->data, name->size)) return i+1;
+    if (orig->level == level && hoedown_buffer_eq(orig->name, name->data, name->size))
+      return i+1;
   }
   return 0;
 }
@@ -577,6 +577,7 @@ void process(hoedown_document *doc, const uint8_t *data, size_t size, size_t lev
             hoedown_escape_html(doc->ob, data + mark, i - mark, doc->escape_secure);
           continue;
         }
+        tag->level = level;
         // Make a copy and call callback
         copy_tag(&stack->orig[stack->size], tag);
         hoedown_action action = doc->callback(tag, stack, doc->opaque);
