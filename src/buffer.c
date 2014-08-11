@@ -101,12 +101,10 @@ void hoedown_buffer_sets(hoedown_buffer *buf, const char *str) {
 int hoedown_buffer_eq(const hoedown_buffer *buf, const uint8_t *data, size_t size) {
   if (buf->size != size) return 0;
 
-  for (size_t i = 0; i < size; i++) {
-    if (buf->data[i] != data[i])
-      return 0;
-  }
+  size_t i = 0;
+  while (i < size && buf->data[i] == data[i]) i++;
 
-  return 1;
+  return i == size;
 }
 
 int hoedown_buffer_eqs(const hoedown_buffer *buf, const char *str) {
@@ -142,10 +140,12 @@ void hoedown_buffer_slurp(hoedown_buffer *buf, size_t size) {
 const char *hoedown_buffer_cstr(hoedown_buffer *buf) {
   assert(buf && buf->unit);
 
-  if (buf->size >= buf->asize)
-    hoedown_buffer_grow(buf, buf->size + 1);
+  if (buf->size < buf->asize && buf->data[buf->size] == 0)
+    return (char *)buf->data;
 
+  hoedown_buffer_grow(buf, buf->size + 1);
   buf->data[buf->size] = 0;
+
   return (char *)buf->data;
 }
 
