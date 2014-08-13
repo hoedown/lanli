@@ -1,30 +1,30 @@
 struct element_entry {
   const char *name;
-  hoedown_element_type type;
+  lanli_element_type type;
 };
 typedef struct element_entry element_entry;
 
 %%
-area, HOEDOWN_EL_VOID
-base, HOEDOWN_EL_VOID
-br, HOEDOWN_EL_VOID
-col, HOEDOWN_EL_VOID
-embed, HOEDOWN_EL_VOID
-hr, HOEDOWN_EL_VOID
-img, HOEDOWN_EL_VOID
-input, HOEDOWN_EL_VOID
-keygen, HOEDOWN_EL_VOID
-link, HOEDOWN_EL_VOID
-meta, HOEDOWN_EL_VOID
-param, HOEDOWN_EL_VOID
-source, HOEDOWN_EL_VOID
-track, HOEDOWN_EL_VOID
-wbr, HOEDOWN_EL_VOID
+area, LANLI_EL_VOID
+base, LANLI_EL_VOID
+br, LANLI_EL_VOID
+col, LANLI_EL_VOID
+embed, LANLI_EL_VOID
+hr, LANLI_EL_VOID
+img, LANLI_EL_VOID
+input, LANLI_EL_VOID
+keygen, LANLI_EL_VOID
+link, LANLI_EL_VOID
+meta, LANLI_EL_VOID
+param, LANLI_EL_VOID
+source, LANLI_EL_VOID
+track, LANLI_EL_VOID
+wbr, LANLI_EL_VOID
 #
-script, HOEDOWN_EL_RAW
-style, HOEDOWN_EL_RAW
+script, LANLI_EL_RAW
+style, LANLI_EL_RAW
 #
-textarea, HOEDOWN_EL_RAW_ESCAPABLE
-title, HOEDOWN_EL_RAW_ESCAPABLE
+textarea, LANLI_EL_RAW_ESCAPABLE
+title, LANLI_EL_RAW_ESCAPABLE
 #
-# all other elements: HOEDOWN_EL_NORMAL
+# all other elements: LANLI_EL_NORMAL

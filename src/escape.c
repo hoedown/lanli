@@ -54,7 +54,7 @@ static const char *HTML_ESCAPES[] = {
         "&gt;"
 };
 
-void hoedown_escape_html(hoedown_buffer *ob, const uint8_t *data, size_t size, int secure) {
+void lanli_escape_html(lanli_buffer *ob, const uint8_t *data, size_t size, int secure) {
   size_t i = 0, mark;
 
   while (1) {
@@ -63,20 +63,20 @@ void hoedown_escape_html(hoedown_buffer *ob, const uint8_t *data, size_t size, i
 
     /* Optimization for cases where there's nothing to escape */
     if (mark == 0 && i >= size) {
-      hoedown_buffer_put(ob, data, size);
+      lanli_buffer_put(ob, data, size);
       return;
     }
 
     if (likely(i > mark))
-      hoedown_buffer_put(ob, data + mark, i - mark);
+      lanli_buffer_put(ob, data + mark, i - mark);
 
     if (i >= size) break;
 
     /* The forward slash is only escaped in secure mode */
     if (!secure && data[i] == '/') {
-      hoedown_buffer_putc(ob, '/');
+      lanli_buffer_putc(ob, '/');
     } else {
-      hoedown_buffer_puts(ob, HTML_ESCAPES[HTML_ESCAPE_TABLE[data[i]]]);
+      lanli_buffer_puts(ob, HTML_ESCAPES[HTML_ESCAPE_TABLE[data[i]]]);
     }
 
     i++;
@@ -85,39 +85,39 @@ void hoedown_escape_html(hoedown_buffer *ob, const uint8_t *data, size_t size, i
 
 
 
-static inline void put_utf8(hoedown_buffer *ob, int c) {
+static inline void put_utf8(lanli_buffer *ob, int c) {
   unsigned char unichar[4];
 
   if (c < 0x80) {
-    hoedown_buffer_putc(ob, c);
+    lanli_buffer_putc(ob, c);
   }
   else if (c < 0x800) {
     unichar[0] = 192 + (c / 64);
     unichar[1] = 128 + (c % 64);
-    hoedown_buffer_put(ob, unichar, 2);
+    lanli_buffer_put(ob, unichar, 2);
   }
   else if (c - 0xd800u < 0x800) {
-    hoedown_buffer_putc(ob, '?');
+    lanli_buffer_putc(ob, '?');
   }
   else if (c < 0x10000) {
     unichar[0] = 224 + (c / 4096);
     unichar[1] = 128 + (c / 64) % 64;
     unichar[2] = 128 + (c % 64);
-    hoedown_buffer_put(ob, unichar, 3);
+    lanli_buffer_put(ob, unichar, 3);
   }
   else if (c < 0x110000) {
     unichar[0] = 240 + (c / 262144);
     unichar[1] = 128 + (c / 4096) % 64;
     unichar[2] = 128 + (c / 64) % 64;
     unichar[3] = 128 + (c % 64);
-    hoedown_buffer_put(ob, unichar, 4);
+    lanli_buffer_put(ob, unichar, 4);
   }
   else {
-    hoedown_buffer_putc(ob, '?');
+    lanli_buffer_putc(ob, '?');
   }
 }
 
-static size_t unescape_entity(hoedown_buffer *ob, const uint8_t *data, size_t size) {
+static size_t unescape_entity(lanli_buffer *ob, const uint8_t *data, size_t size) {
   size_t i = 0;
 
   if (size > 3 && data[0] == '#') {
@@ -151,7 +151,7 @@ static size_t unescape_entity(hoedown_buffer *ob, const uint8_t *data, size_t si
         const struct html_entity *entity = find_entity((const char *)data, i);
 
         if (entity != NULL) {
-          hoedown_buffer_put(ob, entity->utf8, entity->size);
+          lanli_buffer_put(ob, entity->utf8, entity->size);
           return i + 1;
         }
 
@@ -160,11 +160,11 @@ static size_t unescape_entity(hoedown_buffer *ob, const uint8_t *data, size_t si
     }
   }
 
-  hoedown_buffer_putc(ob, '&');
+  lanli_buffer_putc(ob, '&');
   return 0;
 }
 
-void hoedown_unescape_html(hoedown_buffer *ob, const uint8_t *data, size_t size) {
+void lanli_unescape_html(lanli_buffer *ob, const uint8_t *data, size_t size) {
   size_t i = 0, mark;
 
   while (1) {
@@ -173,12 +173,12 @@ void hoedown_unescape_html(hoedown_buffer *ob, const uint8_t *data, size_t size)
 
     /* Optimization for cases where there's nothing to escape */
     if (mark == 0 && i >= size) {
-      hoedown_buffer_put(ob, data, size);
+      lanli_buffer_put(ob, data, size);
       return;
     }
 
     if (likely(i > mark))
-      hoedown_buffer_put(ob, data + mark, i - mark);
+      lanli_buffer_put(ob, data + mark, i - mark);
 
     if (i >= size) break;
 

@@ -2,6 +2,4 @@ language: c
 compiler:
   - clang
   - gcc
-before_install:
- - sudo apt-get install -qq tidy
-script: make test
+script: cmake . && make test

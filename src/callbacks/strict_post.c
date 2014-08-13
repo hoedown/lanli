@@ -36,30 +36,30 @@ int is_safe_link(const uint8_t *data, size_t size) {
 
 // ACTUAL CALLBACK CODE
 
-hoedown_tag_attribute *find_attribute(const hoedown_tag *tag, const attribute_entry *attr) {
+lanli_tag_attribute *find_attribute(const lanli_tag *tag, const attribute_entry *attr) {
   for (size_t a = 0; a < tag->attributes_count; a++) {
-    if (hoedown_buffer_eqs(tag->attributes[a].name, attr->name))
+    if (lanli_buffer_eqs(tag->attributes[a].name, attr->name))
       return &tag->attributes[a];
   }
   return NULL;
 }
 
-int validate_attribute(hoedown_tag *tag, hoedown_tag_attribute *attr) {
-  const hoedown_buffer *name = attr->name;
+int validate_attribute(lanli_tag *tag, lanli_tag_attribute *attr) {
+  const lanli_buffer *name = attr->name;
 
   // Attribute is a URL, validate it
-  if (HOEDOWN_BUFEQSL(name, "href") || HOEDOWN_BUFEQSL(name, "src")) {
+  if (LANLI_BUFEQSL(name, "href") || LANLI_BUFEQSL(name, "src")) {
     if (!is_safe_link(attr->value->data, attr->value->size)) return 0;
   }
 
   return 1;
 }
 
-#define ENFORCE(CONDITION) if (!(CONDITION)) return HOEDOWN_ACTION_ESCAPE
+#define ENFORCE(CONDITION) if (!(CONDITION)) return LANLI_ACTION_ESCAPE
 
-hoedown_action hoedown_callback_strict_post(
-  hoedown_tag *tag,
-  const hoedown_tag_stack *stack,
+lanli_action lanli_callback_strict_post(
+  lanli_tag *tag,
+  const lanli_tag_stack *stack,
   void *opaque
 ) {
   // Try to match the current tag against our list
@@ -70,7 +70,7 @@ hoedown_action hoedown_callback_strict_post(
   // This tag must be of type accepted by the parent
   semantic_type accepted_types;
   if (stack->size) {
-    const hoedown_tag *parent_tag = &stack->tags[stack->size-1];
+    const lanli_tag *parent_tag = &stack->tags[stack->size-1];
     const tag_entry *parent = (const tag_entry *) parent_tag->opaque;
     accepted_types = parent->accepted_types;
   } else {
@@ -83,7 +83,7 @@ hoedown_action hoedown_callback_strict_post(
   for (size_t a = 0; a < current->attributes_count; a++) {
     const attribute_entry *attr = &current->attributes[a];
     // Try to find the attribute in the tag
-    hoedown_tag_attribute *orig_attr = find_attribute(tag, attr);
+    lanli_tag_attribute *orig_attr = find_attribute(tag, attr);
     if (!orig_attr) {
       ENFORCE(attr->optional);
       continue;
@@ -98,12 +98,12 @@ hoedown_action hoedown_callback_strict_post(
   ENFORCE(present_attributes == tag->attributes_count);
 
   // Replace the name if necessary
-  if (current->new_name) hoedown_buffer_sets(tag->name, current->new_name);
+  if (current->new_name) lanli_buffer_sets(tag->name, current->new_name);
 
   // If it's a void element, make it selfclose
-  if (tag->type == HOEDOWN_EL_VOID)
-    tag->tag_type = HOEDOWN_TAG_SELFCLOSE;
+  if (tag->type == LANLI_EL_VOID)
+    tag->tag_type = LANLI_TAG_SELFCLOSE;
 
   // The tag survived! Yay!
-  return HOEDOWN_ACTION_ACCEPT;
+  return LANLI_ACTION_ACCEPT;
 }

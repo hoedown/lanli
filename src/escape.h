@@ -1,7 +1,7 @@
 /* escape.h - escape utilities */
 
-#ifndef HOEDOWN_ESCAPE_H
-#define HOEDOWN_ESCAPE_H
+#ifndef LANLI_ESCAPE_H
+#define LANLI_ESCAPE_H
 
 #include "buffer.h"
 
@@ -14,15 +14,15 @@ extern "C" {
  * FUNCTIONS *
  *************/
 
-/* hoedown_escape_html: escape HTML */
-void hoedown_escape_html(hoedown_buffer *ob, const uint8_t *data, size_t size, int secure);
+/* lanli_escape_html: escape HTML */
+void lanli_escape_html(lanli_buffer *ob, const uint8_t *data, size_t size, int secure);
 
-/* hoedown_unescape_html: unescape HTML */
-void hoedown_unescape_html(hoedown_buffer *ob, const uint8_t *data, size_t size);
+/* lanli_unescape_html: unescape HTML */
+void lanli_unescape_html(lanli_buffer *ob, const uint8_t *data, size_t size);
 
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /** HOEDOWN_ESCAPE_H **/
+#endif /** LANLI_ESCAPE_H **/

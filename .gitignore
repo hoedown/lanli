@@ -2,8 +2,8 @@
 *.dll
 *.exp
 *.lib
-hoedown
-libhoedown.*
+lanli
+liblanli.*
 
 Makefile
 CMakeFiles

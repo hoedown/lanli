@@ -5,12 +5,12 @@
 #include <string.h>
 #include <assert.h>
 
-void hoedown_buffer_init(
-  hoedown_buffer *buf,
+void lanli_buffer_init(
+  lanli_buffer *buf,
   size_t unit,
-  hoedown_realloc_callback data_realloc,
-  hoedown_free_callback data_free,
-  hoedown_free_callback buffer_free
+  lanli_realloc_callback data_realloc,
+  lanli_free_callback data_free,
+  lanli_free_callback buffer_free
 ) {
   assert(buf);
 
@@ -22,13 +22,13 @@ void hoedown_buffer_init(
   buf->buffer_free = buffer_free;
 }
 
-hoedown_buffer *hoedown_buffer_new(size_t unit) {
-  hoedown_buffer *ret = hoedown_malloc(sizeof (hoedown_buffer));
-  hoedown_buffer_init(ret, unit, hoedown_realloc, free, free);
+lanli_buffer *lanli_buffer_new(size_t unit) {
+  lanli_buffer *ret = lanli_malloc(sizeof (lanli_buffer));
+  lanli_buffer_init(ret, unit, lanli_realloc, free, free);
   return ret;
 }
 
-void hoedown_buffer_free(hoedown_buffer *buf) {
+void lanli_buffer_free(lanli_buffer *buf) {
   assert(buf && buf->unit);
 
   buf->data_free(buf->data);
@@ -37,7 +37,7 @@ void hoedown_buffer_free(hoedown_buffer *buf) {
     buf->buffer_free(buf);
 }
 
-void hoedown_buffer_reset(hoedown_buffer *buf) {
+void lanli_buffer_reset(lanli_buffer *buf) {
   assert(buf && buf->unit);
 
   buf->data_free(buf->data);
@@ -45,7 +45,7 @@ void hoedown_buffer_reset(hoedown_buffer *buf) {
   buf->size = buf->asize = 0;
 }
 
-void hoedown_buffer_grow(hoedown_buffer *buf, size_t neosz) {
+void lanli_buffer_grow(lanli_buffer *buf, size_t neosz) {
   size_t neoasz;
   assert(buf && buf->unit);
 
@@ -60,45 +60,45 @@ void hoedown_buffer_grow(hoedown_buffer *buf, size_t neosz) {
   buf->asize = neoasz;
 }
 
-void hoedown_buffer_put(hoedown_buffer *buf, const uint8_t *data, size_t size) {
+void lanli_buffer_put(lanli_buffer *buf, const uint8_t *data, size_t size) {
   assert(buf && buf->unit);
 
   if (buf->size + size > buf->asize)
-    hoedown_buffer_grow(buf, buf->size + size);
+    lanli_buffer_grow(buf, buf->size + size);
 
   memcpy(buf->data + buf->size, data, size);
   buf->size += size;
 }
 
-void hoedown_buffer_puts(hoedown_buffer *buf, const char *str) {
-  hoedown_buffer_put(buf, (const uint8_t *)str, strlen(str));
+void lanli_buffer_puts(lanli_buffer *buf, const char *str) {
+  lanli_buffer_put(buf, (const uint8_t *)str, strlen(str));
 }
 
-void hoedown_buffer_putc(hoedown_buffer *buf, uint8_t c) {
+void lanli_buffer_putc(lanli_buffer *buf, uint8_t c) {
   assert(buf && buf->unit);
 
   if (buf->size >= buf->asize)
-    hoedown_buffer_grow(buf, buf->size + 1);
+    lanli_buffer_grow(buf, buf->size + 1);
 
   buf->data[buf->size] = c;
   buf->size += 1;
 }
 
-void hoedown_buffer_set(hoedown_buffer *buf, const uint8_t *data, size_t size) {
+void lanli_buffer_set(lanli_buffer *buf, const uint8_t *data, size_t size) {
   assert(buf && buf->unit);
 
   if (size > buf->asize)
-    hoedown_buffer_grow(buf, size);
+    lanli_buffer_grow(buf, size);
 
   memcpy(buf->data, data, size);
   buf->size = size;
 }
 
-void hoedown_buffer_sets(hoedown_buffer *buf, const char *str) {
-  hoedown_buffer_set(buf, (const uint8_t *)str, strlen(str));
+void lanli_buffer_sets(lanli_buffer *buf, const char *str) {
+  lanli_buffer_set(buf, (const uint8_t *)str, strlen(str));
 }
 
-int hoedown_buffer_eq(const hoedown_buffer *buf, const uint8_t *data, size_t size) {
+int lanli_buffer_eq(const lanli_buffer *buf, const uint8_t *data, size_t size) {
   if (buf->size != size) return 0;
 
   size_t i = 0;
@@ -107,11 +107,11 @@ int hoedown_buffer_eq(const hoedown_buffer *buf, const uint8_t *data, size_t siz
   return i == size;
 }
 
-int hoedown_buffer_eqs(const hoedown_buffer *buf, const char *str) {
-  return hoedown_buffer_eq(buf, (const uint8_t *)str, strlen(str));
+int lanli_buffer_eqs(const lanli_buffer *buf, const char *str) {
+  return lanli_buffer_eq(buf, (const uint8_t *)str, strlen(str));
 }
 
-int hoedown_buffer_prefix(const hoedown_buffer *buf, const char *prefix) {
+int lanli_buffer_prefix(const lanli_buffer *buf, const char *prefix) {
   assert(buf && buf->unit);
 
   for (size_t i = 0; i < buf->size; ++i) {
@@ -125,7 +125,7 @@ int hoedown_buffer_prefix(const hoedown_buffer *buf, const char *prefix) {
   return 0;
 }
 
-void hoedown_buffer_slurp(hoedown_buffer *buf, size_t size) {
+void lanli_buffer_slurp(lanli_buffer *buf, size_t size) {
   assert(buf && buf->unit);
 
   if (size >= buf->size) {
@@ -137,26 +137,26 @@ void hoedown_buffer_slurp(hoedown_buffer *buf, size_t size) {
   memmove(buf->data, buf->data + size, buf->size);
 }
 
-const char *hoedown_buffer_cstr(hoedown_buffer *buf) {
+const char *lanli_buffer_cstr(lanli_buffer *buf) {
   assert(buf && buf->unit);
 
   if (buf->size < buf->asize && buf->data[buf->size] == 0)
     return (char *)buf->data;
 
-  hoedown_buffer_grow(buf, buf->size + 1);
+  lanli_buffer_grow(buf, buf->size + 1);
   buf->data[buf->size] = 0;
 
   return (char *)buf->data;
 }
 
-void hoedown_buffer_printf(hoedown_buffer *buf, const char *fmt, ...) {
+void lanli_buffer_printf(lanli_buffer *buf, const char *fmt, ...) {
   va_list ap;
   int n;
 
   assert(buf && buf->unit);
 
   if (buf->size >= buf->asize)
-    hoedown_buffer_grow(buf, buf->size + 1);
+    lanli_buffer_grow(buf, buf->size + 1);
 
   va_start(ap, fmt);
   n = vsnprintf((char *)buf->data + buf->size, buf->asize - buf->size, fmt, ap);
@@ -173,7 +173,7 @@ void hoedown_buffer_printf(hoedown_buffer *buf, const char *fmt, ...) {
   }
 
   if ((size_t)n >= buf->asize - buf->size) {
-    hoedown_buffer_grow(buf, buf->size + n + 1);
+    lanli_buffer_grow(buf, buf->size + n + 1);
 
     va_start(ap, fmt);
     n = vsnprintf((char *)buf->data + buf->size, buf->asize - buf->size, fmt, ap);

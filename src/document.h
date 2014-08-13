@@ -1,7 +1,7 @@
 /* document.h - HTML postprocessor */
 
-#ifndef HOEDOWN_DOCUMENT_H
-#define HOEDOWN_DOCUMENT_H
+#ifndef LANLI_DOCUMENT_H
+#define LANLI_DOCUMENT_H
 
 #include "buffer.h"
 
@@ -14,109 +14,109 @@ extern "C" {
  * FLAGS *
  *********/
 
-typedef enum hoedown_tag_type {
-  HOEDOWN_TAG_OPEN,
-  HOEDOWN_TAG_CLOSE,
-  HOEDOWN_TAG_SELFCLOSE
-} hoedown_tag_type;
+typedef enum lanli_tag_type {
+  LANLI_TAG_OPEN,
+  LANLI_TAG_CLOSE,
+  LANLI_TAG_SELFCLOSE
+} lanli_tag_type;
 
-typedef enum hoedown_element_type {
-  HOEDOWN_EL_NORMAL,
-  HOEDOWN_EL_VOID,
-  HOEDOWN_EL_RAW,
-  HOEDOWN_EL_RAW_ESCAPABLE
-} hoedown_element_type;
+typedef enum lanli_element_type {
+  LANLI_EL_NORMAL,
+  LANLI_EL_VOID,
+  LANLI_EL_RAW,
+  LANLI_EL_RAW_ESCAPABLE
+} lanli_element_type;
 
-typedef enum hoedown_flags {
-  HOEDOWN_FLAG_COMMENTS_PARSE = (1 << 0),
-  HOEDOWN_FLAG_COMMENTS_SKIP = (1 << 1),
-  HOEDOWN_FLAG_INVALID_SKIP = (1 << 2),
-  HOEDOWN_FLAG_ESCAPE_SECURE = (1 << 3),
-  HOEDOWN_FLAG_LEVELS_STRICT = (1 << 4)
-} hoedown_flags;
+typedef enum lanli_flags {
+  LANLI_FLAG_COMMENTS_PARSE = (1 << 0),
+  LANLI_FLAG_COMMENTS_SKIP = (1 << 1),
+  LANLI_FLAG_INVALID_SKIP = (1 << 2),
+  LANLI_FLAG_ESCAPE_SECURE = (1 << 3),
+  LANLI_FLAG_LEVELS_STRICT = (1 << 4)
+} lanli_flags;
 
-typedef enum hoedown_action {
-  HOEDOWN_ACTION_ACCEPT,
-  HOEDOWN_ACTION_ESCAPE,
-  HOEDOWN_ACTION_SKIP,
-  HOEDOWN_ACTION_IGNORE,
-  HOEDOWN_ACTION_VERBATIM
-} hoedown_action;
+typedef enum lanli_action {
+  LANLI_ACTION_ACCEPT,
+  LANLI_ACTION_ESCAPE,
+  LANLI_ACTION_SKIP,
+  LANLI_ACTION_IGNORE,
+  LANLI_ACTION_VERBATIM
+} lanli_action;
 
 
 /*********
  * TYPES *
  *********/
 
-struct hoedown_tag_attribute {
-  hoedown_buffer *name;
-  hoedown_buffer *value;
+struct lanli_tag_attribute {
+  lanli_buffer *name;
+  lanli_buffer *value;
   int has_value;
 };
-typedef struct hoedown_tag_attribute hoedown_tag_attribute;
+typedef struct lanli_tag_attribute lanli_tag_attribute;
 
-struct hoedown_tag {
+struct lanli_tag {
   size_t level;
-  hoedown_buffer *name;
-  hoedown_tag_attribute *attributes;
+  lanli_buffer *name;
+  lanli_tag_attribute *attributes;
   size_t attributes_count;
-  hoedown_tag_type tag_type;
-  hoedown_element_type type;
+  lanli_tag_type tag_type;
+  lanli_element_type type;
   void *opaque;
 };
-typedef struct hoedown_tag hoedown_tag;
+typedef struct lanli_tag lanli_tag;
 
-struct hoedown_tag_stack {
-  hoedown_tag *tags;
-  hoedown_tag *orig;
+struct lanli_tag_stack {
+  lanli_tag *tags;
+  lanli_tag *orig;
   size_t size;
   size_t asize;
   size_t max_attributes;
 };
-typedef struct hoedown_tag_stack hoedown_tag_stack;
+typedef struct lanli_tag_stack lanli_tag_stack;
 
-typedef hoedown_action (*hoedown_callback)(hoedown_tag *tag, const hoedown_tag_stack *stack, void *opaque);
+typedef lanli_action (*lanli_callback)(lanli_tag *tag, const lanli_tag_stack *stack, void *opaque);
 
-struct hoedown_document;
-typedef struct hoedown_document hoedown_document;
+struct lanli_document;
+typedef struct lanli_document lanli_document;
 
 
 /*************
  * FUNCTIONS *
  *************/
 
-/* hoedown_document_new: allocate a new document processor */
-hoedown_document *hoedown_document_new(
-  hoedown_callback callback,
+/* lanli_document_new: allocate a new document processor */
+lanli_document *lanli_document_new(
+  lanli_callback callback,
   void *opaque,
-  hoedown_flags flags,
+  lanli_flags flags,
   size_t levels,
   size_t max_nesting,
   size_t max_attributes
 ) __attribute__ ((malloc));
 
-/* hoedown_document_render: process HTML using the document processor */
-void hoedown_document_render(
-  hoedown_document *doc,
-  hoedown_buffer *ob,
+/* lanli_document_render: process HTML using the document processor */
+void lanli_document_render(
+  lanli_document *doc,
+  lanli_buffer *ob,
   const uint8_t *data,
   size_t size
 );
 
-/* hoedown_document_free: free the document processor */
-void hoedown_document_free(hoedown_document *doc);
+/* lanli_document_free: free the document processor */
+void lanli_document_free(lanli_document *doc);
 
 
-#define HOEDOWN_MAX_NESTING__MAX 64
-#define HOEDOWN_MAX_NESTING__MIN  1
-#define HOEDOWN_MAX_ATTRIBUTES__MAX 64
-#define HOEDOWN_MAX_ATTRIBUTES__MIN 0
-#define HOEDOWN_LEVELS__MAX 10
-#define HOEDOWN_LEVELS__MIN 0
+#define LANLI_MAX_NESTING__MAX 64
+#define LANLI_MAX_NESTING__MIN  1
+#define LANLI_MAX_ATTRIBUTES__MAX 64
+#define LANLI_MAX_ATTRIBUTES__MIN 0
+#define LANLI_LEVELS__MAX 10
+#define LANLI_LEVELS__MIN 0
 
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /** HOEDOWN_DOCUMENT_H **/
+#endif /** LANLI_DOCUMENT_H **/

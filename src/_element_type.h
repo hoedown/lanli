@@ -32,7 +32,7 @@ error "gperf generated tables don't work with this execution character set. Plea
 #line 1 "data/element_type.gperf"
 struct element_entry {
   const char *name;
-  hoedown_element_type type;
+  lanli_element_type type;
 };
 typedef struct element_entry element_entry;
 /* maximum key range = 19, duplicates = 0 */
@@ -91,43 +91,43 @@ match_element_type (str, len)
   static const struct element_entry wordlist[] =
     {
 #line 14 "data/element_type.gperf"
-      {"img", HOEDOWN_EL_VOID},
+      {"img", LANLI_EL_VOID},
 #line 17 "data/element_type.gperf"
-      {"link", HOEDOWN_EL_VOID},
+      {"link", LANLI_EL_VOID},
 #line 28 "data/element_type.gperf"
-      {"title", HOEDOWN_EL_RAW_ESCAPABLE},
+      {"title", LANLI_EL_RAW_ESCAPABLE},
 #line 18 "data/element_type.gperf"
-      {"meta", HOEDOWN_EL_VOID},
+      {"meta", LANLI_EL_VOID},
 #line 12 "data/element_type.gperf"
-      {"embed", HOEDOWN_EL_VOID},
+      {"embed", LANLI_EL_VOID},
 #line 25 "data/element_type.gperf"
-      {"style", HOEDOWN_EL_RAW},
+      {"style", LANLI_EL_RAW},
 #line 20 "data/element_type.gperf"
-      {"source", HOEDOWN_EL_VOID},
+      {"source", LANLI_EL_VOID},
 #line 27 "data/element_type.gperf"
-      {"textarea", HOEDOWN_EL_RAW_ESCAPABLE},
+      {"textarea", LANLI_EL_RAW_ESCAPABLE},
 #line 11 "data/element_type.gperf"
-      {"col", HOEDOWN_EL_VOID},
+      {"col", LANLI_EL_VOID},
 #line 21 "data/element_type.gperf"
-      {"track", HOEDOWN_EL_VOID},
+      {"track", LANLI_EL_VOID},
 #line 10 "data/element_type.gperf"
-      {"br", HOEDOWN_EL_VOID},
+      {"br", LANLI_EL_VOID},
 #line 22 "data/element_type.gperf"
-      {"wbr", HOEDOWN_EL_VOID},
+      {"wbr", LANLI_EL_VOID},
 #line 9 "data/element_type.gperf"
-      {"base", HOEDOWN_EL_VOID},
+      {"base", LANLI_EL_VOID},
 #line 19 "data/element_type.gperf"
-      {"param", HOEDOWN_EL_VOID},
+      {"param", LANLI_EL_VOID},
 #line 24 "data/element_type.gperf"
-      {"script", HOEDOWN_EL_RAW},
+      {"script", LANLI_EL_RAW},
 #line 8 "data/element_type.gperf"
-      {"area", HOEDOWN_EL_VOID},
+      {"area", LANLI_EL_VOID},
 #line 15 "data/element_type.gperf"
-      {"input", HOEDOWN_EL_VOID},
+      {"input", LANLI_EL_VOID},
 #line 16 "data/element_type.gperf"
-      {"keygen", HOEDOWN_EL_VOID},
+      {"keygen", LANLI_EL_VOID},
 #line 13 "data/element_type.gperf"
-      {"hr", HOEDOWN_EL_VOID}
+      {"hr", LANLI_EL_VOID}
     };
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)

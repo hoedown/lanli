@@ -17,51 +17,51 @@
 #define ATTR_VALUE_UNIT TOKEN_UNIT
 
 #define RESTRICT_VALUE(VAR, NAME) \
-  ((int)VAR < HOEDOWN_##NAME##__MIN ? HOEDOWN_##NAME##__MIN : \
-  ((int)VAR > HOEDOWN_##NAME##__MAX ? HOEDOWN_##NAME##__MAX : \
+  ((int)VAR < LANLI_##NAME##__MIN ? LANLI_##NAME##__MIN : \
+  ((int)VAR > LANLI_##NAME##__MAX ? LANLI_##NAME##__MAX : \
 VAR))
 
 
 // TAG
 // Methods to create and destroy tag objects
 
-void init_tag(hoedown_tag *tag, size_t max_attributes) {
-  tag->attributes = hoedown_calloc(max_attributes, sizeof(hoedown_tag_attribute));
+void init_tag(lanli_tag *tag, size_t max_attributes) {
+  tag->attributes = lanli_calloc(max_attributes, sizeof(lanli_tag_attribute));
   for (size_t a = 0; a < max_attributes; a++) {
-    tag->attributes[a].name = hoedown_buffer_new(ATTR_NAME_UNIT);
-    tag->attributes[a].value = hoedown_buffer_new(ATTR_VALUE_UNIT);
+    tag->attributes[a].name = lanli_buffer_new(ATTR_NAME_UNIT);
+    tag->attributes[a].value = lanli_buffer_new(ATTR_VALUE_UNIT);
   }
 
-  tag->name = hoedown_buffer_new(TAG_NAME_UNIT);
+  tag->name = lanli_buffer_new(TAG_NAME_UNIT);
 }
 
-void uninit_tag(hoedown_tag *tag, size_t max_attributes) {
-  hoedown_buffer_free(tag->name);
+void uninit_tag(lanli_tag *tag, size_t max_attributes) {
+  lanli_buffer_free(tag->name);
   for (size_t a = 0; a < max_attributes; a++) {
-    hoedown_buffer_free(tag->attributes[a].name);
-    hoedown_buffer_free(tag->attributes[a].value);
+    lanli_buffer_free(tag->attributes[a].name);
+    lanli_buffer_free(tag->attributes[a].value);
   }
   free(tag->attributes);
 }
 
-void reset_tag(hoedown_tag *tag, size_t max_attributes) {
-  hoedown_buffer_reset(tag->name);
+void reset_tag(lanli_tag *tag, size_t max_attributes) {
+  lanli_buffer_reset(tag->name);
   for (size_t a = 0; a < max_attributes; a++) {
-    hoedown_buffer_reset(tag->attributes[a].name);
-    hoedown_buffer_reset(tag->attributes[a].value);
+    lanli_buffer_reset(tag->attributes[a].name);
+    lanli_buffer_reset(tag->attributes[a].value);
   }
 }
 
-void copy_tag(hoedown_tag *dst, const hoedown_tag *src) {
+void copy_tag(lanli_tag *dst, const lanli_tag *src) {
   dst->level = src->level;
-  hoedown_buffer_set(dst->name, src->name->data, src->name->size);
+  lanli_buffer_set(dst->name, src->name->data, src->name->size);
 
   for (size_t a = 0; a < src->attributes_count; a++) {
-    hoedown_tag_attribute *src_attr = &src->attributes[a];
-    hoedown_tag_attribute *dst_attr = &dst->attributes[a];
+    lanli_tag_attribute *src_attr = &src->attributes[a];
+    lanli_tag_attribute *dst_attr = &dst->attributes[a];
 
-    hoedown_buffer_set(dst_attr->name, src_attr->name->data, src_attr->name->size);
-    hoedown_buffer_set(dst_attr->value, src_attr->value->data, src_attr->value->size);
+    lanli_buffer_set(dst_attr->name, src_attr->name->data, src_attr->name->size);
+    lanli_buffer_set(dst_attr->value, src_attr->value->data, src_attr->value->size);
     dst_attr->has_value = src_attr->has_value;
   }
   dst->attributes_count = src->attributes_count;
@@ -74,14 +74,14 @@ void copy_tag(hoedown_tag *dst, const hoedown_tag *src) {
 // TAG STACK
 // Holds the fixed-size stack of elements nested.
 
-hoedown_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) __attribute__ ((malloc));
-hoedown_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) {
-  hoedown_tag_stack *stack = hoedown_malloc(sizeof(hoedown_tag_stack));
+lanli_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) __attribute__ ((malloc));
+lanli_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) {
+  lanli_tag_stack *stack = lanli_malloc(sizeof(lanli_tag_stack));
   stack->max_attributes = max_attributes;
   stack->asize = max_nesting;
 
-  stack->tags = hoedown_calloc(max_nesting, sizeof(hoedown_tag));
-  stack->orig = hoedown_calloc(max_nesting, sizeof(hoedown_tag));
+  stack->tags = lanli_calloc(max_nesting, sizeof(lanli_tag));
+  stack->orig = lanli_calloc(max_nesting, sizeof(lanli_tag));
 
   for (size_t i = 0; i < max_nesting; i++) {
     init_tag(&stack->tags[i], max_attributes);
@@ -91,7 +91,7 @@ hoedown_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) {
   return stack;
 }
 
-void free_tag_stack(hoedown_tag_stack *stack) {
+void free_tag_stack(lanli_tag_stack *stack) {
   for (size_t i = 0; i < stack->asize; i++) {
     uninit_tag(&stack->tags[i], stack->max_attributes);
     uninit_tag(&stack->orig[i], stack->max_attributes);
@@ -103,7 +103,7 @@ void free_tag_stack(hoedown_tag_stack *stack) {
   free(stack);
 }
 
-void reset_tag_stack(hoedown_tag_stack *stack) {
+void reset_tag_stack(lanli_tag_stack *stack) {
   for (size_t i = 0; i < stack->asize; i++) {
     reset_tag(&stack->tags[i], stack->max_attributes);
     reset_tag(&stack->orig[i], stack->max_attributes);
@@ -112,44 +112,44 @@ void reset_tag_stack(hoedown_tag_stack *stack) {
 
 
 // MAIN INSTANCE
-// Definition of hoedown_document and its (de)constructor
+// Definition of lanli_document and its (de)constructor
 
-struct hoedown_document {
-  hoedown_callback callback;
+struct lanli_document {
+  lanli_callback callback;
   void *opaque;
-  hoedown_flags flags;
+  lanli_flags flags;
   size_t levels;
 
   // extracted flags
   int escape_secure;
 
   // preallocated resources for render
-  hoedown_buffer *ob;
-  hoedown_buffer **levelbuf;
-  hoedown_tag_stack *stack;
+  lanli_buffer *ob;
+  lanli_buffer **levelbuf;
+  lanli_tag_stack *stack;
 };
 
-hoedown_document *hoedown_document_new(
-  hoedown_callback callback,
+lanli_document *lanli_document_new(
+  lanli_callback callback,
   void *opaque,
-  hoedown_flags flags,
+  lanli_flags flags,
   size_t levels,
   size_t max_nesting,
   size_t max_attributes
 ) {
-  hoedown_document *doc = hoedown_malloc(sizeof(hoedown_document));
+  lanli_document *doc = lanli_malloc(sizeof(lanli_document));
 
   doc->callback = callback;
   doc->opaque = opaque;
   doc->flags = flags;
   doc->levels = RESTRICT_VALUE(levels, LEVELS);
 
-  doc->escape_secure = flags & HOEDOWN_FLAG_ESCAPE_SECURE;
+  doc->escape_secure = flags & LANLI_FLAG_ESCAPE_SECURE;
 
   size_t length = levels + 1;
-  doc->levelbuf = hoedown_calloc(length, sizeof(hoedown_buffer *));
+  doc->levelbuf = lanli_calloc(length, sizeof(lanli_buffer *));
   for (size_t i = 0; i < length; i++)
-    doc->levelbuf[i] = hoedown_buffer_new(LEVELBUF_UNIT);
+    doc->levelbuf[i] = lanli_buffer_new(LEVELBUF_UNIT);
 
   max_nesting = RESTRICT_VALUE(max_nesting, MAX_NESTING);
   max_attributes = RESTRICT_VALUE(max_attributes, MAX_ATTRIBUTES);
@@ -158,12 +158,12 @@ hoedown_document *hoedown_document_new(
   return doc;
 }
 
-void hoedown_document_free(hoedown_document *doc) {
+void lanli_document_free(lanli_document *doc) {
   free_tag_stack(doc->stack);
 
   size_t length = doc->levels + 1;
   for (size_t i = 0; i < length; i++)
-    hoedown_buffer_free(doc->levelbuf[i]);
+    lanli_buffer_free(doc->levelbuf[i]);
   free(doc->levelbuf);
 
   free(doc);
@@ -245,7 +245,7 @@ static inline int is_attr_sensitive(uint8_t ch) {
 // Parse an attribute value if there's one, according to the HTML5 spec.
 // Sets parsed value to the buffer passed.
 // Returns 0 if there's no value, size of the value otherwise.
-size_t parse_attribute_value(hoedown_buffer *value, const uint8_t *data, size_t size) {
+size_t parse_attribute_value(lanli_buffer *value, const uint8_t *data, size_t size) {
   size_t i = 0, mark;
   while (i < size && is_space(data[i])) i++;
 
@@ -258,7 +258,7 @@ size_t parse_attribute_value(hoedown_buffer *value, const uint8_t *data, size_t 
     mark = i;
     while (i < size && data[i] != delimiter) i++;
     if (!(i < size)) return 0;
-    hoedown_buffer_set(value, data + mark, i - mark);
+    lanli_buffer_set(value, data + mark, i - mark);
 
     return i + 1;
   }
@@ -267,14 +267,14 @@ size_t parse_attribute_value(hoedown_buffer *value, const uint8_t *data, size_t 
   mark = i;
   while (i < size && !is_space(data[i]) && !is_attr_sensitive(data[i])) i++;
   if (mark == i) return 0;
-  hoedown_buffer_set(value, data + mark, i - mark);
+  lanli_buffer_set(value, data + mark, i - mark);
 
   return i;
 }
 
 // Parse an attribute if there's one, according to the HTML5 spec.
 // Returns 0 if there's no valid attribute, size of the attribute otherwise.
-size_t parse_attribute(hoedown_tag_attribute *attr, const uint8_t *data, size_t size) {
+size_t parse_attribute(lanli_tag_attribute *attr, const uint8_t *data, size_t size) {
   size_t i = 0, mark;
 
   // There must be at least one space character as separation
@@ -286,7 +286,7 @@ size_t parse_attribute(hoedown_tag_attribute *attr, const uint8_t *data, size_t 
   mark = i;
   while (i < size && is_attr_name_char(data[i])) i++;
   if (mark == i) return 0;
-  hoedown_buffer_set(attr->name, data + mark, i - mark);
+  lanli_buffer_set(attr->name, data + mark, i - mark);
 
   // Collect attribute value, if there is
   mark = i;
@@ -314,14 +314,14 @@ size_t parse_attribute(hoedown_tag_attribute *attr, const uint8_t *data, size_t 
 // Parse a start tag if there's one, according to the HTML5 spec.
 // This method assumes that data[0] == '<', so check that before calling it.
 // Returns 0 if there's no start tag, size of the tag otherwise.
-size_t parse_start_tag(hoedown_tag *tag, size_t max_attributes, const uint8_t *data, size_t size) {
+size_t parse_start_tag(lanli_tag *tag, size_t max_attributes, const uint8_t *data, size_t size) {
   size_t i = 1, mark;
 
   // Collect the tag name
   mark = i;
   while (i < size && is_alnum_ascii(data[i])) i++;
   if (mark == i) return 0;
-  hoedown_buffer_set(tag->name, data + mark, i - mark);
+  lanli_buffer_set(tag->name, data + mark, i - mark);
 
   // Collect the attributes
   size_t a;
@@ -336,9 +336,9 @@ size_t parse_start_tag(hoedown_tag *tag, size_t max_attributes, const uint8_t *d
   while (i < size && is_space(data[i])) i++;
 
   // Optional slash
-  tag->tag_type = HOEDOWN_TAG_OPEN;
+  tag->tag_type = LANLI_TAG_OPEN;
   if (i < size && data[i] == '/') {
-    tag->tag_type = HOEDOWN_TAG_SELFCLOSE;
+    tag->tag_type = LANLI_TAG_SELFCLOSE;
     i++;
   }
 
@@ -351,7 +351,7 @@ size_t parse_start_tag(hoedown_tag *tag, size_t max_attributes, const uint8_t *d
 // Parse an end tag if there's one, according to the HTML5 spec.
 // This method assumes that data[0] == '<', so check that before calling it.
 // Returns 0 if there's no end tag, size of the tag otherwise.
-size_t parse_end_tag(hoedown_tag *tag, const uint8_t *data, size_t size) {
+size_t parse_end_tag(lanli_tag *tag, const uint8_t *data, size_t size) {
   size_t i = 1, mark;
 
   // Slash
@@ -362,7 +362,7 @@ size_t parse_end_tag(hoedown_tag *tag, const uint8_t *data, size_t size) {
   mark = i;
   while (i < size && is_alnum_ascii(data[i])) i++;
   if (mark == i) return 0;
-  hoedown_buffer_set(tag->name, data + mark, i - mark);
+  lanli_buffer_set(tag->name, data + mark, i - mark);
 
   // Collect optional spacing
   while (i < size && is_space(data[i])) i++;
@@ -415,29 +415,32 @@ size_t parse_comment(const uint8_t *data, size_t size) {
 // Augment a start tag with information about the element it represents,
 // and normalize all parameters (lowercase tag name and attribute names)
 // as well as validation (duplicate attributes, invalid selfclose).
-int validate_start_tag(hoedown_tag *tag) {
+int validate_start_tag(lanli_tag *tag) {
   // Lowercase name
   to_lower_ascii(tag->name->data, tag->name->size);
 
   // Lowercase attribute names
   for (size_t a = 0; a < tag->attributes_count; a++) {
-    hoedown_buffer *attrname = tag->attributes[a].name;
+    lanli_buffer *attrname = tag->attributes[a].name;
     to_lower_ascii(attrname->data, attrname->size);
 
     // Make sure there's no duplicate with previous names
     for (size_t b = 0; b < a; b++) {
-      if (hoedown_buffer_eq(tag->attributes[b].name, attrname->data, attrname->size))
+      if (lanli_buffer_eq(tag->attributes[b].name, attrname->data, attrname->size))
         return 0;
     }
   }
 
   // Match name against element type
   const element_entry *entry = match_element_type((const char *)tag->name->data, tag->name->size);
-  tag->type = entry ? entry->type : HOEDOWN_EL_NORMAL;
+  tag->type = entry ? entry->type : LANLI_EL_NORMAL;
 
   // Only void (or foreign) elements can selfclose
-  if (tag->tag_type == HOEDOWN_TAG_SELFCLOSE && tag->type != HOEDOWN_EL_VOID)
+  if (tag->tag_type == LANLI_TAG_SELFCLOSE && tag->type != LANLI_EL_VOID)
     return 0;
+
+  // Initialize opaque to `NULL`
+  tag->opaque = NULL;
 
   return 1;
 }
@@ -446,59 +449,59 @@ int validate_start_tag(hoedown_tag *tag) {
 // RENDERING
 // Handles the actual processing of HTML snippets.
 
-void output_start_tag(hoedown_document *doc, hoedown_buffer *levelbuf, const hoedown_tag *tag) {
-  hoedown_buffer_putc(doc->ob, '<');
-  hoedown_buffer_put(doc->ob, tag->name->data, tag->name->size);
+void output_start_tag(lanli_document *doc, lanli_buffer *levelbuf, const lanli_tag *tag) {
+  lanli_buffer_putc(doc->ob, '<');
+  lanli_buffer_put(doc->ob, tag->name->data, tag->name->size);
 
   for (size_t a = 0; a < tag->attributes_count; a++) {
-    hoedown_buffer_putc(doc->ob, ' ');
-    hoedown_tag_attribute *attr = &tag->attributes[a];
+    lanli_buffer_putc(doc->ob, ' ');
+    lanli_tag_attribute *attr = &tag->attributes[a];
 
     // Attribute name
-    hoedown_buffer_put(doc->ob, attr->name->data, attr->name->size);
+    lanli_buffer_put(doc->ob, attr->name->data, attr->name->size);
 
     // Attribute value
     if (attr->has_value) {
-      hoedown_buffer_putc(doc->ob, '=');
-      hoedown_buffer_putc(doc->ob, '"');
+      lanli_buffer_putc(doc->ob, '=');
+      lanli_buffer_putc(doc->ob, '"');
       levelbuf->size = 0;
-      hoedown_unescape_html(levelbuf, attr->value->data, attr->value->size);
-      hoedown_escape_html(doc->ob, levelbuf->data, levelbuf->size, doc->escape_secure);
-      hoedown_buffer_putc(doc->ob, '"');
+      lanli_unescape_html(levelbuf, attr->value->data, attr->value->size);
+      lanli_escape_html(doc->ob, levelbuf->data, levelbuf->size, doc->escape_secure);
+      lanli_buffer_putc(doc->ob, '"');
     }
   }
 
   // Selfclose slash
-  if (tag->tag_type == HOEDOWN_TAG_SELFCLOSE)
-    HOEDOWN_BUFPUTSL(doc->ob, " /");
+  if (tag->tag_type == LANLI_TAG_SELFCLOSE)
+    LANLI_BUFPUTSL(doc->ob, " /");
 
-  hoedown_buffer_putc(doc->ob, '>');
+  lanli_buffer_putc(doc->ob, '>');
 }
 
-static inline void close_tag(hoedown_document *doc) {
-  hoedown_tag_stack *stack = doc->stack;
-  hoedown_tag *tag = &stack->tags[--stack->size];
+static inline void close_tag(lanli_document *doc) {
+  lanli_tag_stack *stack = doc->stack;
+  lanli_tag *tag = &stack->tags[--stack->size];
 
-  HOEDOWN_BUFPUTSL(doc->ob, "</");
-  hoedown_buffer_put(doc->ob, tag->name->data, tag->name->size);
-  hoedown_buffer_putc(doc->ob, '>');
+  LANLI_BUFPUTSL(doc->ob, "</");
+  lanli_buffer_put(doc->ob, tag->name->data, tag->name->size);
+  lanli_buffer_putc(doc->ob, '>');
 }
 
 // Find the ending tag of a raw (or raw escapable) element, according to the
 // HTML5 spec. Once found, the content is output accordingly, and the element
 // closed. Returns the position where the ending tag ends.
 size_t search_and_close_raw(
-  hoedown_document *doc,
-  hoedown_buffer *levelbuf,
-  const hoedown_tag *tag,
+  lanli_document *doc,
+  lanli_buffer *levelbuf,
+  const lanli_tag *tag,
   const uint8_t *data,
   size_t size
 ) {
   size_t i = 0, mark;
 
   // Find the end
-  hoedown_buffer *name = tag->name;
-  hoedown_tag *otag = &doc->stack->tags[doc->stack->size];
+  lanli_buffer *name = tag->name;
+  lanli_tag *otag = &doc->stack->tags[doc->stack->size];
   while (1) {
     while (i < size && data[i] != '<') i++;
     mark = i;
@@ -506,17 +509,17 @@ size_t search_and_close_raw(
 
     i += parse_end_tag(otag, data + i, size - i);
     if (i > mark) {
-      if (hoedown_buffer_eq(otag->name, name->data, name->size)) break;
+      if (lanli_buffer_eq(otag->name, name->data, name->size)) break;
     } else i++;
   }
 
   // Output content
-  if (tag->type == HOEDOWN_EL_RAW) {
-    hoedown_buffer_put(doc->ob, data, mark);
-  } else { // HOEDOWN_EL_RAW_ESCAPABLE
+  if (tag->type == LANLI_EL_RAW) {
+    lanli_buffer_put(doc->ob, data, mark);
+  } else { // LANLI_EL_RAW_ESCAPABLE
     levelbuf->size = 0;
-    hoedown_unescape_html(levelbuf, data, mark);
-    hoedown_escape_html(doc->ob, levelbuf->data, levelbuf->size, doc->escape_secure);
+    lanli_unescape_html(levelbuf, data, mark);
+    lanli_escape_html(doc->ob, levelbuf->data, levelbuf->size, doc->escape_secure);
   }
 
   // Finally, close tag
@@ -527,24 +530,25 @@ size_t search_and_close_raw(
   // FIXME: is this a security risk?
 }
 
-static inline size_t match_closing(hoedown_tag_stack *stack, const hoedown_tag *tag, size_t level) {
+static inline size_t match_closing(lanli_tag_stack *stack, const lanli_tag *tag, size_t level) {
   // Lowercase name of end tag
-  hoedown_buffer *name = tag->name;
+  lanli_buffer *name = tag->name;
   to_lower_ascii(name->data, name->size);
 
   // Iterate over stack tags
-  hoedown_tag *orig = stack->orig + stack->size;
+  lanli_tag *orig = stack->orig + stack->size;
   for (size_t i = 0; i < stack->size; i++) {
     --orig;
-    if (orig->level == level && hoedown_buffer_eq(orig->name, name->data, name->size))
+    if (orig->level < level) break;
+    if (orig->level == level && lanli_buffer_eq(orig->name, name->data, name->size))
       return i+1;
   }
   return 0;
 }
 
-void process(hoedown_document *doc, const uint8_t *data, size_t size, size_t level) {
-  hoedown_buffer *levelbuf = doc->levelbuf[level];
-  hoedown_tag_stack *stack = doc->stack;
+void process(lanli_document *doc, const uint8_t *data, size_t size, size_t level) {
+  lanli_buffer *levelbuf = doc->levelbuf[level];
+  lanli_tag_stack *stack = doc->stack;
   size_t next_level = (doc->levels > level) ? level+1 : 0;
 
   size_t i = 0, mark;
@@ -556,16 +560,16 @@ void process(hoedown_document *doc, const uint8_t *data, size_t size, size_t lev
     // Process chunk
     if (i > mark) {
       levelbuf->size = 0;
-      hoedown_unescape_html(levelbuf, data + mark, i - mark);
+      lanli_unescape_html(levelbuf, data + mark, i - mark);
       if (next_level)
         process(doc, levelbuf->data, levelbuf->size, next_level);
       else
-        hoedown_escape_html(doc->ob, levelbuf->data, levelbuf->size, doc->escape_secure);
+        lanli_escape_html(doc->ob, levelbuf->data, levelbuf->size, doc->escape_secure);
     }
 
     if (i >= size) break;
     mark = i;
-    hoedown_tag *tag = &stack->tags[stack->size];
+    lanli_tag *tag = &stack->tags[stack->size];
 
     // Try to parse start tag
     if (stack->size+1 < stack->asize) {
@@ -573,35 +577,35 @@ void process(hoedown_document *doc, const uint8_t *data, size_t size, size_t lev
       if (i > mark) {
         // Start tag parsed, validate it
         if (!validate_start_tag(tag)) {
-          if (!(doc->flags & HOEDOWN_FLAG_INVALID_SKIP))
-            hoedown_escape_html(doc->ob, data + mark, i - mark, doc->escape_secure);
+          if (!(doc->flags & LANLI_FLAG_INVALID_SKIP))
+            lanli_escape_html(doc->ob, data + mark, i - mark, doc->escape_secure);
           continue;
         }
         tag->level = level;
         // Make a copy and call callback
         copy_tag(&stack->orig[stack->size], tag);
-        hoedown_action action = doc->callback(tag, stack, doc->opaque);
+        lanli_action action = doc->callback(tag, stack, doc->opaque);
         // Take pertinent actions
         switch (action) {
-        case HOEDOWN_ACTION_ACCEPT:
+        case LANLI_ACTION_ACCEPT:
           output_start_tag(doc, levelbuf, tag);
-          if (tag->type == HOEDOWN_EL_VOID || tag->tag_type == HOEDOWN_TAG_SELFCLOSE) break;
+          if (tag->type == LANLI_EL_VOID || tag->tag_type == LANLI_TAG_SELFCLOSE) break;
           stack->size++;
-          if (tag->type == HOEDOWN_EL_RAW || tag->type == HOEDOWN_EL_RAW_ESCAPABLE)
+          if (tag->type == LANLI_EL_RAW || tag->type == LANLI_EL_RAW_ESCAPABLE)
             i += search_and_close_raw(doc, levelbuf, tag, data + i, size - i);
           break;
-        case HOEDOWN_ACTION_ESCAPE:
-          hoedown_escape_html(doc->ob, data + mark, i - mark, doc->escape_secure);
+        case LANLI_ACTION_ESCAPE:
+          lanli_escape_html(doc->ob, data + mark, i - mark, doc->escape_secure);
           break;
-        case HOEDOWN_ACTION_SKIP:
+        case LANLI_ACTION_SKIP:
           break;
-        case HOEDOWN_ACTION_IGNORE:
+        case LANLI_ACTION_IGNORE:
           i = mark;
-          HOEDOWN_BUFPUTSL(doc->ob, "&lt;");
+          LANLI_BUFPUTSL(doc->ob, "&lt;");
           i++;
           break;
-        case HOEDOWN_ACTION_VERBATIM:
-          hoedown_buffer_put(doc->ob, data + mark, i - mark);
+        case LANLI_ACTION_VERBATIM:
+          lanli_buffer_put(doc->ob, data + mark, i - mark);
           break;
         }
         continue;
@@ -615,28 +619,28 @@ void process(hoedown_document *doc, const uint8_t *data, size_t size, size_t lev
       size_t tags_to_close = match_closing(stack, tag, level);
       for (size_t n = 0; n < tags_to_close; n++)
         close_tag(doc);
-      if (!tags_to_close && !(doc->flags & HOEDOWN_FLAG_INVALID_SKIP))
-        hoedown_escape_html(doc->ob, data + mark, i - mark, doc->escape_secure);
+      if (!tags_to_close && !(doc->flags & LANLI_FLAG_INVALID_SKIP))
+        lanli_escape_html(doc->ob, data + mark, i - mark, doc->escape_secure);
       continue;
     }
 
     // Try to parse comment
-    if (doc->flags & HOEDOWN_FLAG_COMMENTS_PARSE) {
+    if (doc->flags & LANLI_FLAG_COMMENTS_PARSE) {
       i += parse_comment(data + mark, size - mark);
       if (i > mark) {
-        if (!(doc->flags & HOEDOWN_FLAG_COMMENTS_SKIP))
-          hoedown_buffer_put(doc->ob, data + mark, i - mark);
+        if (!(doc->flags & LANLI_FLAG_COMMENTS_SKIP))
+          lanli_buffer_put(doc->ob, data + mark, i - mark);
         continue;
       }
     }
 
     // Couldn't parse anything, output escaped entity
-    HOEDOWN_BUFPUTSL(doc->ob, "&lt;");
+    LANLI_BUFPUTSL(doc->ob, "&lt;");
     i++;
   }
 
   // If strict levels are enabled, close open tags before exit
-  if (doc->flags & HOEDOWN_FLAG_LEVELS_STRICT) {
+  if (doc->flags & LANLI_FLAG_LEVELS_STRICT) {
     while (stack->size && stack->tags[stack->size-1].level >= level)
       close_tag(doc);
   }
@@ -646,21 +650,21 @@ void process(hoedown_document *doc, const uint8_t *data, size_t size, size_t lev
 // PUBLIC INTERFACE
 // Public entry point for HTML processing
 
-void hoedown_document_render(
-  hoedown_document *doc,
-  hoedown_buffer *ob,
+void lanli_document_render(
+  lanli_document *doc,
+  lanli_buffer *ob,
   const uint8_t *data,
   size_t size
 ) {
   // Prepare the document instance
   doc->ob = ob;
-  hoedown_buffer_grow(ob, ob->size + size);
+  lanli_buffer_grow(ob, ob->size + size);
 
   size_t length = doc->levels + 1;
   size_t asize = LEVELBUF_MAX_SIZE;
   if (asize > size) asize = size;
   for (size_t i = 0; i < length; i++)
-    hoedown_buffer_grow(doc->levelbuf[i], asize);
+    lanli_buffer_grow(doc->levelbuf[i], asize);
 
   doc->stack->size = 0;
 
@@ -673,7 +677,7 @@ void hoedown_document_render(
 
   // Free buffer data
   for (size_t i = 0; i < length; i++)
-    hoedown_buffer_reset(doc->levelbuf[i]);
+    lanli_buffer_reset(doc->levelbuf[i]);
 
   reset_tag_stack(doc->stack);
 }
