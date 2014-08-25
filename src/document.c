@@ -25,7 +25,7 @@ VAR))
 // TAG
 // Methods to create and destroy tag objects
 
-void init_tag(lanli_tag *tag, size_t max_attributes) {
+static inline void init_tag(lanli_tag *tag, size_t max_attributes) {
   tag->attributes = lanli_calloc(max_attributes, sizeof(lanli_tag_attribute));
   for (size_t a = 0; a < max_attributes; a++) {
     tag->attributes[a].name = lanli_buffer_new(ATTR_NAME_UNIT);
@@ -35,7 +35,7 @@ void init_tag(lanli_tag *tag, size_t max_attributes) {
   tag->name = lanli_buffer_new(TAG_NAME_UNIT);
 }
 
-void uninit_tag(lanli_tag *tag, size_t max_attributes) {
+static inline void uninit_tag(lanli_tag *tag, size_t max_attributes) {
   lanli_buffer_free(tag->name);
   for (size_t a = 0; a < max_attributes; a++) {
     lanli_buffer_free(tag->attributes[a].name);
@@ -44,7 +44,7 @@ void uninit_tag(lanli_tag *tag, size_t max_attributes) {
   free(tag->attributes);
 }
 
-void reset_tag(lanli_tag *tag, size_t max_attributes) {
+static inline void reset_tag(lanli_tag *tag, size_t max_attributes) {
   lanli_buffer_reset(tag->name);
   for (size_t a = 0; a < max_attributes; a++) {
     lanli_buffer_reset(tag->attributes[a].name);
@@ -52,7 +52,7 @@ void reset_tag(lanli_tag *tag, size_t max_attributes) {
   }
 }
 
-void copy_tag(lanli_tag *dst, const lanli_tag *src) {
+static void copy_tag(lanli_tag *dst, const lanli_tag *src) {
   dst->level = src->level;
   lanli_buffer_set(dst->name, src->name->data, src->name->size);
 
@@ -74,8 +74,8 @@ void copy_tag(lanli_tag *dst, const lanli_tag *src) {
 // TAG STACK
 // Holds the fixed-size stack of elements nested.
 
-lanli_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) __attribute__ ((malloc));
-lanli_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) {
+static lanli_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) __attribute__ ((malloc));
+static lanli_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) {
   lanli_tag_stack *stack = lanli_malloc(sizeof(lanli_tag_stack));
   stack->max_attributes = max_attributes;
   stack->asize = max_nesting;
@@ -91,7 +91,7 @@ lanli_tag_stack *new_tag_stack(size_t max_nesting, size_t max_attributes) {
   return stack;
 }
 
-void free_tag_stack(lanli_tag_stack *stack) {
+static void free_tag_stack(lanli_tag_stack *stack) {
   for (size_t i = 0; i < stack->asize; i++) {
     uninit_tag(&stack->tags[i], stack->max_attributes);
     uninit_tag(&stack->orig[i], stack->max_attributes);
@@ -103,7 +103,7 @@ void free_tag_stack(lanli_tag_stack *stack) {
   free(stack);
 }
 
-void reset_tag_stack(lanli_tag_stack *stack) {
+static void reset_tag_stack(lanli_tag_stack *stack) {
   for (size_t i = 0; i < stack->asize; i++) {
     reset_tag(&stack->tags[i], stack->max_attributes);
     reset_tag(&stack->orig[i], stack->max_attributes);
@@ -171,9 +171,6 @@ void lanli_document_free(lanli_document *doc) {
 
 
 
-// RENDERING LOGIC
-// ---------------
-
 // LOW-LEVEL HTML UTILS
 
 // Checks if the char is an ASCII digit,
@@ -221,8 +218,6 @@ static inline void to_lower_ascii(uint8_t *data, size_t size) {
 }
 
 
-// HTML PARSING & VALIDATION
-
 // Checks if the char can be part of an attribute name,
 // according to the HTML5 spec.
 static inline int is_attr_name_char(uint8_t ch) {
@@ -242,10 +237,14 @@ static inline int is_attr_sensitive(uint8_t ch) {
       || ch == '"' || ch == '`' || ch == '\'';
 }
 
+
+
+// HTML PARSING & VALIDATION
+
 // Parse an attribute value if there's one, according to the HTML5 spec.
 // Sets parsed value to the buffer passed.
 // Returns 0 if there's no value, size of the value otherwise.
-size_t parse_attribute_value(lanli_buffer *value, const uint8_t *data, size_t size) {
+static size_t parse_attribute_value(lanli_buffer *value, const uint8_t *data, size_t size) {
   size_t i = 0, mark;
   while (i < size && is_space(data[i])) i++;
 
@@ -274,7 +273,7 @@ size_t parse_attribute_value(lanli_buffer *value, const uint8_t *data, size_t si
 
 // Parse an attribute if there's one, according to the HTML5 spec.
 // Returns 0 if there's no valid attribute, size of the attribute otherwise.
-size_t parse_attribute(lanli_tag_attribute *attr, const uint8_t *data, size_t size) {
+static size_t parse_attribute(lanli_tag_attribute *attr, const uint8_t *data, size_t size) {
   size_t i = 0, mark;
 
   // There must be at least one space character as separation
@@ -314,7 +313,7 @@ size_t parse_attribute(lanli_tag_attribute *attr, const uint8_t *data, size_t si
 // Parse a start tag if there's one, according to the HTML5 spec.
 // This method assumes that data[0] == '<', so check that before calling it.
 // Returns 0 if there's no start tag, size of the tag otherwise.
-size_t parse_start_tag(lanli_tag *tag, size_t max_attributes, const uint8_t *data, size_t size) {
+static size_t parse_start_tag(lanli_tag *tag, size_t max_attributes, const uint8_t *data, size_t size) {
   size_t i = 1, mark;
 
   // Collect the tag name
@@ -351,7 +350,7 @@ size_t parse_start_tag(lanli_tag *tag, size_t max_attributes, const uint8_t *dat
 // Parse an end tag if there's one, according to the HTML5 spec.
 // This method assumes that data[0] == '<', so check that before calling it.
 // Returns 0 if there's no end tag, size of the tag otherwise.
-size_t parse_end_tag(lanli_tag *tag, const uint8_t *data, size_t size) {
+static size_t parse_end_tag(lanli_tag *tag, const uint8_t *data, size_t size) {
   size_t i = 1, mark;
 
   // Slash
@@ -390,7 +389,7 @@ static inline int is_valid_comment_content(const uint8_t *data, size_t size) {
 // Parse a comment if there's one, according to the HTML5 spec.
 // This method assumes that data[0] == '<', so check that before calling it.
 // Returns 0 if there's no comment, size of the comment otherwise.
-size_t parse_comment(const uint8_t *data, size_t size) {
+static size_t parse_comment(const uint8_t *data, size_t size) {
   size_t i = 1, mark;
   if (size < 7) return 0;
 
@@ -415,7 +414,7 @@ size_t parse_comment(const uint8_t *data, size_t size) {
 // Augment a start tag with information about the element it represents,
 // and normalize all parameters (lowercase tag name and attribute names)
 // as well as validation (duplicate attributes, invalid selfclose).
-int validate_start_tag(lanli_tag *tag) {
+static int validate_start_tag(lanli_tag *tag) {
   // Lowercase name
   to_lower_ascii(tag->name->data, tag->name->size);
 
@@ -446,10 +445,11 @@ int validate_start_tag(lanli_tag *tag) {
 }
 
 
+
 // RENDERING
 // Handles the actual processing of HTML snippets.
 
-void output_start_tag(lanli_document *doc, lanli_buffer *levelbuf, const lanli_tag *tag) {
+static void output_start_tag(lanli_document *doc, lanli_buffer *levelbuf, const lanli_tag *tag) {
   lanli_buffer_putc(doc->ob, '<');
   lanli_buffer_put(doc->ob, tag->name->data, tag->name->size);
 
@@ -490,7 +490,7 @@ static inline void close_tag(lanli_document *doc) {
 // Find the ending tag of a raw (or raw escapable) element, according to the
 // HTML5 spec. Once found, the content is output accordingly, and the element
 // closed. Returns the position where the ending tag ends.
-size_t search_and_close_raw(
+static size_t search_and_close_raw(
   lanli_document *doc,
   lanli_buffer *levelbuf,
   const lanli_tag *tag,
@@ -546,7 +546,7 @@ static inline size_t match_closing(lanli_tag_stack *stack, const lanli_tag *tag,
   return 0;
 }
 
-void process(lanli_document *doc, const uint8_t *data, size_t size, size_t level) {
+static void process(lanli_document *doc, const uint8_t *data, size_t size, size_t level) {
   lanli_buffer *levelbuf = doc->levelbuf[level];
   lanli_tag_stack *stack = doc->stack;
   size_t next_level = (doc->levels > level) ? level+1 : 0;
@@ -645,6 +645,7 @@ void process(lanli_document *doc, const uint8_t *data, size_t size, size_t level
       close_tag(doc);
   }
 }
+
 
 
 // PUBLIC INTERFACE

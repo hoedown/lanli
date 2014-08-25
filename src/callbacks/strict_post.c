@@ -14,7 +14,7 @@
 
 // GENERAL UTILITIES
 
-int is_safe_link(const uint8_t *data, size_t size) {
+static int is_safe_link(const uint8_t *data, size_t size) {
   static const size_t valid_uris_count = 6;
   static const char *valid_uris[] = {
     "#", "/", "http://", "https://", "ftp://", "mailto:"
@@ -36,7 +36,7 @@ int is_safe_link(const uint8_t *data, size_t size) {
 
 // ACTUAL CALLBACK CODE
 
-lanli_tag_attribute *find_attribute(const lanli_tag *tag, const attribute_entry *attr) {
+static inline lanli_tag_attribute *find_attribute(const lanli_tag *tag, const attribute_entry *attr) {
   for (size_t a = 0; a < tag->attributes_count; a++) {
     if (lanli_buffer_eqs(tag->attributes[a].name, attr->name))
       return &tag->attributes[a];
@@ -44,7 +44,7 @@ lanli_tag_attribute *find_attribute(const lanli_tag *tag, const attribute_entry 
   return NULL;
 }
 
-int validate_attribute(lanli_tag *tag, lanli_tag_attribute *attr) {
+static int validate_attribute(lanli_tag *tag, lanli_tag_attribute *attr) {
   const lanli_buffer *name = attr->name;
 
   // Attribute is a URL, validate it
