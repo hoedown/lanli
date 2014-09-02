@@ -20,16 +20,6 @@ extern "C" {
 
 
 /*********
- * FLAGS *
- *********/
-
-typedef enum {
-  LANLI_BUF_OK = 0,
-  LANLI_BUF_ENOMEM = -1
-} lanli_buferror_t;
-
-
-/*********
  * TYPES *
  *********/
 
@@ -100,7 +90,7 @@ void lanli_buffer_putc(lanli_buffer *buf, uint8_t c);
 /* lanli_buffer_set: replace the buffer's contents with raw data */
 void lanli_buffer_set(lanli_buffer *buf, const uint8_t *data, size_t size);
 
-/* lanli_buffer_puts: replace the buffer's contents with a NUL-terminated string */
+/* lanli_buffer_sets: replace the buffer's contents with a NUL-terminated string */
 void lanli_buffer_sets(lanli_buffer *buf, const char *str);
 
 /* lanli_buffer_eq: compare a buffer's data with other data for equality */

@@ -10,9 +10,9 @@ extern "C" {
 #endif
 
 
-/*********
- * FLAGS *
- *********/
+/*************
+ * CONSTANTS *
+ *************/
 
 typedef enum lanli_tag_type {
   LANLI_TAG_OPEN,

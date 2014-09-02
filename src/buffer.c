@@ -29,7 +29,7 @@ lanli_buffer *lanli_buffer_new(size_t unit) {
 }
 
 void lanli_buffer_free(lanli_buffer *buf) {
-  assert(buf && buf->unit);
+  if (!buf) return;
 
   buf->data_free(buf->data);
 

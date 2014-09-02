@@ -8,6 +8,10 @@ extern "C" {
 #endif
 
 
+/*************
+ * CONSTANTS *
+ *************/
+
 #define LANLI_VERSION "0.0.1"
 #define LANLI_VERSION_MAJOR 0
 #define LANLI_VERSION_MINOR 0
@@ -18,6 +22,7 @@ extern "C" {
  * FUNCTIONS *
  *************/
 
+/* lanli_version: Retrieve Lanli's version numbers */
 void lanli_version(int *major, int *minor, int *revision);
 
 
