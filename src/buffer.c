@@ -100,11 +100,7 @@ void lanli_buffer_sets(lanli_buffer *buf, const char *str) {
 
 int lanli_buffer_eq(const lanli_buffer *buf, const uint8_t *data, size_t size) {
   if (buf->size != size) return 0;
-
-  size_t i = 0;
-  while (i < size && buf->data[i] == data[i]) i++;
-
-  return i == size;
+  return memcmp(buf->data, data, size) == 0;
 }
 
 int lanli_buffer_eqs(const lanli_buffer *buf, const char *str) {

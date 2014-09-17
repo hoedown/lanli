@@ -1,7 +1,7 @@
 #include "version.h"
 
-void lanli_version(int *ver_major, int *ver_minor, int *ver_revision) {
-  *ver_major = LANLI_VERSION_MAJOR;
-  *ver_minor = LANLI_VERSION_MINOR;
-  *ver_revision = LANLI_VERSION_REVISION;
+void lanli_version(int *major, int *minor, int *revision) {
+  *major = LANLI_VERSION_MAJOR;
+  *minor = LANLI_VERSION_MINOR;
+  *revision = LANLI_VERSION_REVISION;
 }
