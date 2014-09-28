@@ -106,7 +106,7 @@ static inline void put_utf8(lanli_buffer *ob, int c) {
     lanli_buffer_put(ob, unichar, 4);
   }
   else {
-    lanli_buffer_putc(ob, '?');
+    lanli_buffer_puts(ob, "\xef\xbf\xbd");
   }
 }
 
@@ -124,6 +124,7 @@ static size_t unescape_entity(lanli_buffer *ob, const uint8_t *data, size_t size
     else if (data[1] == 'x' || data[1] == 'X') {
       for (i = 2; i < size && _isxdigit(data[i]); ++i)
         codepoint = (codepoint * 16) + ((data[i] | 32) % 39 - 9);
+      if (i == 2) return 0;
     }
 
     if (i < size && data[i] == ';') {
