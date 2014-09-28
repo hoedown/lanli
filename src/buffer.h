@@ -35,7 +35,6 @@ struct lanli_buffer {
 
   lanli_realloc_callback data_realloc;
   lanli_free_callback data_free;
-  lanli_free_callback buffer_free;
 };
 typedef struct lanli_buffer lanli_buffer;
 
@@ -66,9 +65,11 @@ void lanli_buffer_init(
   lanli_buffer *buffer,
   size_t unit,
   lanli_realloc_callback data_realloc,
-  lanli_free_callback data_free,
-  lanli_free_callback buffer_free
+  lanli_free_callback data_free
 );
+
+/* lanli_buffer_uninit: uninitialize an existing buffer */
+void lanli_buffer_uninit(lanli_buffer *buf);
 
 /* lanli_buffer_new: allocate a new buffer */
 lanli_buffer *lanli_buffer_new(size_t unit) __attribute__ ((malloc));

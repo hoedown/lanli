@@ -9,8 +9,7 @@ void lanli_buffer_init(
   lanli_buffer *buf,
   size_t unit,
   lanli_realloc_callback data_realloc,
-  lanli_free_callback data_free,
-  lanli_free_callback buffer_free
+  lanli_free_callback data_free
 ) {
   assert(buf);
 
@@ -19,22 +18,22 @@ void lanli_buffer_init(
   buf->unit = unit;
   buf->data_realloc = data_realloc;
   buf->data_free = data_free;
-  buf->buffer_free = buffer_free;
+}
+
+void lanli_buffer_uninit(lanli_buffer *buf) {
+  buf->data_free(buf->data);
 }
 
 lanli_buffer *lanli_buffer_new(size_t unit) {
   lanli_buffer *ret = lanli_malloc(sizeof (lanli_buffer));
-  lanli_buffer_init(ret, unit, lanli_realloc, free, free);
+  lanli_buffer_init(ret, unit, lanli_realloc, free);
   return ret;
 }
 
 void lanli_buffer_free(lanli_buffer *buf) {
   if (!buf) return;
-
-  buf->data_free(buf->data);
-
-  if (buf->buffer_free)
-    buf->buffer_free(buf);
+  lanli_buffer_uninit(buf);
+  free(buf);
 }
 
 void lanli_buffer_reset(lanli_buffer *buf) {
