@@ -120,9 +120,6 @@ struct lanli_document {
   lanli_flags flags;
   size_t levels;
 
-  // extracted flags
-  int escape_secure;
-
   // preallocated resources for render
   lanli_buffer *ob;
   lanli_buffer **levelbuf;
@@ -143,8 +140,6 @@ lanli_document *lanli_document_new(
   doc->opaque = opaque;
   doc->flags = flags;
   doc->levels = RESTRICT_VALUE(levels, LEVELS);
-
-  doc->escape_secure = flags & LANLI_FLAG_ESCAPE_SECURE;
 
   size_t length = levels + 1;
   doc->levelbuf = lanli_calloc(length, sizeof(lanli_buffer *));
@@ -466,7 +461,7 @@ static void output_start_tag(lanli_document *doc, lanli_buffer *levelbuf, const 
       lanli_buffer_putc(doc->ob, '"');
       levelbuf->size = 0;
       lanli_unescape_html(levelbuf, attr->value->data, attr->value->size);
-      lanli_escape_html(doc->ob, levelbuf->data, levelbuf->size, doc->escape_secure);
+      lanli_escape_html(doc->ob, levelbuf->data, levelbuf->size);
       lanli_buffer_putc(doc->ob, '"');
     }
   }
@@ -519,7 +514,7 @@ static size_t search_and_close_raw(
   } else { // LANLI_EL_RAW_ESCAPABLE
     levelbuf->size = 0;
     lanli_unescape_html(levelbuf, data, mark);
-    lanli_escape_html(doc->ob, levelbuf->data, levelbuf->size, doc->escape_secure);
+    lanli_escape_html(doc->ob, levelbuf->data, levelbuf->size);
   }
 
   // Finally, close tag
@@ -564,7 +559,7 @@ static void process(lanli_document *doc, const uint8_t *data, size_t size, size_
       if (next_level)
         process(doc, levelbuf->data, levelbuf->size, next_level);
       else
-        lanli_escape_html(doc->ob, levelbuf->data, levelbuf->size, doc->escape_secure);
+        lanli_escape_html(doc->ob, levelbuf->data, levelbuf->size);
     }
 
     if (i >= size) break;
@@ -578,7 +573,7 @@ static void process(lanli_document *doc, const uint8_t *data, size_t size, size_
         // Start tag parsed, validate it
         if (!validate_start_tag(tag)) {
           if (!(doc->flags & LANLI_FLAG_INVALID_SKIP))
-            lanli_escape_html(doc->ob, data + mark, i - mark, doc->escape_secure);
+            lanli_escape_html(doc->ob, data + mark, i - mark);
           continue;
         }
         tag->level = level;
@@ -595,7 +590,7 @@ static void process(lanli_document *doc, const uint8_t *data, size_t size, size_
             i += search_and_close_raw(doc, levelbuf, tag, data + i, size - i);
           break;
         case LANLI_ACTION_ESCAPE:
-          lanli_escape_html(doc->ob, data + mark, i - mark, doc->escape_secure);
+          lanli_escape_html(doc->ob, data + mark, i - mark);
           break;
         case LANLI_ACTION_SKIP:
           break;
@@ -620,7 +615,7 @@ static void process(lanli_document *doc, const uint8_t *data, size_t size, size_
       for (size_t n = 0; n < tags_to_close; n++)
         close_tag(doc);
       if (!tags_to_close && !(doc->flags & LANLI_FLAG_INVALID_SKIP))
-        lanli_escape_html(doc->ob, data + mark, i - mark, doc->escape_secure);
+        lanli_escape_html(doc->ob, data + mark, i - mark);
       continue;
     }
 

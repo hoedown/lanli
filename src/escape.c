@@ -28,8 +28,8 @@
 static const uint8_t HTML_ESCAPE_TABLE[UINT8_MAX+1] = {
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 1, 0, 0, 0, 2, 3, 0, 0, 0, 0, 0, 0, 0, 4,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 6, 0,
+  0, 0, 1, 0, 0, 0, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 5, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -49,12 +49,11 @@ static const char *HTML_ESCAPES[] = {
         "&quot;",
         "&amp;",
         "&#39;",
-        "&#47;",
         "&lt;",
         "&gt;"
 };
 
-void lanli_escape_html(lanli_buffer *ob, const uint8_t *data, size_t size, int secure) {
+void lanli_escape_html(lanli_buffer *ob, const uint8_t *data, size_t size) {
   size_t i = 0, mark;
 
   while (1) {
@@ -72,13 +71,7 @@ void lanli_escape_html(lanli_buffer *ob, const uint8_t *data, size_t size, int s
 
     if (i >= size) break;
 
-    /* The forward slash is only escaped in secure mode */
-    if (!secure && data[i] == '/') {
-      lanli_buffer_putc(ob, '/');
-    } else {
-      lanli_buffer_puts(ob, HTML_ESCAPES[HTML_ESCAPE_TABLE[data[i]]]);
-    }
-
+    lanli_buffer_puts(ob, HTML_ESCAPES[HTML_ESCAPE_TABLE[data[i]]]);
     i++;
   }
 }

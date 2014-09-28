@@ -89,7 +89,6 @@ static flag_entry flags_info[] = {
   {LANLI_FLAG_COMMENTS_PARSE, "parse-comments", "Parse and maintain comments."},
   {LANLI_FLAG_COMMENTS_SKIP, "skip-comments", "Skip comments. Requires '--parse-comments' to be active as well."},
   {LANLI_FLAG_INVALID_SKIP, "skip-invalid", "Skip parsed, but invalid HTML."},
-  {LANLI_FLAG_ESCAPE_SECURE, "secure-escape", "Use \"secure\" mode when escaping HTML."},
   {LANLI_FLAG_LEVELS_STRICT, "strict-levels", "When using levels, don't allow a level to leave open tags to superior levels."},
 };
 

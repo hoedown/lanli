@@ -15,7 +15,7 @@ extern "C" {
  *************/
 
 /* lanli_escape_html: escape HTML */
-void lanli_escape_html(lanli_buffer *ob, const uint8_t *data, size_t size, int secure);
+void lanli_escape_html(lanli_buffer *ob, const uint8_t *data, size_t size);
 
 /* lanli_unescape_html: unescape HTML */
 void lanli_unescape_html(lanli_buffer *ob, const uint8_t *data, size_t size);

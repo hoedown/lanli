@@ -31,8 +31,7 @@ typedef enum lanli_flags {
   LANLI_FLAG_COMMENTS_PARSE = (1 << 0),
   LANLI_FLAG_COMMENTS_SKIP = (1 << 1),
   LANLI_FLAG_INVALID_SKIP = (1 << 2),
-  LANLI_FLAG_ESCAPE_SECURE = (1 << 3),
-  LANLI_FLAG_LEVELS_STRICT = (1 << 4)
+  LANLI_FLAG_LEVELS_STRICT = (1 << 3)
 } lanli_flags;
 
 typedef enum lanli_action {
