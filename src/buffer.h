@@ -112,6 +112,9 @@ const char *lanli_buffer_cstr(lanli_buffer *buf);
 /* lanli_buffer_printf: formatted printing to a buffer */
 void lanli_buffer_printf(lanli_buffer *buf, const char *fmt, ...) __attribute__ ((format (printf, 2, 3)));
 
+/* lanli_buffer_put_utf8: put a Unicode character encoded as UTF-8 */
+void lanli_buffer_put_utf8(lanli_buffer *buf, unsigned int codepoint);
+
 /* lanli_buffer_free: free the buffer */
 void lanli_buffer_free(lanli_buffer *buf);
 

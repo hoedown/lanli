@@ -78,38 +78,6 @@ void lanli_escape_html(lanli_buffer *ob, const uint8_t *data, size_t size) {
 
 
 
-static inline void put_utf8(lanli_buffer *ob, int c) {
-  unsigned char unichar[4];
-
-  if (c < 0x80) {
-    lanli_buffer_putc(ob, c);
-  }
-  else if (c < 0x800) {
-    unichar[0] = 192 + (c / 64);
-    unichar[1] = 128 + (c % 64);
-    lanli_buffer_put(ob, unichar, 2);
-  }
-  else if (c - 0xd800u < 0x800) {
-    lanli_buffer_putc(ob, '?');
-  }
-  else if (c < 0x10000) {
-    unichar[0] = 224 + (c / 4096);
-    unichar[1] = 128 + (c / 64) % 64;
-    unichar[2] = 128 + (c % 64);
-    lanli_buffer_put(ob, unichar, 3);
-  }
-  else if (c < 0x110000) {
-    unichar[0] = 240 + (c / 262144);
-    unichar[1] = 128 + (c / 4096) % 64;
-    unichar[2] = 128 + (c / 64) % 64;
-    unichar[3] = 128 + (c % 64);
-    lanli_buffer_put(ob, unichar, 4);
-  }
-  else {
-    lanli_buffer_puts(ob, "\xef\xbf\xbd");
-  }
-}
-
 static size_t unescape_entity(lanli_buffer *ob, const uint8_t *data, size_t size) {
   size_t i = 0;
 
@@ -128,7 +96,7 @@ static size_t unescape_entity(lanli_buffer *ob, const uint8_t *data, size_t size
     }
 
     if (i < size && data[i] == ';') {
-      put_utf8(ob, codepoint);
+      lanli_buffer_put_utf8(ob, codepoint);
       return i + 1;
     }
   }

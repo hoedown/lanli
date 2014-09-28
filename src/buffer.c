@@ -181,3 +181,36 @@ void lanli_buffer_printf(lanli_buffer *buf, const char *fmt, ...) {
 
   buf->size += n;
 }
+
+void lanli_buffer_put_utf8(lanli_buffer *ob, unsigned int c) {
+  unsigned char unichar[4];
+
+  if (c < 0x80) {
+    lanli_buffer_putc(ob, c);
+  }
+  else if (c < 0x800) {
+    unichar[0] = 192 + (c / 64);
+    unichar[1] = 128 + (c % 64);
+    lanli_buffer_put(ob, unichar, 2);
+  }
+  else if (c - 0xd800u < 0x800) {
+    LANLI_BUFPUTSL(ob, "\xef\xbf\xbd");
+  }
+  else if (c < 0x10000) {
+    unichar[0] = 224 + (c / 4096);
+    unichar[1] = 128 + (c / 64) % 64;
+    unichar[2] = 128 + (c % 64);
+    lanli_buffer_put(ob, unichar, 3);
+  }
+  else if (c < 0x110000) {
+    unichar[0] = 240 + (c / 262144);
+    unichar[1] = 128 + (c / 4096) % 64;
+    unichar[2] = 128 + (c / 64) % 64;
+    unichar[3] = 128 + (c % 64);
+    lanli_buffer_put(ob, unichar, 4);
+  }
+  else {
+    LANLI_BUFPUTSL(ob, "\xef\xbf\xbd");
+  }
+}
+
