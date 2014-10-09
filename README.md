@@ -1,8 +1,8 @@
 # Lanli
 
 Lanli is an HTML5 sanitizer with unique features. You should use it when you
-have HTML coming from an untrusted source (like user input). Lanli will then
-return valid HTML that you can process and display safely.
+have HTML coming from an untrusted source (like user input). Lanli will
+produce valid HTML that you can process and display safely.
 
 It was made as a companion to [Hoedown][], and they share some code, but are
 independent projects. Their [phylosophy](TODO) is very similar.
@@ -33,26 +33,31 @@ independent projects. Their [phylosophy](TODO) is very similar.
 
  * Lanli will always output well-formed HTML. No unmatched tags, duplicate
    attributes, or any other bad syntax will ever be output.
+
  * Lanli will always output normalized HTML. Tag names and attribute names
    get always lowercased, attributes use the double quote syntax and spacing
    is consistent.
+
  * Lanli will always re-escape all text. That means the text is unescaped,
-   and then escaped again before being output. That ensures any `&ambiguous;`
+   and then escaped again before being output. This ensures any `&ambiguous;`
    character references or spare HTML-sensitive characters get escaped.
 
    This also has the effect that unnecessary entities like `&acute;` get
-   changed to their UTF-8 representation, `á`.
+   changed to their UTF-8 representations, `á`.
 
 ### What it doesn't do
 
  * Lanli is not a compressor. It will leave whitespace untouched other than
    inside tags, so output will always display the same way. You can feed the
    sanitized HTML to a compressor, though.
+
  * Lanli doesn't process text inside tags, and cannot insert or displace tags
    to enhance the HTML. That kind of processing should be done *once* HTML has
    been sanitized by Lanli.
+
  * Lanli has [minor caveats][#caveats] when parsing HTML, that in no way
    affect security of the output.
+
  * Lanli was designed to process HTML snippets, not whole pages.
 
 
@@ -135,7 +140,7 @@ lanli_action my_callback(lanli_tag *tag, const lanli_tag_stack *stack, void *opa
     return LANLI_ACTION_ESCAPE;
 }
 
-...
+/* ... */
 
 lanli_document *processor = lanli_document_new(
   my_callback, NULL, 0, 16, 8
@@ -192,7 +197,7 @@ This is a unique feature of Lanli. Levels allow markup parsers and Lanli to
 differenciate between tags output by the markup parser, and tags that were
 originally in the markup source.
 
-Let's see an example. Imagine this markdown source:
+Let's see an example. Imagine this Markdown source:
 
 ``` markdown
 Here ends the *paragraph.</p> <p>And here* starts another.
@@ -201,22 +206,23 @@ Here ends the *paragraph.</p> <p>And here* starts another.
 The parser, unsuspecting, would then output the following HTML:
 
 ``` html
-<p>Here ends the <strong>paragraph.</p> <p>And here</strong> starts another.
+<p>Here ends the <strong>paragraph.</p> <p>And here</strong> starts another.</p>
 ```
 
 So the sanitizer (and browser) perceives the output as two paragraphs instead
 of one. This demonstrates how the user is able to mess with the rendered HTML.
-With levels, the markdown parser would something like this:
+If the Markdown parser was levels-aware, it'd output something like this:
 
 ``` html
-<p>Here ends the <strong>paragraph.&lt;/p&gt; &lt;p&gt;And here</strong> starts another.
+<p>Here ends the <strong>paragraph.&lt;/p&gt; &lt;p&gt;And here</strong> starts another.</p>
 ```
 
-This makes it clear which tags have been introduced by the user and which come
-from the parser. Lanli would parse the real tags (which are of level 0) and
-then *unescape* the rest to get the `</p>` and `<p>` tags entered by the user,
-which are of level 1. To tell it to parse tags up to level 1, you need to set
-the fourth parameter to 1:
+As you can see, the HTML that was input by the user has been escaped.
+Lanli parses the real tags (output by the parser) and assigns them level 0.
+Then it *unescapes* the rest of the HTML and parses the `</p>` and `<p>` at
+the middle, which are of level 1: these tags came from the user.
+
+To parse tags up to level 1, the fourth parameter is set to 1:
 
 ``` c
 lanli_document *processor = lanli_document_new(
@@ -232,7 +238,7 @@ Wether the next `<p>` is accepted would be left to the callback (Strict post,
 for instance, wouldn't accept a `<p>` inside another `<p>`).
 
 Why is this important? Because a markup parser is actually a *trusted* source
-of HTML[^1], since it's in your control and will never output harmful tags. The
+of HTML, since it's in your control and will never output harmful tags. The
 inline HTML input by the user, however, is *untrusted*. Differenciating between
 the two sources gives us a lot more flexibility.
 
@@ -251,12 +257,11 @@ lanli_action my_callback(lanli_tag *tag, const lanli_tag_stack *stack, void *opa
     return LANLI_ACTION_ACCEPT;
   } else {
     // Tag comes from the user, do all the filtering.
-    ...
+    /* ... */
   }
 }
 
-...
-
+/* ... */
 
 lanli_document *processor = lanli_document_new(
   my_callback, NULL,
@@ -281,4 +286,27 @@ document processor.
 
 ## Caveats
 
-TODO
+HTML has some exotic features that are currently not implemented in Lanli, because parsing them is either
+expensive, complex, or unneeded most of the time:
+
+ - Foreign elements (SVG and MathML) and CDATA sections require special parsing,
+   which is not implemented.
+
+ - HTML allows one to omit the closing tag of some tags, so the following is in fact valid HTML:
+
+   ~~~ html
+   <p> Paragraph 1
+   <p> Paragraph 2
+   <ul> <li> Item 1
+        <li> Item 2
+   </ul>
+   ~~~
+
+   Lanli needs all end tags to be present.
+
+ - Some entities don't need a semicolon at the end, like `&copy`. Lanli doesn't parse that form,
+   the semicolon equivalent must be used instead: `&copy;`.
+
+ - HTML5 is way more permissive than XML and allows attribute names to have almost any character.
+   Lanli only allows a restricted set of ASCII.
+
