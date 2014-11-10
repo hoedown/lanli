@@ -14,7 +14,7 @@ independent projects. Their [phylosophy](TODO) is very similar.
  * **Flexible.** Most sanitizers use whitelists to filter tags, but Lanli
    goes farther: it uses a callback to determine wether a tag gets accepted.
    This allows for smart and customizable filtering. It also accepts
-   various flags to customize parsing, and has [levels][#levels]!
+   various flags to customize parsing, and has [levels](#levels)!
 
  * **Performant.** Lanli shares memory as much as possible, and it parses,
    filters and outputs on the fly, so it's really fast and efficient.
@@ -55,7 +55,7 @@ independent projects. Their [phylosophy](TODO) is very similar.
    to enhance the HTML. That kind of processing should be done *once* HTML has
    been sanitized by Lanli.
 
- * Lanli has [minor caveats][#caveats] when parsing HTML, that in no way
+ * Lanli has [minor caveats](#caveats) when parsing HTML, that in no way
    affect security of the output.
 
  * Lanli was designed to process HTML snippets, not whole pages.
@@ -150,7 +150,7 @@ lanli_document *processor = lanli_document_new(
 Now we're telling Lanli to call `my_callback`. If the tag has no attributes,
 the callback will allow it by returning `LANLI_ACTION_ACCEPT`. Otherwise, it'll
 get escaped (`LANLI_ACTION_ESCAPE`). See the full list of actions in the
-[docs][TODO].
+[docs](TODO).
 
 As you can see, the callback gets passed three arguments:
 
@@ -177,7 +177,6 @@ tweak the parsing, validation or output a bit. Here's a list of them:
    We *strongly recommend* setting this flag too if you parse comments, since keeping them is a security risk (user can enter conditional comments, for example).
  - `LANLI_FLAG_INVALID_SKIP`: There's HTML that gets parsed but isn't valid, like a tag with duplicate attributes, or an end tag that doesn't match.
    If this flag is active, the invalid HTML is skipped instead of escaped.
- - `LANLI_FLAG_ESCAPE_SECURE`: Use "secure" mode when escaping HTML. Additional characters get escaped in this mode (currently `/`).
  - `LANLI_FLAG_LEVELS_STRICT`: When levels are active, don't allow a level to leave open tags to superior levels.
 
 We recommend to set the `LANLI_FLAG_COMMENTS_PARSE` and `LANLI_FLAG_COMMENTS_SKIP`
@@ -294,13 +293,13 @@ expensive, complex, or unneeded most of the time:
 
  - HTML allows one to omit the closing tag of some tags, so the following is in fact valid HTML:
 
-   ~~~ html
+   ``` html
    <p> Paragraph 1
    <p> Paragraph 2
    <ul> <li> Item 1
         <li> Item 2
    </ul>
-   ~~~
+   ```
 
    Lanli needs all end tags to be present.
 
@@ -310,3 +309,6 @@ expensive, complex, or unneeded most of the time:
  - HTML5 is way more permissive than XML and allows attribute names to have almost any character.
    Lanli only allows a restricted set of ASCII.
 
+
+
+[Hoedown]: https://github.com/hoedown/hoedown
