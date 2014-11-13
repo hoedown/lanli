@@ -145,8 +145,8 @@ struct option_data {
 
   /* parsing */
   enum callback_type callback;
-  size_t levels;
   lanli_flags flags;
+  size_t levels;
   size_t max_nesting;
   size_t max_attributes;
 };
@@ -334,8 +334,8 @@ int main(int argc, char **argv) {
   data.ounit = DEF_OUNIT;
   data.filename = NULL;
   data.callback = DEF_CALLBACK;
-  data.levels = DEF_LEVELS;
   data.flags = DEF_FLAGS;
+  data.levels = DEF_LEVELS;
   data.max_nesting = DEF_MAX_NESTING;
   data.max_attributes = DEF_MAX_ATTRIBUTES;
 
@@ -390,7 +390,7 @@ int main(int argc, char **argv) {
 
   /* Sanitize input HTML */
   ob = lanli_buffer_new(data.ounit);
-  document = lanli_document_new(callback, opaque, data.levels, data.flags, data.max_nesting, data.max_attributes);
+  document = lanli_document_new(callback, opaque, data.flags, data.levels, data.max_nesting, data.max_attributes);
 
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);
   lanli_document_render(document, ob, ib->data, ib->size);

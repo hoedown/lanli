@@ -384,10 +384,10 @@ static size_t parse_comment(const uint8_t *data, size_t size) {
   if (data[i] == '-' && data[i+1] == '>') return 0;
 
   // Collect content
-  while (i+2 >= size && !(data[i] == '-' && data[i+1] == '-')) i++;
+  while (i+2 < size && !(data[i] == '-' && data[i+1] == '-')) i++;
   if (i+2 >= size) return 0;
 
-  // Verify end of comment content
+  // Verify end of comment
   if (data[i+2] != '>') return 0;
   return i + 3;
 }
