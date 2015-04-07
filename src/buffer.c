@@ -21,6 +21,7 @@ void lanli_buffer_init(
 }
 
 void lanli_buffer_uninit(lanli_buffer *buf) {
+  assert(buf && buf->unit);
   buf->data_free(buf->data);
 }
 
@@ -83,6 +84,17 @@ void lanli_buffer_putc(lanli_buffer *buf, uint8_t c) {
   buf->size += 1;
 }
 
+int lanli_buffer_putf(lanli_buffer *buf, FILE* file) {
+  assert(buf && buf->unit);
+
+  while (!(feof(file) || ferror(file))) {
+    lanli_buffer_grow(buf, buf->size + buf->unit);
+    buf->size += fread(buf->data + buf->size, 1, buf->unit, file);
+  }
+
+  return ferror(file);
+}
+
 void lanli_buffer_set(lanli_buffer *buf, const uint8_t *data, size_t size) {
   assert(buf && buf->unit);
 
@@ -107,8 +119,6 @@ int lanli_buffer_eqs(const lanli_buffer *buf, const char *str) {
 }
 
 int lanli_buffer_prefix(const lanli_buffer *buf, const char *prefix) {
-  assert(buf && buf->unit);
-
   for (size_t i = 0; i < buf->size; ++i) {
     if (prefix[i] == 0)
       return 0;

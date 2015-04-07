@@ -89,6 +89,9 @@ void lanli_buffer_puts(lanli_buffer *buf, const char *str);
 /* lanli_buffer_putc: append a single char to a buffer */
 void lanli_buffer_putc(lanli_buffer *buf, uint8_t c);
 
+/* hoedown_buffer_putf: read from a file and append to a buffer, until EOF or error */
+int lanli_buffer_putf(lanli_buffer *buf, FILE* file);
+
 /* lanli_buffer_set: replace the buffer's contents with raw data */
 void lanli_buffer_set(lanli_buffer *buf, const uint8_t *data, size_t size);
 

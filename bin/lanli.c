@@ -1,9 +1,3 @@
-#if __STDC_VERSION__ >= 199901L
-#define _XOPEN_SOURCE 600
-#else
-#define _XOPEN_SOURCE 500
-#endif /* __STDC_VERSION__ */
-
 #include "document.h"
 #include "callbacks/strict_post.h"
 
@@ -319,7 +313,7 @@ static int parse_argument(int argn, char *arg, int is_forced, void *opaque) {
 
 int main(int argc, char **argv) {
   struct option_data data;
-  struct timespec start, end;
+  clock_t t1, t2;
   FILE *file = stdin;
   lanli_buffer *ib, *ob;
   lanli_callback callback = NULL;
@@ -355,13 +349,9 @@ int main(int argc, char **argv) {
   /* Read everything */
   ib = lanli_buffer_new(data.iunit);
 
-  while (!feof(file)) {
-    if (ferror(file)) {
-      fprintf(stderr, "I/O errors found while reading input.\n");
-      return 5;
-    }
-    lanli_buffer_grow(ib, ib->size + data.iunit);
-    ib->size += fread(ib->data + ib->size, 1, data.iunit, file);
+  if (lanli_buffer_putf(ib, file)) {
+    fprintf(stderr, "I/O errors found while reading input.\n");
+    return 5;
   }
 
   if (file != stdin) fclose(file);
@@ -392,33 +382,38 @@ int main(int argc, char **argv) {
   ob = lanli_buffer_new(data.ounit);
   document = lanli_document_new(callback, opaque, data.flags, data.levels, data.max_nesting, data.max_attributes);
 
-  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);
+  t1 = clock();
   lanli_document_render(document, ob, ib->data, ib->size);
-  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &end);
+  t2 = clock();
+
+  /* Cleanup */
+  lanli_buffer_free(ib);
+  lanli_document_free(document);
 
   /* Write the result to stdout */
   if (ob->size && ob->data[ob->size-1] != '\n')
     lanli_buffer_putc(ob, '\n');
 
   (void)fwrite(ob->data, 1, ob->size, stdout);
-
-  /* Show rendering time */
-  if (data.show_time) {
-    long long elapsed = (end.tv_sec - start.tv_sec)*1e9 + (end.tv_nsec - start.tv_nsec);
-    if (elapsed < 1e9)
-      fprintf(stderr, "Time spent on rendering: %.2f ms.\n", ((double)elapsed)/1e6);
-    else
-      fprintf(stderr, "Time spent on rendering: %.3f s.\n", ((double)elapsed)/1e9);
-  }
-
-  /* Cleanup */
-  lanli_buffer_free(ib);
   lanli_buffer_free(ob);
-  lanli_document_free(document);
 
   if (ferror(stdout)) {
     fprintf(stderr, "I/O errors found while writing output.\n");
     return 5;
+  }
+
+  /* Show rendering time */
+  if (data.show_time) {
+    if (t1 == -1 || t2 == -1) {
+      fprintf(stderr, "Failed to get the time.\n");
+      return 1;
+    }
+
+    double elapsed = (double)(t2 - t1) / CLOCKS_PER_SEC;
+    if (elapsed < 1)
+      fprintf(stderr, "Time spent on rendering: %7.2f ms.\n", elapsed*1e3);
+    else
+      fprintf(stderr, "Time spent on rendering: %6.3f s.\n", elapsed);
   }
 
   return 0;
