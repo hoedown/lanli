@@ -7,7 +7,7 @@
 // _strict_post_tags.gperf. If you modify it, remember to
 // regenerate the header file by running:
 //
-//     make src/callbacks/_strict_post_tags.h
+//     make _strict_post_tags.h
 //
 #include "_strict_post_tags.h"
 
