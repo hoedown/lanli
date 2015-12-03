@@ -110,10 +110,10 @@ That's it! You have the sanitized HTML at `output->data`, and the size is at
 `output->size`. To print the sanitized HTML to stdout, for example, you'd do:
 
 ``` c
-fwrite(output->data, output->size, sizeof(uint8_t), stdout);
+fwrite(output->data, output->size, 1, stdout);
 ```
 
-You can (and should) reuse the document instance any times you want.
+You can (and should) reuse the document instance any times you want.  
 When you have finished, don't forget to free everything:
 
 ``` c
@@ -192,14 +192,12 @@ lanli_document *processor = lanli_document_new(
 
 #### Levels
 
-This is a unique feature of Lanli. Levels allow markup parsers and Lanli to
-differenciate between tags output by the markup parser, and tags that were
-originally in the markup source.
+This is a unique feature of Lanli. Levels allow Lanli to differenciate between tags coming from trusted code (i.e. a markup parser), and tags input directly by the user.
 
 Let's see an example. Imagine this Markdown source:
 
 ``` markdown
-Here ends the *paragraph.</p> <p>And here* starts another.
+Here ends the **paragraph.</p> <p>And here** starts another.
 ```
 
 The parser, unsuspecting, would then output the following HTML:
@@ -288,26 +286,26 @@ document processor.
 HTML has some exotic features that are currently not implemented in Lanli, because parsing them is either
 expensive, complex, or unneeded most of the time:
 
- - Foreign elements (SVG and MathML) and CDATA sections require special parsing,
-   which is not implemented.
+  - Foreign elements (SVG and MathML) and CDATA sections require special parsing,
+    which is not implemented.
 
- - HTML allows one to omit the closing tag of some tags, so the following is in fact valid HTML:
+  - HTML allows one to omit the closing tag of some tags, so the following is in fact valid HTML:
 
-   ``` html
-   <p> Paragraph 1
-   <p> Paragraph 2
-   <ul> <li> Item 1
-        <li> Item 2
-   </ul>
-   ```
+    ``` html
+    <p> Paragraph 1
+    <p> Paragraph 2
+    <ul> <li> Item 1
+         <li> Item 2
+    </ul>
+    ```
 
-   Lanli needs all end tags to be present.
+    Lanli needs all end tags to be present.
 
- - Some entities don't need a semicolon at the end, like `&copy`. Lanli doesn't parse that form,
-   the semicolon equivalent must be used instead: `&copy;`.
+  - Some entities don't need a semicolon at the end, like `&copy`. Lanli doesn't parse that form,
+    the semicolon equivalent must be used instead: `&copy;`.
 
- - HTML5 is way more permissive than XML and allows attribute names to have almost any character.
-   Lanli only allows a restricted set of ASCII.
+  - HTML5 is way more permissive than XML and allows attribute names to have almost any character.
+    Lanli only allows a restricted set of ASCII.
 
 
 
